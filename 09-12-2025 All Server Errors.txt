@@ -41,7 +41,12 @@ UPM_Workerhost_fatal
 CCM_Workerhost_fatal
 -------------------------
 1. 
-
+DateTime="2025-12-09 11:28:53.9744" ThreadId="1" Level="FATAL" Provider="ComDataEmailSync" 
+Message="ComData Message processor: Mail parsing failed for ComData mail with id: AAMkAGVlY2RlYzE3LWEwMDMtNGY0Zi1hMTg1LWZmNzcwYjNkOWM1NQBGAAAAAADlqZaiPuI7QpY9iwoxZi+wBwCtiNd8Fk0rT4/6iNUCak2gAAAAAAEMAACtiNd8Fk0rT4/6iNUCak2gAAczuHoaAAA=" 
+Exception="System.Exception: The element 'EmployeeID' value is required. It cannot be null or empty
+   at ABC.Common.Framework.Helpers.AbcXElement.GetElementRequiredString(String elementName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Helpers\AbcXElement.cs:line 162
+   at ABC.CCM.Workers.ComDataEmailSync.ComDataEmailProcessor.ProcessCardDeclineMails(ComDataEmail comDataEmail, AbcMailMessageModel message)
+   at ABC.CCM.Workers.ComDataEmailSync.ComDataEmailProcessor.Run()"
 
 -------------------------
 NTFs_Workerhost_fatal
