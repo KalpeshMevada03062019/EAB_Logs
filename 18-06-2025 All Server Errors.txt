@@ -1,0 +1,127 @@
+*[18-06-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="aa2b533e17ba" SessionId="_95c3e694-664e-445b-87d0-390cf0bee53d-36FDB8B5F2AB7DA45644EFEED314E9E4" UserId="239117" UserEmail="JLatino@eab.com" 
+DateTime="2025-06-18 12:37:25.9949" ThreadId="57" Level="FATAL" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<UpdateTransactionEntityAsync>d__165.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 1527
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<>c__DisplayClassa0.<<ValidateAsync>b__9c>d__a5.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<ValidateAsync>d__b1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()"
+   
+   
+RequestId="aa2b533e17ba" SessionId="_95c3e694-664e-445b-87d0-390cf0bee53d-36FDB8B5F2AB7DA45644EFEED314E9E4" UserId="239117" UserEmail="JLatino@eab.com" DateTime="2025-06-18 12:37:25.9366" ThreadId="49" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate START"
+RequestId="aa2b533e17ba" SessionId="_95c3e694-664e-445b-87d0-390cf0bee53d-36FDB8B5F2AB7DA45644EFEED314E9E4" UserId="239117" UserEmail="JLatino@eab.com" DateTime="2025-06-18 12:37:25.9366" ThreadId="49" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate Request content: {'clientDate':'2025-06-18T12:37:26-04:00'}"
+RequestId="aa2b533e17ba" SessionId="_95c3e694-664e-445b-87d0-390cf0bee53d-36FDB8B5F2AB7DA45644EFEED314E9E4" UserId="239117" UserEmail="JLatino@eab.com" DateTime="2025-06-18 12:37:25.9842" ThreadId="57" Level="TRACE" Message="Validating access right start."
+RequestId="aa2b533e17ba" SessionId="_95c3e694-664e-445b-87d0-390cf0bee53d-36FDB8B5F2AB7DA45644EFEED314E9E4" UserId="239117" UserEmail="JLatino@eab.com" DateTime="2025-06-18 12:37:25.9842" ThreadId="57" Level="TRACE" Message="Validating access right end. Duration: 0 ms."
+RequestId="aa2b533e17ba" SessionId="_95c3e694-664e-445b-87d0-390cf0bee53d-36FDB8B5F2AB7DA45644EFEED314E9E4" UserId="239117" UserEmail="JLatino@eab.com" DateTime="2025-06-18 12:37:25.9842" ThreadId="57" Level="TRACE" Message="Updating transaction entity start."
+RequestId="aa2b533e17ba" SessionId="_95c3e694-664e-445b-87d0-390cf0bee53d-36FDB8B5F2AB7DA45644EFEED314E9E4" UserId="239117" UserEmail="JLatino@eab.com" DateTime="2025-06-18 12:37:26.0795" ThreadId="57" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate Completed in 143 ms"
+
+   
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #5
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+1.

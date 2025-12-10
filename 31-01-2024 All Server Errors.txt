@@ -1,0 +1,155 @@
+*[31-01-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. Timout error
+RequestId="14a4c6741b56" UserId="229547" UserEmail="SShoham@eab.com" 
+DateTime="2024-01-31 08:43:10.4729" 
+Message="Error updating spending profile for user with external id 229547" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+RequestId="d9ada4100f61" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2024-01-31 10:02:53.3278" 
+Message="HTTP validation error: Deactivate credit card request failed. Reason: Unable to change status of Stolen/Suspected Fraud card.. Actor Id: f5088bf5-4b99-4291-a563-f9adbb4dbe94" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-----------TRACE
+RequestId="d9ada4100f61" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:02:51.0651" ThreadId="17" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5124/deactivate START"
+RequestId="d9ada4100f61" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:02:51.0807" ThreadId="17" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="d9ada4100f61" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:02:53.3278" ThreadId="17" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 2253 ms."
+RequestId="d9ada4100f61" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:02:53.3278" ThreadId="17" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5124/deactivate Completed in 2263 ms"
+-----------TRACE
+
+-----------INFO
+
+
+RequestId="753cc4a39054" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2024-01-31 10:03:04.6269" 
+Message="HTTP validation error: Deactivate credit card request failed. Reason: Unable to change status of Stolen/Suspected Fraud card.. Actor Id: f5088bf5-4b99-4291-a563-f9adbb4dbe94" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-----------TRACE
+RequestId="753cc4a39054" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:03:02.6666" ThreadId="10" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5124/deactivate START"
+RequestId="753cc4a39054" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:03:02.6666" ThreadId="17" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="753cc4a39054" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:03:04.6269" ThreadId="7" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 1957 ms."
+RequestId="753cc4a39054" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:03:04.6269" ThreadId="7" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5124/deactivate Completed in 1960 ms"
+-----------TRACE
+
+
+RequestId="53885e9c604b" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2024-01-31 10:03:35.7509" 
+Message="HTTP validation error: Deactivate credit card request failed. Reason: Unable to change status of Stolen/Suspected Fraud card.. Actor Id: f5088bf5-4b99-4291-a563-f9adbb4dbe94" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-----------TRACE
+RequestId="53885e9c604b" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:03:33.8367" ThreadId="7" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5124/deactivate START"
+RequestId="53885e9c604b" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:03:33.8524" ThreadId="7" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="53885e9c604b" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:03:35.7509" ThreadId="8" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 1907 ms."
+RequestId="53885e9c604b" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-2E2066A4EFD6D4DA03B1D5D45606874E" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-01-31 10:03:35.7509" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5124/deactivate Completed in 1914 ms"
+-----------TRACE
+
+
+----------------------
+UPM_Website_fatal
+----------------------
+1.
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1.
+DateTime="2024-01-31 06:48:47.7401" Provider="CDF3Import" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) [Id]
+      ,[FirstName]
+      ,[Gender]
+      ,[LastName]
+      ,[ExternalId]
+      ,[Email]
+      ,[FreshDeskId]
+      ,[FreshDeskTalentId]
+  FROM [ABC-UPM].[dbo].[Users] where ExternalId in ('230834','239424','237832', '239747', '232205',' 233631', '239091', '239475', '238213', '230834', '240308', '222953', '	237832', '239424')
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1.
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1.
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+RequestId="34ce4553606a" 
+DateTime="2024-01-31 02:38:36.1765" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="Comdata" 
+Exception=""
+
+----TRACE
+RequestId="34ce4553606a" DateTime="2024-01-31 02:38:32.1163" ThreadId="69" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'238596X003408','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="34ce4553606a" DateTime="2024-01-31 02:38:32.1163" ThreadId="69" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+----TRACE
+
+2.
+RequestId="120ff6b103e9" 
+DateTime="2024-01-31 17:27:09.6365" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="Comdata" 
+Exception=""
+----TRACE
+RequestId="120ff6b103e9" DateTime="2024-01-31 17:27:09.1311" ThreadId="40" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239091X004543','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="120ff6b103e9" DateTime="2024-01-31 17:27:09.1311" ThreadId="40" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+----TRACE
+
+3.
+RequestId="cb60b1386e39" 
+DateTime="2024-01-31 17:37:41.4749" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+4.
+RequestId="e901b2590dc3" 
+DateTime="2024-01-31 17:37:41.5853" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+----------------------
+UPM_API_Fatal
+----------------------
+1.
+
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------
+
+
+

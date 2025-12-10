@@ -1,0 +1,168 @@
+*[16-05-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #2 same error
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2025-05-15 12:55:50.5530" ThreadId="68" Level="FATAL" 
+Message="The given key was not present in the dictionary." 
+Exception="System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.GetExpenseGridItemModel(ExpenseGridRow expenseGridRow, UserRole userRole) in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 1527
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<CreateExpenseGridModelAsync>d__1fa.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 1197
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<SubmittedAsync>d__8a.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 358
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()"
+
+Trace:
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:49.4132" ThreadId="25" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/submitted/0?sortKey=1&sortOrder=2 START"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:49.4764" ThreadId="17" Level="TRACE" Message="Get Submitted transactions sorted by Date Descending start."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:49.4764" ThreadId="17" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:49.4764" ThreadId="17" Level="TRACE" Message="MyLog: startIndex is: 0 AND pageSize is: 50"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5208" ThreadId="71" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation end. Duration: 1037 ms."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: ExpenseGridRowsId list is: 2350714,2364688,2364689,2364692,2364693,2364694,2364719,2365158,2365362,2366131,2366372,2366904,2366905,2366906"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Include Allocations: True"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Ordered Transaction Ids list is: 2366906,2364688,2364692,2364694,2364719,2365362,2366372,2366905,2364689,2364693,2365158,2366131,2366904,2350714"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Owner Id is: f802774f-4422-45e3-885b-fea7e20d8079"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2366906"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2366906 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2364688"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2364688 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2364692"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2364692 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2364694"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2364694 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2364719"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2364719 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2365362"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2365362 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2366372"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2366372 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2366905"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2366905 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2364689"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2364689 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2364693"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2364693 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2365158"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2365158 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2366131"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2366131 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2366904"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Transaction 2366904 added to the list."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Process transaction ID is: 2350714"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Group Event Transaction and TransactionCategory are: 29"
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="MyLog: Group Event Transaction notes apply."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="Get Submitted transactions sorted by Date Descending end. Duration: 1061 ms."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="CreateExpenseGridModel start."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5400" ThreadId="17" Level="TRACE" Message="CreateExpenseGridModel: get transactions purposes. start."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5530" ThreadId="38" Level="TRACE" Message="CreateExpenseGridModel: get transactions purposes. end. Duration: 2 ms."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5530" ThreadId="38" Level="TRACE" Message="CreateExpenseGridModel: get allocated users. start."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5530" ThreadId="38" Level="TRACE" Message="CreateExpenseGridModel: get allocated users. end. Duration: 0 ms."
+RequestId="30067133f8c2" SessionId="_9cb30199-f9dd-4db3-9799-2c5790ae3d0e-45A0E439AC1E393FB494552D0E8C95EB" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-15 12:55:50.5530" ThreadId="68" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/submitted/0?sortKey=1&sortOrder=2 Completed in 1140 ms"
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. Error logged on 13, 14, 15 May
+DateTime="2025-05-15 07:37:48.1313" ThreadId="1" Level="FATAL" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 240391" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+
+2. #2 same error
+DateTime="2025-05-15 12:17:53.9554" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The response received from the service didn't contain valid XML.
+DateTime="2025-05-15 12:19:53.8959" ThreadId="1" Level="FATAL" Provider="WorkersHost" Message="Unhandled error while running creator 'ComDataEmailSync'" Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The response received from the service didn't contain valid XML.
+   at ABC.Common.Worker.Hosts.AbcWorkersHost.ExecuteCreators(String[] creatorNames) in c:\git_sources\eabgo\Common\ABC.Common.Worker\Hosts\AbcWorkersHost.cs:line 85
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read(XmlNodeType nodeType) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 170
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

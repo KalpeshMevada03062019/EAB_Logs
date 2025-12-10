@@ -1,0 +1,147 @@
+RequestId="482195cdc7de" SessionId="_945c5152-46f4-49be-8009-69799f1d9ad7-4F7EB315205A8A2DA596DA45AD2D4855" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-01-09 03:04:17.4109" ThreadId="13" Level="FATAL" Message="The underlying provider failed on Open." Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=5; handshake=15004;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass4.<<ExecuteAsync>b__3>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.EntityClient.EntityConnection.<OpenAsync>d__8.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.EntityConnection.<OpenAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<EnsureConnectionAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<GetResultsAsync>d__e.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<ForEachAsync>d__5`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.UserService.<GetDelegatedToUserRolesAsync>d__13.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\UserService.cs:line 91
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.UserService.<CanAccessUserRoleAsync>d__7.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\UserService.cs:line 63
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.Infrastructure.ApplicationUserStore.<CanAccessUserRoleAsync>d__0.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\Infrastructure\ApplicationUserStore.cs:line 34
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.Infrastructure.Auth.AbcUserStorage`2.<GetCurrentRoleAsync>d__e.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\Auth\AbcUserStorage.cs:line 177
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<EscalatedCountAsync>d__4f.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=5; handshake=15004;  ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass4.<<ExecuteAsync>b__3>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.EntityClient.EntityConnection.<OpenAsync>d__8.MoveNext()
+ClientConnectionId:4efe5892-4962-48b2-85d3-44edf69a5c9f
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+RequestId="f85b65cd253f" SessionId="_9227246e-5d18-4164-a029-23bdf736adc7-66FF4B8377F954C93BBC92AEC3F16D9D" UserId="222784" UserEmail="TPhillips@eab.com" DateTime="2024-01-09 07:56:52.1043" ThreadId="55" Level="FATAL" Message="Rule execution error: 'Error: 'ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+RequestId="376265767f2d" SessionId="_9227246e-5d18-4164-a029-23bdf736adc7-51CAFCF8AFE65F1A4D091B22269D0F8E" UserId="238220" UserEmail="ptitus@eab.com" DateTime="2024-01-09 09:04:24.0536" ThreadId="12" Level="FATAL" Message="Rule execution error: 'Error: 'ExpenseItem:2/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:2/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:2/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+RequestId="8912294bfb0f" SessionId="_945c5152-46f4-49be-8009-69799f1d9ad7-054037B2AC42E9894D33029B1CF69159" UserId="240066" UserEmail="CDuske@eab.com" DateTime="2024-01-09 09:34:19.2246" ThreadId="48" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' Message = 'Cannot read properties of undefined (reading '$valid')'" Exception="System.Exception: TypeError: Cannot read properties of undefined (reading '$valid')
+    at https://go.myeab.com/expense/bundles/modules?v=S6ygeRLmlE-A-AOODGUpUSMrohV3yqoznZid8LaXNUU1:18121:81
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:364550
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:302569)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:304045
+    at w (https://cdn.freshmarketer.com/250342/873272.js:3:343170)"
+RequestId="dd9f51a944aa" SessionId="_945c5152-46f4-49be-8009-69799f1d9ad7-BE078911D4117352471302EE1AE5195B" UserId="502578" UserEmail="MAbubacar@eab.com" DateTime="2024-01-09 10:23:54.0950" ThreadId="48" Level="FATAL" Message="The remote host closed the connection. The error code is 0x800704CD." Exception="System.Web.HttpException (0x800704CD): The remote host closed the connection. The error code is 0x800704CD.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at System.IO.Stream.<>c.<BeginWriteInternal>b__46_0(Object <p0>)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.IO.Stream.EndWrite(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.WebHost.HttpControllerHandler.<WriteStreamedResponseContentAsync>d__15.MoveNext()"

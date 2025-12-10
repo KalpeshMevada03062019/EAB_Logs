@@ -1,0 +1,8 @@
+RequestId="d3dfb50f6d65" SessionId="_0e99d781-5c8c-4650-8bbb-990626a4ded0-BAB72B6FD13FD7F7102554302EB8E391" UserId="238897" UserEmail="ERossi@eab.com" DateTime="2024-11-01 11:20:01.5800" ThreadId="14" Level="FATAL" Message="Unable to replace credit card when owner already has an active credit card. OwnerId: b08436be-0003-427d-82f3-74a922a570e0. EmployeeNumber:238897X005395." Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Unable to replace credit card when owner already has an active credit card. OwnerId: b08436be-0003-427d-82f3-74a922a570e0. EmployeeNumber:238897X005395. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+ABC.Common.BL.Exceptions.ValidationException: Unable to replace credit card when owner already has an active credit card. OwnerId: b08436be-0003-427d-82f3-74a922a570e0. EmployeeNumber:238897X005395.
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<ReplaceCreditCardAsync>d__22.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\CreditCardService.cs:line 196
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.Api.CardManagementApiService.<ReplaceCreditCardAsync>d__26.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.Api\CardManagementApiServic...)."

@@ -1,0 +1,71 @@
+*[22-09-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+
+1.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-09-22 07:00:48.1882" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutApprovedTransactions" 
+Message="Following error occurs during sending 'Go Expense: The following expenses have been approved' email to 'SGreenleaf@eab.com': transaction must have a personal amount" 
+Exception="System.ArgumentException: transaction must have a personal amount
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.ComputeReimbursementAmount(ExpenseGridRow transaction)
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.GetBody(List`1 transactions, User user, DateTime date)
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.CreateMessage(EmailToUserModel emailModel)
+   at ABC.Common.Worker.Mail.MailSenderProcessor`1.<>c__DisplayClass6.<SendMail>b__2() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Mail\MailSenderProcessor.cs:line 84
+   at ABC.Common.Framework.Logger.Logger.LogActionTime[T](Func`1 action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 116
+   at ABC.Common.Worker.Mail.MailSenderProcessor`1.SendMail() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Mail\MailSenderProcessor.cs:line 83"
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="9e2f53f6cf6e" DateTime="2024-09-22 02:37:34.7913" ThreadId="83" Level="FATAL" Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+RequestId="1fd903c0722f" DateTime="2024-09-22 18:54:13.0475" ThreadId="45" Level="FATAL" Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="ComdataMC" Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------

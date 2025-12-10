@@ -1,0 +1,76 @@
+*[10-02-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #15 same error
+RequestId="7aea116f146e" UserId="502570" UserEmail="sunilkumar@eab.com" 
+DateTime="2025-02-10 03:36:48.8851" ThreadId="11" Level="FATAL" 
+Message="An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - ExpenseTransactionTr_E0E006794D425A569228CDAE417854FDC956A5179027F9814CC6CAF17A1ACDAF, item state - Modified" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Could not allocate space for object 'dbo.ExpenseTransactions'.'PK_ExpenseTransactions' in database 'ABC-ERS-AUDIT' because the 'PRIMARY' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.
+
+GT-258: An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - ExpenseTransactionTr_, item state - Modified
+- Reviewed detail trace and info logs of fatal error An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - ExpenseTransactionTr, item state - Modified
+- Colloborate with developer to determine what causing error
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

@@ -1,0 +1,113 @@
+RequestId="" DateTime="2024-12-04 03:55:03.0119" ThreadId="43" Level="FATAL" Message="The remote host closed the connection. The error code is 0x80070057." Provider="" Exception="System.ServiceModel.CommunicationException: The remote host closed the connection. The error code is 0x80070057. ---> System.Web.HttpException: The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at System.ServiceModel.Channels.BytesReadPositionStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.ServiceModel.Activation.HostedHttpContext.HostedRequestHttpOutput.HostedResponseOutputStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Activation.HostedHttpContext.HostedRequestHttpOutput.HostedResponseOutputStream.CheckWrapThrow(Exception e)
+   at System.ServiceModel.Activation.HostedHttpContext.HostedRequestHttpOutput.HostedResponseOutputStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.BufferedStream.Write(Byte[] array, Int32 offset, Int32 count)
+   at System.Xml.XmlStreamNodeWriter.FlushBuffer()
+   at System.Xml.XmlStreamNodeWriter.UnsafeWriteUTF8Chars(Char* chars, Int32 charCount)
+   at System.Xml.XmlStreamNodeWriter.WriteUTF8Chars(String value)
+   at System.Xml.XmlUTF8NodeWriter.WriteEndElement(String prefix, String localName)
+   at System.Xml.XmlBaseWriter.WriteEndElement()
+   at WriteArrayOfKeyValueOfstringstringToXml(XmlWriterDelegator , Object , XmlObjectSerializerWriteContext , CollectionDataContract )
+   at System.Runtime.Serialization.CollectionDataContract.WriteXmlValue(XmlWriterDelegator xmlWriter, Object obj, XmlObjectSerializerWriteContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.WriteDataContractValue(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeWithoutXsiType(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.InternalSerialize(XmlWriterDelegator xmlWriter, Object obj, Boolean isDeclaredType, Boolean writeXsiType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.InternalSerializeReference(XmlWriterDelegator xmlWriter, Object obj, Boolean isDeclaredType, Boolean writeXsiType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle)
+   at WriteFeedInfoModelToXml(XmlWriterDelegator , Object , XmlObjectSerializerWriteContext , ClassDataContract )
+   at System.Runtime.Serialization.ClassDataContract.WriteXmlValue(XmlWriterDelegator xmlWriter, Object obj, XmlObjectSerializerWriteContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.WriteDataContractValue(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeWithoutXsiType(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.InternalSerialize(XmlWriterDelegator xmlWriter, Object obj, Boolean isDeclaredType, Boolean writeXsiType, Int32 declaredTypeID, RuntimeTypeHandle declaredTypeHandle)
+   at WriteArrayOfFeedInfoModelToXml(XmlWriterDelegator , Object , XmlObjectSerializerWriteContext , CollectionDataContract )
+   at System.Runtime.Serialization.CollectionDataContract.WriteXmlValue(XmlWriterDelegator xmlWriter, Object obj, XmlObjectSerializerWriteContext context)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.WriteDataContractValue(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   at System.Runtime.Serialization.XmlObjectSerializerWriteContext.SerializeWithoutXsiType(DataContract dataContract, XmlWriterDelegator xmlWriter, Object obj, RuntimeTypeHandle declaredTypeHandle)
+   at System.Runtime.Serialization.DataContractSerializer.InternalWriteObjectContent(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.DataContractSerializer.InternalWriteObject(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.WriteObjectHandleExceptions(XmlWriterDelegator writer, Object graph, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.WriteObject(XmlDictionaryWriter writer, Object graph)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeParameterPart(XmlDictionaryWriter writer, PartInfo part, Object graph)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeParameter(XmlDictionaryWriter writer, PartInfo part, Object graph)
+   at System.ServiceModel.Dispatcher.DataContractSerializerOperationFormatter.SerializeBody(XmlDictionaryWriter writer, MessageVersion version, String action, MessageDescription messageDescription, Object returnValue, Object[] parameters, Boolean isRequest)
+   at System.ServiceModel.Dispatcher.OperationFormatter.OperationFormatterMessage.OperationFormatterBodyWriter.OnWriteBodyContents(XmlDictionaryWriter writer)
+   at System.ServiceModel.Channels.BodyWriterMessage.OnWriteBodyContents(XmlDictionaryWriter writer)
+   at System.ServiceModel.Security.SecurityAppliedMessage.OnWriteBodyContents(XmlDictionaryWriter writer)
+   at System.ServiceModel.Security.SecurityAppliedMessage.OnWriteMessage(XmlDictionaryWriter writer)
+   at System.ServiceModel.Channels.TextMessageEncoderFactory.TextMessageEncoder.WriteMessage(Message message, Stream stream)
+   at System.ServiceModel.Channels.HttpOutput.WriteStreamedMessage(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpPipeline.EmptyHttpPipeline.SendReplyCore(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpPipeline.EmptyHttpPipeline.SendReply(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpRequestContext.OnReply(Message message, TimeSpan timeout)
+   at System.ServiceModel.Activation.HostedHttpContext.OnReply(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestContextBase.Reply(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelListener`1.SecurityRequestContext.OnReply(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestContextBase.Reply(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.Reply(MessageRpc& rpc)
+System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at System.ServiceModel.Channels.BytesReadPositionStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.ServiceModel.Activation.HostedHttpContext.HostedRequestHttpOutput.HostedResponseOutputStream.Write(Byte[] buffer, Int32 offset, Int32 count)"
+RequestId="" DateTime="2024-12-04 07:16:44.7725" ThreadId="54" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:16:44.7725" ThreadId="54" Level="FATAL" Message="X-Request-Id: 7ac92395-31a4-4fca-93fa-9839ee09811a" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:16:44.7725" ThreadId="54" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:16:44.7725" ThreadId="54" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43009595817},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:19:57.0251" ThreadId="67" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:19:57.0251" ThreadId="67" Level="FATAL" Message="X-Request-Id: f132ae96-4c1c-94d0-8a8f-fd8514fdea3d" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:19:57.0251" ThreadId="67" Level="FATAL" Message="Error Status Code : 405 MethodNotAllowed" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:19:57.0251" ThreadId="67" Level="FATAL" Message="Error Response: {"message":"PUT method is not allowed. It should be one of these method(s): GET"}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:20:34.6331" ThreadId="13" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:20:34.6331" ThreadId="13" Level="FATAL" Message="X-Request-Id: 8c2178be-2b27-4c37-b1ad-0d81d2669c91" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:20:34.6331" ThreadId="13" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:20:34.6331" ThreadId="13" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43172109077},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:22:01.0547" ThreadId="45" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:22:01.0547" ThreadId="45" Level="FATAL" Message="X-Request-Id: 0103969a-8b01-4158-a891-845c393fd02e" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:22:01.0547" ThreadId="45" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:22:01.0547" ThreadId="45" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43240475502},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:22:05.8735" ThreadId="45" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:22:05.8735" ThreadId="45" Level="FATAL" Message="X-Request-Id: d9e7262e-79d3-4075-be83-b767cfb92f30" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:22:05.8735" ThreadId="45" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:22:05.8735" ThreadId="45" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43182317830},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:24:31.7757" ThreadId="19" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:24:31.7757" ThreadId="19" Level="FATAL" Message="X-Request-Id: 8b045957-28ef-4e55-b074-be52f11fe84a" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:24:31.7757" ThreadId="19" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:24:31.7757" ThreadId="19" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43053869310},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:26:25.3346" ThreadId="46" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:26:25.3346" ThreadId="46" Level="FATAL" Message="X-Request-Id: e53f356c-88d6-4865-aa74-6fb25d0f257a" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:26:25.3346" ThreadId="46" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:26:25.3346" ThreadId="46" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43161569020},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:26:46.1454" ThreadId="47" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:26:46.1454" ThreadId="47" Level="FATAL" Message="X-Request-Id: 25090bea-ee26-41e8-9d94-c88734c06c56" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:26:46.1454" ThreadId="47" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:26:46.1454" ThreadId="47" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43232785080},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:27:44.6742" ThreadId="36" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:27:44.6742" ThreadId="36" Level="FATAL" Message="X-Request-Id: 66e7141b-4c99-4529-964f-1bf2b603698b" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:27:44.6742" ThreadId="36" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:27:44.6742" ThreadId="36" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043021540521},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:28:15.4903" ThreadId="53" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:28:15.4903" ThreadId="53" Level="FATAL" Message="X-Request-Id: d7da423b-d8e9-425c-8a63-e8b17991f88b" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:28:15.4903" ThreadId="53" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:28:15.4903" ThreadId="53" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043144795139},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:28:37.0226" ThreadId="52" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:28:37.0226" ThreadId="52" Level="FATAL" Message="X-Request-Id: 785434ba-de41-4d9d-9607-408e6e7022df" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:28:37.0226" ThreadId="52" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:28:37.0226" ThreadId="52" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043160547224},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:29:34.9312" ThreadId="36" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:29:34.9312" ThreadId="36" Level="FATAL" Message="X-Request-Id: 6d278edb-1035-434c-aff1-eaa00be02390" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:29:34.9312" ThreadId="36" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:29:34.9312" ThreadId="36" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043158404411},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:31:30.2183" ThreadId="25" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:31:30.2183" ThreadId="25" Level="FATAL" Message="X-Request-Id: 6328b203-932e-4cca-a4a0-407d9355557e" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:31:30.2183" ThreadId="25" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-12-04 07:31:30.2183" ThreadId="25" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043059772139},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="d56542894313" DateTime="2024-12-04 11:35:30.9415" ThreadId="51" Level="FATAL" Message="Description: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake." Provider="ComdataMC" Exception=""

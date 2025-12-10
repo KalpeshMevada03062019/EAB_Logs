@@ -1,0 +1,58 @@
+RequestId="73bfd974bab5" DateTime="2024-09-26 01:37:45.5207" ThreadId="73" Level="FATAL" Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" Exception=""
+RequestId="" DateTime="2024-09-26 03:25:03.3783" ThreadId="44" Level="FATAL" Message="The request failed. The remote server returned an error: (503) Server Unavailable." Provider="" Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (503) Server Unavailable. ---> System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.Exchange.WebServices.Data.EwsHttpWebRequest.Microsoft.Exchange.WebServices.Data.IEwsHttpWebRequest.GetResponse() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsHttpWebRequest.cs:line 113
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 821
+   --- End of inner exception stack trace ---
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 831
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ValidateAndEmitRequest(IEwsHttpWebRequest& request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 724
+   at Microsoft.Exchange.WebServices.Data.MultiResponseServiceRequest`1.Execute() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\MultiResponseServiceRequest.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.ExchangeService.BindToFolder(FolderId folderId, PropertySet propertySet) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ExchangeService.cs:line 278
+   at Microsoft.Exchange.WebServices.Data.ExchangeService.BindToFolder[TFolder](FolderId folderId, PropertySet propertySet) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ExchangeService.cs:line 295
+   at ABC.EXD.InnerGateway.MailApiService.<>c__DisplayClassb.<GetInboxMailIds>b__8() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 120
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 106
+   at ABC.EXD.InnerGateway.MailApiService.GetInboxMailIds(MailAccount account, Int32 startIndex, Int32 pageSize) in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 126
+   at SyncInvokeGetInboxMailIds(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.Exchange.WebServices.Data.EwsHttpWebRequest.Microsoft.Exchange.WebServices.Data.IEwsHttpWebRequest.GetResponse() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsHttpWebRequest.cs:line 113
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 821"
+RequestId="" DateTime="2024-09-26 07:17:24.0366" ThreadId="11" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:17:24.0366" ThreadId="11" Level="FATAL" Message="X-Request-Id: 62b98472-3398-434f-ae59-cbe58d5e74f0" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:17:24.0366" ThreadId="11" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:17:24.0366" ThreadId="11" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043021540521},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:18:33.1662" ThreadId="90" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:18:33.1662" ThreadId="90" Level="FATAL" Message="X-Request-Id: d40c4b3b-6d0a-41a7-ad86-1b16cb216954" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:18:33.1662" ThreadId="90" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:18:33.1662" ThreadId="90" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043144795139},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:19:27.5203" ThreadId="54" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:19:27.5203" ThreadId="54" Level="FATAL" Message="X-Request-Id: c966b365-86e7-4fe7-ad08-7625daa0de38" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:19:27.5203" ThreadId="54" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:19:27.5203" ThreadId="54" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043160547224},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:21:39.0867" ThreadId="54" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:21:39.0867" ThreadId="54" Level="FATAL" Message="X-Request-Id: 9fb34274-445d-4db2-b95f-59e4aa1f63e3" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:21:39.0867" ThreadId="54" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:21:39.0867" ThreadId="54" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043158404411},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:25:39.3820" ThreadId="55" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:25:39.3820" ThreadId="55" Level="FATAL" Message="X-Request-Id: 57499492-21f1-4157-b581-c567b5feeac9" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:25:39.3820" ThreadId="55" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 07:25:39.3820" ThreadId="55" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043059772139},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-09-26 22:50:03.5087" ThreadId="58" Level="FATAL" Message="Mailbox move in progress. Try again later., Cannot open mailbox. Server = SJ2PR15MB6468.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965" Provider="" Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SJ2PR15MB6468.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965
+   at Microsoft.Exchange.WebServices.Data.ServiceResponse.InternalThrowIfNecessary() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Responses\ServiceResponse.cs:line 277
+   at Microsoft.Exchange.WebServices.Data.MultiResponseServiceRequest`1.Execute() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\MultiResponseServiceRequest.cs:line 169
+   at Microsoft.Exchange.WebServices.Data.ExchangeService.BindToFolder(FolderId folderId, PropertySet propertySet) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ExchangeService.cs:line 278
+   at Microsoft.Exchange.WebServices.Data.ExchangeService.BindToFolder[TFolder](FolderId folderId, PropertySet propertySet) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ExchangeService.cs:line 295
+   at ABC.EXD.InnerGateway.MailApiService.<>c__DisplayClass6.<GetInboxMailCount>b__5() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 104
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 106
+   at ABC.EXD.InnerGateway.MailApiService.GetInboxMailCount(MailAccount account) in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 109
+   at SyncInvokeGetInboxMailCount(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)"

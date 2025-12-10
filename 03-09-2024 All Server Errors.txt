@@ -1,0 +1,158 @@
+*[03-09-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal  
+-------------------------
+1. #Timeout error
+RequestId="0a58b6fe5930" UserId="239091" UserEmail="DHamami@eab.com" 
+DateTime="2024-09-03 09:12:20.4817" ThreadId="29" Level="FATAL" 
+Message="Calling 'Read' when the data reader is closed is not a valid operation." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: Calling 'Read' when the data reader is closed is not a valid operation. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.PurposeService.<GetAllUserPurposesAsync>d__93.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\PurposeService.cs:line 690
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<>c__DisplayClass1ec.<<CreateExpenseGridModelAsync>b__1cd>d__1f7.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 0
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<CreateExpenseGridModelAsync>d__1fa.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 1311
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+:::TRACE:::
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.0909" ThreadId="32" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/unexpensed/0?sortKey=1&sortOrder=2 START"
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.1541" ThreadId="22" Level="TRACE" Message="Get Unexpensed transactions sorted by Date Descending start."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.1541" ThreadId="22" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.1541" ThreadId="22" Level="TRACE" Message="MyLog: startIndex is: 0 AND pageSize is: 50"
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2332" ThreadId="19" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation end. Duration: 73 ms."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="MyLog: ExpenseGridRowsId list is: 2251204,2254399,2254854"
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="MyLog: Include Allocations: False"
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="MyLog: Ordered Transaction Ids list is: 2254854,2254399,2251204"
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="MyLog: Owner Id is: 61e21785-46c4-4a5e-a424-693783850f75"
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="MyLog: Process transaction ID is: 2254854"
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="MyLog: Transaction 2254854 added to the list."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="MyLog: Process transaction ID is: 2254399"
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="MyLog: Transaction 2254399 added to the list."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="MyLog: Process transaction ID is: 2251204"
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="MyLog: Transaction 2251204 added to the list."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="Get Unexpensed transactions sorted by Date Descending end. Duration: 95 ms."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="CreateExpenseGridModel start."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="35" Level="TRACE" Message="CreateExpenseGridModel: get transactions purposes. start."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="29" Level="TRACE" Message="CreateExpenseGridModel: get transactions purposes. end. Duration: 2 ms."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="29" Level="TRACE" Message="CreateExpenseGridModel: get allocated users. start."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2489" ThreadId="29" Level="TRACE" Message="CreateExpenseGridModel: get allocated users. end. Duration: 0 ms."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:11:35.2654" ThreadId="29" Level="TRACE" Message="CreateExpenseGridModel: get all user's purposes. start."
+RequestId="0a58b6fe5930" UserEmail="DHamami@eab.com" DateTime="2024-09-03 09:12:31.0030" ThreadId="29" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/unexpensed/0?sortKey=1&sortOrder=2 Completed in 55912 ms"
+
+:::INFO:::
+
+
+
+2.
+RequestId="e9db0f95d692" UserId="240346" UserEmail="KWolf@eab.com"
+DateTime="2024-09-03 08:42:12.7130" ThreadId="9" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1842
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsActionAsync>d__db`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 0
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsAsync>d__4d.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 411
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<>c__DisplayClass85.<<SubmittedAsync>b__84>d__87.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 0
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<SubmittedAsync>d__8a.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 348
+
+3. #TIMEOUT ERROR
+RequestId="d59475b4ec96" UserId="239133" UserEmail="CPilkington@eab.com" 
+DateTime="2024-09-03 17:24:57.8874" ThreadId="44" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:1/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not resp...)."
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+RequestId="a64381e8e936" SessionId="_34834cb4-a51d-422d-8a8e-2c68007900e2-4B6CEB8069F94C0AEBF8D2ACFBB37CE9" UserId="233613" UserEmail="RCastillo@eab.com" 
+DateTime="2024-09-03 08:52:25.7050" ThreadId="5" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+  
+2.
+RequestId="cc76ab34e6e6" SessionId="_733915ef-43fc-4dbb-aec5-81dea821183e-A22432A8849F838D7514CD7180045550" UserId="239761" UserEmail="DPikul@eab.com" 
+DateTime="2024-09-03 07:07:42.3856" ThreadId="24" Level="FATAL" 
+Message="The requested service, 'https://eabgowers-p01/ers_api/ErsApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ers_api/ErsApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-09-03 09:12:45.2179" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #2 same error in error which was tracked for serveral days.
+DateTime="2024-09-03 03:03:24.5498" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-09-03 09:12:43.5223" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="bd1a53449b38" 
+DateTime="2024-09-03 03:09:57.8017" ThreadId="43" Level="FATAL" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+:::TRACE:::
+RequestId="bd1a53449b38" DateTime="2024-09-03 03:09:57.6755" ThreadId="43" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="8b793e72be83" DateTime="2024-09-03 03:09:57.8017" ThreadId="43" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239159X005078','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="8b793e72be83" DateTime="2024-09-03 03:09:57.8017" ThreadId="43" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="8b793e72be83" DateTime="2024-09-03 03:09:58.2296" ThreadId="43" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 416 ms." Provider="Comdata"
+
+2.
+RequestId="cb84c50b9b04" 
+DateTime="2024-09-03 03:26:57.1154" ThreadId="24" Level="FATAL" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="Comdata" 
+Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. #6 same error
+RequestId="" 
+DateTime="2024-09-03 08:52:27.8476" ThreadId="15" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------

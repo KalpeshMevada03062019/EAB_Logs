@@ -1,0 +1,88 @@
+*[02-06-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="219869e96659" SessionId="_7c6c032a-07dd-457b-9921-9d991f78cece-734138743D297573B61E170FAEEBA734" UserId="235633" UserEmail="ANewell@eab.com" 
+DateTime="2025-06-02 14:06:13.6433" ThreadId="19" Level="FATAL" 
+Message="HTTP validation error: Transaction cannot be saved due to incorrect status." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="219869e96659" UserId="235633" UserEmail="ANewell@eab.com" DateTime="2025-06-02 14:06:13.5800" ThreadId="61" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/toll/save START"
+RequestId="219869e96659" UserId="235633" UserEmail="ANewell@eab.com" DateTime="2025-06-02 14:06:13.5800" ThreadId="61" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/toll/save Request content: {'allocationItems':[{'id':0,'allocatedBy':'Employee','isOwn':true,'percentage':100,'value':'Al Newell','departmentExternalId':null,'departmentAllocationAvailability':null,'userId':'9968ef29-5a60-4c4d-9e77-4940f2dce30c','availablePurposesIds':null,'isGuestUser':false,'userEntity':'EAB'}],'expenses':[{'businessAmount':'67.95','date':'05/20/2025','expenseType':{'id':33,'name':'Toll','route':null},'id':3325183,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'67.95'}],'transactionInfo':{'traveler':'Al Newell','createdFromTransactionId':null,'date':'05/20/2025','logoId':null,'totalAmount':67.95,'merchant':{'merchantCategoryId':null,'address':'Washington, DC','city':'Washington','country':'USA','name':'','state':'DC','zip':'','displayName':''},'purposes':[{'id':41041,'name':'Internal Meeting','isBudgetLine':false,'isGeneric':true,'hasHostCostCenter':true,'isIncentiveTrip':false,'assignedAmount':67.95,'percentage':100,'hasDollarCap':false,'hostCostCenterName':'Sales Strategic Enrollment (Enrollment)','hostCostCenterId':596,'isInstitutionRequired':false,'institutionId':null,'institutionName':null,'isSelected':false}],'version':'AAAAAAElOZ8=','isShared':false,'isRejected':null,'currency':{'id':5,'code':'USD','name':'United States dollar','countryName':'United States','countryCode':'USA'},'isInInternationalMode':false,'exchangeRate':1,'paymentInfo':{'formOfPayment':'Cash','name':'A.Newell-Cash'},'reassignmentInfo':null,'ownerManagementLevel':'D2','notes':'Leader's Council','approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(USD) United States dollar'},'transactionId':2376050,'receiptId':226544,'clientDate':'2025-06-02T14:06:17-04:00'}"
+RequestId="219869e96659" UserId="235633" UserEmail="ANewell@eab.com" DateTime="2025-06-02 14:06:13.6113" ThreadId="61" Level="TRACE" Message="Validating access right start."
+RequestId="219869e96659" UserId="235633" UserEmail="ANewell@eab.com" DateTime="2025-06-02 14:06:13.6270" ThreadId="19" Level="TRACE" Message="Validating access right end. Duration: 2 ms."
+RequestId="219869e96659" UserId="235633" UserEmail="ANewell@eab.com" DateTime="2025-06-02 14:06:13.6275" ThreadId="61" Level="TRACE" Message="Start retrieving transactions to revalidate for InRule. Transaction Id = 2376050"
+RequestId="219869e96659" UserId="235633" UserEmail="ANewell@eab.com" DateTime="2025-06-02 14:06:13.6275" ThreadId="61" Level="TRACE" Message="Transactions retrieving skipped."
+RequestId="219869e96659" UserId="235633" UserEmail="ANewell@eab.com" DateTime="2025-06-02 14:06:13.6275" ThreadId="61" Level="TRACE" Message="Updating transaction entity start."
+RequestId="219869e96659" UserId="235633" UserEmail="ANewell@eab.com" DateTime="2025-06-02 14:06:13.6433" ThreadId="19" Level="TRACE" Message="Updating transaction entity end. Duration: 23 ms."
+RequestId="219869e96659" UserId="235633" UserEmail="ANewell@eab.com" DateTime="2025-06-02 14:06:13.6583" ThreadId="19" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/toll/save Completed in 78 ms"
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

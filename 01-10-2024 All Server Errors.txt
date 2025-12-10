@@ -1,0 +1,200 @@
+*[01-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+
+2.
+RequestId="0cef9e918c69" UserId="238612" UserEmail="MSmith@eab.com" DateTime="2024-10-01 12:08:03.1382" ThreadId="43" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration. ---> System.InvalidOperationException: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+   at System.Data.Entity.Core.Objects.ObjectStateManager.FixupKey(EntityEntry entry)
+   at System.Data.Entity.Core.Objects.EntityEntry.AcceptChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.AcceptAllChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at ABC.Common.Web.Infrastructure.GlobalExceptionLogger.<LogAsync>d__0.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\GlobalExceptionLogger.cs:line 36
+System.InvalidOperationException: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+   at System.Data.Entity.Core.Objects.ObjectStateManager.FixupKey(EntityEntry entry)
+   at System.Data.Entity.Core.Objects.EntityEntry.AcceptChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.AcceptAllChanges()
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)"
+
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. #3 same error
+RequestId="d33a01da3725" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-10-01 12:33:56.2875" ThreadId="16" Level="FATAL" 
+Message="HTTP validation error: Add new card request failed. Reason: 00934,EXPIRATION DATE IS INVALID. UserId: ddeb3734-f465-4e01-9850-cadb111b9e93. UserName: EAB " 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace Logs:
+------------
+RequestId="d33a01da3725" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-10-01 12:33:53.5415" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5442/replace START"
+RequestId="d33a01da3725" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-10-01 12:33:53.6737" ThreadId="16" Level="TRACE" Message="AddCreditCardAsync start."
+RequestId="d33a01da3725" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-10-01 12:33:56.2875" ThreadId="16" Level="TRACE" Message="AddCreditCardAsync end. Duration: 2615 ms."
+RequestId="d33a01da3725" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-10-01 12:33:56.2875" ThreadId="16" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5442/replace Completed in 2746 ms"
+
+Info Logs:
+-----------
+#RequestId="54c63b1e789a" SessionId="_7f8412b7-c8da-4710-9432-fb93e4842c2f-DF97D54CFAAA19F4B132A9AFFED64AF0" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-10-01 12:33:46.0887" ThreadId="8" Level="INFO" Message="Credit card with masked number 556368XXXXXX8455 has been placed to Blocked status for user id 'ddeb3734-f465-4e01-9850-cadb111b9e93'. Actor Id: beefb85a-b04d-4582-97c6-0a9bdab41a53"
+RequestId="ebe9340727b7" SessionId="_de407245-3082-4040-85e7-bea6be8a2a24-F3AA43224813008FEA60AA54CD58ECC6" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-10-01 14:34:05.1182" ThreadId="30" Level="INFO" Message="User 502586 has been logged out"
+RequestId="ee2b01e023f7" SessionId="_de407245-3082-4040-85e7-bea6be8a2a24-B26F33D1B824574BF79AF1B43FCD4701" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-10-01 18:49:06.0320" ThreadId="18" Level="INFO" Message="Credit card with masked number 556368XXXXXX9824 has been placed to Blocked status for user id '568727b9-e457-43ef-a317-785404afced7'. Actor Id: beefb85a-b04d-4582-97c6-0a9bdab41a53"
+RequestId="c4ad953202b4" SessionId="_de407245-3082-4040-85e7-bea6be8a2a24-B26F33D1B824574BF79AF1B43FCD4701" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-10-01 19:51:47.5190" ThreadId="18" Level="INFO" Message="User 502586 has been logged out"
+
+EXD_InnerGateway_Trace:
+-----------------------
+RequestId="c02a12c51d0f" DateTime="2024-10-01 12:33:56.0011" ThreadId="76" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'BRV61','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'THOMAS','cardLastName':'REID','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'238682X005479','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'','alertServiceFlag':false,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'THOMAS REID','mailAddress1':'3320 Lusk St','mailAddress2':' ','mailCity':'Virginia Beach','mailState':'VA','mailZip':'23464','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="c02a12c51d0f" DateTime="2024-10-01 12:33:56.0011" ThreadId="76" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="c02a12c51d0f" DateTime="2024-10-01 12:33:58.5737" ThreadId="76" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 2569 ms." Provider="ComdataMC"
+RequestId="c02a12c51d0f" DateTime="2024-10-01 12:33:58.5737" ThreadId="76" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'failure','requestUID':null,'Items':['099901','00934,EXPIRATION DATE IS INVALID     ,'ItemsElementName':[6,7]}}" Provider="ComdataMC"
+
+RequestId="978a9ef2e1d2" DateTime="2024-10-01 12:34:04.7075" ThreadId="29" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'BRV61','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'THOMAS','cardLastName':'REID','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'238682X005479','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'','alertServiceFlag':false,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'THOMAS REID','mailAddress1':'3320 Lusk St','mailAddress2':' ','mailCity':'Virginia Beach','mailState':'VA','mailZip':'23464','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="978a9ef2e1d2" DateTime="2024-10-01 12:34:04.7075" ThreadId="29" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="978a9ef2e1d2" DateTime="2024-10-01 12:34:07.3287" ThreadId="29" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 2621 ms." Provider="ComdataMC"
+RequestId="978a9ef2e1d2" DateTime="2024-10-01 12:34:07.3443" ThreadId="29" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'failure','requestUID':null,'Items':['099901','00934,EXPIRATION DATE IS INVALID     ,'ItemsElementName':[6,7]}}" Provider="ComdataMC"
+
+RequestId="f637cb338752" DateTime="2024-10-01 12:34:15.2337" ThreadId="29" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'BRV61','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'THOMAS','cardLastName':'REID','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'238682X005479','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'','alertServiceFlag':false,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'THOMAS REID','mailAddress1':'3320 Lusk St','mailAddress2':' ','mailCity':'Virginia Beach','mailState':'VA','mailZip':'23464','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="f637cb338752" DateTime="2024-10-01 12:34:15.2337" ThreadId="29" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="f637cb338752" DateTime="2024-10-01 12:34:17.5093" ThreadId="39" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 2278 ms." Provider="ComdataMC"
+RequestId="f637cb338752" DateTime="2024-10-01 12:34:17.5093" ThreadId="39" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'failure','requestUID':null,'Items':['099901','00934,EXPIRATION DATE IS INVALID     ,'ItemsElementName':[6,7]}}" Provider="ComdataMC"
+
+RequestId="106c3535cc79" DateTime="2024-10-01 12:36:25.2260" ThreadId="52" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'BRV61','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'THOMAS','cardLastName':'REID','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'238682X005479','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'','alertServiceFlag':false,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'THOMAS REID','mailAddress1':'3320 Lusk St','mailAddress2':' ','mailCity':'Virginia Beach','mailState':'VA','mailZip':'23464','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="106c3535cc79" DateTime="2024-10-01 12:36:25.2260" ThreadId="52" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="106c3535cc79" DateTime="2024-10-01 12:36:27.2049" ThreadId="52" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 1981 ms." Provider="ComdataMC"
+RequestId="106c3535cc79" DateTime="2024-10-01 12:36:27.2049" ThreadId="52" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'failure','requestUID':null,'Items':['099901','00934,EXPIRATION DATE IS INVALID     ,'ItemsElementName':[6,7]}}" Provider="ComdataMC"
+
+RequestId="57783ff52ba3" DateTime="2024-10-01 12:36:36.4909" ThreadId="26" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'BRV61','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'THOMAS','cardLastName':'REID','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'238682X005479','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'','alertServiceFlag':false,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'THOMAS REID','mailAddress1':'3320 Lusk St','mailAddress2':' ','mailCity':'Virginia Beach','mailState':'VA','mailZip':'23464','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="57783ff52ba3" DateTime="2024-10-01 12:36:36.4909" ThreadId="26" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="57783ff52ba3" DateTime="2024-10-01 12:36:38.7958" ThreadId="26" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 2296 ms." Provider="ComdataMC"
+RequestId="57783ff52ba3" DateTime="2024-10-01 12:36:38.7958" ThreadId="26" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'failure','requestUID':null,'Items':['099901','00934,EXPIRATION DATE IS INVALID     ,'ItemsElementName':[6,7]}}" Provider="ComdataMC"
+
+RequestId="1cae8ffaa49b" DateTime="2024-10-01 13:28:34.1120" ThreadId="29" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'BRV61','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'THOMAS','cardLastName':'REID','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'238682X005479','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'','alertServiceFlag':false,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'THOMAS REID','mailAddress1':'3320 Lusk St','mailAddress2':' ','mailCity':'Virginia Beach','mailState':'VA','mailZip':'23464','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="1cae8ffaa49b" DateTime="2024-10-01 13:28:34.1120" ThreadId="29" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="1cae8ffaa49b" DateTime="2024-10-01 13:28:36.2947" ThreadId="82" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 2181 ms." Provider="ComdataMC"
+RequestId="1cae8ffaa49b" DateTime="2024-10-01 13:28:36.2947" ThreadId="82" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'failure','requestUID':null,'Items':['099901','00934,EXPIRATION DATE IS INVALID     ,'ItemsElementName':[6,7]}}" Provider="ComdataMC"
+
+RequestId="f0ab557d77d4" DateTime="2024-10-01 13:34:58.6262" ThreadId="65" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'BRV61','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'THOMAS','cardLastName':'REID','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'238682X005479','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'','alertServiceFlag':false,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'THOMAS REID','mailAddress1':'3320 Lusk St','mailAddress2':' ','mailCity':'Virginia Beach','mailState':'VA','mailZip':'23464','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="f0ab557d77d4" DateTime="2024-10-01 13:34:58.6262" ThreadId="65" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="f0ab557d77d4" DateTime="2024-10-01 13:35:01.0627" ThreadId="29" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 2436 ms." Provider="ComdataMC"
+RequestId="f0ab557d77d4" DateTime="2024-10-01 13:35:01.0627" ThreadId="29" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'failure','requestUID':null,'Items':['099901','00934,EXPIRATION DATE IS INVALID     ,'ItemsElementName':[6,7]}}" Provider="ComdataMC"
+
+RequestId="aafe9fef0eca" DateTime="2024-10-01 14:40:39.2097" ThreadId="29" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'BRV61','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'RACHEL','cardLastName':'BECKER','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'229370X005479','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*1585','alertServiceFlag':true,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'RACHEL BECKER','mailAddress1':'1260 Braddock Place','mailAddress2':'UNIT 212','mailCity':'Alexandria','mailState':'VA','mailZip':'22314','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="aafe9fef0eca" DateTime="2024-10-01 14:40:39.2097" ThreadId="29" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="aafe9fef0eca" DateTime="2024-10-01 14:40:41.3136" ThreadId="79" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 2102 ms." Provider="ComdataMC"
+RequestId="aafe9fef0eca" DateTime="2024-10-01 14:40:41.3136" ThreadId="79" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'failure','requestUID':null,'Items':['099901','00934,EXPIRATION DATE IS INVALID     ,'ItemsElementName':[6,7]}}" Provider="ComdataMC"
+
+RequestId="af842b6137b9" DateTime="2024-10-01 14:44:10.9949" ThreadId="55" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'BRV61','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'RACHEL','cardLastName':'BECKER','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'229370X005479','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*1585','alertServiceFlag':true,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'RACHEL BECKER','mailAddress1':'1260 Braddock Place','mailAddress2':'UNIT 212','mailCity':'Alexandria','mailState':'VA','mailZip':'22314','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="af842b6137b9" DateTime="2024-10-01 14:44:10.9949" ThreadId="55" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="af842b6137b9" DateTime="2024-10-01 14:44:14.9004" ThreadId="75" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 3911 ms." Provider="ComdataMC"
+RequestId="af842b6137b9" DateTime="2024-10-01 14:44:14.9004" ThreadId="75" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'failure','requestUID':null,'Items':['099901','00934,EXPIRATION DATE IS INVALID     ,'ItemsElementName':[6,7]}}" Provider="ComdataMC"
+
+RequestId="c9c23a10ce96" DateTime="2024-10-01 13:28:47.8583" ThreadId="65" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'BRV61','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'THOMAS','cardLastName':'REID','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'238682X005479','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'','alertServiceFlag':false,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'THOMAS REID','mailAddress1':'3320 Lusk St','mailAddress2':' ','mailCity':'Virginia Beach','mailState':'VA','mailZip':'23464','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="c9c23a10ce96" DateTime="2024-10-01 13:28:47.8583" ThreadId="65" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="c9c23a10ce96" DateTime="2024-10-01 13:28:50.4352" ThreadId="65" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 2567 ms." Provider="ComdataMC"
+RequestId="c9c23a10ce96" DateTime="2024-10-01 13:28:50.4352" ThreadId="65" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'failure','requestUID':null,'Items':['099901','00934,EXPIRATION DATE IS INVALID     ,'ItemsElementName':[6,7]}}" Provider="ComdataMC"
+
+
+
+2. #4 same error
+RequestId="655011b4d3f5" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-10-01 12:36:24.9136" ThreadId="9" Level="FATAL" 
+Message="HTTP validation error: Add new card request failed. Reason: 00934,EXPIRATION DATE IS INVALID. UserId: ddeb3734-f465-4e01-9850-cadb111b9e93. UserName: EAB " 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+3. #1 
+RequestId="f8fc23070612" UserId="238896" UserEmail="KDornfeld@eab.com" DateTime="2024-10-01 13:34:58.6548" ThreadId="7" Level="FATAL" 
+Message="HTTP validation error: Add new card request failed. Reason: 00934,EXPIRATION DATE IS INVALID. UserId: ddeb3734-f465-4e01-9850-cadb111b9e93. UserName: EAB " 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+4. #2 error
+RequestId="42af8e2c1bd9" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-10-01 14:40:38.7911" ThreadId="30" Level="FATAL" 
+Message="HTTP validation error: Add new card request failed. Reason: 00934,EXPIRATION DATE IS INVALID. UserId: f5088bf5-4b99-4291-a563-f9adbb4dbe94. UserName: EAB " 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace Logs:
+............
+RequestId="42af8e2c1bd9" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-10-01 14:40:36.6608" ThreadId="29" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7535/replace START"
+RequestId="42af8e2c1bd9" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-10-01 14:40:36.6934" ThreadId="29" Level="TRACE" Message="AddCreditCardAsync start."
+RequestId="42af8e2c1bd9" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-10-01 14:40:38.7911" ThreadId="30" Level="TRACE" Message="AddCreditCardAsync end. Duration: 2107 ms."
+RequestId="42af8e2c1bd9" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-10-01 14:40:38.7911" ThreadId="30" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7535/replace Completed in 2130 ms"
+
+Info Logs:
+............
+RequestId="76ea3cd87f93" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-10-01 14:40:26.2410" ThreadId="30" Level="INFO" Message="Credit card activated. MaskedNumber = '556368XXXXXX0963', EmployeeNumber = '229370X005475', ActorId = 'f5088bf5-4b99-4291-a563-f9adbb4dbe94', Description = ''"
+RequestId="76ea3cd87f93" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-10-01 14:40:26.3144" ThreadId="30" Level="INFO" Message="Billing address for credit card with token '399J26J6C2' was updated in Comdata"
+RequestId="76ea3cd87f93" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-10-01 14:40:31.9969" ThreadId="30" Level="INFO" Message="Credit card with masked number 556368XXXXXX1663 has been placed to Blocked status for user id 'f5088bf5-4b99-4291-a563-f9adbb4dbe94'. Actor Id: f5088bf5-4b99-4291-a563-f9adbb4dbe94"
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #TIMEOUT ERROR
+RequestId="737f3048664e" UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-10-01 07:01:29.3272" ThreadId="12" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. #Timeout
+DateTime="2024-10-01 07:00:42.5881" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An error occurred while executing the command definition. See the inner exception for details.
+
+2. #Timeout
+DateTime="2024-10-01 07:00:43.3474" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsToBudgetOwner'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+3. #Timeout
+DateTime="2024-10-01 07:00:46.1856" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ReassignedTransactionUpdater'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

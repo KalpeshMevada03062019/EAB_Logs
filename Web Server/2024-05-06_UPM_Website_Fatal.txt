@@ -1,0 +1,46 @@
+RequestId="9d68b800e78d" SessionId="_eeb900bf-67e9-4261-a0bf-883c45d46df6-3B00829A1C386781DEEA64108A89851F" UserId="240172" UserEmail="YColeman@eab.com" DateTime="2024-05-06 12:17:14.3799" ThreadId="43" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An error occurred while executing the command definition. See the inner exception for details. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ----> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.ComponentModel.Win32Exception: The wait operation timed out
+
+   --- End of inner ExceptionDetail stack trace ---
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System....)."
+RequestId="38869f405417" SessionId="_a490ec6f-5e5a-433a-880d-7ffb709a738e-617B37ECCD387819229971CDD0BA004D" UserId="237732" UserEmail="CHubbard@eab.com" DateTime="2024-05-06 12:26:54.1158" ThreadId="46" Level="FATAL" Message="An error occurred while communicating with the remote host. The error code is 0x80070057." Exception="System.Web.HttpException (0x80004005): An error occurred while communicating with the remote host. The error code is 0x80070057. ---> System.ArgumentException: Value does not fall within the expected range.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at System.IO.Stream.<>c.<BeginWriteInternal>b__46_0(Object <p0>)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.IO.Stream.EndWrite(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.WebHost.HttpControllerHandler.<WriteStreamedResponseContentAsync>d__15.MoveNext()
+System.ArgumentException: Value does not fall within the expected range."
+RequestId="ed447f06eeef" SessionId="_a490ec6f-5e5a-433a-880d-7ffb709a738e-542D4F510160153808BD1DCE9C7D2719" UserId="240327" UserEmail="BCannon@eab.com" DateTime="2024-05-06 17:53:39.8555" ThreadId="49" Level="FATAL" Message="The remote host closed the connection. The error code is 0x80070057." Exception="System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at System.IO.Stream.<>c.<BeginWriteInternal>b__46_0(Object <p0>)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.IO.Stream.EndWrite(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.WebHost.HttpControllerHandler.<WriteStreamedResponseContentAsync>d__15.MoveNext()"

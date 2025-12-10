@@ -1,0 +1,215 @@
+*[10-03-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #3 same error
+RequestId="dc59de187133" UserId="238857" UserEmail="MBecker@eab.com" 
+DateTime="2025-03-10 19:49:26.4616" ThreadId="51" Level="FATAL" 
+Message="HTTP validation error: Rate isn't available for specified currency and date." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+
+RequestId="dc59de187133" SessionId="_4f0e2472-171a-4eb3-8819-75918f7f225c-4A9598237E602D5FFDB383C102C74BB0" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-10 19:49:26.3826" ThreadId="51" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate START"
+RequestId="dc59de187133" SessionId="_4f0e2472-171a-4eb3-8819-75918f7f225c-4A9598237E602D5FFDB383C102C74BB0" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-10 19:49:26.3826" ThreadId="51" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate Request content: {'allocationItems':[{'id':0,'allocatedBy':'Employee','isOwn':true,'percentage':100,'value':'Matt Becker','departmentExternalId':null,'departmentAllocationAvailability':null,'userId':'d094540d-bc2b-4641-90a5-8e696020627c','availablePurposesIds':null,'isGuestUser':false,'userEntity':'EAB'}],'expenses':[{'mealApproverName':null,'financeApprovedMealsThreshold':500,'memberMealThreshold':120,'businessAmount':'17.53','date':'03/11/2025','expenseType':{'id':5,'name':'Food','route':null},'id':null,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'27.70'}],'transactionInfo':{'basedCityReason':null,'traveler':'Matt Becker','uberTransactionType':null,'voucherProgram':null,'createdFromTransactionId':null,'date':'03/11/2025','logoId':null,'totalAmount':17.53,'merchant':{'merchantCategoryId':null,'address':'Sydney, Australia','city':'Sydney','country':'AU','name':'Sydney Airport','state':'NSW','zip':'','displayName':'Sydney Airport','countryFull':'Australia','route':'','streetNumber':''},'purposes':[{'id':41601,'name':'Internal Meeting','isBudgetLine':false,'isGeneric':true,'hasHostCostCenter':true,'isIncentiveTrip':false,'assignedAmount':0,'percentage':100,'hasDollarCap':false,'hostCostCenterName':'Information Security','hostCostCenterId':747,'isInstitutionRequired':false,'institutionId':null,'institutionName':null,'isSelected':false,'checked':true}],'version':null,'isShared':false,'isRejected':null,'currency':{'rate':0.63287,'id':11,'code':'AUD','name':'Australian dollar','countryName':'Australia','countryCode':'AUS'},'isInInternationalMode':true,'exchangeRate':0.63287,'paymentInfo':{'formOfPayment':'Cash','name':'M.Becker-Cash'},'reassignmentInfo':null,'ownerManagementLevel':null,'notes':null,'approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(AUD) Australian dollar','mealApproverName':null,'perDiems':[],'originalPurposes':[{'id':41601,'name':'Internal Meeting','isBudgetLine':false,'isGeneric':true,'hasHostCostCenter':true,'isIncentiveTrip':false,'assignedAmount':0,'percentage':100,'hasDollarCap':false,'hostCostCenterName':'Information Security','hostCostCenterId':747,'isInstitutionRequired':false,'institutionId':null,'institutionName':null,'isSelected':false,'checked':true}]},'transactionId':null,'receiptId':null,'clientDate':'2025-03-11T10:49:27+11:00'}"
+RequestId="dc59de187133" SessionId="_4f0e2472-171a-4eb3-8819-75918f7f225c-4A9598237E602D5FFDB383C102C74BB0" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-10 19:49:26.4290" ThreadId="51" Level="TRACE" Message="Validating access right start."
+RequestId="dc59de187133" SessionId="_4f0e2472-171a-4eb3-8819-75918f7f225c-4A9598237E602D5FFDB383C102C74BB0" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-10 19:49:26.4290" ThreadId="51" Level="TRACE" Message="Validating access right end. Duration: 0 ms."
+RequestId="dc59de187133" SessionId="_4f0e2472-171a-4eb3-8819-75918f7f225c-4A9598237E602D5FFDB383C102C74BB0" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-10 19:49:26.4290" ThreadId="51" Level="TRACE" Message="Updating transaction entity start."
+RequestId="dc59de187133" SessionId="_4f0e2472-171a-4eb3-8819-75918f7f225c-4A9598237E602D5FFDB383C102C74BB0" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-10 19:49:26.4452" ThreadId="17" Level="TRACE" Message="GetRateAsync start."
+RequestId="dc59de187133" SessionId="_4f0e2472-171a-4eb3-8819-75918f7f225c-4A9598237E602D5FFDB383C102C74BB0" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-10 19:49:26.4616" ThreadId="51" Level="TRACE" Message="GetRateAsync end. Duration: 14 ms."
+RequestId="dc59de187133" SessionId="_4f0e2472-171a-4eb3-8819-75918f7f225c-4A9598237E602D5FFDB383C102C74BB0" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-10 19:49:26.4616" ThreadId="51" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate Completed in 79 ms"
+{
+  "allocationItems": [
+    {
+      "id": 0,
+      "allocatedBy": "Employee",
+      "isOwn": true,
+      "percentage": 100,
+      "value": "Matt Becker",
+      "departmentExternalId": null,
+      "departmentAllocationAvailability": null,
+      "userId": "d094540d-bc2b-4641-90a5-8e696020627c",
+      "availablePurposesIds": null,
+      "isGuestUser": false,
+      "userEntity": "EAB"
+    }
+  ],
+  "expenses": [
+    {
+      "mealApproverName": null,
+      "financeApprovedMealsThreshold": 500,
+      "memberMealThreshold": 120,
+      "businessAmount": "17.53",
+      "date": "03/11/2025",
+      "expenseType": {
+        "id": 5,
+        "name": "Food",
+        "route": null
+      },
+      "id": null,
+      "personalAmount": "0.00",
+      "note": null,
+      "personalAmountInternational": "0.00",
+      "businessAmountInternational": "27.70"
+    }
+  ],
+  "transactionInfo": {
+    "basedCityReason": null,
+    "traveler": "Matt Becker",
+    "uberTransactionType": null,
+    "voucherProgram": null,
+    "createdFromTransactionId": null,
+    "date": "03/11/2025",
+    "logoId": null,
+    "totalAmount": 17.53,
+    "merchant": {
+      "merchantCategoryId": null,
+      "address": "Sydney, Australia",
+      "city": "Sydney",
+      "country": "AU",
+      "name": "Sydney Airport",
+      "state": "NSW",
+      "zip": "",
+      "displayName": "Sydney Airport",
+      "countryFull": "Australia",
+      "route": "",
+      "streetNumber": ""
+    },
+    "purposes": [
+      {
+        "id": 41601,
+        "name": "Internal Meeting",
+        "isBudgetLine": false,
+        "isGeneric": true,
+        "hasHostCostCenter": true,
+        "isIncentiveTrip": false,
+        "assignedAmount": 0,
+        "percentage": 100,
+        "hasDollarCap": false,
+        "hostCostCenterName": "Information Security",
+        "hostCostCenterId": 747,
+        "isInstitutionRequired": false,
+        "institutionId": null,
+        "institutionName": null,
+        "isSelected": false,
+        "checked": true
+      }
+    ],
+    "version": null,
+    "isShared": false,
+    "isRejected": null,
+    "currency": {
+      "rate": 0.63287,
+      "id": 11,
+      "code": "AUD",
+      "name": "Australian dollar",
+      "countryName": "Australia",
+      "countryCode": "AUS"
+    },
+    "isInInternationalMode": true,
+    "exchangeRate": 0.63287,
+    "paymentInfo": {
+      "formOfPayment": "Cash",
+      "name": "M.Becker-Cash"
+    },
+    "reassignmentInfo": null,
+    "ownerManagementLevel": null,
+    "notes": null,
+    "approverNotes": null,
+    "escalationNotes": null,
+    "breakfast": null,
+    "lunch": null,
+    "dinner": null,
+    "passenger": "",
+    "currencyCodeInput": "(AUD) Australian dollar",
+    "mealApproverName": null,
+    "perDiems": [],
+    "originalPurposes": [
+      {
+        "id": 41601,
+        "name": "Internal Meeting",
+        "isBudgetLine": false,
+        "isGeneric": true,
+        "hasHostCostCenter": true,
+        "isIncentiveTrip": false,
+        "assignedAmount": 0,
+        "percentage": 100,
+        "hasDollarCap": false,
+        "hostCostCenterName": "Information Security",
+        "hostCostCenterId": 747,
+        "isInstitutionRequired": false,
+        "institutionId": null,
+        "institutionName": null,
+        "isSelected": false,
+        "checked": true
+      }
+    ]
+  },
+  "transactionId": null,
+  "receiptId": null,
+  "clientDate": "2025-03-11T10:49:27+11:00"
+}
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

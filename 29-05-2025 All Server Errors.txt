@@ -1,0 +1,122 @@
+*[29-05-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="2713438aaf40" SessionId="_cae23fc9-dd0d-4bf8-ba47-9b7241661291-6E928F39581A53CC3D4D31B041DDAE9B" UserId="240835" UserEmail="NWoods@eab.com" 
+DateTime="2025-05-29 09:21:01.0101" ThreadId="68" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="2713438aaf40" SessionId="_cae23fc9-dd0d-4bf8-ba47-9b7241661291-6E928F39581A53CC3D4D31B041DDAE9B" UserId="240835" UserEmail="NWoods@eab.com" DateTime="2025-05-29 09:21:00.9761" ThreadId="82" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/misc/43 START"
+RequestId="2713438aaf40" SessionId="_cae23fc9-dd0d-4bf8-ba47-9b7241661291-6E928F39581A53CC3D4D31B041DDAE9B" UserId="240835" UserEmail="NWoods@eab.com" DateTime="2025-05-29 09:21:00.9887" ThreadId="82" Level="TRACE" Message="User '240835' in 'User' role: Getting transaction data for id '43'"
+RequestId="2713438aaf40" SessionId="_cae23fc9-dd0d-4bf8-ba47-9b7241661291-6E928F39581A53CC3D4D31B041DDAE9B" UserId="240835" UserEmail="NWoods@eab.com" DateTime="2025-05-29 09:21:01.0101" ThreadId="68" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/misc/43 Completed in 34 ms"
+
+
+2.
+RequestId="684b5734dc54" SessionId="_cae23fc9-dd0d-4bf8-ba47-9b7241661291-68B3E33D8DD39597E560F2A58969B1F3" UserId="239881" UserEmail="JStallings@eab.com" 
+DateTime="2025-05-29 20:48:08.6794" ThreadId="20" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="684b5734dc54" SessionId="_cae23fc9-dd0d-4bf8-ba47-9b7241661291-68B3E33D8DD39597E560F2A58969B1F3" UserId="239881" UserEmail="JStallings@eab.com" DateTime="2025-05-29 20:48:08.6441" ThreadId="10" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/misc/43 START"
+RequestId="684b5734dc54" SessionId="_cae23fc9-dd0d-4bf8-ba47-9b7241661291-68B3E33D8DD39597E560F2A58969B1F3" UserId="239881" UserEmail="JStallings@eab.com" DateTime="2025-05-29 20:48:08.6487" ThreadId="10" Level="TRACE" Message="User '239881' in 'User' role: Getting transaction data for id '43'"
+RequestId="684b5734dc54" SessionId="_cae23fc9-dd0d-4bf8-ba47-9b7241661291-68B3E33D8DD39597E560F2A58969B1F3" UserId="239881" UserEmail="JStallings@eab.com" DateTime="2025-05-29 20:48:08.6794" ThreadId="20" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/misc/43 Completed in 35 ms"
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2025-05-29 07:38:17.9025" ThreadId="1" Level="FATAL" Provider="ComdataSyncOut" Message="Error updated mailing address for user with ExternalId id 240391" Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at ABC.CCM.Workers.ComdataSyncOut.ComdataSyncOutProcessor.UpdateCardAddressForUsers()
+---> (Inner Exception #0) ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()<---
+
+ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()"
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

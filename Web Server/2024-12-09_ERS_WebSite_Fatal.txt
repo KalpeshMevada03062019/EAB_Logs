@@ -1,0 +1,69 @@
+RequestId="91cb3cda146a" SessionId="_d50c6590-52f6-4666-9753-31c181831099-788F8BAF2010FD4C5BC5114AF7E51D29" UserId="239091" UserEmail="DHamami@eab.com" DateTime="2024-12-09 08:45:38.2021" ThreadId="7" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' Message = 'Cannot read properties of null (reading 'toLowerCase')'" Exception="System.Exception: TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:168:115
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:348999)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:349171
+    at p.$eval (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:356867)
+    at p.$digest (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:355319)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:356954
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:302569)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:304045
+    at w (https://cdn.freshmarketer.com/250342/873272.js:3:343444)"
+RequestId="ccbfb5c75d09" SessionId="_d50c6590-52f6-4666-9753-31c181831099-E89E52E945D393FE19CA838CACB59765" UserId="234650" UserEmail="KeJohnson@eab.com" DateTime="2024-12-09 10:43:28.9943" ThreadId="32" Level="FATAL" Message="The requested service, 'https://eabgowers-p01/exd_inner/GlPayrollFtpApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/exd_inner/GlPayrollFtpApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpChannelUtilities.ValidateRequestReplyResponse(HttpWebRequest request, HttpWebResponse response, HttpChannelFactory`1 factory, WebException responseException, ChannelBinding channelBinding)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at ABC.ERS.BL.GlPayrollFtpApiServiceReference.IGlPayrollFtpApiService.SaveGl(String fileName, Byte[] body)
+   at ABC.ERS.BL.ExtractService.<GenerateExtractAsync>d__2d.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExtractService.cs:line 367
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.ExtractService.<GetExtractSinceLastGenerationAsync>d__3.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExtractService.cs:line 69
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExtractsController.<GenerateSinceLastAsync>d__11.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExtractsController.cs:line 114
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()"
+RequestId="6c0b759581b5" SessionId="_d50c6590-52f6-4666-9753-31c181831099-8EDE8D3896D61C0F83112C1CC5F118A3" UserId="234453" UserEmail="MIngram@eab.com" DateTime="2024-12-09 19:44:44.4553" ThreadId="30" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' Message = 'Cannot read properties of undefined (reading '$valid')'" Exception="System.Exception: TypeError: Cannot read properties of undefined (reading '$valid')
+    at https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:18519:81
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:364550
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:302569)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:304045
+    at w (https://cdn.freshmarketer.com/250342/873272.js:3:343444)"

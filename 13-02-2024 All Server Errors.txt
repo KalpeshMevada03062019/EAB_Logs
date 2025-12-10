@@ -1,0 +1,97 @@
+*[13-02-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+
+----------------------
+UPM_Website_fatal
+----------------------
+1. 
+
+-----------------------
+EXD_OuterGateway_Fatal
+-----------------------
+1. 
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1. 
+DateTime="2024-02-13 06:47:55.8522" Provider="CDF3Import" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+
+2.
+DateTime="2024-02-13 06:47:55.8522" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20240123_045741SB_005978.xml'" 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Base.ExdFileProcessor.DownloadAndSaveFiles(IEnumerable`1 feedInfoModels)"
+----------------------
+EXD_Workerhost_fatal
+----------------------
+1.
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1. 
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. 
+DateTime="2024-02-13 01:43:12.5255" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+RequestId="" 
+DateTime="2024-02-13 01:43:14.2784" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+2.
+RequestId="3c59515da9ba" 
+DateTime="2024-02-13 02:48:00.3835" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+3.
+RequestId="a17e4c788d40" 
+DateTime="2024-02-13 05:41:20.7673"
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+4.
+RequestId="" 
+DateTime="2024-02-13 19:02:17.2893"
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+----------------------
+UPM_API_Fatal
+----------------------
+1. 
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------
+
+
+

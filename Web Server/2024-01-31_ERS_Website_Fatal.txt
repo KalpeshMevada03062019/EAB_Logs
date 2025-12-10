@@ -1,0 +1,424 @@
+RequestId="92f671c59268" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-0DF25460CBB7344F4BFD37970309E463" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-01-31 03:23:03.3271" ThreadId="5" Level="FATAL" Message="Rule execution error: 'Error: 'ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfAllocations/ForEachAllocation/IfAllocatedToUser/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfAllocations/ForEachAllocation/IfAllocatedToUser/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfAllocations/ForEachAllocation/IfAllocatedToUser/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not respond...)."
+RequestId="e2c5e844a6a7" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-11910C7059D8A0BA89C4F4B926F2D91E" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-01-31 05:48:43.1863" ThreadId="55" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.<ExecuteAsync>d__0`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<GetResultsAsync>d__e.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<SingleAsync>d__2d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesCountAsync>d__11f.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1761
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsActionAsync>d__eb`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1339
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsCountAsync>d__5c.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 468
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<>c__DisplayClassd1.<<GetFilteredCountAsync>b__d0>d__d3.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 78
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredCountAsync>d__d6.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 516
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+ClientConnectionId:c8565f8e-0672-4da8-beb1-ee2a7bb7b187
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+RequestId="37cee233ecaf" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-11910C7059D8A0BA89C4F4B926F2D91E" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-01-31 05:48:43.3447" ThreadId="55" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.<ExecuteAsync>d__0`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<GetResultsAsync>d__e.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<ForEachAsync>d__5`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1836
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsActionAsync>d__eb`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsAsync>d__59.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 451
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<>c__DisplayClassc4.<<GetFilteredAsync>b__c3>d__c6.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredAsync>d__c9.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 489
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+ClientConnectionId:3cf7f660-08ea-464e-bc65-b262de03eb2b
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+RequestId="237486d92a75" SessionId="_ed673286-9cd6-4525-aef9-de34cc810dec-6F3D6BBD41EDE8D014679147BE3B1FB8" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-01-31 06:18:47.3236" ThreadId="47" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.<ExecuteAsync>d__0`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<GetResultsAsync>d__e.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<SingleAsync>d__2d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesCountAsync>d__11f.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1761
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsActionAsync>d__eb`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1339
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsCountAsync>d__5c.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 468
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<>c__DisplayClassd1.<<GetFilteredCountAsync>b__d0>d__d3.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 78
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredCountAsync>d__d6.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 516
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+ClientConnectionId:69c8e0cc-6478-4d06-a51a-6722bdf713bc
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+RequestId="14a4c6741b56" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-6A946D645D6292359A38E7F1270846E2" UserId="229547" UserEmail="SShoham@eab.com" DateTime="2024-01-31 08:43:10.4729" ThreadId="54" Level="FATAL" Message="Error updating spending profile for user with external id 229547" Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.<ExecuteAsync>d__0`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<GetResultsAsync>d__e.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<ForEachAsync>d__5`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.SpendingService.<GetUserSpendingAsync>d__18.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\SpendingService.cs:line 92
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.SpendingService.<UpdateSpendingProfileStateAsync>d__0.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\SpendingService.cs:line 65
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+ClientConnectionId:f5d4895b-f69e-4b00-b76b-c403912d9118
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+RequestId="da2837ce00ba" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-388699E57AAF4BBABDE34DC1930F8621" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-01-31 09:13:57.9017" ThreadId="71" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0' Message = 'google is not defined'" Exception="System.Exception: ReferenceError: google is not defined
+    at Object.linkFunc [as link] (https://go.myeab.com/expense/bundles/modules?v=S6ygeRLmlE-A-AOODGUpUSMrohV3yqoznZid8LaXNUU1:23495:13)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:285542
+    at vr (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:322352)
+    at ct (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:314570)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:319978
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:348999)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:349171
+    at p.$eval (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:356867)
+    at p.$digest (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:355319)
+    at p.$apply (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:357151)"
+RequestId="04295c6775d5" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-388699E57AAF4BBABDE34DC1930F8621" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-01-31 09:14:31.6112" ThreadId="64" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0' Message = 'google is not defined'" Exception="System.Exception: ReferenceError: google is not defined
+    at Object.linkFunc [as link] (https://go.myeab.com/expense/bundles/modules?v=S6ygeRLmlE-A-AOODGUpUSMrohV3yqoznZid8LaXNUU1:23495:13)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:285542
+    at vr (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:322352)
+    at ct (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:314570)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:319978
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:348999)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:349171
+    at p.$eval (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:356867)
+    at p.$digest (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:355319)
+    at p.$apply (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:357151)"
+RequestId="3607afb8ba14" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-388699E57AAF4BBABDE34DC1930F8621" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-01-31 09:15:14.9540" ThreadId="71" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0' Message = 'google is not defined'" Exception="System.Exception: ReferenceError: google is not defined
+    at Object.linkFunc [as link] (https://go.myeab.com/expense/bundles/modules?v=S6ygeRLmlE-A-AOODGUpUSMrohV3yqoznZid8LaXNUU1:23495:13)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:285542
+    at vr (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:322352)
+    at ct (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:314570)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:319978
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:348999)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:349171
+    at p.$eval (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:356867)
+    at p.$digest (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:355319)
+    at p.$apply (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:357151)"
+RequestId="18ab20fd6a53" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-388699E57AAF4BBABDE34DC1930F8621" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-01-31 09:15:34.5141" ThreadId="58" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0' Message = 'google is not defined'" Exception="System.Exception: ReferenceError: google is not defined
+    at Object.linkFunc [as link] (https://go.myeab.com/expense/bundles/modules?v=S6ygeRLmlE-A-AOODGUpUSMrohV3yqoznZid8LaXNUU1:23495:13)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:285542
+    at vr (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:322352)
+    at ct (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:314570)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:319978
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:348999)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:349171
+    at p.$eval (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:356867)
+    at p.$digest (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:355319)
+    at p.$apply (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:357151)"
+RequestId="76b9433be44d" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-388699E57AAF4BBABDE34DC1930F8621" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-01-31 09:15:40.4774" ThreadId="58" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0' Message = 'google is not defined'" Exception="System.Exception: ReferenceError: google is not defined
+    at Object.linkFunc [as link] (https://go.myeab.com/expense/bundles/modules?v=S6ygeRLmlE-A-AOODGUpUSMrohV3yqoznZid8LaXNUU1:23495:13)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:285542
+    at vr (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:322352)
+    at ct (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:314570)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:319978
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:348999)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:349171
+    at p.$eval (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:356867)
+    at p.$digest (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:355319)
+    at p.$apply (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:357151)"
+RequestId="5fe91b58d970" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-388699E57AAF4BBABDE34DC1930F8621" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-01-31 09:15:52.4069" ThreadId="17" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0' Message = 'google is not defined'" Exception="System.Exception: ReferenceError: google is not defined
+    at Object.linkFunc [as link] (https://go.myeab.com/expense/bundles/modules?v=S6ygeRLmlE-A-AOODGUpUSMrohV3yqoznZid8LaXNUU1:23495:13)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:285542
+    at vr (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:322352)
+    at ct (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:314570)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:319978
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:348999)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:349171
+    at p.$eval (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:356867)
+    at p.$digest (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:355319)
+    at p.$apply (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:357151)"
+RequestId="0bb11b320c33" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-A793837AC8161E42D74A306618520624" UserId="239733" UserEmail="CMcConnell@eab.com" DateTime="2024-01-31 10:08:02.8725" ThreadId="58" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' Message = 'Cannot read properties of undefined (reading '$valid')'" Exception="System.Exception: TypeError: Cannot read properties of undefined (reading '$valid')
+    at https://go.myeab.com/expense/bundles/modules?v=S6ygeRLmlE-A-AOODGUpUSMrohV3yqoznZid8LaXNUU1:18121:81
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:364550
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:302569)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:304045
+    at w (https://cdn.freshmarketer.com/250342/873272.js:3:343170)"
+RequestId="bc0c9bfd8d23" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-2E49B4BECF803E552F061A4F9D59977E" UserId="234235" UserEmail="TDillman@eab.com" DateTime="2024-01-31 10:22:36.0768" ThreadId="17" Level="FATAL" Message="Rule execution error: 'Error: 'ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+RequestId="0b10bafb6bb2" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-2E49B4BECF803E552F061A4F9D59977E" UserId="234235" UserEmail="TDillman@eab.com" DateTime="2024-01-31 10:23:41.4841" ThreadId="50" Level="FATAL" Message="Rule execution error: 'Error: 'ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+RequestId="75c0f2cdfa9b" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-8F76DF0E7DFDEDAFD2C6B324E94D1AFD" UserId="239472" UserEmail="VDeLaRosa@eab.com" DateTime="2024-01-31 15:34:36.5228" ThreadId="43" Level="FATAL" Message="Rule execution error: 'Error: 'ExpenseItem:3/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:3/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:3/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not resp...)."
+RequestId="2b29fb9fc7c5" SessionId="_e90fca3b-c246-4bb0-a899-9e825a40ebcb-8F76DF0E7DFDEDAFD2C6B324E94D1AFD" UserId="239472" UserEmail="VDeLaRosa@eab.com" DateTime="2024-01-31 15:37:49.0598" ThreadId="25" Level="FATAL" Message="Rule execution error: 'Error: 'ExpenseItem:1/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not resp...)."

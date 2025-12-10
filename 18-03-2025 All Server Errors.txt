@@ -1,0 +1,111 @@
+*[18-03-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #8 same error
+RequestId="98c1f56fd338" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2025-03-18 14:23:36.6275" ThreadId="48" Level="FATAL" 
+Message="The 'LastStatusChangeDate' property on 'ExpenseTransaction' could not be set to a 'null' value. You must set this property to a non-null value of type 'System.DateTime'. " 
+Exception="System.Data.ConstraintException: The 'LastStatusChangeDate' property on 'ExpenseTransaction' could not be set to a 'null' value. You must set this property to a non-null value of type 'System.DateTime'. 
+
+Trace:
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.4379" ThreadId="48" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/unexpensed/0?sortKey=1&sortOrder=2 START"
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5053" ThreadId="48" Level="TRACE" Message="Get Unexpensed transactions sorted by Date Descending start."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5053" ThreadId="48" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5169" ThreadId="48" Level="TRACE" Message="MyLog: startIndex is: 0 AND pageSize is: 50"
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5334" ThreadId="48" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation end. Duration: 21 ms."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="49" Level="TRACE" Message="MyLog: ExpenseGridRowsId list is: 2335950,2336868"
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="49" Level="TRACE" Message="MyLog: Include Allocations: False"
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="49" Level="TRACE" Message="MyLog: Ordered Transaction Ids list is: 2335950,2336868"
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="49" Level="TRACE" Message="MyLog: Owner Id is: 2b63f492-1dc5-40d6-a590-fd813e362f14"
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="49" Level="TRACE" Message="MyLog: Process transaction ID is: 2335950"
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="49" Level="TRACE" Message="MyLog: Transaction 2335950 added to the list."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="49" Level="TRACE" Message="MyLog: Process transaction ID is: 2336868"
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="49" Level="TRACE" Message="MyLog: Transaction 2336868 added to the list."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="49" Level="TRACE" Message="Get Unexpensed transactions sorted by Date Descending end. Duration: 70 ms."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="49" Level="TRACE" Message="CreateExpenseGridModel start."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="49" Level="TRACE" Message="CreateExpenseGridModel: get transactions purposes. start."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="48" Level="TRACE" Message="CreateExpenseGridModel: get transactions purposes. end. Duration: 2 ms."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="48" Level="TRACE" Message="CreateExpenseGridModel: get allocated users. start."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5803" ThreadId="48" Level="TRACE" Message="CreateExpenseGridModel: get allocated users. end. Duration: 0 ms."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.5904" ThreadId="48" Level="TRACE" Message="CreateExpenseGridModel: get all user's purposes. start."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.6124" ThreadId="48" Level="TRACE" Message="CreateExpenseGridModel: get all user's purposes. end. Duration: 24 ms."
+RequestId="98c1f56fd338" SessionId="_ab32b943-c7d9-4dfa-8576-62466265175f-0A302E7D7FDD15DDA19203CA1E445AB4" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-03-18 14:23:36.7388" ThreadId="48" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/unexpensed/0?sortKey=1&sortOrder=2 Completed in 301 ms"
+
+
+Transaction:
+-------------------------------------------
+Transaction ID - 2335950
+OwnerId - 2B63F492-1DC5-40D6-A590-FD813E362F14
+Discriminator - ExpenseTransactionHotel
+FormOfPayment - CreditCard
+Not Found Transaction ID - 2336868
+
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

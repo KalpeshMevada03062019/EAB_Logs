@@ -1,0 +1,100 @@
+*[04-07-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="f6e4b7a8b552" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" 
+DateTime="2025-07-03 10:10:44.8638" ThreadId="32" Level="FATAL" 
+Message="HTTP validation error: It's not possible to update a transaction in submitted status." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="f6e4b7a8b552" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:10:44.8165" ThreadId="28" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/budgetline/save START"
+RequestId="f6e4b7a8b552" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:10:44.8165" ThreadId="28" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/budgetline/save Request content: {'TransactionId':2386674,'PurposesIds':[41617],'AllocationsIds':[],'InstitutionId':null,'clientDate':'2025-07-03T10:10:45-04:00'}"
+RequestId="f6e4b7a8b552" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:10:44.8638" ThreadId="32" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/budgetline/save Completed in 47 ms"
+
+
+2.
+RequestId="6ccb41300250" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" 
+DateTime="2025-07-03 10:11:26.7306" ThreadId="51" Level="FATAL" 
+Message="HTTP validation error: Transaction cannot be saved due to incorrect status." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="6ccb41300250" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:11:26.6352" ThreadId="32" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/save START"
+RequestId="6ccb41300250" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:11:26.6352" ThreadId="32" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/save Request content: {'allocationItems':[{'id':0,'allocatedBy':'Employee','isOwn':true,'percentage':100,'value':'Quinne Teske','departmentExternalId':null,'departmentAllocationAvailability':null,'userId':'484c5125-db1e-4797-b2cb-5dd795e08b4d','availablePurposesIds':null,'isGuestUser':false,'userEntity':'EAB'}],'expenses':[{'businessAmount':'174.07','date':'06/24/2025','expenseType':{'id':8,'name':'Nightly Rate','route':null},'id':3340132,'personalAmount':'0.00','note':'','personalAmountInternational':'0.00','businessAmountInternational':'174.07'},{'businessAmount':'27.76','date':'06/24/2025','expenseType':{'id':10,'name':'Hotel Taxes','route':null},'id':3342864,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'27.76'},{'businessAmount':'174.07','date':'06/25/2025','expenseType':{'id':8,'name':'Nightly Rate','route':null},'id':3342869,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'174.07'},{'businessAmount':'27.76','date':'06/25/2025','expenseType':{'id':10,'name':'Hotel Taxes','route':null},'id':3342870,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'27.76'}],'transactionInfo':{'basedCityReason':null,'overAllowedAmountReason':'this was the hotel I was told to book by the system and the internal travel team','whyBookedOutsideReason':null,'traveler':'TESKE, QUINNE','defaultTravelerName':'Quinne Teske','perDiems':[{'rate':260,'startDate':'02/22/2017','endDate':null,'onDate':'June 25th'}],'hotelConfirmation':{'id':195663,'name':'YOURS TRULY DC VIGNETTE COLLECT-6/24/2025-2NT-CONF: 86414099','isOther':false,'hotel':{'id':0,'name':'YOURS TRULY DC VIGNETTE COLLECT','country':null,'city':null,'state':null}},'isDetailed':false,'attachment':{'id':228665,'version':'AAAAAAEmWC4=','userId':'484c5125-db1e-4797-b2cb-5dd795e08b4d','userName':'Quinne Teske','isAttached':true,'isAttachmentImage':false,'name':'IHG Yours Truly Receipt.pdf','source':'','fileCreatedDate':'2025-07-03T10:01:35.417','folio':null},'isFolioValidated':null,'createdFromTransactionId':null,'date':'06/26/2025','logoId':null,'totalAmount':403.66,'merchant':{'merchantCategoryId':7011,'address':'1143 NEW HAMPSHIRE AVE N','city':'Washington','country':'USA','name':'YOURS TRULY DC','state':'DC','zip':'20037-0000','displayName':'YOURS TRULY DC, Washington, DC'},'purposes':[{'id':41617,'name':'Internal Meeting','isBudgetLine':false,'isGeneric':true,'hasHostCostCenter':true,'isIncentiveTrip':false,'assignedAmount':403.66,'percentage':100,'hasDollarCap':false,'hostCostCenterName':'Seramount Commercial','hostCostCenterId':752,'isInstitutionRequired':false,'institutionId':null,'institutionName':null,'isSelected':false}],'version':'AAAAAAEmWDE=','isShared':false,'isRejected':null,'currency':{'id':5,'code':'USD','name':'United States dollar','countryName':null,'countryCode':null},'isInInternationalMode':false,'exchangeRate':1,'paymentInfo':{'formOfPayment':'CreditCard','name':'HotelCard-8757'},'reassignmentInfo':null,'ownerManagementLevel':'D1','notes':null,'approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(USD) United States Dollar','perDiemList':[{'perDiem':0}]},'transactionId':2386674,'receiptId':228665,'clientDate':'2025-07-03T10:11:27-04:00'}"
+RequestId="6ccb41300250" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:11:26.6826" ThreadId="51" Level="TRACE" Message="Validating access right start."
+RequestId="6ccb41300250" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:11:26.6826" ThreadId="28" Level="TRACE" Message="Validating access right end. Duration: 2 ms."
+RequestId="6ccb41300250" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:11:26.6826" ThreadId="40" Level="TRACE" Message="Start retrieving transactions to revalidate for InRule. Transaction Id = 2386674"
+RequestId="6ccb41300250" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:11:26.6992" ThreadId="40" Level="TRACE" Message="End retrieving transactions to revalidate for InRule. Count: 0 Duration: 12 ms."
+RequestId="6ccb41300250" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:11:26.6992" ThreadId="40" Level="TRACE" Message="Updating transaction entity start."
+RequestId="6ccb41300250" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:11:26.7306" ThreadId="51" Level="TRACE" Message="Updating transaction entity end. Duration: 25 ms."
+RequestId="6ccb41300250" SessionId="_d4027f46-79e2-4d98-adec-f3cac2eaf655-D30D8269CD8379012C62036E9F4C74C7" UserId="240347" UserEmail="Quinne.Teske@seramount.com" DateTime="2025-07-03 10:11:26.7306" ThreadId="51" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/save Completed in 95 ms"
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+1.

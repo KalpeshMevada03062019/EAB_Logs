@@ -1,0 +1,267 @@
+08-08-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal #2 - Timeout Error. System.Data.SqlClient.SqlException: Execution Timeout Expired
+-------------------------
+1. #10 Timeout error
+RequestId="11a2e3fe7da1" UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-08-07 03:08:47.3821" ThreadId="11" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+TRACE::
+RequestId="11a2e3fe7da1" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-07 03:08:05.6798" ThreadId="22" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/reject START"
+RequestId="11a2e3fe7da1" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-07 03:08:05.6798" ThreadId="22" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/reject Request content: {'ids':[{'id':2244224,'version':'AAAAAAEXwT0='}],'reason':'Hi Eleanor,\n\nAs per policy food per diem limit is $100 and you are exceeding limit by $8. kindly put the overage under personal amount.\n\nThank you.'}"
+RequestId="11a2e3fe7da1" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-07 03:08:14.8095" ThreadId="20" Level="TRACE" Message="Start retrieving transactions to revalidate for InRule. Transaction Id = 2244224"
+RequestId="11a2e3fe7da1" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-07 03:08:52.8333" ThreadId="11" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/reject Completed in 47154 ms"
+
+
+RequestId="9e74023d2d2d" SessionId="_87701c4c-cbdd-41cc-b428-db0718b9de16-56D9F65FF9D9C53EA8E1F3A5E9BF2EF0" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-07 04:40:29.3171" ThreadId="9" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/0?sortKey=3&sortOrder=2 START"
+RequestId="9e74023d2d2d" SessionId="_87701c4c-cbdd-41cc-b428-db0718b9de16-56D9F65FF9D9C53EA8E1F3A5E9BF2EF0" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-07 04:40:29.3171" ThreadId="9" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/0?sortKey=3&sortOrder=2 Request content: {'amountFrom':null,'amountTo':null,'categories':[{'name':'Air Travel','id':-2,'selected':false},{'name':'Ground Transportation','id':5,'selected':true},{'name':'Hotel','id':1,'selected':false},{'name':'Food','id':4,'selected':false},{'name':'Miscellaneous','id':8,'selected':false},{'name':'Mobile Communication','id':-1,'selected':false},{'name':'Group Event','id':29,'selected':false}],'creditCards':[],'dateFrom':null,'dateTo':null,'submitDateFrom':'08/06/2024','submitDateTo':'08/06/2024','merchants':[],'transactionIds':[],'filterPurposes':[],'name':null,'notes':null,'statuses':[{'id':5,'name':'Pending Finance','selected':true},{'id':4,'name':'Approved','selected':false},{'id':7,'name':'Paid','selected':false}],'states':[{'id':3,'selected':false},{'id':2,'selected':false},{'id':1,'selected':false}],'users':[],'allCash':false,'allCreditCards':false,'allDirectBill':false}"
+RequestId="9e74023d2d2d" SessionId="_87701c4c-cbdd-41cc-b428-db0718b9de16-56D9F65FF9D9C53EA8E1F3A5E9BF2EF0" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-07 04:40:29.3434" ThreadId="7" Level="TRACE" Message="Get Filtered transactions sorted by Amount Descending start."
+RequestId="9e74023d2d2d" SessionId="_87701c4c-cbdd-41cc-b428-db0718b9de16-56D9F65FF9D9C53EA8E1F3A5E9BF2EF0" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-07 04:40:29.3434" ThreadId="7" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+RequestId="9e74023d2d2d" SessionId="_87701c4c-cbdd-41cc-b428-db0718b9de16-56D9F65FF9D9C53EA8E1F3A5E9BF2EF0" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-07 04:40:29.3536" ThreadId="23" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation end. Duration: 11 ms."
+RequestId="9e74023d2d2d" SessionId="_87701c4c-cbdd-41cc-b428-db0718b9de16-56D9F65FF9D9C53EA8E1F3A5E9BF2EF0" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-07 04:41:02.5856" ThreadId="23" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/0?sortKey=3&sortOrder=2 Completed in 33269 ms"
+
+2. #1 Timeout error
+RequestId="d7d2d4d62a3b" UserId="235445" UserEmail="charrell@eab.com" 
+DateTime="2024-08-08 09:13:52.2207" ThreadId="38" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.UserService.<GetUserRoleByUserIdAndNameAsync>d__e.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\UserService.cs:line 74
+   at ABC.ERS.Web.ExpenseNow.Infrastructure.ApplicationUserStore.<CanAccessUserRoleAsync>d__0.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\Infrastructure\ApplicationUserStore.cs:line 25
+   at ABC.Common.Web.Infrastructure.Auth.AbcUserStorage`2.<GetCurrentRoleAsync>d__e.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\Auth\AbcUserStorage.cs:line 187
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.UserController.<InfoAsync>d__1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\UserController.cs:line 78
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+3.
+RequestId="10bae0260184" SessionId="_5972b50a-4c34-4df0-9553-0f38320c1276-EBC8C5913408E94EBDAF6626EF5D469E" UserId="240297" UserEmail="KMalone@eab.com" DateTime="2024-08-08 10:32:26.5033" ThreadId="29" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1836
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsAsync>d__4d.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 410
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<SubmittedAsync>d__8a.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 348
+
+
+4. #1 Timeout error
+RequestId="1b2a9ecb9d9c" UserId="238000" UserEmail="TSugar@eab.com" 
+DateTime="2024-08-08 12:14:22.8537" ThreadId="18" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1' Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExc...)."
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+DateTime="2024-08-07 03:09:23.9443" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+
+06-07-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+RequestId="33d003f679dd" 
+DateTime="2024-08-07 12:31:09.6541" ThreadId="25" Level="FATAL" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="Comdata" 
+Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1. #2 same error
+RequestId="" DateTime="2024-08-07 10:37:42.3446" ThreadId="80" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+RequestId="" DateTime="2024-08-07 10:48:09.5539" ThreadId="68" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+
+InRule Server
+-------------------------
+
+
+
+

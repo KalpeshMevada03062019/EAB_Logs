@@ -1,0 +1,159 @@
+*[27-08-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal  
+-------------------------
+1. #24 Timeout Error
+RequestId="3cb9ffab2ecf" UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-08-27 03:09:33.7738" ThreadId="19" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.UserService.<GetDelegatedToUserRolesAsync>d__13.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\UserService.cs:line 91
+   at ABC.ERS.BL.UserService.<CanAccessUserRoleAsync>d__7.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\UserService.cs:line 63
+   at ABC.ERS.Web.ExpenseNow.Infrastructure.ApplicationUserStore.<CanAccessUserRoleAsync>d__0.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\Infrastructure\ApplicationUserStore.cs:line 34
+   at ABC.Common.Web.Infrastructure.Auth.AbcUserStorage`2.<GetCurrentRoleAsync>d__e.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\Auth\AbcUserStorage.cs:line 187
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.Filters.AllowByUserRoleAttribute.<OnActionExecutingAsync>d__0.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\Filters\AllowByUserRoleAttribute.cs:line 39
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 17
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+2.
+RequestId="fabf73a6a455" UserId="239368" UserEmail="KKubovcik@eab.com" 
+DateTime="2024-08-27 08:59:51.5041" ThreadId="80" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseTransactionValidationService.<IsSimilarTransactionFindedAsync>d__37.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseTransactionValidationService.cs:line 429
+   at ABC.ERS.BL.ExpenseTransactionValidationService.<ValidateOnSaveAsync>d__2b.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseTransactionValidationService.cs:line 398
+   at ABC.ERS.BL.ExpenseTransactionValidationService.<ValidateOnSaveAsync>d__1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseTransactionValidationService.cs:line 135
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<>c__DisplayClassa0.<<ValidateAsync>b__9d>d__a8.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 0
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<ValidateAsync>d__b1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 588
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+RequestId="8610254ccb80" SessionId="_a1cee159-d918-4df6-a592-7b68ba4a181d-5500631F50FC7CCE48FBD229A50C9102" UserId="240295" UserEmail="AMoore@eab.com" DateTime="2024-08-27 09:11:53.5517" ThreadId="8" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseTransactionService.<GetTransactionOfSpecifiedTypeAsync>d__2f`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseTransactionService.cs:line 0
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<GetAsync>d__15.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 0
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+RequestId="79987b1a6205" UserId="228501" UserEmail="CPainter@eab.com" 
+DateTime="2024-08-27 09:25:51.6550" ThreadId="51" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1842
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsActionAsync>d__db`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 0
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsAsync>d__4d.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 411
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<>c__DisplayClass85.<<SubmittedAsync>b__84>d__87.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 0
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<SubmittedAsync>d__8a.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 348
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+RequestId="523ee6387af2" UserId="239609" UserEmail="krista.lindsey@seramount.com" 
+DateTime="2024-08-27 09:41:34.6503" ThreadId="66" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseTransactionService.<RemapCdf3AndSupplementalsToNewTransactionAsync>d__9f.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseTransactionService.cs:line 834
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<GetOrCreateTransactionEntityAsync>d__150.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 1481
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<UpdateTransactionEntityAsync>d__165.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 0
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<>c__DisplayClassa0.<<ValidateAsync>b__9c>d__a5.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 0
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<ValidateAsync>d__b1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 0
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+RequestId="cd962a81f153" UserId="240247" UserEmail="Olevia.Braithwaite@seramount.com"
+DateTime="2024-08-27 09:41:52.1459" ThreadId="75" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+
+3. #5 - Same Error
+RequestId="fabf73a6a455" UserId="239368" UserEmail="KKubovcik@eab.com" 
+DateTime="2024-08-27 09:00:26.5204" ThreadId="80" Level="FATAL" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+4. #18 - Timeout error
+RequestId="62279076cde3" UserId="235062" UserEmail="BJamous@eab.com" 
+DateTime="2024-08-27 10:57:52.3586" ThreadId="75" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:10/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:10/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:10/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcep...)."
+
+
+5.
+RequestId="66dc2e73ef6e" UserId="239711" UserEmail="ARyan@eab.com" 
+DateTime="2024-08-27 09:11:57.7850" ThreadId="47" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration. ---> System.InvalidOperationException: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+RequestId="6fc10e1a8a27" UserId="226124" UserEmail="MShepard@eab.com" 
+DateTime="2024-08-27 08:59:44.0854" ThreadId="13" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.UPM.BL.UserService.<GetUserByExternalIdAsync>d__c.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.BL\UserService.cs:line 59
+   at ABC.UPM.Website.ApiControllers.UserController.<GetRoleByIdAndNameAsync>d__2c.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Website\ApiControllers\UserController.cs:line 203
+   at ABC.UPM.Website.ApiControllers.UserController.<SetCurrentUserRoleAsync>d__18.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Website\ApiControllers\UserController.cs:line 153
+
+2.
+RequestId="6fc10e1a8a27" UserId="226124" UserEmail="MShepard@eab.com" 
+DateTime="2024-08-27 09:00:19.1449" ThreadId="13" Level="FATAL" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-08-27 06:49:41.4752" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'FareSavingsParser'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #2 same error
+DateTime="2024-08-27 03:09:24.5336" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------

@@ -1,0 +1,99 @@
+*[22-06-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+
+
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #5
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #2 same error 
+RequestId="c1745d68a895" SessionId="_9ac0e263-0c10-489a-a711-793917d15698-4294E14F336C0B632627C169362CFCE9" UserId="239357" UserEmail="BWeckstein@eab.com" 
+DateTime="2025-06-22 06:44:30.1930" ThreadId="12" Level="FATAL" 
+Message="Deactivate credit card request failed. actorLog: Actor Id: 70c08e68-4feb-463a-b07a-88a8e146f99e. Reason: User does not have access to the accountNumber or custid. OwnerId: 70c08e68-4feb-463a-b07a-88a8e146f99e. EmployeeNumber: 239357X005897. CustomerID: DGYXS" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Deactivate credit card request failed. actorLog: Actor Id: 70c08e68-4feb-463a-b07a-88a8e146f99e. Reason: User does not have access to the accountNumber or custid. OwnerId: 70c08e68-4feb-463a-b07a-88a8e146f99e. EmployeeNumber: 239357X005897. CustomerID: DGYXS (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+ABC.Common.BL.Exceptions.ValidationException: Deactivate credit card request failed. actorLog: Actor Id: 70c08e68-4feb-463a-b07a-88a8e146f99e. Reason: User does not have access to the accountNumber or custid. OwnerId: 70c08e68-4feb-463a-b07a-88a8e146f99e. EmployeeNumber: 239357X005897. CustomerID: DGYXS
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<DeactivateCreditCardAsync>d__76.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\CreditCardService.cs:line 525
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.CreditCardService.<ReplaceCreditCardAs...)."
+
+Credit Card Detail:
+------------------------
+CardID: 7962
+FirstName: Benjamin
+LastName: Weckstein
+MaskedNumber: 556305XXXXXX7434
+EmployeeNumber: 239357X005897
+CustomerID: DGYXS
+Status: Blocked
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+1.

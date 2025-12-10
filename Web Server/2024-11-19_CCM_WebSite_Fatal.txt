@@ -1,0 +1,103 @@
+RequestId="1a4e02d505dd" SessionId="_29e26e31-bfba-4362-8676-ba9bc05499c4-F05449717EB3E1D0AEC464D91ED5E049" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-11-19 07:43:42.4343" ThreadId="7" Level="FATAL" Message="HTTP validation error: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 93834c61-2022-41f9-8a6f-405d1c29e5d6. UserName: EAB, CustomerID:  " Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+RequestId="6a27925d4306" SessionId="_29e26e31-bfba-4362-8676-ba9bc05499c4-727C4AD9CF90FC7D70B5401A1699FA67" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-19 09:15:47.3468" ThreadId="8" Level="FATAL" Message="The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass6_0.<CreateTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.EventNotificationService.<NotifyCreditCardDeactivatedAsync>d__16.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\EventNotificationService.cs:line 141
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.CreditCardService.<>c__DisplayClass6e.<<DeactivateCreditCardAsync>b__6c>d__73.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\CreditCardService.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__6.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 92
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.CreditCardService.<DeactivateCreditCardAsync>d__76.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\CreditCardService.cs:line 548
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.Website.ApiControllers.CreditCardController.<DectivateCredtiCardAsync>d__11.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.Website\ApiControllers\CreditCardController.cs:line 118
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()"
+RequestId="b7150ea71c3c" SessionId="_29e26e31-bfba-4362-8676-ba9bc05499c4-727C4AD9CF90FC7D70B5401A1699FA67" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-19 09:17:32.0616" ThreadId="7" Level="FATAL" Message="The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass6_0.<CreateTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.EventNotificationService.<NotifyCreditCardDeactivatedAsync>d__16.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\EventNotificationService.cs:line 141
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.CreditCardService.<>c__DisplayClass6e.<<DeactivateCreditCardAsync>b__6c>d__73.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\CreditCardService.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__6.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 92
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.CreditCardService.<DeactivateCreditCardAsync>d__76.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\CreditCardService.cs:line 548
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.Website.ApiControllers.CreditCardController.<DectivateCredtiCardAsync>d__11.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.Website\ApiControllers\CreditCardController.cs:line 118
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()"
+RequestId="6ddf3c5616a2" SessionId="_40f9a6cb-8274-4758-98fa-ccaff76c46b3-26E2BCCD7BBDB5ECA0697EB7AF602EE8" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-19 09:57:28.8117" ThreadId="9" Level="FATAL" Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: 829f2041-7f7a-4384-89b2-e22fad618a46. Reason: Card not found. OwnerId: 22a5bc97-b7ad-48f4-856e-b2a1fe627bfc. EmployeeNumber: 235405X005264. CustomerID: BRV61" Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+RequestId="8617a93d3ad6" SessionId="_40f9a6cb-8274-4758-98fa-ccaff76c46b3-04254A96FA5A8301B4AA562D76CCEF32" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-11-19 17:28:11.6039" ThreadId="15" Level="FATAL" Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: f5088bf5-4b99-4291-a563-f9adbb4dbe94. Reason: Card not found. OwnerId: 22a5bc97-b7ad-48f4-856e-b2a1fe627bfc. EmployeeNumber: 235405X005264. CustomerID: BRV61" Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."

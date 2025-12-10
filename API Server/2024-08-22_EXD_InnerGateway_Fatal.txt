@@ -1,0 +1,143 @@
+RequestId="10ed45005678" DateTime="2024-08-22 02:08:00.1924" ThreadId="55" Level="FATAL" Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+RequestId="594884bb3f54" DateTime="2024-08-22 06:15:49.7886" ThreadId="71" Level="FATAL" Message="Send Users Event Failed. Error: An error occurred while sending the request." Provider="CustomerIo" Exception="System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.EXD.InnerGateway.CustomerIo.CustomerIoApiClient.<SendRequestAsync>d__27.MoveNext() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\CustomerIo\CustomerIoApiClient.cs:line 151
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.EXD.InnerGateway.CustomerIo.CustomerIoApiClient.<>c__DisplayClass1f.<<SendRequestAndLog>b__1e>d__21.MoveNext() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\CustomerIo\CustomerIoApiClient.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.EXD.InnerGateway.CustomerIo.CustomerIoApiClient.<SendRequestAndLog>d__24.MoveNext() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\CustomerIo\CustomerIoApiClient.cs:line 139
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at ABC.EXD.InnerGateway.CustomerIo.CustomerIoApiClient.<SendUsersAsync>d__e.MoveNext() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\CustomerIo\CustomerIoApiClient.cs:line 89
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.EXD.InnerGateway.CustomerIoApiService.<SendUsersAsync>d__c.MoveNext() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\CustomerIoApiService.svc.cs:line 52
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)"
+RequestId="" DateTime="2024-08-22 06:15:49.9996" ThreadId="71" Level="FATAL" Message="An error occurred while sending the request." Provider="" Exception="System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.EXD.InnerGateway.CustomerIo.CustomerIoApiClient.<SendRequestAsync>d__27.MoveNext() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\CustomerIo\CustomerIoApiClient.cs:line 151
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.EXD.InnerGateway.CustomerIo.CustomerIoApiClient.<>c__DisplayClass1f.<<SendRequestAndLog>b__1e>d__21.MoveNext() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\CustomerIo\CustomerIoApiClient.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.EXD.InnerGateway.CustomerIo.CustomerIoApiClient.<SendRequestAndLog>d__24.MoveNext() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\CustomerIo\CustomerIoApiClient.cs:line 139
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at ABC.EXD.InnerGateway.CustomerIo.CustomerIoApiClient.<SendUsersAsync>d__e.MoveNext() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\CustomerIo\CustomerIoApiClient.cs:line 89
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.EXD.InnerGateway.CustomerIoApiService.<SendUsersAsync>d__c.MoveNext() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\CustomerIoApiService.svc.cs:line 58
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.ServiceModel.Dispatcher.TaskMethodInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.ServiceModel.Dispatcher.TaskMethodInvoker.InvokeEnd(Object instance, Object[]& outputs, IAsyncResult result)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeEnd(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage7(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)"
+RequestId="" DateTime="2024-08-22 07:16:21.2978" ThreadId="31" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:16:21.2978" ThreadId="31" Level="FATAL" Message="X-Request-Id: dfdb6717-2aae-4cd3-a4f9-18ab28fb2bac" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:16:21.2978" ThreadId="31" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:16:21.2978" ThreadId="31" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043021540521},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:16:25.5975" ThreadId="31" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:16:25.5975" ThreadId="31" Level="FATAL" Message="X-Request-Id: e942b933-c4f7-4040-be2f-a9260a0cb36c" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:16:25.5975" ThreadId="31" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:16:25.5975" ThreadId="31" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043167877659},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:16:46.3918" ThreadId="31" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:16:46.3918" ThreadId="31" Level="FATAL" Message="X-Request-Id: 0350b2d3-4c19-91c7-8c31-686a6e5896f5" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:16:46.3918" ThreadId="31" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:16:46.3918" ThreadId="31" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043144795139},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:17:06.3997" ThreadId="24" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:17:06.3997" ThreadId="24" Level="FATAL" Message="X-Request-Id: e1d011e1-a143-4ba4-9758-4e8408c35057" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:17:06.3997" ThreadId="24" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:17:06.3997" ThreadId="24" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043160547224},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:17:58.8228" ThreadId="23" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:17:58.8228" ThreadId="23" Level="FATAL" Message="X-Request-Id: fda6cd0f-94c0-49f0-b54b-09089c913878" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:17:58.8228" ThreadId="23" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:17:58.8228" ThreadId="23" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043158404411},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:19:42.9307" ThreadId="23" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:19:42.9307" ThreadId="23" Level="FATAL" Message="X-Request-Id: f509268f-f934-4e12-86ff-b3bc47068040" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:19:42.9307" ThreadId="23" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-08-22 07:19:42.9307" ThreadId="23" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043059772139},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="a08edf67e470" DateTime="2024-08-22 16:12:15.9773" ThreadId="75" Level="FATAL" Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""

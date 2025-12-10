@@ -1,0 +1,195 @@
+*[19-05-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #2 same error
+RequestId="050968803d0c" SessionId="_818be136-3305-480f-8f14-0ec7c53ccf19-A9A9D8650468495FA4681FA02F2557D7" UserId="239734" UserEmail="MMamer@eab.com" DateTime="2025-05-19 09:59:37.2149" ThreadId="36" Level="FATAL" 
+Message="The remote host closed the connection. The error code is 0x80070057." 
+Exception="System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at System.IO.Stream.<>c.<BeginWriteInternal>b__46_0(Object <p0>)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.IO.Stream.EndWrite(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.WebHost.HttpControllerHandler.<WriteStreamedResponseContentAsync>d__15.MoveNext()"
+
+2.   
+RequestId="a334fff84534" SessionId="_818be136-3305-480f-8f14-0ec7c53ccf19-A9A9D8650468495FA4681FA02F2557D7" UserId="239734" UserEmail="MMamer@eab.com" DateTime="2025-05-19 09:59:37.2363" ThreadId="48" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.AddRange(IEnumerable entities)
+   at System.Data.Entity.DbSet`1.AddRange(IEnumerable`1 entities)
+   at ABC.Common.BL.AdminNotificationService.AddAndSaveNotifications(Subsystems subsystem, AdminNotificationSeverities severity, Boolean isEmailBody, String[] messages) in c:\git_sources\eabgo\Common\ABC.Common.BL\AdminNotificationService.cs:line 42
+   at ABC.Common.Web.Infrastructure.GlobalExceptionLogger.<LogAsync>d__0.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\GlobalExceptionLogger.cs:line 36"
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+RequestId="17dbdbdb444e" SessionId="_c92744aa-b56e-43e1-b156-30f292354f36-E2DEC812CE626D3309F3340E1646AC15" UserId="502739" UserEmail="ahaner@eab.com" 
+DateTime="2025-05-19 18:13:51.4583" ThreadId="24" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: a4296719-a432-40d1-ab8c-9335832d3dcf. Reason: User does not have access to the accountNumber or custid. OwnerId: f3ed5f87-a5e8-4fa0-8c3c-4172a2a9e008. EmployeeNumber: 238941X005531. CustomerID: BRV61" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Credit Card Detail-----
+---------------------------------------
+Username: Christy Wirtz
+MaskedNumber: 556368XXXXXX0237
+EmployeeNumber: 238941X005531
+OwnerId: F3ED5F87-A5E8-4FA0-8C3C-4172A2A9E008
+CustomerID: BRV61
+Status: Active
+Expiration Date: 2028-11-01 00:00:00.000
+Card ID - 7591
+
+New Card - 238941X338824 (DGYXS)
+
+
+2. #2 same error
+RequestId="c5187e37b82c" SessionId="_c92744aa-b56e-43e1-b156-30f292354f36-9488C44486957CD441C93BDC47020B6E" UserId="500231" UserEmail="mprag@eab.com" 
+DateTime="2025-05-19 23:04:06.4915" ThreadId="19" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: User does not have access to the accountNumber or custid. ActorId: fcdd5666-a0c7-467e-a8f2-dc20c26223af. OwnerId: 26c49bca-144b-4ce7-91ed-08da455d23ce. Last4Digits: 6976, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Credit Card Detail-----
+---------------------------------------
+Username: Tisleen Singh
+MaskedNumber: 556305XXXXXX6976
+EmployeeNumber: 238792X338842
+OwnerId: 26C49BCA-144B-4CE7-91ED-08DA455D23CE
+CustomerID: DGYXS
+Status: Active
+Expiration Date: 2028-11-01 00:00:00.000
+Card ID - 9292
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+DateTime="2025-05-19 07:38:16.3969" ThreadId="1" Level="FATAL" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 240391" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at ABC.CCM.Workers.ComdataSyncOut.ComdataSyncOutProcessor.UpdateCardAddressForUsers()
+---> (Inner Exception #0) ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()<---
+
+ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()"
+
+Trace:
+DateTime="2025-05-19 07:38:16.3969" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 7769 end. Duration: 3 ms."
+DateTime="2025-05-19 07:38:16.3969" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 240192X005062 start."
+DateTime="2025-05-19 07:38:16.3969" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2025-05-19 07:38:16.3969" ThreadId="18" Level="TRACE" Provider="ComdataSyncOut" Message="CreditCardService.UpdateCreditCardStatusByComdataStatusAsync_comdataMcApiService.UpdateCreditCardBillingAddressAsync. end. Duration: 602 ms."
+
+
+Occurance of Error:
+DateTime="2025-05-13 07:38:52.3795"
+DateTime="2025-05-14 07:38:17.6719"
+DateTime="2025-05-15 07:37:48.1313"
+DateTime="2025-05-16 07:38:36.8335"
+DateTime="2025-05-17 07:38:28.2777" 
+DateTime="2025-05-18 07:38:18.3984"
+DateTime="2025-05-19 07:38:16.3969" 
+
+Card Detail:
+---------------------------------------
+Username: Marco Dinh
+MaskedNumber: 556368XXXXXX2653
+EmployeeNumber: 240391X005311
+OwnerId: 1C3D4846-C37D-4AC2-8124-8AE8E444BCA9
+CustomerID: BRV61
+Status: Blocked
+Expiration Date: 2028-11-01 00:00:00.000
+Card ID - 7371
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

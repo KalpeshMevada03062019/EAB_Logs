@@ -1,0 +1,104 @@
+*[16-03-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #2 same error
+RequestId="30cf527f4e7a" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:24:33.5568" ThreadId="8" Level="FATAL" 
+Message="HTTP validation error: Rate isn't available for specified currency and date." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="30cf527f4e7a" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:24:33.4599" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate START"
+RequestId="30cf527f4e7a" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:24:33.4599" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate Request content: {'allocationItems':[{'id':0,'allocatedBy':'Employee','isOwn':true,'percentage':100,'value':'Matt Becker','departmentExternalId':null,'departmentAllocationAvailability':null,'userId':'d094540d-bc2b-4641-90a5-8e696020627c','availablePurposesIds':null,'isGuestUser':false,'userEntity':'EAB'}],'expenses':[{'mealApproverName':null,'financeApprovedMealsThreshold':500,'memberMealThreshold':120,'businessAmount':'5.06','date':'03/17/2025','expenseType':{'id':5,'name':'Food','route':null},'id':null,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'8.00'}],'transactionInfo':{'basedCityReason':null,'traveler':'Matt Becker','uberTransactionType':null,'voucherProgram':null,'createdFromTransactionId':null,'date':'03/17/2025','logoId':null,'totalAmount':5.06,'merchant':{'merchantCategoryId':null,'address':'Melbourne, Australia','city':'Melbourne','country':'AU','name':'Scooter Cafe','state':'VIC','zip':'','displayName':'Scooter Cafe','countryFull':'Australia','route':'','streetNumber':''},'purposes':[{'id':41601,'name':'Internal Meeting','isBudgetLine':false,'isGeneric':true,'hasHostCostCenter':true,'isIncentiveTrip':false,'assignedAmount':0,'percentage':100,'hasDollarCap':false,'hostCostCenterName':'Information Security','hostCostCenterId':747,'isInstitutionRequired':false,'institutionId':null,'institutionName':null,'isSelected':false,'checked':true}],'version':null,'isShared':false,'isRejected':null,'currency':{'rate':0.63232,'id':11,'code':'AUD','name':'Australian dollar','countryName':'Australia','countryCode':'AUS'},'isInInternationalMode':true,'exchangeRate':0.63232,'paymentInfo':{'formOfPayment':'Cash','name':'M.Becker-Cash'},'reassignmentInfo':null,'ownerManagementLevel':null,'notes':null,'approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(AUD) Australian dollar','mealApproverName':null,'perDiems':[],'originalPurposes':[{'id':41601,'name':'Internal Meeting','isBudgetLine':false,'isGeneric':true,'hasHostCostCenter':true,'isIncentiveTrip':false,'assignedAmount':0,'percentage':100,'hasDollarCap':false,'hostCostCenterName':'Information Security','hostCostCenterId':747,'isInstitutionRequired':false,'institutionId':null,'institutionName':null,'isSelected':false,'checked':true}]},'transactionId':null,'receiptId':null,'clientDate':'2025-03-17T09:24:35+11:00'}"
+RequestId="30cf527f4e7a" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:24:33.5061" ThreadId="8" Level="TRACE" Message="Validating access right start."
+RequestId="30cf527f4e7a" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:24:33.5061" ThreadId="8" Level="TRACE" Message="Validating access right end. Duration: 0 ms."
+RequestId="30cf527f4e7a" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:24:33.5061" ThreadId="8" Level="TRACE" Message="Updating transaction entity start."
+RequestId="30cf527f4e7a" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:24:33.5218" ThreadId="7" Level="TRACE" Message="GetRateAsync start."
+RequestId="30cf527f4e7a" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:24:33.5568" ThreadId="8" Level="TRACE" Message="GetRateAsync end. Duration: 21 ms."
+RequestId="30cf527f4e7a" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:24:33.5568" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate Completed in 97 ms"
+
+2. #3 same error
+RequestId="0e37c0ff7e2f" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:25:29.7314" ThreadId="8" Level="FATAL" 
+Message="Nullable object must have a value." 
+Exception="System.InvalidOperationException: Nullable object must have a value.
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<GetCurrencyByCountryAsync>d__91.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 544
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+FirstName: Matt
+LastName: Becker
+Trasaction: 2339603
+Food TransactionDetail
+
+Trace Info
+RequestId="0e37c0ff7e2f" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:25:29.6693" ThreadId="8" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/food/countryCurrency/AU/2025-03-17 START"
+RequestId="0e37c0ff7e2f" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:25:29.7010" ThreadId="10" Level="TRACE" Message="GetRateAsync start."
+RequestId="0e37c0ff7e2f" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:25:29.7224" ThreadId="8" Level="TRACE" Message="GetRateAsync end. Duration: 27 ms."
+RequestId="0e37c0ff7e2f" SessionId="_6e631b82-6686-4671-8b81-826172f771c3-6F5ED26DB37D20672A7C62A58200DCB8" UserId="238857" UserEmail="MBecker@eab.com" DateTime="2025-03-16 18:25:29.8335" ThreadId="8" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/food/countryCurrency/AU/2025-03-17 Completed in 164 ms"
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

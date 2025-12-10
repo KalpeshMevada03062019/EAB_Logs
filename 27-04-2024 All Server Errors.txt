@@ -1,0 +1,116 @@
+[27-04-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="fb1eb994feed" UserId="239048" UserEmail="EArtis@eab.com" 
+DateTime="2024-04-27 17:33:50.9198" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: SHUTDOWN is in progress.
+Login failed for user 'goadmin'.
+Cannot continue the execution because the session is in the kill state.
+
+2. #3 same error
+RequestId="fb1eb994feed" SessionId="_17ecf05c-c254-48ad-b2ea-15aa18387fa6-8E10B6B069D1B1B6CFDCC75ABFE8AC40" UserId="239048" UserEmail="EArtis@eab.com" 
+DateTime="2024-04-27 17:33:51.0936" 
+Message="Error adding admin notification." 
+Exception="System.Data.Entity.Core.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.Data.SqlClient.SqlException: SHUTDOWN is in progress.
+Login failed for user 'goadmin'.
+Cannot continue the execution because the session is in the kill state.
+
+3. #6 same error
+RequestId="317152fb9cfd" UserId="239048" UserEmail="EArtis@eab.com" 
+DateTime="2024-04-27 17:34:52.3372" 
+Message="The underlying provider failed on Open." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception: Access is denied
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.  
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.  #6 same error
+1. ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_Workershost_Fatal
+-------------------------
+1.	
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="4437230e6249" 
+DateTime="2024-04-27 02:25:56.4866" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+2.
+RequestId="" 
+DateTime="2024-04-27 07:16:55.2895" 
+Message="Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+3.
+RequestId="" 
+DateTime="2024-04-27 17:27:45.8845"
+Message="The remote host closed the connection. The error code is 0x80070057." Provider="" 
+Exception="System.ServiceModel.CommunicationException: The remote host closed the connection. The error code is 0x80070057. ---> System.Web.HttpException: The remote host closed the connection. The error code is 0x80070057.
+
+4.
+RequestId="7bcbb07d1f99" 
+DateTime="2024-04-27 21:17:39.6370" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

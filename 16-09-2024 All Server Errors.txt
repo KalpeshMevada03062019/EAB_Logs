@@ -1,0 +1,83 @@
+*[16-09-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal  
+-------------------------
+1. #21 same error
+RequestId="e3c65be46487" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-09-16 03:26:47.9518" ThreadId="24" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1842
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsActionAsync>d__eb`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 0
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsAsync>d__59.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 452
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<>c__DisplayClassc4.<<GetFilteredAsync>b__c3>d__c6.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 0
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredAsync>d__c9.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 489
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. #1
+DateTime="2024-09-16 07:03:58.9150" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutApprovedTransactions" 
+Message="Following error occurs during sending 'Go Expense: The following expenses have been approved' email to 'SGreenleaf@eab.com': transaction must have a personal amount" Exception="System.ArgumentException: transaction must have a personal amount
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.ComputeReimbursementAmount(ExpenseGridRow transaction)
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.GetBody(List`1 transactions, User user, DateTime date)
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.CreateMessage(EmailToUserModel emailModel)
+   at ABC.Common.Worker.Mail.MailSenderProcessor`1.<>c__DisplayClass6.<SendMail>b__2() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Mail\MailSenderProcessor.cs:line 84
+   at ABC.Common.Framework.Logger.Logger.LogActionTime[T](Func`1 action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 116
+   at ABC.Common.Worker.Mail.MailSenderProcessor`1.SendMail() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Mail\MailSenderProcessor.cs:line 83"
+
+   
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-09-16 23:22:52.4088" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'"
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------

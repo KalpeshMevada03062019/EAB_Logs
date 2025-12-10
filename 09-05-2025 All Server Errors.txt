@@ -1,0 +1,84 @@
+*[09-05-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #4 same error
+RequestId="ad0460eb882e" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-05-09 17:11:13.3825" ThreadId="28" Level="FATAL" 
+Message="HTTP validation error: Transaction cannot be validated due to incorrect status." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="ad0460eb882e" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-05-09 17:11:13.2446" ThreadId="11" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate START"
+RequestId="ad0460eb882e" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-05-09 17:11:13.2446" ThreadId="11" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate Request content: {'allocationItems':[],'expenses':[{'businessAmount':'0.00','date':'03/28/2025','expenseType':{'id':8,'name':'Nightly Rate','route':null},'id':3285449,'personalAmount':'174.07','note':'','personalAmountInternational':'174.07','businessAmountInternational':'0.00'},{'businessAmount':'0.00','date':'03/28/2025','expenseType':{'id':10,'name':'Hotel Taxes','route':null},'id':3310019,'personalAmount':'27.76','note':null,'personalAmountInternational':'27.76','businessAmountInternational':'0.00'}],'transactionInfo':{'basedCityReason':null,'overAllowedAmountReason':null,'whyBookedOutsideReason':null,'traveler':'WATSON, AVIS','defaultTravelerName':'Avis Watson','perDiems':[{'rate':260,'startDate':'02/22/2017','endDate':null,'onDate':'March 28th'}],'hotelConfirmation':{'id':1,'name':'Other','isOther':true,'hotel':{'id':0,'name':null,'country':null,'city':null,'state':null}},'isDetailed':false,'attachment':{'id':225057,'version':'AAAAAAEkf7o=','userId':'ec322342-d4c2-44d6-a99c-a04a44bbe387','userName':'Avis Watson','isAttached':true,'isAttachmentImage':false,'name':'Yours Truly hotel receipt (1).pdf','source':'','fileCreatedDate':'2025-05-09T17:08:46.86','folio':null},'isFolioValidated':null,'createdFromTransactionId':null,'date':'03/28/2025','logoId':null,'totalAmount':201.83,'merchant':{'merchantCategoryId':7011,'address':'1143 NEW HAMPSHIRE AVE N','city':'Washington','country':'USA','name':'YOURS TRULY DC','state':'DC','zip':'20037-0000','displayName':'YOURS TRULY DC, Washington, DC'},'purposes':[{'id':23457,'name':'Personal Expense','isBudgetLine':true,'isGeneric':false,'hasHostCostCenter':false,'isIncentiveTrip':false,'assignedAmount':0,'percentage':100,'hasDollarCap':false,'hostCostCenterName':null,'hostCostCenterId':null,'isInstitutionRequired':null,'institutionId':null,'institutionName':null,'isSelected':false}],'version':'AAAAAAEkf7w=','isShared':false,'isRejected':null,'currency':{'id':5,'code':'USD','name':'United States dollar','countryName':null,'countryCode':null},'isInInternationalMode':false,'exchangeRate':1,'paymentInfo':{'formOfPayment':'CreditCard','name':'HotelCard-7288'},'reassignmentInfo':null,'ownerManagementLevel':'B3','notes':'Submitted by mistake previously as cash expense','approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(USD) United States Dollar','perDiemList':[{'perDiem':0}],'originalPurposes':[{'id':23457,'name':'Personal Expense','isBudgetLine':true,'isGeneric':false,'hasHostCostCenter':false,'isIncentiveTrip':false,'assignedAmount':0,'percentage':100,'hasDollarCap':false,'hostCostCenterName':null,'hostCostCenterId':null,'isInstitutionRequired':null,'institutionId':null,'institutionName':null,'isSelected':false}]},'transactionId':2347254,'receiptId':225057,'clientDate':'2025-05-09T14:11:13-07:00'}"
+RequestId="ad0460eb882e" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-05-09 17:11:13.3543" ThreadId="21" Level="TRACE" Message="Validating access right start."
+RequestId="ad0460eb882e" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-05-09 17:11:13.3644" ThreadId="11" Level="TRACE" Message="Validating access right end. Duration: 2 ms."
+RequestId="ad0460eb882e" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-05-09 17:11:13.3644" ThreadId="11" Level="TRACE" Message="Updating transaction entity start."
+RequestId="ad0460eb882e" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-05-09 17:11:13.3825" ThreadId="28" Level="TRACE" Message="Updating transaction entity end. Duration: 25 ms."
+RequestId="ad0460eb882e" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-05-09 17:11:13.3825" ThreadId="28" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate Completed in 138 ms"
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+ 
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

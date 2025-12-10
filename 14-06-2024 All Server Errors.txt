@@ -1,0 +1,115 @@
+14-06-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #3 same error
+RequestId="8857c4e8a763" UserId="235561" UserEmail="TLongshore@eab.com" 
+DateTime="2024-06-14 11:51:19.0011" ThreadId="62" Level="FATAL" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+2. 
+RequestId="9f88541eedee" UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-06-14 04:41:17.4258"
+Message="Error updating spending profile for user with external id 236126" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #5
+RequestId="5a26f877df1c" UserId="235561" UserEmail="TLongshore@eab.com" 
+DateTime="2024-06-14 11:50:53.7700" ThreadId="32" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=4; handshake=6; [Login] initialization=0; authentication=0; [Post-Login] complete=14741;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+2. #4
+RequestId="098747b10d44" UserId="239272" UserEmail="PPARADISO@eab.com" 
+DateTime="2024-06-14 11:50:53.7700" ThreadId="27" Level="FATAL" 
+Message="The underlying provider failed on Open." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=4; handshake=6; [Login] initialization=0; authentication=0; [Post-Login] complete=14741;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. #10 same error
+RequestId="2aca1b9049e5" UserId="502586" UserEmail="JTracy@eab.com" 
+DateTime="2024-06-14 12:47:15.4972" 
+Message="HTTP validation error: Add new card request failed. Reason: Can not ship to PO Box for expedited method. UserId: 2617e25d-2d51-4549-8c5f-4e559bc63396. UserName: EAB " 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+TRACE
+RequestId="2aca1b9049e5" SessionId="_e90f6cdd-88bf-4027-8c19-49565ef91aaf-93FCE7249F48A0EB2BA2C19F9F06DE47" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-06-14 12:47:15.1272" ThreadId="84" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5379/replace START"
+RequestId="2aca1b9049e5" SessionId="_e90f6cdd-88bf-4027-8c19-49565ef91aaf-93FCE7249F48A0EB2BA2C19F9F06DE47" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-06-14 12:47:15.1576" ThreadId="84" Level="TRACE" Message="AddCreditCardAsync start."
+RequestId="2aca1b9049e5" SessionId="_e90f6cdd-88bf-4027-8c19-49565ef91aaf-93FCE7249F48A0EB2BA2C19F9F06DE47" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-06-14 12:47:15.4972" ThreadId="84" Level="TRACE" Message="AddCreditCardAsync end. Duration: 334 ms."
+RequestId="2aca1b9049e5" SessionId="_e90f6cdd-88bf-4027-8c19-49565ef91aaf-93FCE7249F48A0EB2BA2C19F9F06DE47" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-06-14 12:47:15.4972" ThreadId="84" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5379/replace Completed in 370 ms"
+
+WARN:
+RequestId="2aca1b9049e5" UserId="502586" UserEmail="JTracy@eab.com" 
+DateTime="2024-06-14 12:47:15.4972" ThreadId="90" Level="WARN" 
+Message="CreditCardService.CreateCreditCardAsync. Can't create credit card - ComData request failed. Response description - Can not ship to PO Box for expedited method. User id - 2617e25d-2d51-4549-8c5f-4e559bc63396." 
+Exception=""
+
+2.
+RequestId="9b5a7ec8a909" UserId="501312" UserEmail="ADurgan@eab.com" 
+DateTime="2024-06-14 18:15:07.9038" 
+Message="HTTP validation error: Add new card request failed. Reason: Can not ship to PO Box for expedited method. UserId: 2617e25d-2d51-4549-8c5f-4e559bc63396. UserName: EAB " 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE
+RequestId="9b5a7ec8a909" SessionId="_e90f6cdd-88bf-4027-8c19-49565ef91aaf-335CFEAE15D35AB908E7634BA7C6C5A1" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-06-14 18:15:07.2292" ThreadId="90" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5379/replace START"
+RequestId="9b5a7ec8a909" SessionId="_e90f6cdd-88bf-4027-8c19-49565ef91aaf-335CFEAE15D35AB908E7634BA7C6C5A1" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-06-14 18:15:07.2494" ThreadId="83" Level="TRACE" Message="AddCreditCardAsync start."
+RequestId="9b5a7ec8a909" SessionId="_e90f6cdd-88bf-4027-8c19-49565ef91aaf-335CFEAE15D35AB908E7634BA7C6C5A1" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-06-14 18:15:07.9038" ThreadId="90" Level="TRACE" Message="AddCreditCardAsync end. Duration: 654 ms."
+RequestId="9b5a7ec8a909" SessionId="_e90f6cdd-88bf-4027-8c19-49565ef91aaf-335CFEAE15D35AB908E7634BA7C6C5A1" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-06-14 18:15:07.9038" ThreadId="90" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5379/replace Completed in 675 ms"
+
+WARN:
+RequestId="9b5a7ec8a909" UserId="501312" UserEmail="ADurgan@eab.com" 
+DateTime="2024-06-14 18:15:07.9038" ThreadId="90" Level="WARN" 
+Message="CreditCardService.CreateCreditCardAsync. Can't create credit card - ComData request failed. Response description - Can not ship to PO Box for expedited method. User id - 2617e25d-2d51-4549-8c5f-4e559bc63396." 
+Exception=""
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-06-14 11:51:25.2610" ThreadId="1" Level="FATAL" Provider="WorkersHost" Message="Unhandled error while running creator 'TravelerCategoriesSync'" Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=13886;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-06-14 11:51:24.2374" ThreadId="1" Level="FATAL" Provider="WorkersHost" Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=8; handshake=10676;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+

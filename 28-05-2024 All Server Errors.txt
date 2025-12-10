@@ -1,0 +1,113 @@
+[28-05-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="a8fcbe5dbb03" UserId="234440" UserEmail="MFeger@eab.com" 
+DateTime="2024-05-28 08:13:28.9012" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. #2 Same error
+RequestId="dd255b77930b" UserId="501312" useremail="adurgan@eab.com" 
+DateTime="2024-05-28 12:13:02.6845" 
+Message="HTTP validation error: Add new card request failed. Reason: Can not ship to PO Box for expedited method. UserId: d9852a62-d944-4dae-943c-da6ab434d9f7. UserName: EAB " 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE::
+RequestId="dd255b77930b" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-05-28 12:13:01.7846" ThreadId="22" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5214/replace START"
+RequestId="dd255b77930b" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-05-28 12:13:01.8166" ThreadId="8" Level="TRACE" Message="AddCreditCardAsync start."
+RequestId="dd255b77930b" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-05-28 12:13:02.6730" ThreadId="20" Level="TRACE" Message="AddCreditCardAsync end. Duration: 862 ms."
+RequestId="dd255b77930b" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-05-28 12:13:02.6845" ThreadId="20" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5214/replace Completed in 900 ms"
+
+WARN::
+RequestId="e6ddaa320f5c" SessionId="_c6e236c2-a937-4b15-a056-57cb2c4e910b-4D7A9E8F3E854F302D1C3937CF9125B6" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-05-28 11:15:34.5555" ThreadId="10" Level="WARN" Message="Credit card data is not updated with actual ComData data. Reason: 00862,EMPLOYEE NUMBER NOT FOUND" Exception=""
+RequestId="dd255b77930b" SessionId="_c6e236c2-a937-4b15-a056-57cb2c4e910b-844064F68FCD2D8D890A1211141607D0" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-05-28 12:13:02.6730" ThreadId="20" Level="WARN" Message="CreditCardService.CreateCreditCardAsync. Can't create credit card - ComData request failed. Response description - Can not ship to PO Box for expedited method. User id - d9852a62-d944-4dae-943c-da6ab434d9f7." Exception=""
+RequestId="98568acb521d" SessionId="_c6e236c2-a937-4b15-a056-57cb2c4e910b-844064F68FCD2D8D890A1211141607D0" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-05-28 12:13:05.5898" ThreadId="21" Level="WARN" Message="CreditCardService.CreateCreditCardAsync. Can't create credit card - ComData request failed. Response description - Can not ship to PO Box for expedited method. User id - d9852a62-d944-4dae-943c-da6ab434d9f7." Exception=""
+RequestId="590dc86d39b4" SessionId="_c6e236c2-a937-4b15-a056-57cb2c4e910b-EFEA90B43196B9EADD84423960814D5F" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-05-28 16:53:26.1798" ThreadId="26" Level="WARN" Message="Credit card data is not updated with actual ComData data. Reason: 00862,EMPLOYEE NUMBER NOT FOUND" Exception=""
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.  
+
+TRACE::
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+EXD_Workershost_Fatal
+-------------------------
+1.	
+DateTime="2024-05-28 06:00:48.9927" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'UberFeedDownloader'" 
+Exception="Renci.SshNet.Common.SshConnectionException: An established connection was aborted by the server.
+
+TRACE::
+DateTime="2024-05-28 06:00:48.8714" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running start."
+DateTime="2024-05-28 06:00:48.9927" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'UberFeedDownloader' disposed."
+DateTime="2024-05-28 06:00:49.0089" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running start."
+DateTime="2024-05-28 06:00:49.8862" ThreadId="1" Level="TRACE" Provider="UberFeedDownloader" Message="2 not processed files availiable on the FTP."
+DateTime="2024-05-28 06:00:51.1336" ThreadId="1" Level="TRACE" Provider="UberFeedDownloader" Message="Files dowloading is finished. 1 files was downloaded. 1 was skipped."
+DateTime="2024-05-28 06:00:51.1336" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running end. Duration: 2133 ms."
+DateTime="2024-05-28 06:00:51.1336" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'UberFeedDownloader' disposed."
+DateTime="2024-05-28 06:00:51.1486" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running start."
+DateTime="2024-05-28 06:00:51.6548" ThreadId="1" Level="TRACE" Provider="UberFeedDownloader" Message="2 not processed files availiable on the FTP."
+DateTime="2024-05-28 06:00:52.2865" ThreadId="1" Level="TRACE" Provider="UberFeedDownloader" Message="Files dowloading is finished. 0 files was downloaded. 2 was skipped."
+DateTime="2024-05-28 06:00:52.2865" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running end. Duration: 1124 ms."
+DateTime="2024-05-28 06:00:52.2865" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'UberFeedDownloader' disposed."
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

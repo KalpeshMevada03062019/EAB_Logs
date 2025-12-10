@@ -1,0 +1,100 @@
+*[26-01-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+
+----------------------
+UPM_Website_fatal
+----------------------
+1.
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1.
+DateTime="2024-01-28 06:47:49.8120" Provider="CDF3Import" 
+Message="Object reference not set to an instance of an object." 
+dException="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+
+
+TRACE: https://prnt.sc/tLYweJGzzyRC
+DateTime="2024-01-28 06:47:49.8120" ThreadId="1" Level="TRACE" Provider="CDF3Import" Message="ExdFileProcessor. Finish file 'G0210862_20240123_045741SB_005978.xml'"
+DateTime="2024-01-28 06:47:49.8120" ThreadId="1" Level="TRACE" Provider="CDF3Import" Message="ExdFileProcessor. Start file 'G0210862_20240127_055803SB_005986.xml' downloading"
+DateTime="2024-01-28 06:47:49.8120" ThreadId="1" Level="TRACE" Provider="CDF3Import" Message="ExdFileProcessor. Start saving of file 'G0210862_20240127_055803SB_005986.xml'"
+
+INFO - https://prnt.sc/AVt1V_notSni
+DateTime="2024-01-28 06:47:49.8120" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Saving: File 'G0210862_20240127_055803SB_005986.xml' - Start"
+DateTime="2024-01-28 06:47:49.8377" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Splitting: Start"
+DateTime="2024-01-28 06:47:49.8377" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Splitting: Adding of City/State/Country if absent - Start."
+DateTime="2024-01-28 06:47:49.8377" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Splitting: Adding of City/State/Country if absent - Finish."
+DateTime="2024-01-28 06:47:49.8752" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Splitting: Finish. Imported - 0 transactions. Credit cards updated - 5, Credit cards added - 0, MerchantCategoryies added - 0, Merchants added - 0"
+DateTime="2024-01-28 06:47:49.9388" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="'G0210862_20240127_055803SB_005986.xml' file saved to be parsed. There are 0 transactions."
+
+2.
+DateTime="2024-01-28 06:48:07.4379" Provider="BalboaSupplementalImport" 
+Message="File with id f5c1c7a9-1e1a-4fba-ba95-06d6810aa2e9 is empty." 
+Exception=""
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+1.
+
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1.
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1.
+DateTime="2024-01-28 00:04:12.4379"  Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+
+2.
+DateTime="2024-01-28 00:23:12.5105" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+
+3.
+DateTime="2024-01-28 15:07:13.3668" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (503) Server Unavailable.
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+
+
+----------------------
+UPM_API_Fatal
+----------------------
+1.
+
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------

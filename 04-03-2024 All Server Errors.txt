@@ -1,0 +1,97 @@
+[04-03-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-03-04 06:47:54.9070" Provider="CDF3Import" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+
+DateTime="2024-03-04 06:47:54.9070" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20240123_045741SB_005978.xml'" 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Base.ExdFileProcessor.DownloadAndSaveFiles(IEnumerable`1 feedInfoModels)"
+
+2.
+DateTime="2024-03-04 20:05:21.5562" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (503) Server Unavailable. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #1 error
+DateTime="2024-03-04 18:30:12.6072" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+	
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. #5 same error
+RequestId="fe6ea4a59c3c" 
+DateTime="2024-03-04 01:43:02.8236" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+
+2. #2 same error
+RequestId="923e3a330012" 
+DateTime="2024-03-04 01:44:17.7881" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="Comdata" 
+Exception=""
+
+3.
+RequestId="" DateTime="2024-03-04 18:30:15.6850" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+4.
+RequestId="" DateTime="2024-03-04 20:05:22.5578" 
+Message="The request failed. The remote server returned an error: (503) Server Unavailable." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (503) Server Unavailable. ---> System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+
+

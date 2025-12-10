@@ -1,0 +1,53 @@
+[18-10-2023]
+
+Web Server
+----------------------
+ERS_Website_fatal
+----------------------
+1.
+RequestId="d451aba5b35e" 
+DateTime="2023-10-18 00:35:12.2654"
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2.
+RequestId="930a2e25e270" 
+DateTime="2023-10-18 09:28:48.5574"
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+----------------------
+UPM_Website_fatal
+----------------------
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1.
+DateTime="2023-10-18 06:52:50.1305" Provider="CDF3Parser"  [Timeout error]
+Message="CDF3 Parsing: InRule validation exception: One or more errors occurred." 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."
+	
+----------------------
+NTF_Workerhost_fatal
+----------------------
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+
+----------------------
+UPM_API_Fatal
+----------------------
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------

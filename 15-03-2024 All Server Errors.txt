@@ -1,0 +1,99 @@
+[15-03-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-03-15 02:25:21.4675" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (503) Server Unavailable. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #6 same error
+DateTime="2024-03-15 01:40:13.1696" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (503) Server Unavailable.
+ 
+2. #1 error TIMEOUT
+DateTime="2024-03-15 09:08:05.3792" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComdataSyncIn'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+	
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="" 
+DateTime="2024-03-15 01:40:13.7950" 
+Message="The request failed. The remote server returned an error: (503) Server Unavailable." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (503) Server Unavailable. ---> System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+
+RequestId="" 
+DateTime="2024-03-15 02:03:13.1939" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+
+RequestId="" 
+DateTime="2024-03-15 18:13:15.5530" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+RequestId="" 
+DateTime="2024-03-15 10:18:17.2943"
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+
+

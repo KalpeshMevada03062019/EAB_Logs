@@ -1,0 +1,111 @@
+[16-04-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #4 same error 
+RequestId="20b6e9fcf47d" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-04-16 09:23:32.4113" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+
+2.
+RequestId="c6d9d453d486" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-04-16 10:29:22.2480" 
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration. ---> System.InvalidOperationException: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #2 same error 
+RequestId="dc84b16f1e81" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2024-04-16 09:42:44.6688" 
+Message="HTTP validation error: Unable to replace credit card when owner already has an active credit card. UserId: 8be72666-bdcd-4403-9273-36679c4d28e4" Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2
+RequestId="c04daf32f03c" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2024-04-16 10:24:25.1786" 
+Message="HTTP validation error: Deactivate credit card request failed. Reason: Card not found. Actor Id: f5088bf5-4b99-4291-a563-f9adbb4dbe94" Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+3.
+RequestId="c6873054c709" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2024-04-16 10:46:10.0275" 
+Message="HTTP validation error: Unable to replace credit card when owner already has an active credit card. UserId: ac28779e-c5c5-4f68-b878-3a4a1a8f3336" Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_Workershost_Fatal
+-------------------------
+1.	
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="1e6f04664e88" 
+DateTime="2024-04-16 03:01:39.8878" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+TRACE:
+RequestId="1e6f04664e88" 
+DateTime="2024-04-16 03:01:39.8245" 
+Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'234922X004256','maskCardFlag':'Y'}]" Provider="Comdata"
+
+RequestId="1e6f04664e88" 
+DateTime="2024-04-16 03:01:39.8245" 
+Message="GetCardByEmployeeNumber start." Provider="Comdata"
+
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

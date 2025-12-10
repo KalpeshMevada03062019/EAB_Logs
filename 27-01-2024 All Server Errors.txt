@@ -1,0 +1,108 @@
+*[26-01-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+
+----------------------
+UPM_Website_fatal
+----------------------
+1.
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1.
+DateTime="2024-01-27 01:10:22.1259" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (503) Server Unavailable. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (503) Server Unavailable. ----> System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.Exchange.WebServices.Data.EwsHttpWebRequest.Microsoft.Exchange.WebServices.Data.IEwsHttpWebRequest.GetResponse() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsHttpWebRequest.cs:line 113
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 821
+   --- End of inner ExceptionDetail stack trace ---
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWeb...)."
+   
+2. 
+DateTime="2024-01-27 06:48:10.1020" Provider="CDF3Import" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+ 
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+1.
+
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1.
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. #2 same error
+DateTime="2024-01-27 13:01:12.5015" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailync'" Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+
+2.
+DateTime="2024-01-27 15:22:34.6968" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComdataSyncIn'" Exception="System.Data.Entity.Core.EntityException: An exception has been raised that is likely due to a transient failure. If you are connecting to a SQL Azure database consider using SqlAzureExecutionStrategy. ---> System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.Entity.Core.EntityException: An exception has been raised that is likely due to a transient failure. If you are connecting to a SQL Azure database consider using SqlAzureExecutionStrategy. ---> System.Data.SqlClient.SqlException: A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - An existing connection was forcibly closed by the remote host.) ---> System.ComponentModel.Win32Exception: An existing connection was forcibly closed by the remote host
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+RequestId="" 
+DateTime="2024-01-27 01:10:22.8390" 
+Message="The request failed. The remote server returned an error: (503) Server Unavailable." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (503) Server Unavailable. ---> System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+
+2. #2 Same error
+RequestId="" 
+DateTime="2024-01-27 13:01:14.8587" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+3. 
+RequestId="edac730d4be3" 
+DateTime="2024-01-27 18:57:42.3786" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+
+TRACE - https://prnt.sc/Mcueu8H6BwMY
+RequestId="edac730d4be3" DateTime="2024-01-27 18:57:40.1539" ThreadId="84" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'226146X003510','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="edac730d4be3" DateTime="2024-01-27 18:57:40.1539" ThreadId="84" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+
+INFO:
+RequestId="f3c041a7abdb" DateTime="2024-01-27 08:06:33.9608" ThreadId="30" Level="INFO" Message="PersonalInfo update is needed for user with ExtId = 226146. Changed: EmergencyContactName. Nutravel value: H Hock. User value: Heather Hock." Provider="NuTravel"
+RequestId="f3c041a7abdb" DateTime="2024-01-27 08:06:33.9608" ThreadId="30" Level="INFO" Message="CustomFields update is needed for user with ExtId = 226146." Provider="NuTravel"
+----------------------
+UPM_API_Fatal
+----------------------
+1.
+
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------

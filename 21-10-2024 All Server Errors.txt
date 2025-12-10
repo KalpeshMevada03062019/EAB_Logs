@@ -1,0 +1,194 @@
+*[21-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #4 same error for same user
+RequestId="41f3a95f4bff"  UserId="239412" UserEmail="JCousins@eab.com" 
+DateTime="2024-10-21 09:59:31.2980" ThreadId="22" Level="FATAL" 
+Message="The remote host closed the connection. The error code is 0x80070057." 
+Exception="System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+
+2.
+RequestId="c41b7fa4476a" UserId="239412" UserEmail="JCousins@eab.com" 
+DateTime="2024-10-21 09:59:31.3137" ThreadId="55" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.ArgumentException: An item with the same key has already been added.
+
+3.
+RequestId="d6bec19b8f6b" UserId="224124" UserEmail="SMandelbaum@eab.com" 
+DateTime="2024-10-21 11:30:00.9102" ThreadId="60" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="d6bec19b8f6b" SessionId="_4473be34-4ed9-4c6d-8fd6-03dc6db7fe06-2ABA3EF6BB14E1451F482009FE2D9C35" UserId="224124" UserEmail="SMandelbaum@eab.com" DateTime="2024-10-21 11:30:00.8671" ThreadId="60" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/toll/2282457 START"
+RequestId="d6bec19b8f6b" SessionId="_4473be34-4ed9-4c6d-8fd6-03dc6db7fe06-2ABA3EF6BB14E1451F482009FE2D9C35" UserId="224124" UserEmail="SMandelbaum@eab.com" DateTime="2024-10-21 11:30:00.8783" ThreadId="60" Level="TRACE" Message="User '239840' in 'User' role: Getting transaction data for id '2282457'"
+RequestId="d6bec19b8f6b" SessionId="_4473be34-4ed9-4c6d-8fd6-03dc6db7fe06-2ABA3EF6BB14E1451F482009FE2D9C35" UserId="224124" UserEmail="SMandelbaum@eab.com" DateTime="2024-10-21 11:30:00.9102" ThreadId="60" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/toll/2282457 Completed in 43 ms"
+
+
+4. #9 same error
+RequestId="538c26d7daaa" UserId="237575" UserEmail="SParrott@eab.com" 
+DateTime="2024-10-21 15:01:40.4622" ThreadId="22" Level="FATAL" 
+Message="There was no endpoint listening at https://eabgowers-p01/upm_api/UpmApiService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details." 
+Exception="System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://eabgowers-p01/upm_api/UpmApiService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 10.123.4.70:443
+
+Trace::
+RequestId="538c26d7daaa" SessionId="_be7d2f6f-907d-4434-82db-3e8073b97bbd-D45C4A723C4F599FA153D59BAA51B901" UserId="237575" UserEmail="SParrott@eab.com" DateTime="2024-10-21 15:01:19.3809" ThreadId="22" Level="TRACE" Message="GET https://go.myeab.com/expense/api/user/info START"
+RequestId="538c26d7daaa" SessionId="_be7d2f6f-907d-4434-82db-3e8073b97bbd-D45C4A723C4F599FA153D59BAA51B901" UserId="237575" UserEmail="SParrott@eab.com" DateTime="2024-10-21 15:01:40.4934" ThreadId="22" Level="TRACE" Message="GET https://go.myeab.com/expense/api/user/info Completed in 21113 ms"
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+RequestId="25c183bf9c1b" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-10-21 02:58:49.7817" ThreadId="11" Level="FATAL" 
+Message="The requested service, 'https://eabgowers-p01/ers_api/ErsApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ers_api/ErsApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+   at ABC.UPM.BL.ErsApiServiceReference.IErsApiService.IsGlExtractAllowedForUser(String externalId, String roleName)
+   at ABC.UPM.Website.ApiControllers.UserController.<>c__DisplayClass21.<GetUserRolesAsync>b__20(Role x) in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Website\ApiControllers\UserController.cs:line 192
+   at ABC.UPM.Website.ApiControllers.UserController.<GetUserRolesAsync>d__23.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Website\ApiControllers\UserController.cs:line 190
+   at ABC.UPM.Website.ApiControllers.UserController.<GetUserInfoAsync>d__3.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Website\ApiControllers\UserController.cs:line 0
+
+2.
+RequestId="ae5a81bdad21" UserId="238792" UserEmail="TSingh@eab.com" 
+DateTime="2024-10-21 15:00:05.1018" ThreadId="22" Level="FATAL" 
+Message="The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." 
+Exception="System.ServiceModel.CommunicationException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+3. #25 same error
+RequestId="46461df9ce36" UserId="237575" UserEmail="SParrott@eab.com" 
+DateTime="2024-10-21 15:01:40.6986" ThreadId="33" Level="FATAL" 
+Message="There was no endpoint listening at https://eabgowers-p01/ers_api/ErsApiService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details." 
+Exception="System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://eabgowers-p01/ers_api/ErsApiService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 10.123.4.70:443
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+1.
+RequestId="7efc5d8eb78b" 
+DateTime="2024-10-21 08:24:54.6446" ThreadId="9" Level="FATAL" 
+Message="Twilio. From=+16097446153, Digits=7745. Exception occurred during activation card via phone" 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+
+Trace: (Started but not ended)
+RequestId="7efc5d8eb78b" 
+DateTime="2024-10-21 08:23:54.5668" ThreadId="9" Level="TRACE" 
+Message="TwilioConnectionController.ActivateCreditCard_cardManagementApiService.ActivateCreditCardViaPhone start."
+
+INFO:
+RequestId="d59892a32a2d" DateTime="2024-10-21 08:23:50.2338" ThreadId="9" Level="INFO" Message="Twilio. CheckUserPhoneAndCreditCard. Twilio incoming call from +16097446153"
+RequestId="d59892a32a2d" DateTime="2024-10-21 08:23:50.2338" ThreadId="9" Level="INFO" Message="Start checking User Phone Number (+16097446153) and Credit Card (7745)."
+RequestId="d59892a32a2d" DateTime="2024-10-21 08:23:54.3777" ThreadId="9" Level="INFO" Message="End checking User Phone Number and Credit Card. Validation result: True"
+RequestId="7efc5d8eb78b" DateTime="2024-10-21 08:23:54.5668" ThreadId="9" Level="INFO" Message="Twilio. HandleInput. From=+16097446153, Digits=7745"
+RequestId="1b1bd2745f8c" DateTime="2024-10-21 08:24:20.5335" ThreadId="7" Level="INFO" Message="Twilio. ValidateLastTwoCardStatuses. Twilio incoming call from +16097446153"
+RequestId="1b1bd2745f8c" DateTime="2024-10-21 08:24:20.5335" ThreadId="7" Level="INFO" Message="Start validation of user last two cards. User input: 7745."
+RequestId="1b1bd2745f8c" DateTime="2024-10-21 08:24:21.6698" ThreadId="7" Level="INFO" Message="End validation of user last two cards. User input: 7745. Validation result: False"
+RequestId="e4b54da1b2f5" DateTime="2024-10-21 08:24:37.1923" ThreadId="9" Level="INFO" Message="Twilio. ValidateLastTwoCardStatuses. Twilio incoming call from +16097446153"
+RequestId="e4b54da1b2f5" DateTime="2024-10-21 08:24:37.1923" ThreadId="9" Level="INFO" Message="Start validation of user last two cards. User input: 7745."
+RequestId="e4b54da1b2f5" DateTime="2024-10-21 08:24:37.9325" ThreadId="9" Level="INFO" Message="End validation of user last two cards. User input: 7745. Validation result: False"
+RequestId="7efc5d8eb78b" DateTime="2024-10-21 08:24:54.6865" ThreadId="9" Level="INFO" Message="Twilio. From=+16097446153, Digits=7745. Activation results: isSuccessfull = False, message = ''"
+RequestId="7efc5d8eb78b" DateTime="2024-10-21 08:24:54.6865" ThreadId="9" Level="INFO" Message="Twilio. From=+16097446153, Digits=7745. Dial BalboaPhoneNumber '+12027471777'. Audio Url = https://go.myeab.com/exd/Content/Audio/unsuccessful.mp3"
+RequestId="fd1779e482f0" DateTime="2024-10-21 09:30:15.4570" ThreadId="10" Level="INFO" Message="Twilio. CheckUserPhoneAndCreditCard. Twilio incoming call from +17036566590"
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. #119 same error
+DateTime="2024-10-21 00:00:02.4679" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: One or more errors occurred. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+System.AggregateException: One or more errors occurred. ----> Microsoft.Identity.Client.MsalServiceException: AADSTS7000222: The provided client secret keys for app 'bbe161ec-8d30-4463-a13b-badf42e0aa11' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: 8644b824-e730-4b80-b034-08867a216000 Correlation ID: 9d30eae6-ef96-4824-9e96-59b0dc4bc348 Timestamp: 2024-10-21 04:00:02Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateErrorResponse(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext, Boolean addCorrelationId)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.<ExecuteRequestAsync>d__10`1.MoveNext()
+--- End of stack trace from previo...)."
+
+2. #2  same error
+DateTime="2024-10-21 15:00:23.2648" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://eabgowers-p01/exd_inner/MailApiService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 10.123.4.70:443
+
+3. #8 same error
+DateTime="2024-10-21 15:01:23.0277" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://eabgowers-p01/upm_api/UpmApiService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 10.123.4.70:443
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. #8 same error
+DateTime="2024-10-21 08:05:04.9397" ThreadId="1" Level="FATAL" Provider="EmailsToAdmin" 
+Message="Following error occurs during sending 'Emails To Admin.' email to 'rbecker@eab.com': One or more errors occurred." 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: One or more errors occurred. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #575 same error
+DateTime="2024-10-21 00:00:53.6262" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: One or more errors occurred.
+System.AggregateException: One or more errors occurred. ----> Microsoft.Identity.Client.MsalServiceException: AADSTS7000222: The provided client secret keys for app 'bbe161ec-8d30-4463-a13b-badf42e0aa11' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: 5804f84a-01f4-43c3-9a2b-a0eb67dd3900 Correlation ID: 6d8a541f-05f2-4221-b590-37bd0b3ff126 Timestamp: 2024-10-21 04:00:53Z
+
+2. #9 same error
+DateTime="2024-10-21 15:08:14.4932" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://eabgowers-p01/exd_inner/MailApiService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 10.123.4.70:443
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. #781 same error
+RequestId="" 
+DateTime="2024-10-21 00:00:03.4411" ThreadId="59" Level="FATAL" 
+Message="One or more errors occurred." Provider="" 
+Exception="System.AggregateException: One or more errors occurred. ---> Microsoft.Identity.Client.MsalServiceException: AADSTS7000222: The provided client secret keys for app 'bbe161ec-8d30-4463-a13b-badf42e0aa11' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: 8644b824-e730-4b80-b034-08867a216000 Correlation ID: 9d30eae6-ef96-4824-9e96-59b0dc4bc348 Timestamp: 2024-10-21 04:00:02Z
+
+RequestId="bd62933f71ee" 
+DateTime="2024-10-21 19:24:27.7450" ThreadId="47" Level="FATAL" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="ComdataMC" 
+Exception=""
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+RequestId="9fd0246991d3" DateTime="2024-10-21 08:25:58.1039" ThreadId="5" Level="FATAL" 
+Message="CardManagementApiService.ActivateCreditCardViaPhoneAsync. Error activating credit card by phone number" 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataMcApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+
+Trace: 
+RequestId="9fd0246991d3" DateTime="2024-10-21 08:23:56.5536" ThreadId="12" Level="TRACE" Message="CardManagementApiService.ActivateCreditCardViaPhoneAsync. Start. phoneNumber = +16097446153, cardLastFourDigits = 7745"
+RequestId="9fd0246991d3" DateTime="2024-10-21 08:23:56.5536" ThreadId="12" Level="TRACE" Message="CardManagementApiService.ActivateCreditCardViaPhoneAsync_cardService.ActivateCreditCardViaPhoneAsync start."
+RequestId="9fd0246991d3" DateTime="2024-10-21 08:25:58.1198" ThreadId="5" Level="TRACE" Message="CardManagementApiService.ActivateCreditCardViaPhoneAsync. End. IsSuccessfull = False, Message = Internal server error."
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

@@ -1,0 +1,124 @@
+[15-05-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #2 matches
+RequestId="4a79e783ba3c" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-05-15 09:46:52.8870"
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.  
+RequestId="4743a194dcf4" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-05-15 07:23:18.8565" 
+Message="HTTP validation error: Deactivate credit card request failed. Reason: User does not have access to the accountNumber or custid. Actor Id: 7b56cf05-086f-41d1-af57-d66ae5a4a8ca" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2. #5 same error
+RequestId="d8c5e4f20f28" UserId="501312" UserEmail="ADurgan@eab.com" 
+DateTime="2024-05-15 13:42:29.0651" 
+Message="HTTP validation error: Activate credit card request failed. Reason: Card not found. ActorId: 5d3084be-622d-41cb-96c3-8044c4157af0. OwnerId: ae94be08-8418-4eee-8438-a6d6dc896f50. Last4Digits: 8668" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+3. #2 same error
+RequestId="2cf294e75a58" UserId="238896" UserEmail="KDornfeld@eab.com" 
+DateTime="2024-05-15 16:15:33.8509" 
+Message="HTTP validation error: Activate credit card request failed. Reason: Card not found. ActorId: 8b6ddf0a-d419-48f4-a98e-11d583867724. OwnerId: ae94be08-8418-4eee-8438-a6d6dc896f50. Last4Digits: 8668" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+RequestId="aac1577e9f32" SessionId="_eec0586d-74fb-410c-af20-b4d78b63751d-7462A957CB8A3FABE5CFE10EC88275F0" UserId="233252" UserEmail="ESvrcek@eab.com" 
+DateTime="2024-05-15 08:51:57.9324" 
+Message="Error adding admin notification." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.InvalidOperationException: The connection was not closed. The connection's current state is connecting.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-05-15 18:20:07.5938" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The mailbox database is temporarily unavailable., Cannot open mailbox. Server = SJ2PR15MB6468.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965 (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceResponseException: The mailbox database is temporarily unavailable., Cannot open mailbox. Server = SJ2PR15MB6468.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965
+   at Microsoft.Exchange.WebServices.Data.ServiceResponse.InternalThrowIfNecessary() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Responses\ServiceResponse.cs:line 277
+   at Microsoft.Exchange.WebServices.Data.MultiResponseServiceRequest`1.Execute() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\MultiResponseServiceRequest.cs:line 169
+   at Microsoft.Exchange.WebServices.Data.ExchangeService.BindToFolder(FolderId folderId, PropertySet propertySet) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\Ews...)."
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #4 same error
+DateTime="2024-05-14 23:21:34.1079" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'"
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+2. #1 same error
+DateTime="2024-05-14 23:23:17.6412" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComdataSyncIn'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=4; handshake=15005;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_Workershost_Fatal
+-------------------------
+1.	
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="" 
+DateTime="2024-05-15 18:20:09.1680"
+Message="The mailbox database is temporarily unavailable., Cannot open mailbox. Server = SJ2PR15MB6468.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: The mailbox database is temporarily unavailable., Cannot open mailbox. Server = SJ2PR15MB6468.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

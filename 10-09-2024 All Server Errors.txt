@@ -1,0 +1,259 @@
+*[10-09-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal  
+-------------------------
+1. #32 same error
+RequestId="fe57782ea789" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-09-10 03:05:41.8853" ThreadId="23" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesCountAsync>d__11f.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1762
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsActionAsync>d__eb`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1340
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsCountAsync>d__5c.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 469
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<>c__DisplayClassd1.<<GetFilteredCountAsync>b__d0>d__d3.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 0
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 78
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredCountAsync>d__d6.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 516
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+
+
+:::Common Methods:::
+GetTransactionsOfSpecifiedStatusesCountAsync()
+GetFilteredTransactionsActionAsync()
+GetFilteredTransactionsCountAsync()
+GetFilteredCountAsync()
+ExecuteActionFilterAsync()
+ExecuteAuthorizationFilterAsyncCore()
+
+2.  #4 same error
+RequestId="f48c91f171f0" UserId="240227" UserEmail="LHarris@eab.com" 
+DateTime="2024-09-10 09:42:58.4237" ThreadId="66" Level="FATAL" 
+Message="An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - ExpenseTransactionNo_735E31FDA86BB7E0DCEF72699841903B7BC819948782FAB8188FA969741602F6, item state - Deleted" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.Common.Web.ApiControllers.Base.SaveableController`2.<SaveChangesAsync>d__0.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Base\SaveableController.cs:line 30
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<SaveBudgetLineAsync>d__173.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 928
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+:::Common Methods:::
+SaveChangesAsync()
+SaveBudgetLineAsync()
+ExecuteActionFilterAsync()
+
+2. #2 same error
+RequestId="35848c101c95" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-09-10 03:05:41.8994" ThreadId="7" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.ArgumentException: An item with the same key has already been added.
+
+3. #6 same error
+RequestId="ca0336c24e19" UserId="240227" UserEmail="LHarris@eab.com" 
+DateTime="2024-09-10 09:42:58.3460" ThreadId="66" Level="FATAL" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at ABC.Common.Web.Infrastructure.GlobalExceptionLogger.<LogAsync>d__0.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\GlobalExceptionLogger.cs:line 36
+
+
+4. #timeout error
+RequestId="bdc94b82e4c0" UserId="228013" UserEmail="SWoda@eab.com" 
+DateTime="2024-09-10 09:42:23.4505" ThreadId="92" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+
+5.
+RequestId="ca0336c24e19" UserId="240227" UserEmail="LHarris@eab.com" 
+DateTime="2024-09-10 09:42:58.3460" ThreadId="66" Level="FATAL" 
+Message="Invalid operation. The connection is closed." 
+Exception="System.InvalidOperationException: Invalid operation. The connection is closed.
+
+6.
+RequestId="70e2c456f86e" UserId="502033" UserEmail="AKanodia@eab.com" 
+DateTime="2024-09-10 09:56:12.4478" ThreadId="76" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseTransactionValidationService.<IsSimilarTransactionFindedAsync>d__37.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseTransactionValidationService.cs:line 429
+   at ABC.ERS.BL.ExpenseTransactionValidationService.<ValidateOnSaveAsync>d__2b.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseTransactionValidationService.cs:line 398
+   at ABC.ERS.BL.ExpenseTransactionValidationService.<ValidateOnSubmitAsync>d__3e.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseTransactionValidationService.cs:line 445
+   at ABC.ERS.BL.ExpenseTransactionValidationService.<ValidateOnSubmitAsync>d__13.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseTransactionValidationService.cs:line 257
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<>c__DisplayClass19a.<<SubmitTransactionAsync>b__183>d__1a5.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 0
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__6.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 92
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<SubmitTransactionAsync>d__1b1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 1801
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<SubmitAsync>d__70.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 439
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.<ExecuteStoreCommandsAsync>d__c.MoveNext()
+
+:::Common Methods:::
+IsSimilarTransactionFindedAsync()
+ValidateOnSaveAsync()
+ValidateOnSubmitAsync()
+SubmitTransactionAsync()
+SubmitAsync()
+ExecuteActionFilterAsync()
+ExecuteStoreCommandsAsync()
+
+7. #Timeout
+RequestId="e52eec7c3756" UserId="238220" UserEmail="ptitus@eab.com" 
+DateTime="2024-09-10 09:58:34.1219" ThreadId="93" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.UserService.<GetDelegatedToUserRolesAsync>d__13.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\UserService.cs:line 91
+   at ABC.ERS.BL.UserService.<CanAccessUserRoleAsync>d__7.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\UserService.cs:line 63
+   at ABC.ERS.Web.ExpenseNow.Infrastructure.ApplicationUserStore.<CanAccessUserRoleAsync>d__0.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\Infrastructure\ApplicationUserStore.cs:line 34
+   at ABC.Common.Web.Infrastructure.Auth.AbcUserStorage`2.<GetCurrentRoleAsync>d__e.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\Auth\AbcUserStorage.cs:line 187
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.UserController.<InfoAsync>d__1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\UserController.cs:line 78
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+:::Common Methods:::
+GetDelegatedToUserRolesAsync()
+CanAccessUserRoleAsync()
+GetCurrentRoleAsync()
+InfoAsync()
+ExecuteActionFilterAsync()
+
+8.  #14 Spending profile errro
+RequestId="6b13e6ff069f"UserId="238110" UserEmail="JAlatis@eab.com" 
+DateTime="2024-09-10 11:23:53.4446" ThreadId="39" Level="FATAL" 
+Message="Error updating spending profile for user with external id 238110" 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/SpendingProfileManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+ at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.SpendingService.<UpdateSpendingProfileStateAsync>d__0.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\SpendingService.cs:line 67"
+
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #2 same error
+RequestId="ff6ea5a20748" UserId="228013" UserEmail="SWoda@eab.com" 
+DateTime="2024-09-10 09:43:17.0361" ThreadId="12" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.Common.BL.UserServiceCommon.<GetAllUserRolesByIdAsync>d__45`2.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.BL\UserServiceCommon.cs:line 0
+   at ABC.Common.BL.UserServiceCommon.<GetUserRolesByIdAsync>d__9`2.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.BL\UserServiceCommon.cs:line 0
+   at ABC.UPM.Website.ApiControllers.UserController.<GetUserRolesAsync>d__23.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Website\ApiControllers\UserController.cs:line 187
+   at ABC.UPM.Website.ApiControllers.UserController.<GetUserInfoAsync>d__3.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Website\ApiControllers\UserController.cs:line 0
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+
+2. #18 same error
+RequestId="3dc4d3a2f7a3" UserId="238419" UserEmail="MCreighton@eab.com" 
+DateTime="2024-09-10 10:40:00.5218" ThreadId="26" Level="FATAL" 
+Message="The requested service, 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+---------------------------
+EXD_OuterGateway_Fatal
+---------------------------
+1. 
+RequestId="bf8041b31323" 
+DateTime="2024-09-10 14:39:23.4639" ThreadId="9" Level="FATAL" 
+Message="Twilio. From=+12024392402, Digits=2258. Exception occurred during activation card via phone" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+===========================================================
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-09-10 07:01:35.9843" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutApprovedTransactions" 
+Message="Following error occurs during sending 'Go Expense: The following expenses have been approved' email to 'SGreenleaf@eab.com': transaction must have a personal amount" 
+Exception="System.ArgumentException: transaction must have a personal amount
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #3 Timeout error.
+DateTime="2024-09-10 03:06:24.5774" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+2.
+DateTime="2024-09-10 07:40:10.2886" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'DailyStatisticsSender'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+:::TRACE:::
+DateTime="2024-09-10 07:40:10.2301" ThreadId="1" Level="TRACE" Provider="DailyStatisticsSender" Message="GetUserSpendingAsync start."
+DateTime="2024-09-10 07:40:10.2563" ThreadId="1" Level="TRACE" Provider="DailyStatisticsSender" Message="GetUserSpendingAsync end. Duration: 24 ms."
+DateTime="2024-09-10 07:40:10.2563" ThreadId="1" Level="TRACE" Provider="DailyStatisticsSender" Message="Statistic for user was calculated. ExternalId: 234412"
+DateTime="2024-09-10 07:40:10.2563" ThreadId="1" Level="TRACE" Provider="DailyStatisticsSender" Message="NotifyDailyStatisticsAsync start."
+DateTime="2024-09-10 07:40:10.2886" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'DailyStatisticsSender' disposed."
+
+:::INFO::::
+DateTime="2024-09-10 07:40:09.4964" ThreadId="14" Level="INFO" Provider="ComdataSyncIn" Message="Credit card with masked number 556368XXXXXX6177 has been updated with ComData info for owner with id '99a4719d-f1e6-45e2-a245-6f38d1ef4bf5'"
+DateTime="2024-09-10 07:40:09.4964" ThreadId="1" Level="INFO" Provider="ComdataSyncIn" Message="ComDataSync Card with id = 5510 was synced."
+DateTime="2024-09-10 07:40:09.7929" ThreadId="5" Level="INFO" Provider="ComdataSyncIn" Message="Credit card with masked number 556368XXXXXX1227 has been updated with ComData info for owner with id '99a4719d-f1e6-45e2-a245-6f38d1ef4bf5'"
+DateTime="2024-09-10 07:40:09.7929" ThreadId="1" Level="INFO" Provider="ComdataSyncIn" Message="ComDataSync Card with id = 4861 was synced."
+DateTime="2024-09-10 07:40:10.0740" ThreadId="11" Level="INFO" Provider="ComdataSyncIn" Message="Credit card with masked number 556368XXXXXX4272 has been updated with ComData info for owner with id '1a68f552-53bb-46ae-a4a1-6f3f213bd833'"
+DateTime="2024-09-10 07:40:10.0761" ThreadId="1" Level="INFO" Provider="ComdataSyncIn" Message="ComDataSync Card with id = 6794 was synced."
+DateTime="2024-09-10 07:40:10.2886" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="End running creator with name 'DailyStatisticsSender'"
+
+2. #
+DateTime="2024-09-10 11:39:54.5740" ThreadId="1" Level="FATAL" Provider="ComDataEmailSync" 
+Message="ComData Message processor. Event Notification failed for credit card decline. Credit card decline Id: 93023" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+Credit card decline Id: 93023, 93024, 93025, 9037
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+===========================================================
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="9b3a8f269041" 
+DateTime="2024-09-10 23:38:48.6350" ThreadId="81" Level="FATAL" 
+Message="Description: The HTTP service located at https://w6.iconnectdata.com/MCWS/services/MCWS is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later.." Provider="ComdataMC" 
+Exception=""
+
+
+NO INFOR LOG
+WARN
+RequestId="f4bcd4fdb919" DateTime="2024-09-10 23:37:45.6448" ThreadId="86" Level="WARN" Message="Description: 00862,EMPLOYEE NUMBER NOT FOUND. FaultCode: BusinessException" Provider="Comdata" Exception=""
+RequestId="17082f61e735" DateTime="2024-09-10 23:38:05.2710" ThreadId="72" Level="WARN" Message="Description: 00862,EMPLOYEE NUMBER NOT FOUND. FaultCode: BusinessException" Provider="Comdata" Exception=""
+RequestId="5db1ddf0fceb" DateTime="2024-09-10 23:38:48.9671" ThreadId="81" Level="WARN" Message="Description: 00862,EMPLOYEE NUMBER NOT FOUND. FaultCode: BusinessException" Provider="Comdata" Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------

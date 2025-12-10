@@ -1,0 +1,90 @@
+[01-05-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="04c539ba66a7" SessionId="_e1e73e3e-08a0-4492-8f0c-10d309b2058f-463AD0EED43782632BA43ADEE4B318A8" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-05-01 09:06:14.6340" ThreadId="50" Level="FATAL" Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.  
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-05-01 00:10:54.0115" ThreadId="1" Level="FATAL" Provider="WorkersHost" Message="Unhandled error while running creator 'ComDataEmailSync'" Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = PH0PR15MB4781.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #2 same error
+DateTime="2024-05-01 00:10:54.0115" ThreadId="1" Level="FATAL" Provider="WorkersHost" Message="Unhandled error while running creator 'ComDataEmailSync'" Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = PH0PR15MB4781.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_Workershost_Fatal
+-------------------------
+1.	
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="" 
+DateTime="2024-05-01 00:10:54.4349" 
+Message="Mailbox move in progress. Try again later., Cannot open mailbox. Server = PH0PR15MB4781.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = PH0PR15MB4781.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+2. #5 same error
+RequestId="76a5662de508" 
+DateTime="2024-05-01 06:55:25.2366" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+3.
+RequestId="" 
+DateTime="2024-05-01 23:39:33.9923" 
+Message="The request failed. The operation has timed out" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The operation has timed out ---> System.Net.WebException: The operation has timed out
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

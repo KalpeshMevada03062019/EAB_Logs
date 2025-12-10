@@ -1,0 +1,168 @@
+*[06-07-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2025-07-06 06:47:57.4962" ThreadId="1" Level="FATAL" Provider="BalboaSupplementalImport" 
+Message="File with id 9a724811-1bf5-4c9c-82ae-01a4a467464a is empty." Exception=""
+
+2.
+DateTime="2025-07-06 06:47:57.5118" ThreadId="1" Level="FATAL" Provider="BalboaSupplementalImport" 
+Message="File with id c8f4ef8e-40b9-414d-a429-55a2014e6e1e is empty." Exception=""
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+DateTime="2025-07-06 07:37:46.5235" ThreadId="1" Level="FATAL" Provider="ComdataSyncOut" 
+essage="Error updated mailing address for user with ExternalId id 237388" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '237388X002535'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at ABC.CCM.Workers.ComdataSyncOut.ComdataSyncOutProcessor.UpdateCardAddressForUsers()
+---> (Inner Exception #0) ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '237388X002535'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()<---
+
+ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '237388X002535'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()"
+DateTime="2025-07-06 07:37:46.9976" ThreadId="1" Level="FATAL" Provider="ComdataSyncOut" Message="Error updated mailing address for user with ExternalId id 237058" Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '237058X002613'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at ABC.CCM.Workers.ComdataSyncOut.ComdataSyncOutProcessor.UpdateCardAddressForUsers()
+---> (Inner Exception #0) ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '237058X002613'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()<---
+
+ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '237058X002613'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()"
+DateTime="2025-07-06 07:37:47.4256" ThreadId="1" Level="FATAL" Provider="ComdataSyncOut" Message="Error updated mailing address for user with ExternalId id 240391" Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at ABC.CCM.Workers.ComdataSyncOut.ComdataSyncOutProcessor.UpdateCardAddressForUsers()
+---> (Inner Exception #0) ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()<---
+
+ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()"
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+1.

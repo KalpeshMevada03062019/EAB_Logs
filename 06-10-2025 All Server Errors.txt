@@ -1,0 +1,137 @@
+*[06-10-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+RequestId="a16b66d635c5" SessionId="_73022df1-38c5-46fd-b8d5-f560edc70a48-C09B855B6AC45A9A1F381F3869E50E6D" UserId="240930" UserEmail="HPieroulli@eab.com" 
+DateTime="2025-10-06 05:33:53.4476" ThreadId="37" Level="FATAL" 
+Message="The requested service, 'https://eabgowers-p01/exd_inner/CurrencyApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/exd_inner/CurrencyApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.CurrencyService.<>c__DisplayClass19.<<GetAndAddToDbRateFromCurrencyLayerAsync>b__18>d__1b.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\CurrencyService.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 78
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.CurrencyService.<GetAndAddToDbRateFromCurrencyLayerAsync>d__1e.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\CurrencyService.cs:line 72
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.CurrencyService.<GetAndAddToDbCurrencyRateAsync>d__d.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\CurrencyService.cs:line 56
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<GetCurrencyByCountryAsync>d__91.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 541
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()"
+
+Trace:
+RequestId="a16b66d635c5" SessionId="_73022df1-38c5-46fd-b8d5-f560edc70a48-C09B855B6AC45A9A1F381F3869E50E6D" UserId="240930" UserEmail="HPieroulli@eab.com" DateTime="2025-10-06 05:33:53.3211" ThreadId="23" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/food/countryCurrency/US START"
+RequestId="a16b66d635c5" SessionId="_73022df1-38c5-46fd-b8d5-f560edc70a48-C09B855B6AC45A9A1F381F3869E50E6D" UserId="240930" UserEmail="HPieroulli@eab.com" DateTime="2025-10-06 05:33:53.3845" ThreadId="37" Level="TRACE" Message="GetRateAsync start."
+RequestId="a16b66d635c5" SessionId="_73022df1-38c5-46fd-b8d5-f560edc70a48-C09B855B6AC45A9A1F381F3869E50E6D" UserId="240930" UserEmail="HPieroulli@eab.com" DateTime="2025-10-06 05:33:53.4632" ThreadId="37" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/food/countryCurrency/US Completed in 142 ms"
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+1.

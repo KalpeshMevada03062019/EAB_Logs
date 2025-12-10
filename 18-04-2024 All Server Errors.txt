@@ -1,0 +1,124 @@
+[17-04-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #5 same error
+RequestId="d1aff4811c78" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-04-18 03:00:51.3263" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+2.
+RequestId="132033a6d8bd" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-04-18 04:07:43.8349" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+3. GT-67
+RequestId="80db863e5993" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-04-18 04:42:37.6455"  
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.  #Timeout
+RequestId="c31e90a4e97e" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-04-18 08:27:53.2148" 
+Message="Unable to retrieve traveler category for user with external id 238506" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An error occurred while executing the command definition. See the inner exception for details. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+2.
+RequestId="9611c8cc33b2" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-04-18 08:28:11.6901" 
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration. ---> System.InvalidOperationException: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+
+3.
+RequestId="9d0a9edf841a" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-04-18 08:51:07.2048" 
+Message="An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - CreditCard_385EB0C8FDB4336FA38BAAE18837984FE4369971944F94DB70131B0A86007503, item state - Modified" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+4. #
+RequestId="6ecf9c601711"  UserId="500232" useremail="karchuleta@eab.com"
+DateTime="2024-04-18 08:51:23.6029"
+Message="HTTP validation error: Add new card request failed. Reason: 00288,EMPLOYEE ID ALREADY EXIST FOR CARD #: 2216 * UPDATE IGNORED **"
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-04-18 07:26:42.2498" ThreadId="1" Level="FATAL" Provider="WorkersHost" Message="Unhandled error while running creator 'EmailsAttachment'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The operation has timed out (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #2 same error
+DateTime="2024-04-18 20:21:12.6133" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_Workershost_Fatal
+-------------------------
+1.	
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="" DateTime="2024-04-18 05:20:23.1775" 
+Message="The request failed. The remote server returned an error: (503) Server Unavailable." Provider="" Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (503) Server Unavailable. ---> System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+
+RequestId="" DateTime="2024-04-18 07:26:43.6981" 
+Message="The request failed. The operation has timed out" Provider="" Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The operation has timed out ---> System.Net.WebException: The operation has timed out
+
+RequestId="" DateTime="2024-04-18 20:21:15.7632" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+RequestId="" DateTime="2024-04-18 22:21:12.8200" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

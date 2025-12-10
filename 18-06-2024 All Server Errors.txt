@@ -1,0 +1,157 @@
+18-06-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #10 same error timeout
+RequestId="21f45aeadf1d"  UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-06-18 08:30:21.8417" 
+Message="The underlying provider failed on Open." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=15014;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+2.
+RequestId="ac2792ee745f" UserId="238524" UserEmail="BDonaldson@eab.com" 
+DateTime="2024-06-18 21:22:58.3678" 
+Message="HTTP validation error: Transaction cannot be saved due to incorrect status." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE::
+RequestId="ac2792ee745f" UserId="238524" UserEmail="BDonaldson@eab.com" DateTime="2024-06-18 21:22:58.2828" ThreadId="29" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/save START"
+RequestId="ac2792ee745f" UserId="238524" UserEmail="BDonaldson@eab.com" DateTime="2024-06-18 21:22:58.2828" ThreadId="29" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/save Request content: {'allocationItems':[{'id':0,'allocatedBy':'Employee','isOwn':true,'percentage':100,'value':'Beth Donaldson','departmentExternalId':null,'departmentAllocationAvailability':null,'userId':'a6bc6a7d-5018-4051-8f65-0a7202f5e1e8','availablePurposesIds':null,'isGuestUser':false,'userEntity':'EAB'}],'expenses':[{'businessAmount':'18.93','date':'05/29/2024','expenseType':{'id':10,'name':'Hotel Taxes','route':null},'id':3111887,'personalAmount':'0.00','note':'','personalAmountInternational':'0.00','businessAmountInternational':'18.93'},{'businessAmount':'157.78','date':'05/29/2024','expenseType':{'id':8,'name':'Nightly Rate','route':null},'id':3120654,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'157.78'}],'transactionInfo':{'basedCityReason':null,'overAllowedAmountReason':null,'whyBookedOutsideReason':null,'traveler':'DONALDSON, BETH','defaultTravelerName':'Beth Donaldson','perDiems':[{'rate':190,'startDate':'07/15/2019','endDate':null,'onDate':'May 29th'}],'hotelConfirmation':{'id':186496,'name':'SPRINGHILL SUITES LAKELAND-5/28/2024-1NT-CONF: 98962765','isOther':false,'hotel':{'id':0,'name':'SPRINGHILL SUITES LAKELAND','country':null,'city':null,'state':null}},'isDetailed':false,'attachment':{'id':205647,'version':'AAAAAAEVc+k=','userId':'a6bc6a7d-5018-4051-8f65-0a7202f5e1e8','userName':'Beth Donaldson','isAttached':true,'isAttachmentImage':false,'name':'DONALDSON_95984.pdf','source':'','fileCreatedDate':'2024-06-18T21:09:50.997','folio':null},'isFolioValidated':null,'createdFromTransactionId':null,'date':'05/29/2024','logoId':null,'totalAmount':176.71,'merchant':{'merchantCategoryId':3770,'address':'511 WEST LIME STREET','city':'LAKELAND','country':'USA','name':'SPRING HILL SUITES','state':'FL','zip':'33803-0000','displayName':'SPRING HILL SUITES, LAKELAND, FL'},'purposes':[{'id':37110,'name':'Partner Visit or Onsite','isBudgetLine':false,'isGeneric':true,'hasHostCostCenter':true,'isIncentiveTrip':false,'assignedAmount':176.71,'percentage':100,'hasDollarCap':false,'hostCostCenterName':'Sales Strategic Enrollment (Enrollment)','hostCostCenterId':596,'isInstitutionRequired':true,'institutionId':20033,'institutionName':'Southeastern University - Graduate Programs - Lakeland - FL','isSelected':false}],'version':'AAAAAAEVc+o=','isShared':false,'isRejected':null,'currency':{'id':5,'code':'USD','name':'United States dollar','countryName':null,'countryCode':null},'isInInternationalMode':false,'exchangeRate':1,'paymentInfo':{'formOfPayment':'CreditCard','name':'B.Donaldson-8510'},'reassignmentInfo':null,'ownerManagementLevel':'D2 Senior Leadership','notes':null,'approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(USD) United States Dollar','perDiemList':[{'perDiem':0}]},'transactionId':2220681,'receiptId':205647,'clientDate':'2024-06-18T21:22:58-04:00'}"
+RequestId="ac2792ee745f" UserId="238524" UserEmail="BDonaldson@eab.com" DateTime="2024-06-18 21:22:58.3201" ThreadId="57" Level="TRACE" Message="Validating access right start."
+RequestId="ac2792ee745f" UserId="238524" UserEmail="BDonaldson@eab.com" DateTime="2024-06-18 21:22:58.3201" ThreadId="57" Level="TRACE" Message="Validating access right end. Duration: 2 ms."
+RequestId="ac2792ee745f" UserId="238524" UserEmail="BDonaldson@eab.com" DateTime="2024-06-18 21:22:58.3201" ThreadId="57" Level="TRACE" Message="Start retrieving transactions to revalidate for InRule. Transaction Id = 2220681"
+RequestId="ac2792ee745f" UserId="238524" UserEmail="BDonaldson@eab.com" DateTime="2024-06-18 21:22:58.3459" ThreadId="29" Level="TRACE" Message="End retrieving transactions to revalidate for InRule. Count: 0 Duration: 17 ms."
+RequestId="ac2792ee745f" UserId="238524" UserEmail="BDonaldson@eab.com" DateTime="2024-06-18 21:22:58.3459" ThreadId="29" Level="TRACE" Message="Updating transaction entity start."
+RequestId="ac2792ee745f" UserId="238524" UserEmail="BDonaldson@eab.com" DateTime="2024-06-18 21:22:58.3678" ThreadId="29" Level="TRACE" Message="Updating transaction entity end. Duration: 26 ms."
+RequestId="ac2792ee745f" UserId="238524" UserEmail="BDonaldson@eab.com" DateTime="2024-06-18 21:22:58.3678" ThreadId="29" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/save Completed in 85 ms"
+
+Warn::
+
+3.
+RequestId="a8dcd14fa500" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-06-18 08:30:40.0896" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+RequestId="36c3a9baffca" UserId="233538" UserEmail="BSchenkel@eab.com" 
+DateTime="2024-06-18 08:30:21.2370" 
+Message="Error adding admin notification." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=7; handshake=15007;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+2.
+RequestId="36c3a9baffca" UserId="233538" UserEmail="BSchenkel@eab.com" 
+DateTime="2024-06-18 08:30:21.2370" 
+Message="Error adding admin notification." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=7; handshake=15007;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-06-18 08:30:37.3469" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An error occurred while executing the command definition. See the inner exception for details.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-06-18 08:30:28.3253" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+

@@ -1,0 +1,117 @@
+*[15-11-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="cd8c4a24677d" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2024-11-15 15:12:58.2920" ThreadId="24" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #4 same error
+RequestId="cfc14c7afc34" UserId="230727" UserEmail="kbrenneman@eab.com" 
+DateTime="2024-11-15 07:45:34.2410" ThreadId="14" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: a0acbcb8-f428-4deb-8f3b-aef51a0b219f. EmployeeNumber:230727X005514." 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Unable to replace credit card when owner already has an active credit card. OwnerId: a0acbcb8-f428-4deb-8f3b-aef51a0b219f. EmployeeNumber:230727X005514. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+Card details:
++++++++++++++
+Employee Name - Karl Brenneman
+Status - Blocked
+CustomerID - BRV61
+
+2. #3 same error
+RequestId="fb5cf4f92390" UserId="239750" UserEmail="joaquin.ross@seramount.com" 
+DateTime="2024-11-15 13:29:49.8354" ThreadId="25" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: c58c9ba8-cfd6-4199-9baf-6a48376f8efb. EmployeeNumber:239750X005229." 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Unable to replace credit card when owner already has an active credit card. OwnerId: c58c9ba8-cfd6-4199-9baf-6a48376f8efb. EmployeeNumber:239750X005229. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+Card details:
++++++++++++++
+Employee Name - Joaquin Ross
+Status - Active
+CustomerID - BRV61
+
+3. #3 same error
+RequestId="8e73de957d76" UserId="239752" UserEmail="JFlanagan@eab.com" 
+DateTime="2024-11-15 15:50:33.1151" ThreadId="14" Level="FATAL" 
+Message="Add new card request failed. Reason: Can not ship to PO Box for expedited method is a required tag. UserId: b70a50d3-aec9-4db1-9b3f-9a754c2f6c4b. UserName: EAB, CustomerID:  " 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Add new card request failed. Reason: Can not ship to PO Box for expedited method is a required tag. UserId: b70a50d3-aec9-4db1-9b3f-9a754c2f6c4b. UserName: EAB, CustomerID:   (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+
+Card details:
++++++++++++++
+Employee Name - Jacque Flanagan
+Status - PendingProcessing
+CustomerID - DGYXS
+EmployeeNumber - 239752X005985
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.  #4 same error
+RequestId="" DateTime="2024-11-15 07:45:34.5357" ThreadId="18" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: a0acbcb8-f428-4deb-8f3b-aef51a0b219f. EmployeeNumber:230727X005514." 
+Exception="ABC.Common.BL.Exceptions.ValidationException: Unable to replace credit card when owner already has an active credit card. OwnerId: a0acbcb8-f428-4deb-8f3b-aef51a0b219f. EmployeeNumber:230727X005514.
+
+2. #1
+RequestId="" 
+DateTime="2024-11-15 13:30:08.4967" ThreadId="35" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: c58c9ba8-cfd6-4199-9baf-6a48376f8efb. EmployeeNumber:239750X005229." 
+Exception="ABC.Common.BL.Exceptions.ValidationException: Unable to replace credit card when owner already has an active credit card. OwnerId: c58c9ba8-cfd6-4199-9baf-6a48376f8efb. EmployeeNumber:239750X005229.
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

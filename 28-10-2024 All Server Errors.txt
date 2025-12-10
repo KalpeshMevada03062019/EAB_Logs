@@ -1,0 +1,95 @@
+*[28-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="25d60fe4d1c7" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-10-28 04:29:58.1356" ThreadId="21" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:1/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not resp...)."
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-10-28 06:00:03.5925" ThreadId="1" Level="FATAL" Provider="WorkersHost" Message="Unhandled error while running creator 'EmailsAttachment'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SJ2PR15MB6468.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965 (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+DateTime="2024-10-28 06:49:17.0851" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 06:49:17.6072" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241022_123338SB_006535.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 06:49:20.1686" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 06:49:20.9097" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 06:49:21.4337" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 06:49:21.4337" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241023_073936SB_006538.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 06:49:27.4386" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 06:49:27.4386" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 14:09:00.8048" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 14:09:00.8205" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241022_123338SB_006535.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 14:09:01.0584" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 14:09:01.0584" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 14:09:01.1231" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 14:09:01.1231" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241023_073936SB_006538.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 14:09:10.3592" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 14:09:10.3592" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 14:09:26.9817" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-28 14:09:26.9817" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541tryagain.xml'" Exception="System.Exception: There is no EmployeeId element.
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. #2 same error request id=1e66548940c3
+RequestId="69a9f66f579f" 
+DateTime="2024-10-28 06:11:07.0836" ThreadId="82" Level="FATAL" 
+Message="Description: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake." Provider="ComdataMC" 
+Exception=""
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

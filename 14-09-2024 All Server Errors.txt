@@ -1,0 +1,146 @@
+*[14-09-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal  
+-------------------------
+1. 
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-09-14 06:49:58.3590" ThreadId="1" Level="FATAL" Provider="UberParser" 
+Message="Batch failed. Error message : One or more errors occurred." 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:18/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."
+   at ABC.Common.Worker.Feed.Processor.TabularFeedProcessor`2.ProcessBulk(List`1 items) in c:\git_sources\eabgo\Common\ABC.Common.Worker\Feed\Processor\TabularFeedProcessor.cs:line 265
+----------------------------> (Inner Exception #0) System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:18/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:18/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not res...).<---
+
+:::Trace LOGS:::
+DateTime="2024-09-14 06:49:01.2798" ThreadId="1" Level="TRACE" Provider="UberParser" Message="InRuleService. ValidateTransactionsByInRuleAsync. Pre-validation completed. Duration: 5392 ms."
+DateTime="2024-09-14 06:49:02.2039" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running start."
+DateTime="2024-09-14 06:49:02.2039" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="Start syncing entities."
+DateTime="2024-09-14 06:49:02.2039" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessorBase.EntityMerger.SourceEntitiesLoader.LoadSourceEntities start."
+DateTime="2024-09-14 06:49:06.2460" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessorBase.EntityMerger.SourceEntitiesLoader.LoadSourceEntities end. Duration: 4049 ms."
+DateTime="2024-09-14 06:49:06.2460" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessorBase.EntityMerger.MergeEntity: sourceEntities.Count=7701 start."
+DateTime="2024-09-14 06:49:06.2460" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessor.MergeEntity.MergeEntities: sourceEntities.Count=7701. start."
+DateTime="2024-09-14 06:49:06.2623" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="TravelerCategorySync.MergeEntities. Start merging traveler category entities."
+DateTime="2024-09-14 06:49:16.1841" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="TravelerCategorySync.LogMergeResult. 0 UserTravelerCategory entities were removed. 0 entities were added."
+DateTime="2024-09-14 06:49:17.3845" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="TravelerCategorySync.MergeEntities. End merging traveler category entities."
+DateTime="2024-09-14 06:49:17.3845" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessor.MergeEntity.MergeEntities: sourceEntities.Count=7701. end. Duration: 11127 ms."
+DateTime="2024-09-14 06:49:17.3845" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessor.MergeEntity.SaveChanges. start."
+DateTime="2024-09-14 06:49:17.8803" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessor.MergeEntity.SaveChanges. end. Duration: 494 ms."
+DateTime="2024-09-14 06:49:17.8803" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessor.MergeEntity.PostSaveProcess. start."
+DateTime="2024-09-14 06:49:17.8803" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessor.MergeEntity.PostSaveProcess. end. Duration: 0 ms."
+DateTime="2024-09-14 06:49:17.8803" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessor.MergeEntity.SaveChanges. Post processing start."
+DateTime="2024-09-14 06:49:18.3363" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessor.MergeEntity.SaveChanges. Post processing end. Duration: 463 ms."
+DateTime="2024-09-14 06:49:18.3363" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="SyncProcessorBase.EntityMerger.MergeEntity: sourceEntities.Count=7701 end. Duration: 12088 ms."
+DateTime="2024-09-14 06:49:18.3363" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="End syncing entities, Elapsed time: 16138 ms."
+DateTime="2024-09-14 06:49:18.3363" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running end. Duration: 16139 ms."
+DateTime="2024-09-14 06:49:18.3520" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'TravelerCategoriesSync' disposed."
+DateTime="2024-09-14 06:49:58.6356" ThreadId="1" Level="TRACE" Provider="UberParser" Message="ProcessBulk end. Duration: 136695 ms."
+DateTime="2024-09-14 06:49:58.6457" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running end. Duration: 296576 ms."
+DateTime="2024-09-14 06:49:58.6457" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'UberParser' disposed."
+
+:::INFO LOGS:::
+DateTime="2024-09-14 06:45:01.4660" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="Start running creator with name 'UberParser'"
+DateTime="2024-09-14 06:45:01.9147" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="Start running creator with name 'TravelerCategoriesSync'"
+DateTime="2024-09-14 06:45:02.1504" ThreadId="1" Level="INFO" Provider="UberParser" Message="Start."
+DateTime="2024-09-14 06:45:02.0721" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="Start running creator with name 'EmailsAttachment'"
+DateTime="2024-09-14 06:45:03.1017" ThreadId="1" Level="INFO" Provider="EmailsAttachment" Message="Attach Via Email: There are 0 mails available on server"
+DateTime="2024-09-14 06:45:03.4316" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="End running creator with name 'EmailsAttachment'"
+DateTime="2024-09-14 06:45:08.6212" ThreadId="1" Level="INFO" Provider="UberParser" Message="1 new Feeds received."
+DateTime="2024-09-14 06:45:18.6876" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="End running creator with name 'TravelerCategoriesSync'"
+DateTime="2024-09-14 06:45:20.9060" ThreadId="1" Level="INFO" Provider="UberParser" Message="Feed Id = 9187f796-f206-4cbb-a2b2-b534d85645e0 with 92 lines is registered."
+DateTime="2024-09-14 06:46:01.9164" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="Start running creator with name 'TravelerCategoriesSync'"
+DateTime="2024-09-14 06:46:18.7286" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="End running creator with name 'TravelerCategoriesSync'"
+DateTime="2024-09-14 06:47:01.9163" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="Start running creator with name 'TravelerCategoriesSync'"
+DateTime="2024-09-14 06:47:18.3146" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="End running creator with name 'TravelerCategoriesSync'"
+DateTime="2024-09-14 06:47:41.8037" ThreadId="1" Level="INFO" Provider="UberParser" Message="There are 1 feeds require processing."
+DateTime="2024-09-14 06:47:41.8037" ThreadId="1" Level="INFO" Provider="UberParser" Message="Start feed Id = 9187f796-f206-4cbb-a2b2-b534d85645e0. 1 of 1"
+DateTime="2024-09-14 06:47:41.8977" ThreadId="1" Level="INFO" Provider="UberParser" Message="Batch mode is On: Batch size = 92."
+DateTime="2024-09-14 06:47:42.5938" ThreadId="1" Level="INFO" Provider="UberParser" Message="2 lines with 'SBSJ x EAB E360 Partnership Meeting' voucher program will be processed as ExpenseTransactionTransportation."
+DateTime="2024-09-14 06:47:42.5938" ThreadId="1" Level="INFO" Provider="UberParser" Message="The Expense provider will be set to Voucher | UberX."
+DateTime="2024-09-14 06:47:42.5938" ThreadId="1" Level="INFO" Provider="UberParser" Message="Total Amount for 'SBSJ x EAB E360 Partnership Meeting' voucher and Hannah McLeod (240296) owner: $62.29"
+DateTime="2024-09-14 06:47:42.7049" ThreadId="1" Level="INFO" Provider="UberParser" Message="1 lines with 'Gonzaga University School of Law' voucher program will be processed as ExpenseTransactionTransportation."
+DateTime="2024-09-14 06:47:42.7049" ThreadId="1" Level="INFO" Provider="UberParser" Message="The Expense provider will be set to Voucher | UberXL."
+DateTime="2024-09-14 06:47:42.7049" ThreadId="1" Level="INFO" Provider="UberParser" Message="Total Amount for 'Gonzaga University School of Law' voucher and Kat Malone (240297) owner: $11.88"
+DateTime="2024-09-14 06:48:02.0007" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="Start running creator with name 'TravelerCategoriesSync'"
+DateTime="2024-09-14 06:48:21.7120" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="End running creator with name 'TravelerCategoriesSync'"
+DateTime="2024-09-14 06:49:01.9564" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="Start running creator with name 'TravelerCategoriesSync'"
+DateTime="2024-09-14 06:49:18.3520" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="End running creator with name 'TravelerCategoriesSync'"
+DateTime="2024-09-14 06:49:58.6356" ThreadId="1" Level="INFO" Provider="UberParser" Message="End feed Id = 9187f796-f206-4cbb-a2b2-b534d85645e0. 1 of 1"
+DateTime="2024-09-14 06:49:58.6356" ThreadId="1" Level="INFO" Provider="UberParser" Message="92 totally items from 1 feeds processed. 0 was processed with success. 0 items are not suitable for processing. 92 items are erroneous."
+DateTime="2024-09-14 06:49:58.6457" ThreadId="1" Level="INFO" Provider="UberParser" Message="Finish."
+DateTime="2024-09-14 06:49:58.6457" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="End running creator with name 'UberParser'"
+
+2.
+DateTime="2024-09-14 07:00:47.4347" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ReassignedTransactionUpdater'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+:::TRACE:::
+DateTime="2024-09-14 07:00:03.4168" ThreadId="1" Level="TRACE" Provider="ReassignedTransactionUpdater" Message="Start syncing entities."
+DateTime="2024-09-14 07:00:03.6012" ThreadId="1" Level="TRACE" Provider="ReassignedTransactionUpdater" Message="SyncProcessorBase.EntityMerger.SourceEntitiesLoader.LoadSourceEntities start."
+DateTime="2024-09-14 07:00:47.4347" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'ReassignedTransactionUpdater' disposed."
+
+3. #9 same timeout error
+DateTime="2024-09-14 07:01:13.2112" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutApprovedTransactions" 
+Message="Following error occurs during sending 'Go Expense: The following expenses have been approved' email: One or more errors occurred." 
+Exception="System.AggregateException: One or more errors occurred. ---> System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+4.
+DateTime="2024-09-14 07:12:57.8551" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutApprovedTransactions" 
+Message="Following error occurs during sending 'Go Expense: The following expenses have been approved' email to 'SGreenleaf@eab.com': transaction must have a personal amount" 
+Exception="System.ArgumentException: transaction must have a personal amount
+
+
+CCM_Workerhost_fatal
+-------------------------
+1. #3 same error
+DateTime="2024-09-16 19:21:54.5770" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SJ0PR15MB4775.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------

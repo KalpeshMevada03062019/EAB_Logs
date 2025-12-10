@@ -1,0 +1,103 @@
+[26-02-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+RequestId="a7ef5cb9e483" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-02-26 02:58:58.1564"
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+2.
+RequestId="5f3287387a4c" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-02-26 09:42:08.3718" 
+Message="Error updating spending profile for user with external id 236154" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+3. #2 Same error
+RequestId="b8305bdc9fdf" UserId="235510" UserEmail="EKahn@eab.com" 
+DateTime="2024-02-26 19:28:50.2554" 
+Message="HTTP validation error: Wrong image file." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE::
+RequestId="b8305bdc9fdf" SessionId="_e3a3ff5e-0bd9-4375-a470-7de8f33b84a9-A71A35A32B9CDF3AD722C1F498E5EF13" UserId="235510" UserEmail="EKahn@eab.com" DateTime="2024-02-26 19:28:50.1919" ThreadId="10" Level="TRACE" Message="POST https://go.myeab.com/expense/api/Attachment/upload START"
+RequestId="b8305bdc9fdf" SessionId="_e3a3ff5e-0bd9-4375-a470-7de8f33b84a9-A71A35A32B9CDF3AD722C1F498E5EF13" UserId="235510" UserEmail="EKahn@eab.com" DateTime="2024-02-26 19:28:50.2246" ThreadId="10" Level="TRACE" Message="User '235510' in 'User' role: Start to upload."
+RequestId="b8305bdc9fdf" SessionId="_e3a3ff5e-0bd9-4375-a470-7de8f33b84a9-A71A35A32B9CDF3AD722C1F498E5EF13" UserId="235510" UserEmail="EKahn@eab.com" DateTime="2024-02-26 19:28:50.2554" ThreadId="19" Level="TRACE" Message="POST https://go.myeab.com/expense/api/Attachment/upload Completed in 63 ms"
+
+INFO::
+RequestId="2ebb19abdbbc" SessionId="_e3a3ff5e-0bd9-4375-a470-7de8f33b84a9-A87D3BFCACBD2972770CE3E96D43C678" UserId="235510" UserEmail="EKahn@eab.com" DateTime="2024-02-26 20:36:57.2619" ThreadId="22" Level="INFO" Message="User 235510 has been logged out"
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-02-26 06:47:43.7745" Provider="CDF3Import" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+
+DateTime="2024-02-26 06:47:43.7745" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20240123_045741SB_005978.xml'" 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Base.ExdFileProcessor.DownloadAndSaveFiles(IEnumerable`1 feedInfoModels)"
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #2 Remote Server unavailable
+DateTime="2024-02-26 08:04:13.0224" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (503) Server Unavailable.
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+	
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+RequestId="" 
+DateTime="2024-02-26 08:04:14.7336" ThreadId="41" Level="FATAL" 
+Message="The request failed. The remote server returned an error: (503) Server Unavailable." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (503) Server Unavailable. ---> System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+
+2.
+RequestId="" DateTime="2024-02-26 19:56:13.6260" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

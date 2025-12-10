@@ -1,0 +1,73 @@
+[11-12-2023]
+
+Web Server
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+RequestId="0c01fbac0c23"  UserId="235773" UserEmail="AWyatt@eab.com" 
+DateTime="2023-12-11 22:02:45.2560"
+Message="An error occurred while communicating with the remote host. The error code is 0x80070057." 
+Exception="System.Web.HttpException (0x80004005): An error occurred while communicating with the remote host. The error code is 0x80070057. ---> System.ArgumentException: Value does not fall within the expected range.
+at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at System.IO.Stream.<>c.<BeginWriteInternal>b__46_0(Object <p0>)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.IO.Stream.EndWrite(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.WebHost.HttpControllerHandler.<WriteStreamedResponseContentAsync>d__15.MoveNext()
+System.ArgumentException: Value does not fall within the expected range."
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+
+----------------------
+UPM_Website_fatal
+----------------------
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1. 
+DateTime="2023-12-11 06:47:54.4810" Provider="BalboaSupplementalImport" 
+Message="File with id 5b1daa7e-c49b-4491-9e53-c9b0d011d7de is empty." Exception=""
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. 
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+
+----------------------
+UPM_API_Fatal
+----------------------
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------

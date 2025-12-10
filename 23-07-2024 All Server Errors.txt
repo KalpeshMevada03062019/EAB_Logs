@@ -1,0 +1,265 @@
+23-07-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+RequestId="0cdbb6e8ed9f" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-07-23 04:29:58.9991" ThreadId="45" Level="FATAL" 
+Message="Error adding admin notification." Exception="System.InvalidOperationException: The changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration. ---> System.InvalidOperationException: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+
+2.
+RequestId="2f3f8420e43c" UserId="239089" UserEmail="EPayne@eab.com" 
+DateTime="2024-07-23 09:09:50.5089" ThreadId="43" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration. ---> System.InvalidOperationException: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+
+3. #2 same error
+RequestId="dc1e7e795522" UserId="240137" UserEmail="GJewell@eab.com" 
+DateTime="2024-07-23 09:37:58.8616" ThreadId="24" Level="FATAL" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+
+4.
+RequestId="60f0eb41d1ac" UserId="240137" UserEmail="GJewell@eab.com" 
+DateTime="2024-07-23 09:09:50.4831" ThreadId="42" Level="FATAL" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+
+5. #7 same error
+RequestId="f2efe141ecb0" SessionId="_c4d07869-385b-423b-a492-4603586e51e9-80C1113A168781E34FDE620073934BBB" UserId="237506" UserEmail="BMorgan@eab.com" 
+DateTime="2024-07-23 19:27:18.2931" 
+Message="HTTP validation error: Wrong image file." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE:: 
+RequestId="f2efe141ecb0" SessionId="_c4d07869-385b-423b-a492-4603586e51e9-80C1113A168781E34FDE620073934BBB" UserId="237506" UserEmail="BMorgan@eab.com" DateTime="2024-07-23 19:27:18.2299" ThreadId="59" Level="TRACE" Message="POST https://go.myeab.com/expense/api/Attachment/upload START"
+RequestId="f2efe141ecb0" SessionId="_c4d07869-385b-423b-a492-4603586e51e9-80C1113A168781E34FDE620073934BBB" UserId="237506" UserEmail="BMorgan@eab.com" DateTime="2024-07-23 19:27:18.2713" ThreadId="71" Level="TRACE" Message="User '237506' in 'User' role: Start to upload."
+RequestId="f2efe141ecb0" SessionId="_c4d07869-385b-423b-a492-4603586e51e9-80C1113A168781E34FDE620073934BBB" UserId="237506" UserEmail="BMorgan@eab.com" DateTime="2024-07-23 19:27:18.2931" ThreadId="59" Level="TRACE" Message="POST https://go.myeab.com/expense/api/Attachment/upload Completed in 63 ms"
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+RequestId="177e834f9fc9" SessionId="_5b41ffbd-d96c-49e7-abda-4901018b2333-0FD4C7594CEC46D446345237D6909D71" UserId="239892" UserEmail="MMorgan@eab.com" 
+DateTime="2024-07-23 14:47:38.5954" ThreadId="34" Level="FATAL" 
+Message="HTTP validation error: MailTo should contains only letters and whitespaces." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace::::
+RequestId="6d0e30a53906" SessionId="_5b41ffbd-d96c-49e7-abda-4901018b2333-0FD4C7594CEC46D446345237D6909D71" UserId="239892" UserEmail="MMorgan@eab.com" DateTime="2024-07-23 14:47:38.5792" ThreadId="34" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/replace START"
+RequestId="6d0e30a53906" SessionId="_5b41ffbd-d96c-49e7-abda-4901018b2333-0FD4C7594CEC46D446345237D6909D71" UserId="239892" UserEmail="MMorgan@eab.com" DateTime="2024-07-23 14:47:38.5954" ThreadId="34" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/replace Completed in 16 ms"
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-07-23 07:16:04.7367" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutUnexpensedTransactions" 
+Message="Following error occurs during sending 'Your Weekly Expense Statement' email: One or more errors occurred." 
+Exception="System.AggregateException: One or more errors occurred. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+
+
+TRACE::
+DateTime="2024-07-23 07:16:02.6806" ThreadId="1" Level="TRACE" Provider="EmailsToUserAboutUnexpensedTransactions" Message="Load email model start."
+DateTime="2024-07-23 07:16:02.6862" ThreadId="1" Level="TRACE" Provider="EmailsToUserAboutUnexpensedTransactions" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+DateTime="2024-07-23 07:16:02.7120" ThreadId="10" Level="TRACE" Provider="EmailsToUserAboutUnexpensedTransactions" Message="GetTransactionsOfSpecifiedStatuses query compilation end. Duration: 29 ms."
+DateTime="2024-07-23 07:16:04.9115" ThreadId="1" Level="TRACE" Provider="EmailsToUserAboutUnexpensedTransactions" Message="Load email model start."
+DateTime="2024-07-23 07:16:04.9115" ThreadId="1" Level="TRACE" Provider="EmailsToUserAboutUnexpensedTransactions" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+DateTime="2024-07-23 07:16:04.9428" ThreadId="5" Level="TRACE" Provider="EmailsToUserAboutUnexpensedTransactions" Message="GetTransactionsOfSpecifiedStatuses query compilation end. Duration: 30 ms."
+DateTime="2024-07-23 07:16:04.9428" ThreadId="1" Level="TRACE" Provider="EmailsToUserAboutUnexpensedTransactions" Message="Load email model end. Duration: 36 ms."
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+
+06-07-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+
+

@@ -1,0 +1,120 @@
+RequestId="b589158faa19" DateTime="2024-02-04 01:17:32.3354" ThreadId="48" Level="FATAL" Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="Comdata" Exception=""
+RequestId="2776f9dc7236" DateTime="2024-02-04 01:38:50.2352" ThreadId="82" Level="FATAL" Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+RequestId="" DateTime="2024-02-04 05:05:13.7498" ThreadId="57" Level="FATAL" Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.Exchange.WebServices.Data.EwsHttpWebRequest.Microsoft.Exchange.WebServices.Data.IEwsHttpWebRequest.GetResponse() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsHttpWebRequest.cs:line 113
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 821
+   --- End of inner exception stack trace ---
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 831
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ValidateAndEmitRequest(IEwsHttpWebRequest& request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 724
+   at Microsoft.Exchange.WebServices.Data.MultiResponseServiceRequest`1.Execute() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\MultiResponseServiceRequest.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.ExchangeService.BindToFolder(FolderId folderId, PropertySet propertySet) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ExchangeService.cs:line 278
+   at Microsoft.Exchange.WebServices.Data.ExchangeService.BindToFolder[TFolder](FolderId folderId, PropertySet propertySet) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ExchangeService.cs:line 295
+   at ABC.EXD.InnerGateway.MailApiService.<>c__DisplayClass3.<GetMails>b__0() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 42
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 106
+   at ABC.EXD.InnerGateway.MailApiService.GetMails(MailAccount account, Nullable`1 receivedAfterDate, String subject) in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 70
+   at SyncInvokeGetMails(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.Exchange.WebServices.Data.EwsHttpWebRequest.Microsoft.Exchange.WebServices.Data.IEwsHttpWebRequest.GetResponse() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsHttpWebRequest.cs:line 113
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 821
+System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)"
+RequestId="" DateTime="2024-02-04 07:16:12.9824" ThreadId="37" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:16:12.9824" ThreadId="37" Level="FATAL" Message="X-Request-Id: d3aae3b7-a682-48ad-8797-4e01c33af4e4" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:16:12.9824" ThreadId="37" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:16:12.9824" ThreadId="37" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43009595817},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:19:23.1225" ThreadId="60" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:19:23.1225" ThreadId="60" Level="FATAL" Message="X-Request-Id: de66edfe-32d5-4c02-bd77-8bff3a733376" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:19:23.1225" ThreadId="60" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:19:23.1225" ThreadId="60" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43182317830},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:20:51.8269" ThreadId="56" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:20:51.8269" ThreadId="56" Level="FATAL" Message="X-Request-Id: 04ee8cb3-f4ca-4275-8b6c-94f46cc62b6a" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:20:51.8269" ThreadId="56" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:20:51.8269" ThreadId="56" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43053869310},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:20:54.3277" ThreadId="56" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:20:54.3277" ThreadId="56" Level="FATAL" Message="X-Request-Id: 76fc9dca-370f-4acd-afa7-f7c42576db63" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:20:54.3277" ThreadId="56" Level="FATAL" Message="Error Status Code : 404 NotFound" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:20:54.3277" ThreadId="56" Level="FATAL" Message="Error Response: " Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:22:03.6364" ThreadId="58" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:22:03.6364" ThreadId="58" Level="FATAL" Message="X-Request-Id: f28b73d1-3913-4d4b-a1b4-094fbc7e4237" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:22:03.6364" ThreadId="58" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:22:03.6364" ThreadId="58" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43161569020},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:03.1088" ThreadId="26" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:03.1088" ThreadId="26" Level="FATAL" Message="X-Request-Id: fe267770-21bb-4139-950a-3341c7aa8c9a" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:03.1088" ThreadId="26" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:03.1088" ThreadId="26" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043021540521},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:07.2903" ThreadId="26" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:07.2903" ThreadId="26" Level="FATAL" Message="X-Request-Id: 466df412-938e-40fe-9adf-4bbdc8dc6693" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:07.2903" ThreadId="26" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:07.2903" ThreadId="26" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043167877659},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:27.0434" ThreadId="58" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:27.0434" ThreadId="58" Level="FATAL" Message="X-Request-Id: 5a34249c-9175-4609-864a-e746762789f2" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:27.0434" ThreadId="58" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:27.0434" ThreadId="58" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043144795139},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:44.3457" ThreadId="58" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:44.3457" ThreadId="58" Level="FATAL" Message="X-Request-Id: a8399d57-83b8-4bde-bf00-c72734dca9c4" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:44.3457" ThreadId="58" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:23:44.3457" ThreadId="58" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043160547224},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:24:14.6731" ThreadId="29" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:24:14.6731" ThreadId="29" Level="FATAL" Message="X-Request-Id: a52f18f3-0815-4eed-b69a-c9ddd688d42f" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:24:14.6731" ThreadId="29" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:24:14.6731" ThreadId="29" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043142390215},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:24:30.2527" ThreadId="59" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:24:30.2527" ThreadId="59" Level="FATAL" Message="X-Request-Id: d276ac00-2c0a-4dfe-b55f-e21d8c95dda6" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:24:30.2527" ThreadId="59" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:24:30.2527" ThreadId="59" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043158404411},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:25:58.5478" ThreadId="75" Level="FATAL" Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:25:58.5478" ThreadId="75" Level="FATAL" Message="X-Request-Id: a95103d3-1161-49a8-9443-ee0759109f4a" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:25:58.5478" ThreadId="75" Level="FATAL" Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 07:25:58.5478" ThreadId="75" Level="FATAL" Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":2043059772139},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+RequestId="" DateTime="2024-02-04 11:37:13.6413" ThreadId="9" Level="FATAL" Message="The request failed. The remote server returned an error: (503) Server Unavailable." Provider="" Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (503) Server Unavailable. ---> System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.Exchange.WebServices.Data.EwsHttpWebRequest.Microsoft.Exchange.WebServices.Data.IEwsHttpWebRequest.GetResponse() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsHttpWebRequest.cs:line 113
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 821
+   --- End of inner exception stack trace ---
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 831
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ValidateAndEmitRequest(IEwsHttpWebRequest& request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 724
+   at Microsoft.Exchange.WebServices.Data.MultiResponseServiceRequest`1.Execute() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\MultiResponseServiceRequest.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.Folder.InternalFindItems[TItem](SearchFilter searchFilter, ViewBase view, Grouping groupBy) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ServiceObjects\Folders\Folder.cs:line 360
+   at Microsoft.Exchange.WebServices.Data.Folder.FindItems(SearchFilter searchFilter, ItemView view) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ServiceObjects\Folders\Folder.cs:line 381
+   at ABC.EXD.InnerGateway.MailApiService.<>c__DisplayClass3.<GetMails>b__0() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 59
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 106
+   at ABC.EXD.InnerGateway.MailApiService.GetMails(MailAccount account, Nullable`1 receivedAfterDate, String subject) in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 70
+   at SyncInvokeGetMails(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.Exchange.WebServices.Data.EwsHttpWebRequest.Microsoft.Exchange.WebServices.Data.IEwsHttpWebRequest.GetResponse() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsHttpWebRequest.cs:line 113
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 821"

@@ -1,0 +1,22 @@
+RequestId="bf8041b31323" DateTime="2024-09-10 14:39:23.4639" ThreadId="9" Level="FATAL" Message="Twilio. From=+12024392402, Digits=2258. Exception occurred during activation card via phone" Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at ABC.EXD.OuterGateway.Controllers.TwilioConnectionController.CheckUserPhoneAndCreditCard() in c:\git_sources\eabgo\ExternalData\ABC.EXD.OuterGateway\Controllers\TwilioConnectionController.cs:line 70
+---> (Inner Exception #0) System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)"

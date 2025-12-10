@@ -1,0 +1,115 @@
+[12-03-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="30c3e6897715" 
+UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-03-12 07:12:20.1086" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2. #68 same error
+RequestId="e3b4daf20f88" UserId="239291" UserEmail="PauleAnne.Kaziewicz@seramount.com" 
+DateTime="2024-03-12 21:15:33.8130"
+Message="Could not establish trust relationship for the SSL/TLS secure channel with authority 'eabgowers-p01'." Exception="System.ServiceModel.Security.SecurityNegotiationException: Could not establish trust relationship for the SSL/TLS secure channel with authority 'eabgowers-p01'. ---> System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #400 same error
+RequestId="d34095c6ba02" UserId="232172" UserEmail="FPuckett@eab.com" 
+DateTime="2024-03-12 20:02:01.5704" 
+Message="Could not establish trust relationship for the SSL/TLS secure channel with authority 'eabgowers-p01'." Exception="System.ServiceModel.Security.SecurityNegotiationException: Could not establish trust relationship for the SSL/TLS secure channel with authority 'eabgowers-p01'. ---> System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. #3 #The remote certificate is invalid according to the validation procedure.
+RequestId="51a2bcb95ec2" UserId="502586" UserEmail="JTracy@eab.com" 
+DateTime="2024-03-12 20:07:35.4905" 
+Message="Unable to retrieve traveler category for user with external id 239368" 
+Exception="System.ServiceModel.Security.SecurityNegotiationException: Could not establish trust relationship for the SSL/TLS secure channel with authority 'eabgowers-p01'. ---> System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure.
+
+2. #15 error
+RequestId="244f85baf3fc" UserId="502586" UserEmail="JTracy@eab.com" 
+DateTime="2024-03-12 20:07:35.5379" 
+Message="Could not establish trust relationship for the SSL/TLS secure channel with authority 'eabgowers-p01'." Exception="System.ServiceModel.Security.SecurityNegotiationException: Could not establish trust relationship for the SSL/TLS secure channel with authority 'eabgowers-p01'. ---> System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure.
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-03-12 07:02:27.3901" Provider="EmailsToUserAboutApprovedTransactions" 
+Message="Following error occurs during sending 'Go Expense: The following expenses have been approved' email to 'SMandelbaum@eab.com': The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+2. #48 error
+DateTime="2024-03-12 20:00:02.1237" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.Security.SecurityNegotiationException: Could not establish trust relationship for the SSL/TLS secure channel with authority 'eabgowers-p01'. ---> System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.  #241 same error
+DateTime="2024-03-12 20:01:53.4547" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.Security.SecurityNegotiationException: Could not establish trust relationship for the SSL/TLS secure channel with authority 'eabgowers-p01'. ---> System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure.
+
+-------------------------
+EXD_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-03-12 06:00:42.4354" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'UberFeedDownloader'" 
+Exception="Renci.SshNet.Common.SshConnectionException: An established connection was aborted by the server.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+	
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+RequestId="243697b0b531" 
+DateTime="2024-03-12 02:12:30.3552" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="Comdata" 
+Exception=""
+
+
+2. #471 error
+RequestId="8057924d5e60" 
+DateTime="2024-03-12 03:38:34.3784" 
+Message="Description: com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed; nested exception is com.sun.xml.wss.XWSSecurityException: com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed." Provider="ComdataMC" 
+Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+
+

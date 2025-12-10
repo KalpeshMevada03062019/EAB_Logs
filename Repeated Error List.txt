@@ -1,0 +1,41 @@
+
+
+Repeated Error list
+
+*Web Server*
+----------------------
+CCM_Website_fatal
+----------------------
+[10-01-2024]-----------
+1. #1 Time error 
+RequestId="f022409faf84" UserId="238896" UserEmail="KDornfeld@eab.com" 
+DateTime="2024-01-10 09:49:33.8308" 
+Message="HTTP validation error: Deactivate credit card request failed. Reason: Card not found. Actor Id: 8b6ddf0a-d419-48f4-a98e-11d583867724" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+----------------------
+UPM_Website_fatal
+----------------------
+[11-01-2024]-----------
+1. #5 Time same error Today only
+RequestId="a650d16c1b07" UserId="240231" UserEmail="EDimartino@eab.com" 
+DateTime="2024-01-11 09:12:48.8997" 
+Message="The underlying provider failed on Open." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=15008;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+2. [04 Oct,] 02 Jan, - #22 , 11 Jan - #6 Time same error Today in UPM Website
+RequestId="a650d16c1b07" UserId="240231" UserEmail="EDimartino@eab.com" 
+DateTime="2024-01-11 09:12:48.9159"
+Message="Error adding admin notification." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+
+
+*Workerhost*
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. #58 - 05; #58 - 06 , #1 - 07; #1 - 08; Jan #2 - 09; Jan #4 - 10; Jan 2024 #2 - 11 Jan 2024 Same error #it's repeated for few days.
+DateTime="2024-01-11 00:59:12.4876" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.

@@ -1,0 +1,121 @@
+*[09-01-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+RequestId="dd9f51a944aa" UserId="502578" UserEmail="MAbubacar@eab.com" 
+DateTime="2024-01-09 10:23:54.0950" 
+Message="The remote host closed the connection. The error code is 0x800704CD." 
+Exception="System.Web.HttpException (0x800704CD): The remote host closed the connection. The error code is 0x800704CD.
+ at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at System.IO.Stream.<>c.<BeginWriteInternal>b__46_0(Object <p0>)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.IO.Stream.EndWrite(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.WebHost.HttpControllerHandler.<WriteStreamedResponseContentAsync>d__15.MoveNext()"
+
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+
+----------------------
+UPM_Website_fatal
+----------------------
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1. 
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. #2 same error
+DateTime="2024-01-09 05:08:12.7600" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+ at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at ABC.CCM.Workers.ComdataSyncOut.ComdataSyncOutProcessor.UpdateCardAddressForUsers()
+---> (Inner Exception #0) ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238668X003753'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()<---
+
+ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238668X003753'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()"
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1. #This error repeated for a few days.
+RequestId="287d87ffa1d9" 
+DateTime="2024-01-09 01:08:47.2695" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="Comdata" Exception=""
+
+2. #This error repeated for a few days.
+RequestId="" 
+DateTime="2024-01-09 05:08:14.0423" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+
+----------------------
+UPM_API_Fatal
+----------------------
+1.
+
+
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------

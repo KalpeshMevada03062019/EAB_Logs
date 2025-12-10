@@ -1,0 +1,364 @@
+*[12-08-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal  #20 same Timeout error
+-------------------------
+1. #1 timeout error
+RequestId="49f77aaacd07" UserId="240305" UserEmail="CTupurani@eab.com" 
+DateTime="2024-08-12 02:02:56.3812" ThreadId="7" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1836
+
+2.  #1 timeout error
+RequestId="c95a67a1f49e" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-12 04:41:51.2464" ThreadId="9" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+  at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesCountAsync>d__11f.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1761
+  at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredCountAsync>d__d6.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 516
+
+3. 
+RequestId="7d6334cd3e5d" SessionId="_4b8993dd-7cae-4e50-ae23-4c76c4cd98d9-DD2731FFE7C776EE6A59711C0A11279D" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-12 04:41:51.4363" ThreadId="26" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+4. #14 same Timeout error for SunilKumar
+RequestId="7d6334cd3e5d" SessionId="_4b8993dd-7cae-4e50-ae23-4c76c4cd98d9-DD2731FFE7C776EE6A59711C0A11279D" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-08-12 04:41:51.4363" ThreadId="26" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1836
+at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredAsync>d__c9.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 489
+
+5.
+RequestId="7d6334cd3e5d" SessionId="_4b8993dd-7cae-4e50-ae23-4c76c4cd98d9-DD2731FFE7C776EE6A59711C0A11279D" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-12 04:41:51.4363" ThreadId="26" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1836
+at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsAsync>d__59.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 451
+at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredAsync>d__c9.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 489
+
+6.
+RequestId="c50894fb3074" SessionId="_4b8993dd-7cae-4e50-ae23-4c76c4cd98d9-16FBE35B9AC24CE15C9126FE46014585" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-08-12 06:10:45.1597" ThreadId="36" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration. ---> System.InvalidOperationException: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+
+7. *NEW ERROR* No further trace - Related to HOTEL transaction Id=2246544 
+RequestId="c10ff4f9224d" UserId="223756" UserEmail="KTerrell@eab.com" 
+DateTime="2024-08-12 08:50:47.9354" ThreadId="41" Level="FATAL" 
+Message="HTTP validation error: There is no transaction with Id={0}." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="c10ff4f9224d" UserEmail="KTerrell@eab.com" DateTime="2024-08-12 08:50:47.8160" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/groupEvent/validate START"
+RequestId="c10ff4f9224d" UserEmail="KTerrell@eab.com" DateTime="2024-08-12 08:50:47.8160" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/groupEvent/validate Request content: {'allocationItems':[{'id':0,'allocatedBy':'Employee','isOwn':true,'percentage':100,'value':'Kate Terrell','departmentExternalId':null,'departmentAllocationAvailability':null,'userId':'7dee1abc-e991-4567-b6f8-6a6c1641da95','availablePurposesIds':null,'isGuestUser':false,'userEntity':'EAB'}],'expenses':[{'businessAmount':'579.76','date':'08/05/2024','expenseType':null,'id':3147703,'personalAmount':'0.00','note':'','personalAmountInternational':'0.00','businessAmountInternational':'579.76'}],'transactionInfo':{'basedCityReason':null,'overAllowedAmountReason':null,'whyBookedOutsideReason':null,'traveler':'TERRELL, KATE','defaultTravelerName':'Kate Terrell','perDiems':[{'rate':260,'startDate':'02/22/2017','endDate':null,'onDate':'August 5th'}],'hotelConfirmation':null,'isDetailed':false,'attachment':null,'isFolioValidated':null,'createdFromTransactionId':null,'date':'08/05/2024','logoId':60,'totalAmount':579.76,'merchant':{'merchantCategoryId':3590,'address':'2401 M STREET NW','city':'Washington','country':'USA','name':'FAIRMONT HOTELS','state':'DC','zip':'20037-0000','displayName':'FAIRMONT HOTELS, Washington, DC'},'purposes':[],'version':'AAAAAAEYFz4=','isShared':false,'isRejected':null,'currency':{'id':5,'code':'USD','name':'United States dollar','countryName':null,'countryCode':null},'isInInternationalMode':false,'exchangeRate':1,'paymentInfo':{'formOfPayment':'CreditCard','name':'HotelCard-4363'},'reassignmentInfo':null,'ownerManagementLevel':'E1 Executive','notes':null,'approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(USD) United States Dollar','perDiemList':[{'perDiem':0}]},'transactionId':2246544,'receiptId':208357,'clientDate':'2024-08-12T08:50:48-04:00'}"
+RequestId="c10ff4f9224d" UserEmail="KTerrell@eab.com" DateTime="2024-08-12 08:50:47.8636" ThreadId="41" Level="TRACE" Message="Validating access right start."
+RequestId="c10ff4f9224d" UserEmail="KTerrell@eab.com" DateTime="2024-08-12 08:50:47.8636" ThreadId="8" Level="TRACE" Message="Validating access right end. Duration: 2 ms."
+RequestId="c10ff4f9224d" UserEmail="KTerrell@eab.com" DateTime="2024-08-12 08:50:47.8636" ThreadId="8" Level="TRACE" Message="Updating transaction entity start."
+RequestId="c10ff4f9224d" UserEmail="KTerrell@eab.com" DateTime="2024-08-12 08:50:47.9354" ThreadId="41" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/groupEvent/validate Completed in 119 ms"
+
+TransactionDetails::::::::
+TransactionId=2246544
+OwnerId=7DEE1ABC-E991-4567-B6F8-6A6C1641DA95
+CreatedDate: 2024-08-09 07:01:49.257
+ChargedDate: 2024-08-05
+Status = 6
+ExternalId=223756 of transaction
+Discriminator: ExpenseTransactionHotel
+Amount=579.76
+
+
+8. #2 same timeout error
+RequestId="15576e47e84d" SessionId="_4b8993dd-7cae-4e50-ae23-4c76c4cd98d9-164B6362EA102F2D6A14FE0F2B7F1125" UserId="238326" UserEmail="KMcElroy@eab.com" DateTime="2024-08-12 08:54:03.3506" ThreadId="28" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+at ABC.ERS.BL.CurrencyService.<GetStoredRateAsync>d__25.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\CurrencyService.cs:line 91
+at ABC.ERS.BL.CurrencyService.<GetAndAddToDbCurrencyRateAsync>d__d.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\CurrencyService.cs:line 49
+at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<GetCurrencyByCountryAsync>d__91.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 541
+
+9. #1 same timeout error
+RequestId="98aac0a21a43" SessionId="_4b8993dd-7cae-4e50-ae23-4c76c4cd98d9-50D4331AC1E48E405121E6A17FF3C02A" UserId="238670" UserEmail="JLi@eab.com" 
+DateTime="2024-08-12 09:02:58.2401" ThreadId="36" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+ at ABC.ERS.Web.ExpenseNow.Mappers.AttachmentMapper.MapToModel(AttachmentModel model, Attachment attachment, Boolean includeContent, IAttachmentService attachmentService, Int32 maxWidth, Int32 maxHeight) in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\Mappers\AttachmentMapper.cs:line 26
+ at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+10.
+RequestId="e7702e0b4abc" SessionId="_4b8993dd-7cae-4e50-ae23-4c76c4cd98d9-50D4331AC1E48E405121E6A17FF3C02A" UserId="238670" UserEmail="JLi@eab.com" 
+DateTime="2024-08-12 09:03:04.7351" ThreadId="28" Level="FATAL" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+11.
+RequestId="98aac0a21a43" SessionId="_4b8993dd-7cae-4e50-ae23-4c76c4cd98d9-50D4331AC1E48E405121E6A17FF3C02A" UserId="238670" UserEmail="JLi@eab.com" 
+DateTime="2024-08-12 09:03:04.9724" ThreadId="36" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration. ---> System.InvalidOperationException: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+
+12. #2 same timeout error
+RequestId="221ffb799930" SessionId="_aec1d1a4-703c-4602-a5c8-4560f29da863-5575BC702ACA490CEB645116E69E915A" UserId="238896" UserEmail="KDornfeld@eab.com" 
+DateTime="2024-08-12 12:07:24.3106" ThreadId="8" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 
+at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsAsync>d__59.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 451
+at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredAsync>d__c9.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 489
+
+13.
+RequestId="a74116484054" SessionId="_aec1d1a4-703c-4602-a5c8-4560f29da863-5575BC702ACA490CEB645116E69E915A" UserId="238896" UserEmail="KDornfeld@eab.com" 
+DateTime="2024-08-12 12:07:24.3539" ThreadId="41" Level="FATAL" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+  at ABC.Common.Web.Infrastructure.GlobalExceptionLogger.<LogAsync>d__0.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\GlobalExceptionLogger.cs:line 36
+
+14. #2 same Invalid Permission Error
+RequestId="255cdfd88fc9" SessionId="_aec1d1a4-703c-4602-a5c8-4560f29da863-B75717337410B8A1F5A4FC6C1086B9C4" UserId="237971" UserEmail="AFridfertig@eab.com" 
+DateTime="2024-08-12 15:36:18.0715" ThreadId="40" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE:1
+RequestId="255cdfd88fc9" UserId="237971" UserEmail="AFridfertig@eab.com" DateTime="2024-08-12 15:36:18.0391" ThreadId="17" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/groundTransportation/taxi/2247759 START"
+RequestId="255cdfd88fc9" UserId="237971" UserEmail="AFridfertig@eab.com" DateTime="2024-08-12 15:36:18.0553" ThreadId="17" Level="TRACE" Message="User '226124' in 'User' role: Getting transaction data for id '2247759'"
+RequestId="255cdfd88fc9" UserId="237971" UserEmail="AFridfertig@eab.com" DateTime="2024-08-12 15:36:18.0715" ThreadId="40" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/groundTransportation/taxi/2247759 Completed in 32 ms"
+
+Trace:2
+RequestId="b2f7bcc9283e" SessionId="_aec1d1a4-703c-4602-a5c8-4560f29da863-B75717337410B8A1F5A4FC6C1086B9C4" UserId="237971" UserEmail="AFridfertig@eab.com" DateTime="2024-08-12 15:36:23.4195" ThreadId="24" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/groundTransportation/taxi/2247759 START"
+RequestId="b2f7bcc9283e" SessionId="_aec1d1a4-703c-4602-a5c8-4560f29da863-B75717337410B8A1F5A4FC6C1086B9C4" UserId="237971" UserEmail="AFridfertig@eab.com" DateTime="2024-08-12 15:36:23.4297" ThreadId="24" Level="TRACE" Message="User '226124' in 'User' role: Getting transaction data for id '2247759'"
+RequestId="b2f7bcc9283e" SessionId="_aec1d1a4-703c-4602-a5c8-4560f29da863-B75717337410B8A1F5A4FC6C1086B9C4" UserId="237971" UserEmail="AFridfertig@eab.com" DateTime="2024-08-12 15:36:23.4499" ThreadId="24" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/groundTransportation/taxi/2247759 Completed in 30 ms"
+
+
+Transaction Detail:::::
+Transaction ID=2247759 
+Discriminator=ExpenseTransactionTransportation
+OwnerId=NULL
+CreditCardID=51810
+CreditCard Owner=Rachel Becker
+
+
+User ID= 06DB5FE7-81B1-4C9C-A071-38D960BE8E14
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+RequestId="2299e482c176" 
+DateTime="2024-08-12 01:09:14.5889" ThreadId="26" Level="FATAL" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. #Timeout error
+RequestId="" 
+DateTime="2024-08-12 08:50:40.7267" ThreadId="25" Level="FATAL" 
+Message="Calling 'Read' when the data reader is closed is not a valid operation." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: Calling 'Read' when the data reader is closed is not a valid operation. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+RequestId="" 
+DateTime="2024-08-12 03:09:19.7430" ThreadId="12" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+2.
+RequestId="" DateTime="2024-08-12 10:36:14.4541" ThreadId="55" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+InRule Server
+-------------------------
+
+
+06-07-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1. 
+
+
+
+InRule Server
+-------------------------
+
+
+
+

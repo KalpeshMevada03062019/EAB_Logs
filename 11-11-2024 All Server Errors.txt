@@ -1,0 +1,195 @@
+*[11-11-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="54b2df0d7520" UserId="239091" UserEmail="DHamami@eab.com" 
+DateTime="2024-11-11 14:48:07.1196" ThreadId="76" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2. #3 same error
+RequestId="4b559e74c2e7" UserId="238350" UserEmail="DErickson@eab.com" 
+DateTime="2024-11-11 18:43:46.3233" ThreadId="34" Level="FATAL" 
+Message="HTTP validation error: Wrong image file." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+RequestId="7ce4e6e881a2" UserId="502570" UserEmail="SunilKumar@eab.com"
+DateTime="2024-11-11 02:58:37.3454" ThreadId="11" Level="FATAL" 
+Message="The HTTP request to 'https://eabgowers-p01/ers_api/ErsApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout." 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/ers_api/ErsApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #3 same error
+RequestId="68dbbc618d2b" UserId="238085" UserEmail="KKozicki@eab.com" 
+DateTime="2024-11-11 10:19:15.3408" ThreadId="19" Level="FATAL" 
+Message="Unable to create the first credit card when owner already has credit card. UserId: 4d498a2c-dfe7-47bf-bfe4-87e67175c4e4" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Unable to create the first credit card when owner already has credit card. UserId: 4d498a2c-dfe7-47bf-bfe4-87e67175c4e4 (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+Trace:
+++++++
+RequestId="f608b433b5de" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:19:08.1200" ThreadId="19" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/request START"
+RequestId="f608b433b5de" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:19:21.8158" ThreadId="19" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/request Completed in 13696 ms"
+RequestId="b7b7ebf4efa3" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:19:38.9690" ThreadId="30" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/request START"
+RequestId="b7b7ebf4efa3" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:19:38.9906" ThreadId="30" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/request Completed in 22 ms"
+RequestId="426fa96365d1" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:20:30.1967" ThreadId="16" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/request START"
+RequestId="426fa96365d1" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:20:30.2280" ThreadId="11" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/request Completed in 31 ms"
+RequestId="7e9a58b43966" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:20:38.5917" ThreadId="17" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/creditcard/get START"
+RequestId="7e9a58b43966" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:20:39.2249" ThreadId="19" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/creditcard/get Completed in 633 ms"
+RequestId="612e461d5f1e" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:20:41.6532" ThreadId="19" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/creditcard/creditCardWizardOptions START"
+RequestId="612e461d5f1e" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:20:41.8754" ThreadId="30" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/creditcard/creditCardWizardOptions Completed in 222 ms"
+RequestId="f22df2cf8a38" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:21:05.4795" ThreadId="30" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/replace START"
+RequestId="f22df2cf8a38" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:21:18.3615" ThreadId="17" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/replace Completed in 12882 ms"
+RequestId="549da1933b70" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:21:21.9723" ThreadId="17" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/creditcard/get START"
+RequestId="549da1933b70" UserId="238085" UserEmail="KKozicki@eab.com" DateTime="2024-11-11 10:21:22.5567" ThreadId="30" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/creditcard/get Completed in 584 ms"
+
+Card Detail:
+++++++++++
+Username - Katie Kozicki - https://prnt.sc/3X1SDyiogKpG
+FirstName: Katie
+LastName: Kozicki
+EmployeeNumber: 238085X005893
+MaskedNumber: 556305XXXXXX6403
+Status: PendingProcessing
+CustomerId: DGYXS
+
+
+EXD_InnerGateway_Trace: (Request and response from API Server)
+++++++++++++++++++++++
+RequestId="d52d9c6d1f2f" DateTime="2024-11-11 10:21:07.4244" ThreadId="42" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'DGYXS','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'KATELYN','cardLastName':'KOZICKI','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'238085X005893','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'','alertServiceFlag':false,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'KATELYN KOZICKI','mailAddress1':'5806 Biscayne Dr','mailAddress2':' ','mailCity':'Alexandria','mailState':'VA','mailZip':'22303','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="d52d9c6d1f2f" DateTime="2024-11-11 10:21:07.4244" ThreadId="42" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="d52d9c6d1f2f" DateTime="2024-11-11 10:21:11.3176" ThreadId="52" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 3899 ms." Provider="ComdataMC"
+RequestId="d52d9c6d1f2f" DateTime="2024-11-11 10:21:11.3176" ThreadId="52" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'success','requestUID':'291915b7-f52e-4a5c-89c1-4c5ed3a21b9f','Items':['ZZ321','DGYXS','556305XXXXXX6403','238085X005893','399Z42L6R9'],'ItemsElementName':[0,4,2,5,3]}}" Provider="ComdataMC"
+
+
+
+2. #2 same error
+RequestId="a3a9ba2c8329" UserId="226636" UserEmail="Ccoleman@eab.com" 
+DateTime="2024-11-11 11:37:52.2455" ThreadId="16" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: 28061fbe-e89c-4cec-bd61-e7e390b80fa7. EmployeeNumber:226636X005331." 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Unable to replace credit card when owner already has an active credit card. OwnerId: 28061fbe-e89c-4cec-bd61-e7e390b80fa7. EmployeeNumber:226636X005331. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+Card Detail:
+++++++++++++++
+First Name - Cassandra
+LastName - Coleman
+MaskedNumber - 556368XXXXXX9816
+EmployeeNumber - 226636X005331
+Status - Active
+CustomerId - BRV61
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-11-11 06:48:15.4017" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+2.
+DateTime="2024-11-11 06:48:16.0751" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241022_123338SB_006535.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+3.
+DateTime="2024-11-11 06:48:16.3662" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+4.
+DateTime="2024-11-11 06:48:16.3662" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+5.
+DateTime="2024-11-11 06:48:18.1646" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+6.
+DateTime="2024-11-11 06:48:18.4003" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_073936SB_006538.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+7.
+DateTime="2024-11-11 06:48:27.0973" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+8.
+DateTime="2024-11-11 06:48:27.0973" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+9.
+DateTime="2024-11-11 06:48:35.7943" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+10.
+DateTime="2024-11-11 06:48:35.7943" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541tryagain.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+11.
+DateTime="2024-11-11 15:46:43.0084" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The operation has timed out (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="" 
+DateTime="2024-11-11 15:46:43.7133" ThreadId="52" Level="FATAL" 
+Message="The request failed. The operation has timed out" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The operation has timed out ---> System.Net.WebException: The operation has timed out
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

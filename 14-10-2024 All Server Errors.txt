@@ -1,0 +1,109 @@
+*[14-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #2 Same error
+RequestId="2fe229ab66e8" UserId="240295" UserEmail="AMoore@eab.com" 
+DateTime="2024-10-14 16:02:04.6470" ThreadId="24" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE:
+RequestId="2fe229ab66e8" SessionId="" UserId="" UserEmail="" DateTime="2024-10-14 16:02:04.6036" ThreadId="91" Level="TRACE" Message="Session sliding for user Alex Moore"
+RequestId="2fe229ab66e8" SessionId="_628651fb-4bf8-424e-ab7c-7f70bda91265-482928A94C4D932BD3341B00BBA98007" UserId="240295" UserEmail="AMoore@eab.com" DateTime="2024-10-14 16:02:04.6036" ThreadId="91" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/hotel/2279223 START"
+RequestId="2fe229ab66e8" SessionId="_628651fb-4bf8-424e-ab7c-7f70bda91265-482928A94C4D932BD3341B00BBA98007" UserId="240295" UserEmail="AMoore@eab.com" DateTime="2024-10-14 16:02:04.6152" ThreadId="91" Level="TRACE" Message="User '233418' in 'User' role: Getting transaction data for id '2279223'"
+RequestId="2fe229ab66e8" SessionId="_628651fb-4bf8-424e-ab7c-7f70bda91265-482928A94C4D932BD3341B00BBA98007" UserId="240295" UserEmail="AMoore@eab.com" DateTime="2024-10-14 16:02:04.6470" ThreadId="24" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/hotel/2279223 Completed in 43 ms"
+
+
+RequestId="592d896cf7c9" UserId="240295" UserEmail="AMoore@eab.com" 
+DateTime="2024-10-14 16:02:22.4577" ThreadId="81" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE:
+RequestId="592d896cf7c9" UserId="240295" UserEmail="AMoore@eab.com" DateTime="2024-10-14 16:02:22.3780" ThreadId="91" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/hotel/2279223 START"
+RequestId="592d896cf7c9" UserId="240295" UserEmail="AMoore@eab.com" DateTime="2024-10-14 16:02:22.3881" ThreadId="91" Level="TRACE" Message="User '233418' in 'User' role: Getting transaction data for id '2279223'"
+RequestId="592d896cf7c9" UserId="240295" UserEmail="AMoore@eab.com" DateTime="2024-10-14 16:02:22.4577" ThreadId="81" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/hotel/2279223 Completed in 80 ms"
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #Kelly Marientes
+RequestId="369c40e2915c" UserId="502729" UserEmail="KMarientes@eab.com" 
+DateTime="2024-10-14 14:03:25.6114" ThreadId="36" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: An error occurred while receiving the HTTP response to https://w6.iconnectdata.com/MCWS/services/MCWS. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.. ActorId: 829f2041-7f7a-4384-89b2-e22fad618a46. OwnerId: e09b551d-1f55-4efb-8384-b3aced492eca. Last4Digits: 6001, CustomerID = 'BRV61'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+First Name: Sammy
+LastName: Cozzolino-Artiga
+MaskedNumber: 556368XXXXXX6001
+EmployeeNumber: 240132X005446
+Status: PendingProcessing
+Card Id: 7506
+ExternalID - 240132
+
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-10-14 18:30:02.5975" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = LV8PR15MB6487.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965 (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #Temporary Unavailable
+DateTime="2024-10-14 22:26:54.2087" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The mailbox database is temporarily unavailable., Cannot open mailbox. Server = SJ0PR15MB4775.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+
+DateTime="2024-10-14 23:33:10.1362" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The mailbox database is temporarily unavailable., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

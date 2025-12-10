@@ -1,0 +1,263 @@
+22-07-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+RequestId="4520f25af9c5" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:23:39.5993" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Unchanged" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions. ---> System.Data.Entity.Core.OptimisticConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+
+2. #4 same error
+RequestId="eeea677dc9a2" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0540" 
+Message="Index was outside the bounds of the array." 
+Exception="System.IndexOutOfRangeException: Index was outside the bounds of the array.
+
+TRACE::
+RequestId="eeea677dc9a2" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0152" ThreadId="39" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/escalated/count START"
+RequestId="8991d1f76376" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0383" ThreadId="11" Level="TRACE" Message="GET https://go.myeab.com/expense/api/filter/getall START"
+RequestId="b003ce8936a5" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0383" ThreadId="39" Level="TRACE" Message="Get Wfa transactions count start."
+RequestId="b003ce8936a5" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0383" ThreadId="39" Level="TRACE" Message="GetTransactionsOfSpecifiedStatusesCount query compilation start."
+RequestId="b003ce8936a5" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0383" ThreadId="39" Level="TRACE" Message="GetTransactionsOfSpecifiedStatusesCount query compilation end. Duration: 0 ms."
+RequestId="5062d8dc5156" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0383" ThreadId="41" Level="TRACE" Message="Get Wfa transactions sorted by Date Descending start."
+RequestId="5062d8dc5156" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0383" ThreadId="41" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+RequestId="b003ce8936a5" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0383" ThreadId="41" Level="TRACE" Message="Get Wfa transactions count end. Duration: 5 ms."
+RequestId="b003ce8936a5" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0383" ThreadId="41" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/wfa/count Response content: {'count':491}"
+RequestId="b003ce8936a5" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0383" ThreadId="41" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/wfa/count Completed in 63 ms"
+RequestId="5062d8dc5156" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0540" ThreadId="41" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation end. Duration: 6 ms."
+RequestId="8991d1f76376" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0540" ThreadId="11" Level="TRACE" Message="GET https://go.myeab.com/expense/api/filter/getall Completed in 16 ms"
+RequestId="eeea677dc9a2" SessionId="_81db4e2d-dcb1-4fd9-b14c-958c09333532-403C070489CAD54E9633479DD340708C" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.1173" ThreadId="39" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/escalated/count Completed in 102 ms"
+
+3.
+RequestId="8991d1f76376" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:16.0540" 
+Message="HTTP validation error: Role is not available" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+4. #3 same error
+RequestId="cfce62e15c91" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:37.7518" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions. ---> System.Data.Entity.Core.OptimisticConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+
+5. #2 same error
+RequestId="552e0b07349f" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-07-22 03:25:37.8724" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The ROLLBACK TRANSACTION request has no corresponding BEGIN TRANSACTION.
+
+
+6. #10 same error (#1 -- UserId -- 234453, #8 -- UserId -- 240137)
+RequestId="f7b0ec3f27d6" UserId="240137" UserEmail="GJewell@eab.com" 
+DateTime="2024-07-22 14:02:34.7013" ThreadId="65" Level="FATAL" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+RequestId="950506e6c0e3" 
+DateTime="2024-07-22 03:57:42.0775" ThreadId="5" Level="FATAL" 
+Message="Description: The HTTP request to 'https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200' has exceeded the allotted timeout of 01:00:00. The time allotted to this operation may have been a portion of a longer timeout.." Provider="Comdata" 
+Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+
+06-07-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+
+

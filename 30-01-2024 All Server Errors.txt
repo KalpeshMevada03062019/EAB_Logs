@@ -1,0 +1,119 @@
+*[30-01-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+RequestId="7e2d9b221a33" UserId="502586" UserEmail="JTracy@eab.com" 
+DateTime="2024-01-30 14:00:00.5746" 
+Message="HTTP validation error: Deactivate credit card request failed. Reason: Card not found. Actor Id: beefb85a-b04d-4582-97c6-0a9bdab41a53" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE:
+RequestId="7e2d9b221a33" SessionId="_a2bf4ad7-9f0e-4d4d-8603-66084cdaf863-9C64A169BF93BC46B9FBA220440EF50F" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-01-30 13:59:59.9736" ThreadId="17" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/4458/deactivate START"
+RequestId="7e2d9b221a33" SessionId="_a2bf4ad7-9f0e-4d4d-8603-66084cdaf863-9C64A169BF93BC46B9FBA220440EF50F" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-01-30 13:59:59.9838" ThreadId="25" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="7e2d9b221a33" SessionId="_a2bf4ad7-9f0e-4d4d-8603-66084cdaf863-9C64A169BF93BC46B9FBA220440EF50F" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-01-30 14:00:00.5746" ThreadId="17" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 593 ms."
+RequestId="7e2d9b221a33" SessionId="_a2bf4ad7-9f0e-4d4d-8603-66084cdaf863-9C64A169BF93BC46B9FBA220440EF50F" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-01-30 14:00:00.5846" ThreadId="17" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/4458/deactivate Completed in 611 ms"
+
+INFO:
+RequestId="c8e734ab6236" SessionId="_a2bf4ad7-9f0e-4d4d-8603-66084cdaf863-94EAAAF4F3FF313A5149FD02A58E0AA3" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-01-30 16:25:39.1501" ThreadId="24" Level="INFO" Message="User 502586 has been logged out"
+
+The following are the user details for the individual experiencing this error:
+- UserID: BEEFB85A-B04D-4582-97C6-0A9BDAB41A53
+- FirstName: James
+- LastName: Tracy
+- EmailId: JTracy@eab.com
+- EmployeeId: 502586
+- MaskedNumber: 
+
+----------------------
+UPM_Website_fatal
+----------------------
+1.
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1.
+DateTime="2024-01-30 06:48:12.4564" Provider="CDF3Import" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+
+2.
+DateTime="2024-01-30 06:48:17.2436" Provider="BalboaSupplementalImport" 
+Message="File with id 7e1a53af-9dd5-45b7-b763-d6ca62377190 is empty." 
+Exception=""
+
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1.
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1.
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+RequestId="" 
+DateTime="2024-01-30 01:24:14.3821" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+2. #5 same error
+RequestId="a09f6a2adb38" 
+DateTime="2024-01-30 01:28:05.9004" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+3.
+RequestId="42c2dac892c3" 
+DateTime="2024-01-30 02:42:56.8644" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+4.
+RequestId="35438340faa2" 
+DateTime="2024-01-30 05:09:55.4139" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="Comdata" 
+Exception=""
+
+
+----------------------
+UPM_API_Fatal
+----------------------
+1.
+
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------
+
+
+

@@ -1,0 +1,207 @@
+*[07-11-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.#1 error
+RequestId="48f889ecd15f" UserId="502729" UserEmail="KMarientes@eab.com" 
+DateTime="2024-11-07 09:42:54.5503" ThreadId="9" Level="FATAL" 
+Message="HTTP validation error: Unable to replace credit card when owner already has an active credit card. OwnerId: 1e338202-91f7-4814-899b-68ebd47120b8. EmployeeNumber:239159X005427." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+++++++++
+RequestId="48f889ecd15f"UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-07 09:42:54.4711" ThreadId="10" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7487/replace START"
+RequestId="48f889ecd15f"UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-07 09:42:54.5503" ThreadId="9" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7487/replace Completed in 79 ms"
+
+Info:
+++++++++
+RequestId="c2f1f1095d34" DateTime="2024-11-07 09:42:54.2728" ThreadId="80" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239318X005661','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="c2f1f1095d34" DateTime="2024-11-07 09:42:54.2728" ThreadId="80" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="c2f1f1095d34" DateTime="2024-11-07 09:42:54.4950" ThreadId="88" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 224 ms." Provider="Comdata"
+RequestId="c2f1f1095d34" DateTime="2024-11-07 09:42:54.4950" ThreadId="88" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556305XXXXXX4599','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'B','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'SHYAMA','cardLastName':'VENKATESWAR','driverLicenseNumber':'****','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'239318X005661','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2028-11-01T00:00:00','cardToken':'399V77L2D4','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':0.00,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':30000.00,'cycleTxnLimit':999,'cycleTxnLimitUsed':0,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':999},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'SHYAMA VENKATESWAR','mailAddress1':'68-09 BOOTH STREET','mailAddress2':'#3K','mailCity':'FOREST HILLS','mailState':'NY','mailZip':'11375','mailCountry':'USA'}}" Provider="Comdata"
+
+Card Detail:
+FirstName - Marshall
+LastName - McClung
+ExternalId - 239159
+CustomerID - BRV61
+MaskedNumber - 556368XXXXXX5490
+EmployeeNumber - 239159X005427
+Status - Active
+
+
+2. #4 same error
+RequestId="4fb8b8a087fd" UserId="502729" UserEmail="KMarientes@eab.com" 
+DateTime="2024-11-07 09:43:38.8353" ThreadId="10" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: 829f2041-7f7a-4384-89b2-e22fad618a46. Reason: Card not found. OwnerId: 1e338202-91f7-4814-899b-68ebd47120b8. EmployeeNumber: 239159X005078. CustomerID: BRV61" Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
++++++++
+RequestId="4fb8b8a087fd" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-07 09:43:37.2505" ThreadId="18" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7138/deactivate START"
+RequestId="4fb8b8a087fd" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-07 09:43:37.2668" ThreadId="18" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="4fb8b8a087fd" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-07 09:43:38.8353" ThreadId="10" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 1575 ms."
+RequestId="4fb8b8a087fd" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-07 09:43:38.8353" ThreadId="10" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7138/deactivate Completed in 1585 ms"
+
+Card Detail:
+FirstName - Marshall
+LastName - McClung
+ExternalId - 239159
+CustomerID - BRV61
+MaskedNumber - 556368XXXXXX7058
+EmployeeNumber - 239159X005078FRD
+Status - Fraud
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #2 same error for user
+RequestId="a2bdfcbe571f" UserId="240295" UserEmail="AMoore@eab.com" 
+DateTime="2024-11-07 09:10:11.2348" ThreadId="30" Level="FATAL" 
+Message="The Claim 'OnBehalfExternalId: 235765' was not able to be removed.  It is either not part of this Identity or it is a claim that is owned by the Principal that contains this Identity. For example, the Principal will own the claim when creating a GenericPrincipal with roles. The roles will be exposed through the Identity that is passed in the constructor, but not actually owned by the Identity.  Similar logic exists for a RolePrincipal." 
+Exception="System.InvalidOperationException: The Claim 'OnBehalfExternalId: 235765' was not able to be removed.  It is either not part of this Identity or it is a claim that is owned by the Principal that contains this Identity. For example, the Principal will own the claim when creating a GenericPrincipal with roles. The roles will be exposed through the Identity that is passed in the constructor, but not actually owned by the Identity.  Similar logic exists for a RolePrincipal.
+
+Trace:
+++++++
+RequestId="cc1a3b789661" UserId="240295" UserEmail="AMoore@eab.com" DateTime="2024-11-07 09:10:10.9971" ThreadId="14" Level="TRACE" Message="POST https://go.myeab.com/upm/api/user/setCurrentUserRole?externalId=235765&roleName=User START"
+RequestId="cc1a3b789661" UserId="240295" UserEmail="AMoore@eab.com" DateTime="2024-11-07 09:10:11.3134" ThreadId="14" Level="TRACE" Message="POST https://go.myeab.com/upm/api/user/setCurrentUserRole?externalId=235765&roleName=User Completed in 316 ms"
+
+User: Jennifer Winn
+ID - 3A0C1E4D-9441-4749-9200-8C91AA4F56A3
+Status - Active
+
+2.
+RequestId="cf46bc2edb6b" UserId="240295" UserEmail="AMoore@eab.com" 
+DateTime="2024-11-07 09:10:11.2826" ThreadId="14" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.ArgumentException: An item with the same key has already been added.
+
+3. #1 error
+RequestId="69f6b231ab22" UserId="239159" UserEmail="MMcClung@eab.com" 
+DateTime="2024-11-07 09:14:14.8926" ThreadId="22" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: 1e338202-91f7-4814-899b-68ebd47120b8. EmployeeNumber:239159X005427." 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Unable to replace credit card when owner already has an active credit card. OwnerId: 1e338202-91f7-4814-899b-68ebd47120b8. EmployeeNumber:239159X005427. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+4. #5 same error
+RequestId="3ec0aa841c0c" UserId="230727" UserEmail="kbrenneman@eab.com" 
+DateTime="2024-11-07 19:48:15.9073" ThreadId="26" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: a0acbcb8-f428-4deb-8f3b-aef51a0b219f. EmployeeNumber:230727X005514." 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Unable to replace credit card when owner already has an active credit card. OwnerId: a0acbcb8-f428-4deb-8f3b-aef51a0b219f. EmployeeNumber:230727X005514. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-11-07 06:49:55.8515" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+2.
+DateTime="2024-11-07 06:49:55.8515" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241022_123338SB_006535.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+3.
+DateTime="2024-11-07 06:49:55.8832" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+4.
+DateTime="2024-11-07 06:49:55.8832" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+5.
+DateTime="2024-11-07 06:49:55.9314" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+6.
+DateTime="2024-11-07 06:49:55.9314" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_073936SB_006538.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+7.
+DateTime="2024-11-07 06:50:07.7202" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+8.
+DateTime="2024-11-07 06:50:07.7202" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+9.
+DateTime="2024-11-07 06:50:23.1518" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+10.
+DateTime="2024-11-07 06:50:23.1518" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541tryagain.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-11-07 04:00:53.9169" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. #1 error for  EmployeeNumber:239159X005427
+RequestId="" 
+DateTime="2024-11-07 09:14:14.8825" ThreadId="40" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: 1e338202-91f7-4814-899b-68ebd47120b8. EmployeeNumber:239159X005427." 
+Exception="ABC.Common.BL.Exceptions.ValidationException: Unable to replace credit card when owner already has an active credit card. OwnerId: 1e338202-91f7-4814-899b-68ebd47120b8. EmployeeNumber:239159X005427.
+
+2. #5 same error for EmployeeNumber:230727X005514.
+RequestId="" 
+DateTime="2024-11-07 19:48:17.8727" ThreadId="10" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: a0acbcb8-f428-4deb-8f3b-aef51a0b219f. EmployeeNumber:230727X005514." 
+Exception="ABC.Common.BL.Exceptions.ValidationException: Unable to replace credit card when owner already has an active credit card. OwnerId: a0acbcb8-f428-4deb-8f3b-aef51a0b219f. EmployeeNumber:230727X005514.
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

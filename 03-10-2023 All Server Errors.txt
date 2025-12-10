@@ -1,0 +1,91 @@
+[03-10-2023]
+*WebServer*
+----------------------
+ERS_Website_fatal
+----------------------
+1.
+RequestId="7b55c33d70bb" [Timeout]
+DateTime="2023-10-03 03:28:54.5708" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+2.
+RequestId="f9a04576254d" [Timeout]
+DateTime="2023-10-03 04:32:34.8607" 
+Message="Error updating spending profile for user with external id 240190" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+3.
+RequestId="f9a04576254d"
+DateTime="2023-10-03 04:32:34.8607" 
+Message="Error updating spending profile for user with external id 240190" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+RequestId="e7e8158c20ed" [Not Timeout error]
+DateTime="2023-10-03 11:25:49.9983" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+----------------------
+CCM_Website_fatal 
+----------------------
+1.
+RequestId="1936e6873abb"  #2 oct and #3 oct same error
+DateTime="2023-10-03 11:36:24.6413" 
+Message="HTTP validation error: Unable to replace credit card when owner already has an active credit card. UserId: 3ceece3e-7e97-4f65-b074-a5528705ef07" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+															 
+2.                                                           
+RequestId="af9354af53e6"  #2 oct and #3 oct same error
+DateTime="2023-10-03 15:56:35.7722" 
+Message="HTTP validation error: Unable to replace credit card when owner already has an active credit card. UserId: 3ceece3e-7e97-4f65-b074-a5528705ef07" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+----------------------
+UPM_Website_fatal
+----------------------
+
+*Workerhost*
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. [Not crititcal error]
+DateTime="2023-10-03 07:39:57.1051" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 238596" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408'
+
+2. [Not crititcal error]
+DateTime="2023-10-03 07:39:57.4886" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 235720" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '235720X003508'
+
+
+
+----------------------
+ERS_Workerhost_fatal 
+----------------------
+1. [No need to report]
+DateTime="2023-10-03 06:48:56.4462" Provider="CDF3Parser" 
+Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item" Exception="ABC.ERS.FileWorkers.Implementation.Exceptions.Cdf3ParserAbsentElementException: There is no 'DateOfPurchase' required item
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+RequestId="0069d563e84e" 
+DateTime="2023-10-03 02:26:57.3569"
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+
+----------------------
+UPM_Api_Fatal
+----------------------
+
+
+
+*InRule Server*
+----------------------
+InRule_Fatal all Timeout error
+----------------------

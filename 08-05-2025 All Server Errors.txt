@@ -1,0 +1,274 @@
+*[08-05-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="01d7b270fc3b" UserId="239892" UserEmail="MMorgan@eab.com" DateTime="2025-05-08 10:00:17.5031" ThreadId="19" Level="FATAL" 
+Message="HTTP validation error: Transaction reverting is possible only from WFA, Budget WFA or Budget Approved status" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="01d7b270fc3b" SessionId="_e24cf253-2bc6-42d2-bf3b-83d5053a2d6d-28CA94DF29A109D79AE6DF222D2E0F0A" UserId="239892" UserEmail="MMorgan@eab.com" DateTime="2025-05-08 10:00:16.1743" ThreadId="28" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/revert START"
+RequestId="01d7b270fc3b" SessionId="_e24cf253-2bc6-42d2-bf3b-83d5053a2d6d-28CA94DF29A109D79AE6DF222D2E0F0A" UserId="239892" UserEmail="MMorgan@eab.com" DateTime="2025-05-08 10:00:16.1743" ThreadId="28" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/revert Request content: {'id':2362571,'version':'AAAAAAEkKhw='}"
+RequestId="01d7b270fc3b" SessionId="_e24cf253-2bc6-42d2-bf3b-83d5053a2d6d-28CA94DF29A109D79AE6DF222D2E0F0A" UserId="239892" UserEmail="MMorgan@eab.com" DateTime="2025-05-08 10:00:16.6028" ThreadId="19" Level="TRACE" Message="Start retrieving transactions to revalidate for InRule. Transaction Id = 2362571"
+RequestId="01d7b270fc3b" SessionId="_e24cf253-2bc6-42d2-bf3b-83d5053a2d6d-28CA94DF29A109D79AE6DF222D2E0F0A" UserId="239892" UserEmail="MMorgan@eab.com" DateTime="2025-05-08 10:00:17.5031" ThreadId="19" Level="TRACE" Message="End retrieving transactions to revalidate for InRule. Count: 0 Duration: 906 ms."
+RequestId="01d7b270fc3b" SessionId="_e24cf253-2bc6-42d2-bf3b-83d5053a2d6d-28CA94DF29A109D79AE6DF222D2E0F0A" UserId="239892" UserEmail="MMorgan@eab.com" DateTime="2025-05-08 10:00:17.5031" ThreadId="19" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/revert Completed in 1329 ms"
+
+Username : Monyé Morgan
+Transaction ID - 2362571
+Status - Paid
+Discriminatore - Food transaction - 	
+Partner Meal
+
+
+2.
+RequestId="1a1b76728e50" SessionId="_e24cf253-2bc6-42d2-bf3b-83d5053a2d6d-81FA6D3CF82D983106881A84467EC656" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-08 17:14:11.3312" ThreadId="64" Level="FATAL" Message="An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - ExpenseTransactionGr_D186972C2DBD22257827191F7935BBD1A7BCD16C2E0B68EB918470FBC1E501DB, item state - Modified" Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_dbo.ExpenseTransactions_dbo.ReassignmentReasons_ReassignmentReason". The conflict occurred in database "ABC-ERS", table "dbo.ReassignmentReasons", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Base.SaveableController`2.<SaveChangesAsync>d__0.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Base\SaveableController.cs:line 30
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<SubmitTransactionAsync>d__1b1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 1847
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<SubmitAsync>d__70.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 439
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_dbo.ExpenseTransactions_dbo.ReassignmentReasons_ReassignmentReason". The conflict occurred in database "ABC-ERS", table "dbo.ReassignmentReasons", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+System.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_dbo.ExpenseTransactions_dbo.ReassignmentReasons_ReassignmentReason". The conflict occurred in database "ABC-ERS", table "dbo.ReassignmentReasons", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+ClientConnectionId:a491981d-10b7-4e7b-94a8-68ecf3caae78
+Error Number:547,State:0,Class:16"
+
+
+3.
+RequestId="9ef57326f1e3" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-08 17:14:41.1053" ThreadId="64" Level="FATAL" 
+Message="An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - ExpenseTransactionGr_D186972C2DBD22257827191F7935BBD1A7BCD16C2E0B68EB918470FBC1E501DB, item state - Modified" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_dbo.ExpenseTransactions_dbo.ReassignmentReasons_ReassignmentReason". The conflict occurred in database "ABC-ERS", table "dbo.ReassignmentReasons", column 'Id'.
+The statement has been terminated.
+
+4.
+RequestId="232340e50585" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-08 17:15:52.6411" ThreadId="62" Level="FATAL" 
+Message="An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - ExpenseTransactionGroupEvent, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.ExpenseTransactions_dbo.ReassignmentReasons_ReassignmentReason". The conflict occurred in database "ABC-ERS", table "dbo.ReassignmentReasons", column 'Id'.
+The statement has been terminated.
+
+5.
+RequestId="8a525acc1fa2" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-08 17:16:13.1288" ThreadId="60" Level="FATAL" 
+Message="An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - ExpenseTransactionGr_D186972C2DBD22257827191F7935BBD1A7BCD16C2E0B68EB918470FBC1E501DB, item state - Modified" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_dbo.ExpenseTransactions_dbo.ReassignmentReasons_ReassignmentReason". The conflict occurred in database "ABC-ERS", table "dbo.ReassignmentReasons", column 'Id'.
+The statement has been terminated.
+
+6.
+RequestId="4e9eb884664e" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-08 17:16:42.0218" ThreadId="81" Level="FATAL" 
+Message="An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - ExpenseTransactionMiscellaneus, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.ExpenseTransactions_dbo.ReassignmentReasons_ReassignmentReason". The conflict occurred in database "ABC-ERS", table "dbo.ReassignmentReasons", column 'Id'.
+The statement has been terminated.
+
+7.
+RequestId="2fe05e64cd40" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-05-08 17:16:57.3939" ThreadId="17" Level="FATAL" 
+Message="An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - ExpenseTransactionMiscellaneus, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_dbo.ExpenseTransactions_dbo.ReassignmentReasons_ReassignmentReason". The conflict occurred in database "ABC-ERS", table "dbo.ReassignmentReasons", column 'Id'.
+The statement has been terminated.
+
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+RequestId="9c2db59c3a42" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:04:02.7231" ThreadId="13" Level="FATAL" Message="HTTP validation error: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: f3a9f26b-5315-4d37-ae79-50825f08c85a. UserName: EAB, CustomerID:  " Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+RequestId="7f7eeac9cfb0" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:04:43.3054" ThreadId="19" Level="FATAL" Message="HTTP validation error: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: f3a9f26b-5315-4d37-ae79-50825f08c85a. UserName: EAB, CustomerID:  " Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+RequestId="b11f265c76c0" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:05:34.5840" ThreadId="8" Level="FATAL" Message="HTTP validation error: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: f3a9f26b-5315-4d37-ae79-50825f08c85a. UserName: EAB, CustomerID:  " Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+RequestId="6f2f998c842b" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:06:04.7966" ThreadId="13" Level="FATAL" Message="HTTP validation error: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: f3a9f26b-5315-4d37-ae79-50825f08c85a. UserName: EAB, CustomerID:  " Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+RequestId="8cfacdfd5489" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:06:11.8519" ThreadId="8" Level="FATAL" Message="HTTP validation error: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: f3a9f26b-5315-4d37-ae79-50825f08c85a. UserName: EAB, CustomerID:  " Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="9c2db59c3a42" SessionId="" UserId="" UserEmail="" DateTime="2025-05-08 07:04:00.6793" ThreadId="7" Level="TRACE" Message="Session sliding for user Pooja Chamoli"
+RequestId="9c2db59c3a42" SessionId="_69db24e8-867f-42f8-b39c-237513e44601-F2F1550D56A53D7DC460F326475A4C71" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:04:00.6965" ThreadId="7" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/approveRequest START"
+RequestId="9c2db59c3a42" SessionId="_69db24e8-867f-42f8-b39c-237513e44601-F2F1550D56A53D7DC460F326475A4C71" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:04:00.8557" ThreadId="13" Level="TRACE" Message="Update user spending profile start."
+RequestId="9c2db59c3a42" SessionId="_69db24e8-867f-42f8-b39c-237513e44601-F2F1550D56A53D7DC460F326475A4C71" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:04:00.9186" ThreadId="7" Level="TRACE" Message="Update user spending profile end. Duration: 63 ms."
+RequestId="9c2db59c3a42" SessionId="_69db24e8-867f-42f8-b39c-237513e44601-F2F1550D56A53D7DC460F326475A4C71" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:04:00.9276" ThreadId="7" Level="TRACE" Message="Update user traveler category start."
+RequestId="9c2db59c3a42" SessionId="_69db24e8-867f-42f8-b39c-237513e44601-F2F1550D56A53D7DC460F326475A4C71" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:04:01.4025" ThreadId="19" Level="TRACE" Message="Update user traveler category end. Duration: 478 ms."
+RequestId="9c2db59c3a42" SessionId="_69db24e8-867f-42f8-b39c-237513e44601-F2F1550D56A53D7DC460F326475A4C71" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:04:01.4025" ThreadId="19" Level="TRACE" Message="Approve credit card request start."
+RequestId="9c2db59c3a42" SessionId="_69db24e8-867f-42f8-b39c-237513e44601-F2F1550D56A53D7DC460F326475A4C71" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:04:01.5045" ThreadId="19" Level="TRACE" Message="AddCreditCardAsync start."
+RequestId="9c2db59c3a42" SessionId="_69db24e8-867f-42f8-b39c-237513e44601-F2F1550D56A53D7DC460F326475A4C71" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:04:02.7231" ThreadId="13" Level="TRACE" Message="AddCreditCardAsync end. Duration: 1215 ms."
+RequestId="9c2db59c3a42" SessionId="_69db24e8-867f-42f8-b39c-237513e44601-F2F1550D56A53D7DC460F326475A4C71" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-05-08 07:04:02.7231" ThreadId="13" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/approveRequest Completed in 2027 ms"
+
+---------------------------------------
+Username: Mike Thompson
+MaskedNumber: 556305XXXXXX3532
+EmployeeNumber: 240818X338845
+OwnerId: F3A9F26B-5315-4D37-AE79-50825F08C85A
+CustomerID: DGYXS
+Status: PendingProcessing
+Expiration Date: 2028-11-01 00:00:00.000
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+RequestId="27e5d4fd9ff4" UserId="240828" UserEmail="JSabater@eab.com" DateTime="2025-05-09 15:58:40.2118" ThreadId="24" Level="FATAL" 
+Message="HTTP validation error: Air preferences is absent." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2.
+RequestId="eee5efdcdb84" UserId="240828" UserEmail="JSabater@eab.com" DateTime="2025-05-09 15:58:40.2427" ThreadId="23" Level="FATAL" 
+Message="HTTP validation error: Delegates is absent." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+ 
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="b07a96b11e09" DateTime="2025-05-01 21:23:57.9450" ThreadId="79" Level="FATAL" Message="Description: The underlying connection was closed: The connection was closed unexpectedly.." Provider="Comdata" Exception=""
+RequestId="5b902f3e645d" DateTime="2025-05-01 21:57:10.6283" ThreadId="90" Level="FATAL" Message="Description: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake." Provider="ComdataMC" Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

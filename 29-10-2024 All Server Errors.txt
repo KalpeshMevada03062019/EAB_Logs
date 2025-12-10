@@ -1,0 +1,88 @@
+*[29-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="4f473b9eef47" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2024-10-29 09:24:29.6456" ThreadId="32" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2.
+RequestId="3581bb73d693" UserId="238964" UserEmail="VPike@eab.com" 
+DateTime="2024-10-29 11:24:11.1282" ThreadId="46" Level="FATAL" 
+Message="HTTP validation error: Wrong image file." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace Logs:
+RequestId="3581bb73d693" SessionId="_e5216868-1f01-4097-9f95-633c96fb7aec-44997812DBA3C9C8AF2BF8D43754743E" UserId="238964" UserEmail="VPike@eab.com" DateTime="2024-10-29 11:24:11.0653" ThreadId="46" Level="TRACE" Message="POST https://go.myeab.com/expense/api/Attachment/upload START"
+RequestId="3581bb73d693" SessionId="_e5216868-1f01-4097-9f95-633c96fb7aec-44997812DBA3C9C8AF2BF8D43754743E" UserId="238964" UserEmail="VPike@eab.com" DateTime="2024-10-29 11:24:11.0967" ThreadId="27" Level="TRACE" Message="User '238964' in 'User' role: Start to upload."
+RequestId="3581bb73d693" SessionId="_e5216868-1f01-4097-9f95-633c96fb7aec-44997812DBA3C9C8AF2BF8D43754743E" UserId="238964" UserEmail="VPike@eab.com" DateTime="2024-10-29 11:24:11.1282" ThreadId="46" Level="TRACE" Message="POST https://go.myeab.com/expense/api/Attachment/upload Completed in 63 ms"
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-10-29 18:20:54.0627" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="1e66548940c3" 
+DateTime="2024-10-29 21:25:42.7884" ThreadId="80" Level="FATAL" 
+Message="Description: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake." Provider="ComdataMC" 
+Exception=""
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

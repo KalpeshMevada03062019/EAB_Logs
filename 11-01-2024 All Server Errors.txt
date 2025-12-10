@@ -1,0 +1,76 @@
+*[11-01-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+
+----------------------
+UPM_Website_fatal
+----------------------
+1. #5 Time same error Today only
+RequestId="a650d16c1b07" UserId="240231" UserEmail="EDimartino@eab.com" 
+DateTime="2024-01-11 09:12:48.8997" 
+Message="The underlying provider failed on Open." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=15008;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+2. #6 Time same error Today in UPM Website
+RequestId="a650d16c1b07" UserId="240231" UserEmail="EDimartino@eab.com" 
+DateTime="2024-01-11 09:12:48.9159"
+Message="Error adding admin notification." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1. 
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. #2 Same error #it's repeated for few days.
+DateTime="2024-01-11 00:59:12.4876" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1. #2 Time same erro #Repeated for few days.
+RequestId="" DateTime="2024-01-11 00:59:13.1639"
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+----------------------
+UPM_API_Fatal
+----------------------
+1.
+
+
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------

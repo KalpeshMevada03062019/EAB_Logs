@@ -1,0 +1,82 @@
+[04-10-2023]
+*WebServer*
+----------------------
+ERS_Website_fatal
+----------------------
+1. [SQL Connection error]
+RequestId="479d36acf2dc"
+DateTime="2023-10-04 04:27:24.4301"
+Message="Error adding admin notification." 
+Exception="System.Data.Entity.Core.EntityException: An error occurred while starting a transaction on the provider connection. See the inner exception for details. ---> System.InvalidOperationException: SqlConnection does not support parallel transactions.
+
+
+----------------------
+CCM_Website_fatal 
+----------------------
+1. [#18 Error]
+RequestId="c5dac36444ee" 
+DateTime="2023-10-04 11:02:32.6969"  
+Message="HTTP validation error: Unable to replace credit card when owner already has an active credit card. UserId: 3ceece3e-7e97-4f65-b074-a5528705ef07" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+									
+2. [#1] Need to report                            
+RequestId="500b21542d40"            
+DateTime="2023-10-04 11:03:58.6045"  
+Message="HTTP validation error: Deactivate credit card request failed. Reason: Card not found. Actor Id: f5088bf5-4b99-4291-a563-f9adbb4dbe94" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+									
+3.  Need to report                                        
+RequestId="bf5cb1ca5dea"            
+DateTime="2023-10-04 11:17:31.5966"  
+Message="HTTP validation error: Looks like we are experiencing an issue. If it continues, contact the Go Team." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+									
+4.  Need to report                                        
+RequestId="e6a6fb89478e"            
+DateTime="2023-10-04 11:17:36.6557" 
+Message="HTTP validation error: Users Spending Profile is blocked or does not allows credit cards. UserId=3ceece3e-7e97-4f65-b074-a5528705ef07" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+*Workerhost*
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1.
+DateTime="2023-10-04 07:39:18.3446" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 238596" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408'
+									
+2.                                  
+DateTime="2023-10-04 07:39:18.7098" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 235720" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '235720X003508'
+
+
+----------------------
+ERS_Workerhost_fatal 
+----------------------
+1.
+DateTime="2023-10-04 06:49:28.7427" Provider="CDF3Parser" 
+Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item" Exception="ABC.ERS.FileWorkers.Implementation.Exceptions.Cdf3ParserAbsentElementException: There is no 'DateOfPurchase' required item
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+RequestId="4c057f5f9de8" 
+DateTime="2023-10-04 03:23:25.1810" 
+Message="Description: The HTTP request to 'https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200' has exceeded the allotted timeout of 01:00:00. The time allotted to this operation may have been a portion of a longer timeout.." Provider="Comdata" Exception=""
+
+2.
+RequestId="eea13824759d" 
+DateTime="2023-10-04 14:10:15.4143" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="ComdataMC" Exception=""
+
+
+*InRule Server*
+----------------------
+InRule_Fatal all Timeout error
+----------------------

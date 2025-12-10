@@ -1,0 +1,117 @@
+*[10-07-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+RequestId="96458112e6be" SessionId="_bc7554ca-479b-4136-ad8e-7f446a0feca9-0494941FA554DCFDE1744F35716D2AC6" UserId="238220" UserEmail="ptitus@eab.com" 
+DateTime="2025-07-10 12:03:09.0561" ThreadId="16" Level="FATAL" 
+Message="The Claim 'CurrentRoleName: User' was not able to be removed.  It is either not part of this Identity or it is a claim that is owned by the Principal that contains this Identity. For example, the Principal will own the claim when creating a GenericPrincipal with roles. The roles will be exposed through the Identity that is passed in the constructor, but not actually owned by the Identity.  Similar logic exists for a RolePrincipal." 
+Exception="System.InvalidOperationException: The Claim 'CurrentRoleName: User' was not able to be removed.  It is either not part of this Identity or it is a claim that is owned by the Principal that contains this Identity. For example, the Principal will own the claim when creating a GenericPrincipal with roles. The roles will be exposed through the Identity that is passed in the constructor, but not actually owned by the Identity.  Similar logic exists for a RolePrincipal.
+   at System.Security.Claims.ClaimsIdentity.RemoveClaim(Claim claim)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at ABC.Common.Web.Infrastructure.Auth.AbcUserStorage`2.SetUserRole(String role, String onBehalfExternalId) in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\Auth\AbcUserStorage.cs:line 114
+   at ABC.UPM.Website.ApiControllers.UserController.<SetCurrentUserRoleAsync>d__18.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Website\ApiControllers\UserController.cs:line 165
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()"
+
+Trace:
+RequestId="fe19465a2015" SessionId="_bc7554ca-479b-4136-ad8e-7f446a0feca9-0494941FA554DCFDE1744F35716D2AC6" UserId="238220" UserEmail="ptitus@eab.com" DateTime="2025-07-10 12:03:06.7975" ThreadId="17" Level="TRACE" Message="POST https://go.myeab.com/upm/api/user/setCurrentUserRole?externalId=235579&roleName=User START"
+RequestId="fe19465a2015" SessionId="_a94d54fc-f77c-45eb-bc83-cfffb61d51bf-0D6798728CE76F7B97CDB4534A71183B" UserId="238220" UserEmail="ptitus@eab.com" DateTime="2025-07-10 12:03:09.0503" ThreadId="13" Level="TRACE" Message="POST https://go.myeab.com/upm/api/user/setCurrentUserRole?externalId=235579&roleName=User Completed in 2253 ms"
+RequestId="c7bf364c74ff" SessionId="_a94d54fc-f77c-45eb-bc83-cfffb61d51bf-0D6798728CE76F7B97CDB4534A71183B" UserId="238220" UserEmail="ptitus@eab.com" DateTime="2025-07-10 12:03:09.0717" ThreadId="13" Level="TRACE" Message="GET https://go.myeab.com/upm/api/user/info/go.myeab.com/expense/ START"
+RequestId="c7bf364c74ff" SessionId="_a94d54fc-f77c-45eb-bc83-cfffb61d51bf-0D6798728CE76F7B97CDB4534A71183B" UserId="238220" UserEmail="ptitus@eab.com" DateTime="2025-07-10 12:03:09.1122" ThreadId="13" Level="TRACE" Message="GET https://go.myeab.com/upm/api/user/info/go.myeab.com/expense/ Completed in 40 ms"
+RequestId="9bfaa8cac797" SessionId="_a94d54fc-f77c-45eb-bc83-cfffb61d51bf-0D6798728CE76F7B97CDB4534A71183B" UserId="238220" UserEmail="ptitus@eab.com" DateTime="2025-07-10 12:03:09.1349" ThreadId="13" Level="TRACE" Message="GET https://go.myeab.com/upm/api/picture/get/useravatar/small/null START"
+RequestId="9bfaa8cac797" SessionId="_a94d54fc-f77c-45eb-bc83-cfffb61d51bf-0D6798728CE76F7B97CDB4534A71183B" UserId="238220" UserEmail="ptitus@eab.com" DateTime="2025-07-10 12:03:09.1349" ThreadId="13" Level="TRACE" Message="GET https://go.myeab.com/upm/api/picture/get/useravatar/small/null Completed in 0 ms"
+RequestId="03974d9c6aa6" SessionId="_bc7554ca-479b-4136-ad8e-7f446a0feca9-0494941FA554DCFDE1744F35716D2AC6" UserId="238220" UserEmail="ptitus@eab.com" DateTime="2025-07-10 12:03:09.1505" ThreadId="16" Level="TRACE" Message="POST https://go.myeab.com/upm/api/user/setCurrentUserRole?externalId=235579
+
+User Detail:
+----------------------
+UserName: Chris Marett
+External ID: 235579
+Status: Active
+
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+1.

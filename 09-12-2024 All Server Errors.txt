@@ -1,0 +1,135 @@
+*[09-12-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="ccbfb5c75d09" UserId="234650" UserEmail="KeJohnson@eab.com" 
+DateTime="2024-12-09 10:43:28.9943" ThreadId="32" Level="FATAL" 
+Message="The requested service, 'https://eabgowers-p01/exd_inner/GlPayrollFtpApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/exd_inner/GlPayrollFtpApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+RequestId="121f22d3c535" UserId="502734" UserEmail="RKorson@eab.com" DateTime="2024-12-09 13:38:30.6377" ThreadId="7" Level="FATAL" 
+Message="HTTP validation error: Looks like we are experiencing an issue. If it continues, contact the Go Team." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #2 same error 
+RequestId="deff70d9cbc6" UserId="238338" UserEmail="CCriniti@eab.com" DateTime="2024-12-09 10:37:11.7407" ThreadId="26" Level="FATAL" 
+Message="The requested service, 'https://eabgowers-p01/ccm_api/SpendingProfileManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/SpendingProfileManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+2.
+RequestId="da69b2e85398" UserId="236010" UserEmail="CMoses@eab.com" DateTime="2024-12-09 13:33:14.4990" ThreadId="32" Level="FATAL" 
+Message="The requested service, 'https://eabgowers-p01/ccm_api/SpendingProfileManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/SpendingProfileManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+3. #2 same error
+RequestId="1a1ee89a7a9f" UserId="240283" UserEmail="MKarten@eab.com" DateTime="2024-12-09 13:38:05.6978" ThreadId="18" Level="FATAL" 
+Message="The requested service, 'https://eabgowers-p01/ccm_api/SpendingProfileManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/SpendingProfileManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+4. #3 same error
+RequestId="1859e66a7cfd" UserId="239505" UserEmail="diana.forster@seramount.com" DateTime="2024-12-09 23:22:07.3587" ThreadId="15" Level="FATAL" 
+Message="The requested service, 'https://eabgowers-p01/ccm_api/SpendingProfileManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/SpendingProfileManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-12-09 07:04:48.8320" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutApprovedTransactions" 
+Message="Following error occurs during sending 'Go Expense: The following expenses have been approved' email to 'Nichelle.Wash@seramount.com': transaction must have a personal amount" 
+Exception="System.ArgumentException: transaction must have a personal amount
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.ComputeReimbursementAmount(ExpenseGridRow transaction)
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.GetBody(List`1 transactions, User user, DateTime date)
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.CreateMessage(EmailToUserModel emailModel)
+   at ABC.Common.Worker.Mail.MailSenderProcessor`1.<>c__DisplayClass6.<SendMail>b__2() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Mail\MailSenderProcessor.cs:line 84
+   at ABC.Common.Framework.Logger.Logger.LogActionTime[T](Func`1 action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 116
+   at ABC.Common.Worker.Mail.MailSenderProcessor`1.SendMail() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Mail\MailSenderProcessor.cs:line 83"
+   
+User Detail:
+-------------
+FirstName: Nichelle
+LastName: Wash
+ID: E8C13F23-CFBD-4F6E-9186-5A01F4A8D2D4
+Status - Active
+External ID: 239812
+	
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-12-09 11:36:54.4758" ThreadId="1" Level="FATAL" Provider="ComDataEmailSync" 
+Message="ComData Message processor. Event Notification failed for credit card decline. Credit card decline Id: 99926" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+2.
+DateTime="2024-12-09 23:31:56.6765" ThreadId="1" Level="FATAL" Provider="ComDataEmailSync" 
+Message="ComData Message processor. Event Notification failed for credit card decline. Credit card decline Id: 99982" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+3.
+DateTime="2024-12-09 23:42:54.7051" ThreadId="1" Level="FATAL" Provider="ComDataEmailSync" 
+Message="ComData Message processor. Event Notification failed for credit card decline. Credit card decline Id: 99985"
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="4e84bf776d6f" DateTime="2024-12-09 11:31:16.3768" ThreadId="42" Level="FATAL" 
+Message="CardManagementApiService.ActivateCreditCardViaPhoneAsync. Error activating credit card by phone number" 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+2.
+RequestId="bf62b58057da" DateTime="2024-12-09 13:31:31.4369" ThreadId="10" Level="FATAL" 
+Message="CardManagementApiService.ActivateCreditCardViaPhoneAsync. Error activating credit card by phone number" 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. #2 same error
+RequestId="4e84bf776d6f" DateTime="2024-12-09 11:31:16.3768" ThreadId="42" Level="FATAL" 
+Message="CardManagementApiService.ActivateCreditCardViaPhoneAsync. Error activating credit card by phone number" 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

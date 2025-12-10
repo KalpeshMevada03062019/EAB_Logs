@@ -1,0 +1,97 @@
+*[13-12-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #09 Dec, #13 Dec
+RequestId="842c22de3db9" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-12-13 08:42:45.3776" ThreadId="9" Level="FATAL" 
+Message="HTTP validation error: Looks like we are experiencing an issue. If it continues, contact the Go Team." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+WARN::
+RequestId="842c22de3db9" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-12-13 08:42:45.2044" ThreadId="8" Level="WARN" 
+Message="Activate card on Comdata. EmployeeNumber = '235693X005676', CustomerID = 'DGYXS', Attempt number = 1 of 1, Exception = 'The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataMcApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout.'" 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataMcApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+   at ABC.CCM.BL.CreditCardService.<ActivateCreditCardAsync>d__4f.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\CreditCardService.cs:line 277
+
+Card Detais:
+--------------
+First Name: Brett
+Last Name: Schraeder
+EmployeeNumber: 235693X005676
+MaskedNumber: 556305XXXXXX6868
+CustomerID: DGYXS
+Status: Active
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+1.
+RequestId="ecd6c644c880" 
+DateTime="2024-12-13 14:43:46.0896" ThreadId="7" Level="FATAL" 
+Message="Twilio. From=+18609616371, Digits=9540. Exception occurred during activation card via phone" 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-12-13 07:02:32.9738" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutApprovedTransactions" 
+Message="Following error occurs during sending 'Go Expense: The following expenses have been approved' email to 'Nichelle.Wash@seramount.com': transaction must have a personal amount" 
+Exception="System.ArgumentException: transaction must have a personal amount
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

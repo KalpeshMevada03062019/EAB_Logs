@@ -1,0 +1,155 @@
+*[30-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+RequestId="91d898474270" UserId="239892" UserEmail="MMorgan@eab.com" 
+DateTime="2024-10-30 13:03:38.6194" ThreadId="26" Level="FATAL" 
+Message="HTTP validation error: MailTo should contains only letters and whitespaces." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2. #3 same error
+RequestId="5b15e9b1429f" UserId="238962" UserEmail="MPinkowitz@eab.com" 
+DateTime="2024-10-30 14:41:27.3631" ThreadId="13" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: cd3249c7-9065-4fd5-9a60-4a9d9d3cf445. EmployeeNumber:238962X005460." 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Unable to replace credit card when owner already has an active credit card. OwnerId: cd3249c7-9065-4fd5-9a60-4a9d9d3cf445. EmployeeNumber:238962X005460. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+3. #5 same error
+RequestId="dcc67742cd81" UserId="239159" UserEmail="MMcClung@eab.com" 
+DateTime="2024-10-30 14:45:33.4910" ThreadId="18" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: 1e338202-91f7-4814-899b-68ebd47120b8. EmployeeNumber:239159X005427." 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Unable to replace credit card when owner already has an active credit card. OwnerId: 1e338202-91f7-4814-899b-68ebd47120b8. EmployeeNumber:239159X005427. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+4. #2 same error
+RequestId="290497c0e2d8" UserId="233418" UserEmail="KMiller@eab.com" 
+DateTime="2024-10-30 16:56:10.6277" ThreadId="54" Level="FATAL" 
+Message="Add new card request failed. Reason: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.. UserId: 58c373ec-16ba-44dc-9b95-3ed2b9bda53b. UserName: EAB, CustomerID:  " 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Add new card request failed. Reason: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.. UserId: 58c373ec-16ba-44dc-9b95-3ed2b9bda53b. UserName: EAB, CustomerID:   (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+5. #1 error
+RequestId="1afa47e53e2f" UserId="239304" UserEmail="rumbi.petrozzello@seramount.com" 
+DateTime="2024-10-30 22:42:35.9154" ThreadId="84" Level="FATAL" 
+Message="Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 1bdca4b3-c486-48c1-8835-5238e4d72530. UserName: EAB, CustomerID:  " 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 1bdca4b3-c486-48c1-8835-5238e4d72530. UserName: EAB, CustomerID:   (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-10-30 06:50:00.7288" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-10-30 06:50:00.7288" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241022_123338SB_006535.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+2.
+DateTime="2024-10-30 06:50:00.8076" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+3.
+DateTime="2024-10-30 06:50:00.8076" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+4.
+DateTime="2024-10-30 06:50:00.9015" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+5.
+DateTime="2024-10-30 06:50:00.9171" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_073936SB_006538.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+6.
+DateTime="2024-10-30 06:50:09.3247" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+7.
+DateTime="2024-10-30 06:50:09.3717" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+8.
+DateTime="2024-10-30 06:50:15.3831" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+9.
+DateTime="2024-10-30 06:50:15.3831" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541tryagain.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. #3 same error
+RequestId="" 
+DateTime="2024-10-30 14:41:28.4574" ThreadId="28" Level="FATAL"
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: cd3249c7-9065-4fd5-9a60-4a9d9d3cf445. EmployeeNumber:238962X005460." 
+Exception="ABC.Common.BL.Exceptions.ValidationException: Unable to replace credit card when owner already has an active credit card. OwnerId: cd3249c7-9065-4fd5-9a60-4a9d9d3cf445. EmployeeNumber:238962X005460.
+
+2. #5 same error
+RequestId="" 
+DateTime="2024-10-30 14:45:34.5633" ThreadId="43" Level="FATAL" 
+Message="Unable to replace credit card when owner already has an active credit card. OwnerId: 1e338202-91f7-4814-899b-68ebd47120b8. EmployeeNumber:239159X005427." 
+Exception="ABC.Common.BL.Exceptions.ValidationException: Unable to replace credit card when owner already has an active credit card. OwnerId: 1e338202-91f7-4814-899b-68ebd47120b8. EmployeeNumber:239159X005427.
+
+3.
+RequestId="" DateTime="2024-10-30 22:42:35.5785" ThreadId="14" Level="FATAL" 
+Message="Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 1bdca4b3-c486-48c1-8835-5238e4d72530. UserName: EAB, CustomerID:  " 
+Exception="ABC.Common.BL.Exceptions.ValidationException: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 1bdca4b3-c486-48c1-8835-5238e4d72530. UserName: EAB, CustomerID:  
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

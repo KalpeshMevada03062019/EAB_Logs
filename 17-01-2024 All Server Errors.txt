@@ -1,0 +1,83 @@
+*[17-01-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+RequestId="f67d03848392" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-01-17 09:03:58.1127" 
+Message="Error adding admin notification." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.InvalidOperationException: The connection was not closed. The connection's current state is connecting.
+
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+
+----------------------
+UPM_Website_fatal
+----------------------
+1.
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1. 
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+1.
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1.
+
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. Trace - https://prnt.sc/0odwb_ITFApc
+DateTime="2024-01-17 23:57:12.7980" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1. 
+RequestId="cc1dfffeb027" 
+DateTime="2024-01-17 08:25:00.3548" 
+Message="Description: The underlying connection was closed: The connection was closed unexpectedly.." Provider="Comdata" 
+Exception=""
+
+2.
+RequestId="" 
+DateTime="2024-01-17 23:57:14.3458" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+
+----------------------
+UPM_API_Fatal
+----------------------
+1.
+
+
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------

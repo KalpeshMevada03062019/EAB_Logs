@@ -1,0 +1,11 @@
+RequestId="e6f2e5685e1b" SessionId="_7eed0d8a-7b4a-48b2-87b5-a97e788d64dd-4B50E564598ED0E627990F2BED4AFE03" UserId="240457" UserEmail="FPanetta@eab.com" DateTime="2024-07-04 03:26:57.6878" ThreadId="14" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An error occurred while executing the command definition. See the inner exception for details. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ----> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.ComponentModel.Win32Exception: The wait operation timed out
+
+   --- End of inner ExceptionDetail stack trace ---
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System....)."

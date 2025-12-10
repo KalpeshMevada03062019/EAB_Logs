@@ -1,0 +1,147 @@
+*[10-06-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="8bfc5073fd07" SessionId="_89f471fd-b66c-46bb-a240-a73d43604f9b-1F745CCCD0FEA5A9A3B6110E1D896C67" UserId="240270" UserEmail="JParisse@eab.com" 
+DateTime="2025-06-10 09:36:53.6785" ThreadId="10" Level="FATAL" 
+Message="The remote host closed the connection. The error code is 0x80070057." 
+Exception="System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at System.IO.Stream.<>c.<BeginWriteInternal>b__46_0(Object <p0>)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.IO.Stream.EndWrite(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.WebHost.HttpControllerHandler.<WriteStreamedResponseContentAsync>d__15.MoveNext()"
+
+Trace:
+RequestId="8bfc5073fd07" SessionId="_89f471fd-b66c-46bb-a240-a73d43604f9b-1F745CCCD0FEA5A9A3B6110E1D896C67" UserId="240270" UserEmail="JParisse@eab.com" DateTime="2025-06-10 09:36:53.4397" ThreadId="10" Level="TRACE" Message="GET https://go.myeab.com/expense/api/suggestion/institution?count=50&key=university+of START"
+RequestId="8bfc5073fd07" SessionId="_89f471fd-b66c-46bb-a240-a73d43604f9b-1F745CCCD0FEA5A9A3B6110E1D896C67" UserId="240270" UserEmail="JParisse@eab.com" DateTime="2025-06-10 09:36:53.6629" ThreadId="10" Level="TRACE" Message="GET https://go.myeab.com/expense/api/suggestion/institution?count=50&key=university+of Response content: {'hasMoreResults':true,'items':[{'id':345,'name':'University of Akron (Upward Bound) - Akron - OH'},{'id':346,'name':'University of Akron Upward Bound Classic - Akron - OH'},{'id':347,'name':'University of Alaska/Anchorage (Ed Opportunity Center) - Anchorage - AK'},{'id':348,'name':'University of Alaska/Anchorage (Talent Search) - Anchorage - AK'},{'id':349,'name':'University of Alaska/Fairbanks(Student Support Services) - Fairbanks - AK'},{'id':301,'name':'University of Alaska-Fairbanks (Upward Bound) - Fairbanks - AK'},{'id':350,'name':'University of Arizona Office of Early Academic Outreach - Tucson - AZ'},{'id':351,'name':'University of Arizona Upward Bound TRIO - Tucson - AZ'},{'id':352,'name':'University of Arkansas College Access Initiative - Fayetteville - AR'},{'id':353,'name':'University of Arkansas Community College at Hope (Student Support Services) - Hope - AR'},{'id':354,'name':'University of Arkansas/ Fayetteville (Talent Search) - Fayetteville - AR'},{'id':355,'name':'University of Arkansas-Fayetteville (Upward Bound Math/Science) - Fayetteville - AR'},{'id':356,'name':'University of Arkansas-Fayetteville (Upward Bound) - Fayetteville - AR'},{'id':357,'name':'University of Arkansas-Fort Smith Upward Bound - Fort Smith - AR'},{'id':360,'name':'University of Arkansas-Monticello (Upward Bound) - Monticello - AR'},{'id':361,'name':'University of Arkansas-Pine Bluff (Upward Bound) - Pine Bluff - AR'},{'id':362,'name':'University of Bridgeport (Talent Search) - Bridgeport - CT'},{'id':238,'name':'University of California - Berkeley Pre-College TRiO Talent Search - Berkeley - CA'},{'id':239,'name':'University of California - Berkeley Upward Bound - Berkeley - CA'},{'id':240,'name':'University of California (Early Academic Outreach Program-EAOP) - Oakland - CA'},{'id':241,'name':'University of California / Irvine (Early Academic Outreach Program) - Irvine - CA'},{'id':242,'name':'University of California Berkeley Destination College Advising Corps - Berkeley - CA'},{'id':243,'name':'University of California, San Diego, Early Academic Outreach Program - La Jolla - CA'},{'id':244,'name':'University of California/Riverside (Talent Search) - Riverside - CA'},{'id':245,'name':'University of California-Davis (Talent Search) - Woodland - CA'},{'id':246,'name':'University of Central Arkansas (Upward Bound) - Conway - AR'},{'id':247,'name':'University of Central Oklahoma (Upward Bound) - Edmond - OK'},{'id':248,'name':'University of Central Oklahoma Student Support Services - Edmond - OK'},{'id':249,'name':'University of Chicago (Upward Bound) - Chicago - IL'},{'id':285,'name':'University of Colorado at Boulder - Science Discovery - Boulder - CO'},{'id':204,'name':'University of Dhaka - Dhaka - Bangladesh'},{'id':609,'name':'University of Hawaii/ Windward Community College (Talent Search) - Kaneohe - HI'},{'id':178,'name':'University of Latvia - Riga - Latvia'},{'id':435,'name':'University of Louisville (Upward Bound) - Louisville - KY'},{'id':436,'name':'University of Maine (Upward Bound) - Orono - ME'},{'id':437,'name':'University of Maine at Farmington (Upward Bound) - Farmington - ME'},{'id':303,'name':'University of Maine Educational Talent Search - Orono - ME'},{'id':438,'name':'University of Maine-Presque Isle (Talent Search) - Presque Isle - ME'},{'id':439,'name':'University of Maine-Presque Isle (Upward Bound) - Presque Isle - ME'},{'id':440,'name':'University of Mary (Student Support Services) - Bismarck - ND'},{'id':441,'name':'University of Maryland Pre-College Program (Upward Bound) - College Park - MD'},{'id':442,'name':'University of Maryland-Baltimore County (Upward Bound Math/Science) - Baltimore - MD'},{'id':443,'name':'University of Maryland-Eastern Shore (Upward Bound) - Princess Anne - MD'},{'id':444,'name':'University of Massachusetts Amherst Upward Bound - Amherst - MA'},{'id':445,'name':'University of Massachusetts/ Boston (Talent Search) - Boston - MA'},{'id':452,'name':'University of Massachusetts-Boston (GEAR UP) - Boston - MA'},{'id':470,'name':'University of Massachusetts-Boston (Upward Bound Math/Science) - Dedham - MA'},{'id':471,'name':'University of Massachusetts-Dartmouth (Upward Bound) - North Dartmouth - MA'},{'id':448,'name':'University of Michigan-Dearborn (GEAR UP) - Dearborn - MI'},{'id':472,'name':'University of Michigan-Flint (GEAR UP) - Flint - MI'}],'totalCount':100}"
+RequestId="8bfc5073fd07" SessionId="_89f471fd-b66c-46bb-a240-a73d43604f9b-1F745CCCD0FEA5A9A3B6110E1D896C67" UserId="240270" UserEmail="JParisse@eab.com" DateTime="2025-06-10 09:36:53.6629" ThreadId="10" Level="TRACE" Message="GET https://go.myeab.com/expense/api/suggestion/institution?count=50&key=university+of Completed in 223 ms"
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #5
+RequestId="3ab962df4bc0" SessionId="_db316170-084f-4681-84d1-c89127d499ad-D06A9FA4CC10740278DCD17047007417" UserId="502418" UserEmail="pchamoli@eab.com" 
+DateTime="2025-06-10 06:26:10.9481" ThreadId="16" Level="FATAL" 
+Message="HTTP validation error: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 97497806-93ac-4dbd-83e4-8618479afcdf. UserName: EAB, CustomerID:  " 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="3ab962df4bc0" SessionId="_db316170-084f-4681-84d1-c89127d499ad-D06A9FA4CC10740278DCD17047007417" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-06-10 06:26:08.7974" ThreadId="16" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/approveRequest START"
+RequestId="3ab962df4bc0" SessionId="_db316170-084f-4681-84d1-c89127d499ad-D06A9FA4CC10740278DCD17047007417" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-06-10 06:26:08.9546" ThreadId="9" Level="TRACE" Message="Update user spending profile start."
+RequestId="3ab962df4bc0" SessionId="_db316170-084f-4681-84d1-c89127d499ad-D06A9FA4CC10740278DCD17047007417" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-06-10 06:26:09.0177" ThreadId="9" Level="TRACE" Message="Update user spending profile end. Duration: 63 ms."
+RequestId="3ab962df4bc0" SessionId="_db316170-084f-4681-84d1-c89127d499ad-D06A9FA4CC10740278DCD17047007417" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-06-10 06:26:09.0334" ThreadId="9" Level="TRACE" Message="Update user traveler category start."
+RequestId="3ab962df4bc0" SessionId="_db316170-084f-4681-84d1-c89127d499ad-D06A9FA4CC10740278DCD17047007417" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-06-10 06:26:09.4780" ThreadId="16" Level="TRACE" Message="Update user traveler category end. Duration: 449 ms."
+RequestId="3ab962df4bc0" SessionId="_db316170-084f-4681-84d1-c89127d499ad-D06A9FA4CC10740278DCD17047007417" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-06-10 06:26:09.4780" ThreadId="16" Level="TRACE" Message="Approve credit card request start."
+RequestId="3ab962df4bc0" SessionId="_db316170-084f-4681-84d1-c89127d499ad-D06A9FA4CC10740278DCD17047007417" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-06-10 06:26:09.6038" ThreadId="9" Level="TRACE" Message="AddCreditCardAsync start."
+RequestId="3ab962df4bc0" SessionId="_db316170-084f-4681-84d1-c89127d499ad-D06A9FA4CC10740278DCD17047007417" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-06-10 06:26:10.9380" ThreadId="16" Level="TRACE" Message="AddCreditCardAsync end. Duration: 1341 ms."
+RequestId="3ab962df4bc0" SessionId="_db316170-084f-4681-84d1-c89127d499ad-D06A9FA4CC10740278DCD17047007417" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-06-10 06:26:10.9491" ThreadId="16" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/approveRequest Completed in 2152 ms"
+
+EXD_InnerGateway_Trace:
+RequestId="f0035888d2b8" DateTime="2025-06-10 06:26:08.0628" ThreadId="30" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'236189X005506','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="f0035888d2b8" DateTime="2025-06-10 06:26:08.0628" ThreadId="30" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="f0035888d2b8" DateTime="2025-06-10 06:26:08.3167" ThreadId="21" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 252 ms." Provider="Comdata"
+RequestId="f0035888d2b8" DateTime="2025-06-10 06:26:08.3167" ThreadId="21" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556368XXXXXX7611','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'B','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'LAURA','cardLastName':'SPURNEY','driverLicenseNumber':'','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'236189X005506','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2028-11-01T00:00:00','cardToken':'399Q92R2R3','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':0.00,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':30000.00,'cycleTxnLimit':999,'cycleTxnLimitUsed':0,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':999},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'LAURA SPURNEY','mailAddress1':'540 S FRANKLIN','mailAddress2':'','mailCity':'DENVER','mailState':'CO','mailZip':'80209','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="2981ff03a64d" DateTime="2025-06-10 06:26:09.5866" ThreadId="10" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239777X338738','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="2981ff03a64d" DateTime="2025-06-10 06:26:09.5866" ThreadId="10" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="2981ff03a64d" DateTime="2025-06-10 06:26:09.8875" ThreadId="30" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 292 ms." Provider="Comdata"
+RequestId="2981ff03a64d" DateTime="2025-06-10 06:26:09.8875" ThreadId="30" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556305XXXXXX2501','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'A','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'ALICIA','cardLastName':'GRAVES','driverLicenseNumber':'****','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'239777X338738','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2028-11-01T00:00:00','cardToken':'422Y33H7P9','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':0.00,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':30000.00,'cycleTxnLimit':999,'cycleTxnLimitUsed':0,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':999},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'ALICIA GRAVES','mailAddress1':'5350 AMESBURY DRIVE','mailAddress2':'APT 110','mailCity':'DALLAS','mailState':'TX','mailZip':'75206','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="dda083326c8d" DateTime="2025-06-10 06:26:09.9310" ThreadId="30" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239777X005253','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="dda083326c8d" DateTime="2025-06-10 06:26:09.9310" ThreadId="30" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="dda083326c8d" DateTime="2025-06-10 06:26:10.2160" ThreadId="16" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 289 ms." Provider="Comdata"
+RequestId="dda083326c8d" DateTime="2025-06-10 06:26:10.2160" ThreadId="16" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556368XXXXXX5756','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'B','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'ALICIA','cardLastName':'GRAVES','driverLicenseNumber':'','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'239777X005253','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2028-11-01T00:00:00','cardToken':'396M67M4G7','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':0.00,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':30000.00,'cycleTxnLimit':999,'cycleTxnLimitUsed':0,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':999},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'ALICIA GRAVES','mailAddress1':'5350 AMESBURY DRIVE','mailAddress2':'APT 110','mailCity':'DALLAS','mailState':'TX','mailZip':'75206','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="e68e0cf08757" DateTime="2025-06-10 06:26:10.2475" ThreadId="16" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'240680X338828','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="e68e0cf08757" DateTime="2025-06-10 06:26:10.2475" ThreadId="16" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="51331851fc75" DateTime="2025-06-10 06:26:10.5319" ThreadId="30" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'DGYXS','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'ERICA','cardLastName':'JOHNSON','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'240833X338865','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*7821','alertServiceFlag':true,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'OPERATIONS TEAM   CC','mailAddress1':'EAB','mailAddress2':'2445 M Street NW','mailCity':'Washington','mailState':'DC','mailZip':'20037','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="51331851fc75" DateTime="2025-06-10 06:26:10.5319" ThreadId="30" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="e68e0cf08757" DateTime="2025-06-10 06:26:10.5319" ThreadId="16" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 275 ms." Provider="Comdata"
+RequestId="e68e0cf08757" DateTime="2025-06-10 06:26:10.5365" ThreadId="16" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556305XXXXXX4265','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'A','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'JULIA','cardLastName':'PHILYAW','driverLicenseNumber':'****','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'240680X338828','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2028-11-01T00:00:00','cardToken':'424P49X3R7','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':0.00,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':30000.00,'cycleTxnLimit':999,'cycleTxnLimitUsed':0,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':999},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'JULIA PHILYAW','mailAddress1':'1401 NW 71ST AVENUE','mailAddress2':'','mailCity':'PLANTATION','mailState':'FL','mailZip':'33313','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="90107c7a7f60" DateTime="2025-06-10 06:26:10.5637" ThreadId="16" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'240680X338768','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="90107c7a7f60" DateTime="2025-06-10 06:26:10.5637" ThreadId="16" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+
+RequestId="cf844f3330e8" DateTime="2025-06-10 07:13:02.5894" ThreadId="31" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 2121 ms." Provider="ComdataMC"
+RequestId="cf844f3330e8" DateTime="2025-06-10 07:13:02.5894" ThreadId="31" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'success','requestUID':'ac43c64c-273d-488e-8e60-c2a195d1948a','Items':['ZZ321','DGYXS','556305XXXXXX1105','240833X338865','426R37H3F4'],'ItemsElementName':[0,4,2,5,3]}}" Provider="ComdataMC"
+
+
+Card Detail:
+----------------------
+Username - Erica Johnson
+Status - PendingProcessing
+MaskedNumber - 556305XXXXXX1105
+EmployeeNumber - 240833X338865
+CreditCardId - 9359
+Customer ID - DGYXS
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+1.

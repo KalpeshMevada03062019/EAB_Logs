@@ -1,0 +1,90 @@
+*[07-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+RequestId="3c9ec129e31c" UserId="239691" UserEmail="GWalters@eab.com" DateTime="2024-10-07 09:01:55.4505" ThreadId="9" Level="FATAL" Message="The underlying provider failed on Open." Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=3261;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+RequestId="7c9eb17a1b48" UserId="239691" UserEmail="GWalters@eab.com" DateTime="2024-10-07 09:01:55.4646" ThreadId="23" Level="FATAL" Message="Error adding admin notification." Exception="System.ArgumentException: An item with the same key has already been added.
+RequestId="70ab4b1c19c3" UserId="239691" UserEmail="GWalters@eab.com" DateTime="2024-10-07 09:01:55.4646" ThreadId="8" Level="FATAL" Message="Error adding admin notification." Exception="System.InvalidOperationException: The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.
+RequestId="3c9ec129e31c" UserId="239691" UserEmail="GWalters@eab.com" DateTime="2024-10-07 09:01:55.4646" ThreadId="9" Level="FATAL" Message="Error adding admin notification." Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=3261;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+RequestId="60e5774620b8" UserId="239691" UserEmail="GWalters@eab.com" DateTime="2024-10-07 09:02:05.7084" ThreadId="46" Level="FATAL" Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+   at ABC.Common.Web.Infrastructure.Auth.AbcUserStorage`2.<GetLoggedUserAsync>d__6.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\Auth\AbcUserStorage.cs:line 153
+   at ABC.Common.Web.Infrastructure.Auth.AbcUserStorage`2.<GetCurrentRoleAsync>d__e.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\Auth\AbcUserStorage.cs:line 0
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.Filters.AllowByUserRoleAttribute.<OnActionExecutingAsync>d__0.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\Filters\AllowByUserRoleAttribute.cs:line 39
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 17
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+RequestId="60e5774620b8" SessionId="_c49843d2-6ebc-4b47-a26a-370a56ba469e-B432E095959C4DDDC0661B63E0B1D305" UserId="239691" UserEmail="GWalters@eab.com" DateTime="2024-10-07 09:02:05.7242" ThreadId="46" Level="FATAL" Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+
+2.
+RequestId="33c8267b9ab1" UserId="232205" UserEmail="OCrean@eab.com" DateTime="2024-10-07 12:20:37.5692" ThreadId="28" Level="FATAL" 
+Message="Error updating spending profile for user with external id 232205" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+RequestId="3f58718cdda1" UserId="240293" UserEmail="LRosa@eab.com" 
+DateTime="2024-10-07 09:08:57.5355" ThreadId="25" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.UPM.BL.TravelerCategoryService.<GetUserActiveTravelerCategoryAsync>d__2.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.BL\TravelerCategoryService.cs:line 0
+   at ABC.UPM.Website.ApiControllers.UserController.<GetUserInfoAsync>d__3.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Website\ApiControllers\UserController.cs:line 73
+
+2.
+RequestId="54a4bbd272df" UserId="240293" UserEmail="LRosa@eab.com" 
+DateTime="2024-10-07 09:09:01.0059" ThreadId="19" Level="FATAL" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

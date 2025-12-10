@@ -1,0 +1,107 @@
+*[22-09-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+RequestId="0938e7b037cc" UserId="222971" UserEmail="KBrewer@eab.com" 
+DateTime="2025-09-22 09:50:22.9757" ThreadId="58" Level="FATAL" 
+Message="HTTP validation error: There is no transaction with Id=2395061 to be used as a parent" Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="0938e7b037cc" UserId="222971" UserEmail="KBrewer@eab.com" DateTime="2025-09-22 09:50:22.8974" ThreadId="63" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/baggageFee/submit START"
+RequestId="0938e7b037cc" UserId="222971" UserEmail="KBrewer@eab.com" DateTime="2025-09-22 09:50:22.8974" ThreadId="63" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/baggageFee/submit Request content: {'allocationItems':[{'id':0,'allocatedBy':'Employee','isOwn':true,'percentage':100,'value':'Katie Brewer','departmentExternalId':null,'departmentAllocationAvailability':null,'userId':'f2e7ee68-c2e4-4592-9555-381810b1a1e6','availablePurposesIds':null,'isGuestUser':false,'userEntity':'EAB'}],'expenses':[{'businessAmount':'7.00','date':'07/18/2025','expenseType':{'id':14,'name':'Baggage Fee','route':null},'id':null,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'7.00'}],'transactionInfo':{'traveler':'Katie Brewer','createdFromTransactionId':2395061,'date':'07/18/2025','logoId':null,'totalAmount':7,'merchant':{'merchantCategoryId':7299,'address':'11350 MCCORMICK RD','city':'HUNT VALLEY','country':'USA','name':'NYX*SMARTECARTE CART/S','state':'MD','zip':'21031-0000','displayName':'NYX*SMARTECARTE CART/S'},'purposes':[{'id':44202,'name':'Mexico - Commercial - Incentive - 7/13/25 to 7/18/25','isBudgetLine':true,'isGeneric':false,'hasHostCostCenter':true,'isIncentiveTrip':false,'assignedAmount':0,'percentage':100,'hasDollarCap':false,'hostCostCenterName':'EAB Commercial Admin','hostCostCenterId':483,'isInstitutionRequired':null,'institutionId':null,'institutionName':null,'isSelected':false,'checked':true}],'version':'AAAAAAEpJ6E=','isShared':false,'isRejected':null,'currency':{'id':5,'code':'USD','name':'United States dollar','countryName':null,'countryCode':null},'isInInternationalMode':false,'exchangeRate':1,'paymentInfo':{'formOfPayment':'CreditCard','name':'K.Brewer-1203'},'reassignmentInfo':{'dateOfReassignment':'2025-09-21T07:00:25.087','originalOwner':{'firstName':'Katie','lastName':'Brewer','id':'f2e7ee68-c2e4-4592-9555-381810b1a1e6','name':null},'currentOwner':{'firstName':'Steven','lastName':'Mandelbaum','id':'ff059988-8556-43f5-95e1-729af50d9fa5','name':null},'reassignmentReason':'AgingExpenses','isRejected':false},'ownerManagementLevel':'D2','notes':'baggage cart','approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(USD) United States Dollar','originalPurposes':[{'id':44202,'name':'Mexico - Commercial - Incentive - 7/13/25 to 7/18/25','isBudgetLine':true,'isGeneric':false,'hasHostCostCenter':true,'isIncentiveTrip':false,'assignedAmount':0,'percentage':100,'hasDollarCap':false,'hostCostCenterName':'EAB Commercial Admin','hostCostCenterId':483,'isInstitutionRequired':null,'institutionId':null,'institutionName':null,'isSelected':false,'checked':true}]},'transactionId':null,'receiptId':null,'clientDate':'2025-09-22T09:50:17-04:00'}"
+RequestId="0938e7b037cc" UserId="222971" UserEmail="KBrewer@eab.com" DateTime="2025-09-22 09:50:22.9601" ThreadId="38" Level="TRACE" Message="Validating access right start."
+RequestId="0938e7b037cc" UserId="222971" UserEmail="KBrewer@eab.com" DateTime="2025-09-22 09:50:22.9601" ThreadId="38" Level="TRACE" Message="Validating access right end. Duration: 0 ms."
+RequestId="0938e7b037cc" UserId="222971" UserEmail="KBrewer@eab.com" DateTime="2025-09-22 09:50:22.9601" ThreadId="38" Level="TRACE" Message="Updating transaction entity start."
+RequestId="0938e7b037cc" UserId="222971" UserEmail="KBrewer@eab.com" DateTime="2025-09-22 09:50:22.9757" ThreadId="58" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/baggageFee/submit Completed in 78 ms"
+
+- BaggageFee trancation of Katie Brewer.
+
+2.
+RequestId="543024ab2139" UserId="225016" UserEmail="PVail@eab.com" 
+DateTime="2025-09-22 09:51:26.1554" ThreadId="70" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="543024ab2139" UserId="225016" UserEmail="PVail@eab.com" DateTime="2025-09-22 09:51:26.1241" ThreadId="70" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/groupEvent/2422287 START"
+RequestId="543024ab2139" UserId="225016" UserEmail="PVail@eab.com" DateTime="2025-09-22 09:51:26.1397" ThreadId="70" Level="TRACE" Message="User '225016' in 'PurposeEditor' role: Getting transaction data for id '2422287'"
+RequestId="543024ab2139" UserId="225016" UserEmail="PVail@eab.com" DateTime="2025-09-22 09:51:26.1554" ThreadId="70" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/groupEvent/2422287 Completed in 31 ms"
+
+ExpenseTransactionHotel
+Pam Vail
+
+3.
+RequestId="7633f95035e3" UserId="225016" UserEmail="PVail@eab.com"
+DateTime="2025-09-22 09:51:38.6620" ThreadId="27" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+1.

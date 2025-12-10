@@ -1,0 +1,108 @@
+[30-05-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="cfbe1ea8e741" UserId="236801" UserEmail="SGreenleaf@eab.com" 
+DateTime="2024-05-30 14:07:47.7345" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+
+#1 - DateTime="2024-05-06 20:51:14.9323"
+#1 - DateTime="2024-04-17 10:25:05.8331"
+#1 - DateTime="2024-05-28 08:13:28.9012"
+#1 - DateTime="2024-05-30 14:07:47.7345"
+
+TRACE:::
+RequestId="cfbe1ea8e741" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-05-30 14:07:47.6712" Message="POST https://go.myeab.com/expense/api/transaction/food/validate START"
+RequestId="cfbe1ea8e741" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-05-30 14:07:47.6712" Message="POST https://go.myeab.com/expense/api/transaction/food/validate Request content: {'clientDate':'2024-05-30T14:07:49-04:00'}"
+RequestId="cfbe1ea8e741" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-05-30 14:07:47.7345" Message="Validating access right start."
+RequestId="cfbe1ea8e741" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-05-30 14:07:47.7345" Message="Validating access right end. Duration: 0 ms."
+RequestId="cfbe1ea8e741" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-05-30 14:07:47.7345" Message="Updating transaction entity start."
+RequestId="cfbe1ea8e741" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-05-30 14:07:47.7659" Message="POST https://go.myeab.com/expense/api/transaction/food/validate Completed in 95 ms"
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+RequestId="590f3f9188ce" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-05-30 09:22:57.4700" 
+Message="Unable to retrieve traveler category for user with external id 223636" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An error occurred while executing the command definition. See the inner exception for details. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.  
+
+TRACE::
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-05-30 09:01:07.4969" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=7; handshake=10; [Login] initialization=0; authentication=0; [Post-Login] complete=14746;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+EXD_Workershost_Fatal
+-------------------------
+1.	
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. #6 same error
+RequestId="e18785735246" 
+DateTime="2024-05-30 02:25:54.1303" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+2. #1 error
+RequestId="c8d518aa0fb1" 
+DateTime="2024-05-30 02:39:24.4864" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="Comdata" 
+Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

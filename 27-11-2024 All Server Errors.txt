@@ -1,0 +1,148 @@
+*[27-11-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="a7efc65e9b75" UserId="502729" UserEmail="KMarientes@eab.com" 
+DateTime="2024-11-27 10:45:33.2653" ThreadId="33" Level="FATAL" 
+Message="HTTP validation error: Transaction cannot be validated due to incorrect status." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+User Id: 5f97384b-c355-430a-8f43-4257a0244df3
+FirstName: Joshua Parisse
+ExpenseTransaction Id: 2282302
+Expense Type: ExpenseTransactionHotel
+Status: 5 (WFA)
+CardId: 79029
+Card: CreditCard
+
+Trace:
+++++++
+RequestId="a7efc65e9b75" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-27 10:45:33.1877" ThreadId="52" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate START"
+RequestId="a7efc65e9b75" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-27 10:45:33.1877" ThreadId="52" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate Request content: {'allocationItems':[{'id':0,'allocatedBy':'Employee','isOwn':true,'percentage':100,'value':'Joshua Parisse','departmentExternalId':null,'departmentAllocationAvailability':null,'userId':'5f97384b-c355-430a-8f43-4257a0244df3','availablePurposesIds':null,'isGuestUser':false,'userEntity':'EAB'}],'expenses':[{'businessAmount':'1178.00','date':'10/15/2024','expenseType':{'id':8,'name':'Nightly Rate','route':null},'id':3195364,'personalAmount':'0.00','note':'','personalAmountInternational':'0.00','businessAmountInternational':'1178.00'},{'businessAmount':'140.73','date':'10/17/2024','expenseType':{'id':10,'name':'Hotel Taxes','route':null},'id':3221324,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'140.73'},{'businessAmount':'60.00','date':'10/17/2024','expenseType':{'id':7,'name':'Other Hotel Charges','route':null},'id':3221325,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'60.00'}],'transactionInfo':{'basedCityReason':null,'overAllowedAmountReason':'This was the only available stay near the office, close to partner. When I called GO through booking, this was the suggested hotel.','whyBookedOutsideReason':null,'traveler':'PARISSE, JOSHUA','defaultTravelerName':'Joshua Parisse','perDiems':[{'rate':260,'startDate':'02/22/2017','endDate':null,'onDate':'October 15th'}],'hotelConfirmation':{'id':190124,'name':'ST. GREGORY HOTEL-10/15/2024-2NT-CONF: 919041087','isOther':false,'hotel':{'id':0,'name':'ST. GREGORY HOTEL','country':null,'city':null,'state':null}},'isDetailed':false,'attachment':{'id':215778,'version':'AAAAAAEeELs=','userId':'5f97384b-c355-430a-8f43-4257a0244df3','userName':'Joshua Parisse','isAttached':true,'isAttachmentImage':false,'name':'st gregory receipt.pdf','source':'','fileCreatedDate':'2024-11-25T17:46:04.453','folio':null},'isFolioValidated':null,'createdFromTransactionId':null,'date':'10/17/2024','logoId':null,'totalAmount':1378.73,'merchant':{'merchantCategoryId':7011,'address':'2033 M ST NW','city':'Washington','country':'USA','name':'ST GREGORY HOTEL','state':'DC','zip':'20036-3301','displayName':'ST GREGORY HOTEL, Washington, DC'},'purposes':[{'id':36395,'name':'Partner Visit or Onsite','isBudgetLine':false,'isGeneric':true,'hasHostCostCenter':true,'isIncentiveTrip':false,'assignedAmount':1378.73,'percentage':100,'hasDollarCap':false,'hostCostCenterName':'Strategic Analysis (Enrollment)','hostCostCenterId':445,'isInstitutionRequired':true,'institutionId':4302,'institutionName':'William Woods University - Fulton - MO','isSelected':false}],'version':'AAAAAAEeJpY=','isShared':false,'isRejected':null,'currency':{'id':5,'code':'USD','name':'United States dollar','countryName':null,'countryCode':null},'isInInternationalMode':false,'exchangeRate':1,'paymentInfo':{'formOfPayment':'CreditCard','name':'J.Parisse-2571'},'reassignmentInfo':null,'ownerManagementLevel':'D1 Senior Leadership','notes':'1st night rate: $589; 2nd night rate: $539; \nHotel Rm Tax night 1: $89.16; Hotel Rm tax night 2: $81.19\nThere are 2 garage tax charges, totaling $10.80 (despite not using a garage)\nAnd there are 2 additional rm tax fees (each 4.79, totaling $9.58)','approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(USD) United States Dollar','perDiemList':[{'perDiem':0}]},'transactionId':2282302,'receiptId':215778,'clientDate':'2024-11-27T07:45:34-08:00'}"
+RequestId="a7efc65e9b75" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-27 10:45:33.2342" ThreadId="37" Level="TRACE" Message="Validating access right start."
+RequestId="a7efc65e9b75" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-27 10:45:33.2342" ThreadId="38" Level="TRACE" Message="Validating access right end. Duration: 2 ms."
+RequestId="a7efc65e9b75" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-27 10:45:33.2342" ThreadId="38" Level="TRACE" Message="Updating transaction entity start."
+RequestId="a7efc65e9b75" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-27 10:45:33.2653" ThreadId="33" Level="TRACE" Message="Updating transaction entity end. Duration: 27 ms."
+RequestId="a7efc65e9b75" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-11-27 10:45:33.2653" ThreadId="33" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate Completed in 78 ms"
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-11-27 06:48:29.9332" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+2.
+DateTime="2024-11-27 06:48:29.9332" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241022_123338SB_006535.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+3.
+DateTime="2024-11-27 06:48:30.0300" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+4.
+DateTime="2024-11-27 06:48:30.0300" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+5.
+DateTime="2024-11-27 06:48:30.1171" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+6.
+DateTime="2024-11-27 06:48:30.1171" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_073936SB_006538.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+7.
+DateTime="2024-11-27 06:48:36.4817" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+8.
+DateTime="2024-11-27 06:48:36.4817" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+9.
+DateTime="2024-11-27 06:48:42.4936" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+10.
+DateTime="2024-11-27 06:48:42.4936" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541tryagain.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+11.
+DateTime="2024-11-27 06:51:20.8824" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+12.
+DateTime="2024-11-27 06:51:20.8824" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241119_150219SB_006599.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

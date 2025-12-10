@@ -1,0 +1,181 @@
+*[06-12-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-12-06 07:02:31.0064" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutApprovedTransactions" Message="Following error occurs during sending 'Go Expense: The following expenses have been approved' email to 'Nichelle.Wash@seramount.com': transaction must have a personal amount" Exception="System.ArgumentException: transaction must have a personal amount
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.ComputeReimbursementAmount(ExpenseGridRow transaction)
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.GetBody(List`1 transactions, User user, DateTime date)
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.CreateMessage(EmailToUserModel emailModel)
+   at ABC.Common.Worker.Mail.MailSenderProcessor`1.<>c__DisplayClass6.<SendMail>b__2() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Mail\MailSenderProcessor.cs:line 84
+   at ABC.Common.Framework.Logger.Logger.LogActionTime[T](Func`1 action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 116
+   at ABC.Common.Worker.Mail.MailSenderProcessor`1.SendMail() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Mail\MailSenderProcessor.cs:line 83"
+   
+TRACE:
+DateTime="2024-12-06 07:02:30.9588" ThreadId="11" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="MyLog: ExpenseGridRowsId list is: 2283329,2283330,2302666"
+DateTime="2024-12-06 07:02:30.9588" ThreadId="11" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="MyLog: Include Allocations: False"
+DateTime="2024-12-06 07:02:30.9588" ThreadId="11" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="MyLog: Ordered Transaction Ids list is: 2283329,2283330,2302666"
+DateTime="2024-12-06 07:02:30.9588" ThreadId="11" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="MyLog: Owner Id is: e8c13f23-cfbd-4f6e-9186-5a01f4a8d2d4"
+DateTime="2024-12-06 07:02:30.9588" ThreadId="11" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="MyLog: Process transaction ID is: 2283329"
+DateTime="2024-12-06 07:02:30.9588" ThreadId="11" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="MyLog: Transaction 2283329 added to the list."
+DateTime="2024-12-06 07:02:30.9588" ThreadId="11" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="MyLog: Process transaction ID is: 2283330"
+DateTime="2024-12-06 07:02:30.9588" ThreadId="11" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="MyLog: Transaction 2283330 added to the list."
+DateTime="2024-12-06 07:02:30.9588" ThreadId="11" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="MyLog: Process transaction ID is: 2302666"
+DateTime="2024-12-06 07:02:30.9588" ThreadId="11" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="MyLog: Transaction 2302666 added to the list."
+DateTime="2024-12-06 07:02:30.9588" ThreadId="1" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="Load email model end. Duration: 26 ms."
+DateTime="2024-12-06 07:02:30.9588" ThreadId="1" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="Create email message start."
+DateTime="2024-12-06 07:02:31.0371" ThreadId="1" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="Load email model start."
+DateTime="2024-12-06 07:02:31.0371" ThreadId="1" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+DateTime="2024-12-06 07:02:31.0371" ThreadId="1" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="MyLog: startIndex is: 0 AND pageSize is: 1000"
+DateTime="2024-12-06 07:02:31.0528" ThreadId="12" Level="TRACE" Provider="EmailsToUserAboutApprovedTransactions" Message="GetTransactionsOfSpecifiedStatuses query compilation end. Duration: 4 ms."
+
+INFO:
+Not found user id in Approved transactions list which should be available.
+   
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-12-06 07:42:27.2331" ThreadId="1" Level="FATAL" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 238878" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238878X005701'
+
+Card Detail:
+--------------
+CustomerID: DGYXS
+Status: Active
+MaskedNumber: 556305XXXXXX3701
+EmployeeNumber: 238878X005701
+FirstName: Alessandra
+LastName: Weiler
+
+DateTime="2024-12-06 07:42:22.7260" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running start."
+DateTime="2024-12-06 07:42:22.8257" ThreadId="18" Level="TRACE" Provider="ComdataSyncOut" Message="CreditCardService.UpdateCreditCardStatusByComdataStatusAsync_comdataMcApiService.UpdateCreditCardBillingAddressAsync. start."
+DateTime="2024-12-06 07:42:22.9956" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 551 ms."
+DateTime="2024-12-06 07:42:22.9956" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 233969X005036 end. Duration: 551 ms."
+DateTime="2024-12-06 07:42:23.0113" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 7096 start."
+DateTime="2024-12-06 07:42:23.0113" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 7096 end. Duration: 2 ms."
+DateTime="2024-12-06 07:42:23.0274" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 239752X005985 start."
+DateTime="2024-12-06 07:42:23.0274" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-12-06 07:42:23.6915" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 671 ms."
+DateTime="2024-12-06 07:42:23.6915" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 239752X005985 end. Duration: 671 ms."
+DateTime="2024-12-06 07:42:23.7072" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9041 start."
+DateTime="2024-12-06 07:42:23.7072" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9041 end. Duration: 2 ms."
+DateTime="2024-12-06 07:42:23.7235" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 239752X005039 start."
+DateTime="2024-12-06 07:42:23.7240" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-12-06 07:42:24.6097" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 892 ms."
+DateTime="2024-12-06 07:42:24.6097" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 239752X005039 end. Duration: 892 ms."
+DateTime="2024-12-06 07:42:24.6097" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 7099 start."
+DateTime="2024-12-06 07:42:24.6097" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 7099 end. Duration: 2 ms."
+DateTime="2024-12-06 07:42:24.6248" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 226312X006023 start."
+DateTime="2024-12-06 07:42:24.6248" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-12-06 07:42:25.2232" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 596 ms."
+DateTime="2024-12-06 07:42:25.2232" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 226312X006023 end. Duration: 596 ms."
+DateTime="2024-12-06 07:42:25.2232" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9080 start."
+DateTime="2024-12-06 07:42:25.2232" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9080 end. Duration: 2 ms."
+DateTime="2024-12-06 07:42:25.2383" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 226312X005182 start."
+DateTime="2024-12-06 07:42:25.2383" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-12-06 07:42:25.5375" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 293 ms."
+DateTime="2024-12-06 07:42:25.5375" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 226312X005182 end. Duration: 293 ms."
+DateTime="2024-12-06 07:42:25.5375" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 7242 start."
+DateTime="2024-12-06 07:42:25.5375" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 7242 end. Duration: 2 ms."
+DateTime="2024-12-06 07:42:25.5536" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 239498X006037 start."
+DateTime="2024-12-06 07:42:25.5536" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-12-06 07:42:25.8064" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 239 ms."
+DateTime="2024-12-06 07:42:25.8064" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 239498X006037 end. Duration: 240 ms."
+DateTime="2024-12-06 07:42:25.8064" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9094 start."
+DateTime="2024-12-06 07:42:25.8064" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9094 end. Duration: 2 ms."
+DateTime="2024-12-06 07:42:25.8220" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 239498X004944 start."
+DateTime="2024-12-06 07:42:25.8220" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-12-06 07:42:26.0596" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 233 ms."
+DateTime="2024-12-06 07:42:26.0596" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 239498X004944 end. Duration: 233 ms."
+DateTime="2024-12-06 07:42:26.0697" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 7004 start."
+DateTime="2024-12-06 07:42:26.0697" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 7004 end. Duration: 2 ms."
+DateTime="2024-12-06 07:42:26.0914" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 227407X338687 start."
+DateTime="2024-12-06 07:42:26.0914" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-12-06 07:42:26.4227" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 340 ms."
+DateTime="2024-12-06 07:42:26.4227" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 227407X338687 end. Duration: 341 ms."
+DateTime="2024-12-06 07:42:26.4227" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9133 start."
+DateTime="2024-12-06 07:42:26.4385" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9133 end. Duration: 3 ms."
+DateTime="2024-12-06 07:42:26.4385" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 227407X003992 start."
+DateTime="2024-12-06 07:42:26.4385" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-12-06 07:42:26.6799" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 237 ms."
+DateTime="2024-12-06 07:42:26.6799" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 227407X003992 end. Duration: 237 ms."
+DateTime="2024-12-06 07:42:26.6914" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 5042 start."
+DateTime="2024-12-06 07:42:26.6914" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 5042 end. Duration: 2 ms."
+DateTime="2024-12-06 07:42:26.7073" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 239106X005980 start."
+DateTime="2024-12-06 07:42:26.7073" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-12-06 07:42:26.7275" ThreadId="1" Level="TRACE" Provider="ComdataSyncOut" Message="Card address was updated for user. ExternalId=240283"
+DateTime="2024-12-06 07:42:26.7391" ThreadId="15" Level="TRACE" Provider="ComdataSyncOut" Message="CreditCardService.UpdateCreditCardStatusByComdataStatusAsync_comdataMcApiService.UpdateCreditCardBillingAddressAsync. start."
+DateTime="2024-12-06 07:42:27.0395" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 328 ms."
+DateTime="2024-12-06 07:42:27.0395" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 239106X005980 end. Duration: 329 ms."
+DateTime="2024-12-06 07:42:27.0395" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9036 start."
+DateTime="2024-12-06 07:42:27.0495" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9036 end. Duration: 2 ms."
+DateTime="2024-12-06 07:42:27.0556" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 239106X005067 start."
+DateTime="2024-12-06 07:42:27.0556" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-12-06 07:42:27.2129" ThreadId="10" Level="TRACE" Provider="ComdataSyncOut" Message="CreditCardService.UpdateCreditCardStatusByComdataStatusAsync_comdataMcApiService.UpdateCreditCardBillingAddressAsync. end. Duration: 466 ms."
+
+
+warn:
+DateTime="2024-12-06 00:59:29.6005" ThreadId="1" Level="WARN" Provider="ComdataSyncIn" Message="SyncByItemProcessor.MergeEntity. Error for 7765." Exception="System.ArgumentException: CreditCardEntitiesMerger.MergeEntity. Card with EmployeeNumber '238878X005701' is not found in ComData. CardId: 7765.
+
+
+Infor:
+RequestId="d5e8386f68a4" DateTime="2024-12-06 07:40:56.5070" ThreadId="65" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556305XXXXXX3701','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'A','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'ALESSANDRA','cardLastName':'WEILER','driverLicenseNumber':'****','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'238878X005701','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2028-11-01T00:00:00','cardToken':'399W22T4R9','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':7.00,'cycleAmountLimitHold':91.72,'cycleAmountLimitAvailable':29901.28,'cycleTxnLimit':999,'cycleTxnLimitUsed':1,'cycleTxnLimitHold':1,'cycleTxnLimitAvailable':997},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'ALESSANDRA WEILER','mailAddress1':'21 ASHMONT AVENUE','mailAddress2':'','mailCity':'NEWTON','mailState':'MA','mailZip':'02458','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="5e5338063621" DateTime="2024-12-06 07:40:56.5703" ThreadId="65" Level="TRACE" Message="Method: inquireCardV
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

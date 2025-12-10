@@ -1,0 +1,165 @@
+*[18-04-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="2a25be21a1fc" UserId="502473" UserEmail="dcarr@eab.com" 
+DateTime="2025-04-18 15:53:57.9850" ThreadId="43" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+-------
+RequestId="2a25be21a1fc" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-04-18 15:53:57.9289" ThreadId="43" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/save START"
+RequestId="2a25be21a1fc" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-04-18 15:53:57.9289" ThreadId="43" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/save Request content: {'allocationItems':[{'id':0,'allocatedBy':'Employee','isOwn':true,'percentage':100,'value':'Caroline Painter','departmentExternalId':null,'departmentAllocationAvailability':null,'userId':'76eb18ec-f1fc-4c15-a0a2-938649ba8a95','availablePurposesIds':null,'isGuestUser':false,'userEntity':'EAB'}],'expenses':[{'id':0,'date':'03/25/2025','expenseType':{'id':7,'name':'Other Hotel Charges','route':null},'typeId':-1,'note':null,'personalAmount':'0.00','businessAmount':'-1254.58','personalAmountInternational':'0.00','businessAmountInternational':'-1254.58'},{'id':0,'date':'03/25/2025','expenseType':{'id':8,'name':'Nightly Rate','route':null},'typeId':-1,'note':null,'personalAmount':'0.00','businessAmount':'387.00','personalAmountInternational':'0.00','businessAmountInternational':'387.00'},{'id':0,'date':'03/25/2025','expenseType':{'id':10,'name':'Hotel Taxes','route':null},'typeId':-1,'note':null,'personalAmount':'0.00','businessAmount':'90.72','personalAmountInternational':'0.00','businessAmountInternational':'90.72'},{'id':0,'date':'03/26/2025','expenseType':{'id':8,'name':'Nightly Rate','route':null},'typeId':-1,'note':null,'personalAmount':'0.00','businessAmount':'387.00','personalAmountInternational':'0.00','businessAmountInternational':'387.00'},{'id':0,'date':'03/26/2025','expenseType':{'id':10,'name':'Hotel Taxes','route':null},'typeId':-1,'note':null,'personalAmount':'0.00','businessAmount':'90.72','personalAmountInternational':'0.00','businessAmountInternational':'90.72'},{'id':0,'date':'03/27/2025','expenseType':{'id':8,'name':'Nightly Rate','route':null},'typeId':-1,'note':null,'personalAmount':'0.00','businessAmount':'358.01','personalAmountInternational':'0.00','businessAmountInternational':'358.01'},{'id':0,'date':'03/27/2025','expenseType':{'id':10,'name':'Hotel Taxes','route':null},'typeId':-1,'note':null,'personalAmount':'0.00','businessAmount':'90.72','personalAmountInternational':'0.00','businessAmountInternational':'90.72'}],'transactionInfo':{'basedCityReason':null,'overAllowedAmountReason':null,'whyBookedOutsideReason':'Price- this was booked before the message about booking outside of Go.','traveler':'PAINTER, CAROLINE','defaultTravelerName':'Caroline Painter','perDiems':[{'rate':260,'startDate':'02/22/2017','endDate':null,'onDate':'March 27th'}],'hotelConfirmation':{'id':1,'name':'Other','isOther':true,'hotel':{'id':0,'name':null,'country':null,'city':null,'state':null}},'isDetailed':false,'attachment':{'id':223689,'version':'AAAAAAEjdmM=','userId':'76eb18ec-f1fc-4c15-a0a2-938649ba8a95','userName':'Caroline Painter','isAttached':true,'isAttachmentImage':false,'name':'Hotel 3_25_25 (1).pdf','source':'','fileCreatedDate':'2025-04-17T21:07:07.99','folio':null},'isFolioValidated':null,'createdFromTransactionId':null,'date':'03/28/2025','logoId':81,'totalAmount':149.59,'merchant':{'merchantCategoryId':3513,'address':'2350 M ST NW','city':'Washington','country':'USA','name':'WESTIN HOTELS','state':'DC','zip':'20037-0000','displayName':'WESTIN HOTELS, Washington, DC'},'purposes':[],'version':'AAAAAAEjdmQ=','isShared':false,'isRejected':null,'currency':{'id':5,'code':'USD','name':'United States dollar','countryName':null,'countryCode':null},'isInInternationalMode':false,'exchangeRate':1,'paymentInfo':{'formOfPayment':'CreditCard','name':'C.Painter-5347'},'reassignmentInfo':null,'ownerManagementLevel':'D2','notes':'They originally charged $1200, but one of the nights was comped and there was an account credit.','approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(USD) United States Dollar','perDiemList':[{'perDiem':0}]},'transactionId':2347429,'receiptId':223689,'clientDate':'2025-04-18T12:53:58-07:00'}"
+RequestId="2a25be21a1fc" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-04-18 15:53:57.9764" ThreadId="50" Level="TRACE" Message="Validating access right start."
+RequestId="2a25be21a1fc" UserId="502473" UserEmail="dcarr@eab.com" DateTime="2025-04-18 15:53:57.9850" ThreadId="43" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/save Completed in 56 ms"
+
+Transaction details:
+--------------------
+OwnerId: 76EB18EC-F1FC-4C15-A0A2-938649BA8A95
+Use: Caroline Painter
+Discriminator: ExpenseTransactionHotel
+Amount: 149.59
+Status: 5 (Pending Finance)
+ProcessTransactionId: 250330000039697
+TrasactionID: 2347429
+ExternalId: 228501
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2025-04-18 23:46:09.6876" ThreadId="1" Level="FATAL" Provider="WorkersHost" Message="Unhandled error while running creator 'TravelerCategoriesSync'" Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://eabgowers-p01/upm_api/UpmApiService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 10.123.4.70:443
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStreamAsyncResult.CompleteGetRequestStream(IAsyncResult result)
+   --- End of inner exception stack trace ---
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.UpmDataService.<GetUsersTravelerCategoriesAsync>d__6.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ABC.ERS.SyncWorkers.TravelerCategorySync.TravelerCategoryEntitiesLoader.LoadSourceEntities()
+   at ABC.Common.Worker.Sync.SyncProcessorBase`1.<Run>b__0() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Sync\SyncProcessorBase.cs:line 38
+   at ABC.Common.Framework.Logger.Logger.LogActionTime[T](Func`1 action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 116
+   at ABC.Common.Worker.Sync.SyncProcessorBase`1.Run() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Sync\SyncProcessorBase.cs:line 37
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 104
+   at ABC.Common.Worker.Hosts.AbcWorkersHost.ExecuteCreators(String[] creatorNames) in c:\git_sources\eabgo\Common\ABC.Common.Worker\Hosts\AbcWorkersHost.cs:line 85
+---> (Inner Exception #0) System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://eabgowers-p01/upm_api/UpmApiService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 10.123.4.70:443
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStreamAsyncResult.CompleteGetRequestStream(IAsyncResult result)
+   --- End of inner exception stack trace ---
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.UpmDataService.<GetUsersTravelerCategoriesAsync>d__6.MoveNext()<---
+
+System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://eabgowers-p01/upm_api/UpmApiService.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 10.123.4.70:443
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStreamAsyncResult.CompleteGetRequestStream(IAsyncResult result)
+   --- End of inner exception stack trace ---
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.ERS.BL.UpmDataService.<GetUsersTravelerCategoriesAsync>d__6.MoveNext()
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 10.123.4.70:443
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStreamAsyncResult.CompleteGetRequestStream(IAsyncResult result)
+System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 10.123.4.70:443
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)"
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

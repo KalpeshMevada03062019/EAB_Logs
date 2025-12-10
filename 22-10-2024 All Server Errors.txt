@@ -1,0 +1,121 @@
+*[22-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="750d8e7ff17f" UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-10-22 08:43:57.8006" ThreadId="45" Level="FATAL" 
+Message="The underlying provider failed on Open." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=5; handshake=15004;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<GetAsync>d__15.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 177
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+RequestId="0a01bd89523c" UserId="502729" UserEmail="KMarientes@eab.com" 
+DateTime="2024-10-22 19:02:33.7632" ThreadId="16" Level="FATAL" 
+Message="Model state validation error: The Reason field is required." 
+Exception=""
+
+ExternalID - 222775
+Name: David Felsenthal
+MaskedNumber - 556368XXXXXX9444
+EmployeeNumber - 222775X005515
+Status - PendingProcessing
+
+ExternalID - 226349
+Jimmy Chiang
+MaskedNumber - 556368XXXXXX9369
+EmployeeNumber - 226349X005516
+Status - PendingProcessing
+
+
+TRACE LOG:
+RequestId="0a01bd89523c" SessionId="_3ccc69aa-b87d-4262-a69e-1192475e22c4-FC2DBB4B9C2E176F673F17E62FE1EB14" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-10-22 19:02:33.7632" ThreadId="16" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7079/replace START"
+RequestId="0a01bd89523c" SessionId="_3ccc69aa-b87d-4262-a69e-1192475e22c4-FC2DBB4B9C2E176F673F17E62FE1EB14" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-10-22 19:02:33.7632" ThreadId="16" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7079/replace Completed in 0 ms"
+
+INFOR LOG:
+RequestId="8a94999e57a7" SessionId="_3ccc69aa-b87d-4262-a69e-1192475e22c4-8209BB7C50314955CF79F1A521337362" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-10-22 18:48:42.1394" ThreadId="16" Level="INFO" Message="Credit card with masked number 556368XXXXXX9444 has been updated with ComData info for owner with id '2271b7fb-c774-41cd-8d10-c276427bb7a6'"
+RequestId="42c699d825f5" SessionId="_3ccc69aa-b87d-4262-a69e-1192475e22c4-FC2DBB4B9C2E176F673F17E62FE1EB14" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-10-22 19:02:44.7739" ThreadId="20" Level="INFO" Message="Credit card with masked number 556368XXXXXX9369 has been created for owner with id 'e62fa57f-baf2-4876-806d-44bcf46a1ccf'"
+RequestId="42c699d825f5" SessionId="_3ccc69aa-b87d-4262-a69e-1192475e22c4-FC2DBB4B9C2E176F673F17E62FE1EB14" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-10-22 19:02:45.3104" ThreadId="8" Level="INFO" Message="Credit card with masked number 556368XXXXXX9369 has been updated with ComData info for owner with id 'e62fa57f-baf2-4876-806d-44bcf46a1ccf'"
+RequestId="ffd2a1719250" SessionId="_8437c951-52bc-4c39-a71f-b954207e548b-58C4EBEFF983AAB31A0788B1864B9542" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-10-22 19:22:28.1727" ThreadId="10" Level="INFO" Message="Credit card activated. MaskedNumber = '556368XXXXXX2406', EmployeeNumber = '229370X005497', ActorId = 'f5088bf5-4b99-4291-a563-f9adbb4dbe94', Description = '', CustomerID = 'BRV61'"
+
+EXD_InnerGateway_TRACE:
+RequestId="8ec4fc309e6d" DateTime="2024-10-22 19:02:43.3463" ThreadId="25" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'BRV61','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'JIMMY','cardLastName':'CHIANG','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'226349X005516','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*0041','alertServiceFlag':true,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'JIMMY CHIANG','mailAddress1':'4101 Davenport St NW','mailAddress2':' ','mailCity':'Washington','mailState':'DC','mailZip':'20016','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="8ec4fc309e6d" DateTime="2024-10-22 19:02:43.3463" ThreadId="25" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="8ec4fc309e6d" DateTime="2024-10-22 19:02:45.7809" ThreadId="25" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 2430 ms." Provider="ComdataMC"
+RequestId="8ec4fc309e6d" DateTime="2024-10-22 19:02:45.7809" ThreadId="25" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'success','requestUID':'6db15a61-cbf4-41bd-b1e7-c2f83ab17ab4','Items':['ZZ321','BRV61','556368XXXXXX9369','226349X005516','399T63H3E6'],'ItemsElementName':[0,4,2,5,3]}}" Provider="ComdataMC"
+
+
+2.
+RequestId="750d8e7ff17f"  UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-10-22 08:43:57.8480" ThreadId="45" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.
+   at ABC.Common.Web.Infrastructure.GlobalExceptionLogger.<LogAsync>d__0.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\GlobalExceptionLogger.cs:line 36"
+
+3.
+RequestId="5b068f986a0c" UserId="240295" UserEmail="AMoore@eab.com" 
+DateTime="2024-10-22 10:32:11.4331" ThreadId="44" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:2/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:2/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:2/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+1.
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

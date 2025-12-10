@@ -1,0 +1,99 @@
+*[10-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #Timeout ExpenseGridService.cs:line 1842 common error
+RequestId="b64d84a6b224" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-10-10 02:53:31.3986" ThreadId="10" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+2. #Timeout
+RequestId="fd3aba402d5e" UserId="224124" UserEmail="SMandelbaum@eab.com" 
+DateTime="2024-10-10 08:42:20.7703" ThreadId="74" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.UserService.<GetUserRoleByUserIdAndNameAsync>d__e.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\UserService.cs:line 74
+   at ABC.ERS.Web.ExpenseNow.Infrastructure.ApplicationUserStore.<CanAccessUserRoleAsync>d__0.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\Infrastructure\ApplicationUserStore.cs:line 25
+   at ABC.Common.Web.Infrastructure.Auth.AbcUserStorage`2.<GetCurrentRoleAsync>d__e.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\Auth\AbcUserStorage.cs:line 187
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.UserController.<InfoAsync>d__1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\UserController.cs:line 78
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+Common Methods:
++++++++++++++++
+GetUserRoleByUserIdAndNameAsync()
+CanAccessUserRoleAsync
+GetCurrentRoleAsync
+InfoAsync
+
+3. #TIMEOUT ERROR
+RequestId="659636dd2ff1" UserId="236148" UserEmail="kcarter@eab.com" 
+DateTime="2024-10-10 10:27:58.9808" ThreadId="38" Level="FATAL" 
+Message="Error updating spending profile for user with external id 236148" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.SpendingService.<GetUserSpendingAsync>d__18.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\SpendingService.cs:line 92
+   at ABC.ERS.BL.SpendingService.<UpdateSpendingProfileStateAsync>d__0.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\SpendingService.cs:line 65
+
+
+Common Methods:
++++++++++++++++
+GetUserSpendingAsync()
+UpdateSpendingProfileStateAsync()
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-10-10 17:17:56.7151" ThreadId="1" Level="FATAL" Provider="ComDataEmailSync" 
+Message="ComData Message processor. Event Notification failed for credit card decline. Credit card decline Id: 95680" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+---> (Inner Exception #0) System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

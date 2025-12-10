@@ -1,0 +1,89 @@
+*[21-01-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+
+----------------------
+UPM_Website_fatal
+----------------------
+1.
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1. 
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+1.
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1.
+DateTime="2024-01-21 03:53:26.0754" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=11; handshake=10; [Login] initialization=0; authentication=0; [Post-Login] complete=14747;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. #5 same error
+DateTime="2024-01-21 02:42:35.0285" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1. #211 same error
+RequestId="6c0a73c481e1" 
+DateTime="2024-01-21 04:22:37.4925" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+TRACE-------------
+RequestId="6c0a73c481e1" DateTime="2024-01-21 04:22:35.0777" ThreadId="60" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'238730X004055','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="6c0a73c481e1" DateTime="2024-01-21 04:22:35.0777" ThreadId="60" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+
+2. #4 same error
+RequestId="" 
+DateTime="2024-01-21 12:59:15.2036"
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+
+3.
+RequestId="75491c6563ab" DateTime="2024-01-21 22:41:33.5168"
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="ComdataMC" 
+Exception=""
+
+
+----------------------
+UPM_API_Fatal
+----------------------
+1.
+
+
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------

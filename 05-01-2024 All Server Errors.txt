@@ -1,0 +1,94 @@
+[05-01-2024]
+
+Web Server
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+RequestId="1dd3c8ffd754" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-01-05 03:01:58.3711"
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+2.
+RequestId="20a395fca3bf" UserId="502570" UserEmail="SunilKumar@eab.com"
+DateTime="2024-01-05 01:56:20.6065" 
+Message="Error adding admin notification." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+
+----------------------
+CCM_Website_fatal
+----------------------
+1. Same error repeated #11 time
+RequestId="4273f8cd14b4" UserId="500412" UserEmail="BChalkley@eab.com"  #9 same error
+DateTime="2024-01-05 17:55:43.3470" 
+Message="HTTP validation error: Unable to replace credit card when owner already has an active credit card. UserId: 9dbd6b00-07a2-4623-8f66-74e156c62108" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2.
+RequestId="a379d7c263cd" UserId="501312" UserEmail="ADurgan@eab.com" 
+DateTime="2024-01-05 18:02:56.1053"
+Message="HTTP validation error: Unable to replace credit card when owner already has an active credit card. UserId: 9dbd6b00-07a2-4623-8f66-74e156c62108" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+----------------------
+UPM_Website_fatal
+----------------------
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1. 
+DateTime="2024-01-05 23:05:14.8420" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote name could not be resolved: 'outlook.office365.com' (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote name could not be resolved: 'outlook.office365.com' ----> System.Net.WebException: The remote name could not be resolved: 'outlook.office365.com'
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult)
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.EmitRequest(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 413
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.BuildEwsHttpWebRequest() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 793
+   --- End of inner ExceptionDe...)."
+
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1. #57 same error
+DateTime="2024-01-05 23:03:08.3967" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception: The network path was not found
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. #58 same error
+DateTime="2024-01-05 23:03:44.2568" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception: The network path was not found
+
+2. #4 same error
+DateTime="2024-01-05 23:08:16.4173" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComdataSyncIn'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception: Access is denied
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+
+
+----------------------
+UPM_API_Fatal
+----------------------
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------

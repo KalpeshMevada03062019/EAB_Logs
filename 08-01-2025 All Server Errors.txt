@@ -1,0 +1,91 @@
+*[08-01-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #4 same error
+RequestId="84d09bc61a8c" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2025-01-08 22:26:24.5018" ThreadId="32" Level="FATAL" 
+Message="Nullable object must have a value." 
+Exception="System.InvalidOperationException: Nullable object must have a value.
+
+
+Trace:
+RequestId="dc39b42302fc" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.4560" ThreadId="22" Level="TRACE" Message="GET https://go.myeab.com/expense/api/user/my-roles START"
+RequestId="dc39b42302fc" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.4718" ThreadId="46" Level="TRACE" Message="GET https://go.myeab.com/expense/api/user/my-roles Response content: [{'id':'127e165c-585f-4b94-bbf0-24cda16a78ab','name':'User','displayName':'User'},{'id':'48c448de-0b2e-4763-baea-4fe452609083','name':'BudgetApprover','displayName':'Budget Owner'},{'id':'bc4be638-67b9-4be7-9966-65c58bf925d0','name':'PurposeEditor','displayName':'Purpose Editor'},{'id':'e27ccfb1-cbbf-48eb-a002-93ef7f35c809','name':'GlobalApprover','displayName':'Approver'},{'id':'a212c6bb-6fad-4fdc-b2a9-9f1d88a224b5','name':'BudgetEditor','displayName':'Budget Editor'},{'id':'a4760da5-a635-4df4-85d8-f8761a7b1f7a','name':'Administrator','displayName':'Administrator'}]"
+RequestId="dc39b42302fc" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.4718" ThreadId="46" Level="TRACE" Message="GET https://go.myeab.com/expense/api/user/my-roles Completed in 16 ms"
+RequestId="9b0e6f74fb47" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.5043" ThreadId="22" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/unexpensed/0?sortKey=1&sortOrder=2 START"
+RequestId="5225d763f6d2" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.5043" ThreadId="46" Level="TRACE" Message="GET https://go.myeab.com/expense/api/filter/getall START"
+RequestId="5225d763f6d2" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.5349" ThreadId="46" Level="TRACE" Message="GET https://go.myeab.com/expense/api/filter/getall Response content: [{'id':9,'name':'Rewards'},{'id':109,'name':'Mine'},{'id':142,'name':'Ready to Submit'},{'id':190,'name':'Rewards Ready To Submit'},{'id':364,'name':'Uber'},{'id':381,'name':'Jefferson Hotel - A'},{'id':440,'name':'Hotel Expenses'},{'id':448,'name':'Open Hotel Only'},{'id':449,'name':'Airfare Only'},{'id':459,'name':'Cash Expenses'}]"
+RequestId="5225d763f6d2" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.5349" ThreadId="46" Level="TRACE" Message="GET https://go.myeab.com/expense/api/filter/getall Completed in 31 ms"
+RequestId="9b0e6f74fb47" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.5506" ThreadId="22" Level="TRACE" Message="Get Unexpensed transactions sorted by Date Descending start."
+RequestId="9b0e6f74fb47" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.5506" ThreadId="22" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+RequestId="9b0e6f74fb47" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.5506" ThreadId="22" Level="TRACE" Message="MyLog: startIndex is: 0 AND pageSize is: 50"
+RequestId="cd3de9fc7032" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.5984" ThreadId="39" Level="TRACE" Message="GET https://go.myeab.com/expense/api/filter/create START"
+RequestId="cd3de9fc7032" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.6296" ThreadId="46" Level="TRACE" Message="GET https://go.myeab.com/expense/api/filter/create Response content: {'amountFrom':null,'amountTo':null,'categories':[{'name':'Air Travel','id':-2,'selected':false},{'name':'Ground Transportation','id':5,'selected':false},{'name':'Hotel','id':1,'selected':false},{'name':'Food','id':4,'selected':false},{'name':'Miscellaneous','id':8,'selected':false},{'name':'Mobile Communication','id':-1,'selected':false},{'name':'Group Event','id':29,'selected':false}],'creditCards':[],'dateFrom':null,'dateTo':null,'submitDateFrom':null,'submitDateTo':null,'id':0,'merchants':[],'transactionIds':[],'filterPurposes':[],'name':null,'notes':null,'statuses':[{'id':1,'name':'New','selected':false},{'id':6,'name':'Rejected','selected':false},{'id':10,'name':'Reassigned','selected':false},{'id':5,'name':'Pending Finance','selected':false},{'id':4,'name':'Approved','selected':false},{'id':7,'name':'Paid','selected':false}],'states':[{'id':3,'selected':false},{'id':2,'selected':false},{'id':1,'selected':false}],'users':[],'allCash':false,'allCreditCards':false,'allDirectBill':false}"
+RequestId="cd3de9fc7032" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.6296" ThreadId="46" Level="TRACE" Message="GET https://go.myeab.com/expense/api/filter/create Completed in 31 ms"
+RequestId="9b0e6f74fb47" SessionId="_de8604b6-76c5-412c-87ad-7e5529b1335e-3BA46D6C73CA3A0ADBF6A1B085357A1B" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-01-08 22:26:32.6611" ThreadId="46" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation end. Duration: 111 ms."
+
+Info:
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #6 same error
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

@@ -1,0 +1,212 @@
+*[16-09-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+RequestId="61c16eed7210" UserId="236801" UserEmail="SGreenleaf@eab.com" 
+DateTime="2025-09-16 23:49:03.4529" ThreadId="24" Level="FATAL" Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<UpdateTransactionEntityAsync>d__165.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 1529
+--- End of stack trace from previous location where exception was thrown ---
+
+Trace:
+RequestId="61c16eed7210" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2025-09-16 23:49:03.3265" ThreadId="24" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/misc/validate START"
+RequestId="61c16eed7210" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2025-09-16 23:49:03.3265" ThreadId="24" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/misc/validate Request content: {'clientDate':'2025-09-16T23:49:03-04:00'}"
+RequestId="61c16eed7210" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2025-09-16 23:49:03.4529" ThreadId="24" Level="TRACE" Message="Validating access right start."
+RequestId="61c16eed7210" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2025-09-16 23:49:03.4529" ThreadId="24" Level="TRACE" Message="Validating access right end. Duration: 0 ms."
+RequestId="61c16eed7210" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2025-09-16 23:49:03.4529" ThreadId="24" Level="TRACE" Message="Updating transaction entity start."
+RequestId="61c16eed7210" UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2025-09-16 23:49:03.5160" ThreadId="24" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/misc/validate Completed in 189 ms"
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+RequestId="8d33c27b6c52" SessionId="_cbebbc84-8367-4a07-882b-32a8aaeb67fa-D17CD61A855265B2782999C19B2B123A" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2025-09-16 17:46:40.8929" ThreadId="26" Level="FATAL" 
+Message="The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout." 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)
+   --- End of inner exception stack trace ---
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.TransactionService.<>c__DisplayClassa.<<GetUserTransactionsAsync>b__5>d__c.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\TransactionService.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.TransactionService.<GetUserTransactionsAsync>d__f.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\TransactionService.cs:line 83
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.Website.ApiControllers.UserController.<GetUserTransactionGridAsync>d__1e.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.Website\ApiControllers\UserController.cs:line 229
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.Website.ApiControllers.UserController.<GetUserTransactionsAsync>d__7.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.Website\ApiControllers\UserController.cs:line 131
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+System.Net.WebException: The request was aborted: The request was canceled.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)"
+
+Trace:
+RequestId="8d33c27b6c52" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-09-16 17:45:40.8782" ThreadId="9" Level="TRACE" Message="GET https://go.myeab.com/ccm/api/users/2a623541-11cf-41d8-a5a7-ba019f05c848/transactions?dateFrom=08%2F03%2F2025&dateTo=09%2F16%2F2025&declinedOnly=false&pageSize=50&sortKey=0&sortOrder=2&startIndex=0 START"
+RequestId="8d33c27b6c52" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-09-16 17:45:40.8782" ThreadId="8" Level="TRACE" Message="GetTransactionHistoryAsync start."
+RequestId="8d33c27b6c52" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2025-09-16 17:46:40.9750" ThreadId="26" Level="TRACE" Message="GET https://go.myeab.com/ccm/api/users/2a623541-11cf-41d8-a5a7-ba019f05c848/transactions?dateFrom=08%2F03%2F2025&dateTo=09%2F16%2F2025&declinedOnly=false&pageSize=50&sortKey=0&sortOrder=2&startIndex=0 Completed in 60097 ms"
+   
+   
+RequestId="649e226f3ed8" SessionId="_cbebbc84-8367-4a07-882b-32a8aaeb67fa-9FF28C248708C57D3F88A1D0940FE3DA" UserId="502473" UserEmail="dcarr@eab.com" 
+DateTime="2025-09-16 18:12:02.6899" ThreadId="26" Level="FATAL" 
+Message="The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout." 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)
+   --- End of inner exception stack trace ---
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.TransactionService.<>c__DisplayClassa.<<GetUserTransactionsAsync>b__5>d__c.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\TransactionService.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.TransactionService.<GetUserTransactionsAsync>d__f.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\TransactionService.cs:line 83
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.Website.ApiControllers.UserController.<GetUserTransactionGridAsync>d__1e.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.Website\ApiControllers\UserController.cs:line 229
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.Website.ApiControllers.UserController.<GetUserTransactionsAsync>d__7.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.Website\ApiControllers\UserController.cs:line 131
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+System.Net.WebException: The request was aborted: The request was canceled.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+1.

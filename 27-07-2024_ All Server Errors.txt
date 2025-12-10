@@ -1,0 +1,81 @@
+27-07-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #11 Same error for User ID=502602, #2 same error for UserId="222705" UserEmail="Aherman@eab.com"
+RequestId="62625726e1fa" UserId="502602" UserEmail="KMevada@eab.com" 
+DateTime="2024-07-27 01:22:24.3471" ThreadId="13" Level="FATAL" 
+Message="Nullable object must have a value." Exception="System.InvalidOperationException: Nullable object must have a value.
+ at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1873
+
+2. #3 same error
+RequestId="56ab585c71b1" UserId="502602" UserEmail="KMevada@eab.com" 
+DateTime="2024-07-27 11:08:12.7112" ThreadId="27" Level="FATAL" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. #2 same error
+DateTime="2024-07-27 07:00:15.5700" ThreadId="1" Level="FATAL" Provider="EmailsToBudgetOwner" 
+Message="Following error occurs during sending 'Transactions waiting for approval' email: One or more errors occurred." 
+Exception="System.AggregateException: One or more errors occurred. ---> System.InvalidOperationException: Nullable object must have a value.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #1
+DateTime="2024-07-27 16:25:16.9896" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception: The network path was not found
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+RequestId="" 
+DateTime="2024-07-27 07:16:08.8035" ThreadId="9" Level="FATAL" 
+Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" 
+Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+RequestId="" DateTime="2024-07-27 16:25:14.7811" ThreadId="5" Level="FATAL" 
+Message="An exception has been raised that is likely due to a transient failure. If you are connecting to a SQL Azure database consider using SqlAzureExecutionStrategy." 
+Exception="System.Data.Entity.Core.EntityException: An exception has been raised that is likely due to a transient failure. If you are connecting to a SQL Azure database consider using SqlAzureExecutionStrategy. ---> System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The specified network name is no longer available.) ---> System.ComponentModel.Win32Exception: The specified network name is no longer available
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+

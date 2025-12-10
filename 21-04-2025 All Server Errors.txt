@@ -1,0 +1,106 @@
+*[21-04-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="fc7fd0a4f7e8" UserId="502570" UserEmail="sunilkumar@eab.com" 
+DateTime="2025-04-21 05:36:14.3754" ThreadId="17" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="fc7fd0a4f7e8" UserId="502570" UserEmail="sunilkumar@eab.com" DateTime="2025-04-21 05:36:14.3276" ThreadId="20" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/hotel/2355510 START"
+RequestId="fc7fd0a4f7e8" UserId="502570" UserEmail="sunilkumar@eab.com" DateTime="2025-04-21 05:36:14.3436" ThreadId="20" Level="TRACE" Message="User '228501' in 'User' role: Getting transaction data for id '2355510'"
+RequestId="fc7fd0a4f7e8" UserId="502570" UserEmail="sunilkumar@eab.com" DateTime="2025-04-21 05:36:14.3754" ThreadId="17" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/hotel/2355510 Completed in 48 ms"
+
+
+Transaction details:
+--------------------
+ID - 2355510
+Amount: 251.46
+OwnerId: 4878440D-4DDB-4072-95AE-40657D6D47F3
+Username: Patty Taguba
+External ID: 239535
+Discriminator: ExpenseTransactionHotel
+Last Status Change Date: 2025-04-21 05:44:43.620
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+RequestId="780a85020602" UserId="502586" UserEmail="jtracy@eab.com" 
+DateTime="2025-04-21 16:53:31.4953" ThreadId="9" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: User does not have access to the accountNumber or custid. ActorId: beefb85a-b04d-4582-97c6-0a9bdab41a53. OwnerId: 753ffe3d-920c-46ee-b246-f967983868f8. Last4Digits: 2225, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."  
+
+
+Credit Card Detail:
+----------------------
+FirstName: Zayd
+LastName: Zayd
+OwnerId: 753FFE3D-920C-46EE-B246-F967983868F8
+CustomerID: DGYXS
+Status: Active
+MaskedNumber: 556305XXXXXX2225
+EmployeeNumber: 240796X338833
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

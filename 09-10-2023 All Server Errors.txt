@@ -1,0 +1,41 @@
+[09-10-2023]
+*WebServer*
+----------------------
+CCM_Website_fatal
+----------------------
+1. [#7 time same error]
+RequestId="68cc60568fc0"
+DateTime="2023-10-09 10:41:25.1030" 
+Message="Model state validation error: Only letters and spaces are allowed in the MailTo field." Exception=""
+
+----------------------
+ERS_Website_fatal
+----------------------
+1.
+RequestId="c5806116490a" 
+DateTime="2023-10-09 09:27:47.4828" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1.
+DateTime="2023-10-09 06:48:29.1700" Provider="BalboaSupplementalImport" 
+Message="File with id f3bfb7d4-59f9-4055-aeba-061e9a1dac0d is empty." Exception=""
+
+2.
+DateTime="2023-10-09 06:48:29.1858" Provider="BalboaSupplementalImport" 
+Message="File with id dd7d4c9c-1ed6-4192-949c-5fe0cbdcb362 is empty." Exception=""
+
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------
+1.
+DateTime="2023-10-09 12:16:27.4624" 
+Message="Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" 
+Exception="Operating System: Microsoft Windows NT 10.0.20348.0

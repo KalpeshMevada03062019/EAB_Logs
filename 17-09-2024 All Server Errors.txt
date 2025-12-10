@@ -1,0 +1,110 @@
+*[17-09-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #6 Timeout error
+RequestId="0c11e0439d6c" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-09-17 01:56:48.4627" ThreadId="10" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+2. 
+RequestId="423eb880dd64" UserId="236126" UserEmail="gspencer@eab.com" 
+DateTime="2024-09-17 02:59:55.2234" ThreadId="26" Level="FATAL" 
+Message="HTTP validation error: There is no transaction with Id=2247767 to be used as a parent" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+First Name - Graham
+Last Name - Spencer
+EmailID - gspencer@eab.com
+
+Trace Logs:
+RequestId="423eb880dd64" SessionId="_d3b0b86c-2e22-4af7-857d-a934b0fbea5c-A348D2E7AE55D8F3DE4A2F76598889F9" UserId="236126" UserEmail="gspencer@eab.com" DateTime="2024-09-17 02:59:55.2234" ThreadId="25" Level="TRACE" Message="Updating transaction entity start."
+RequestId="423eb880dd64" SessionId="_d3b0b86c-2e22-4af7-857d-a934b0fbea5c-A348D2E7AE55D8F3DE4A2F76598889F9" UserId="236126" UserEmail="gspencer@eab.com" DateTime="2024-09-17 02:59:55.2234" ThreadId="26" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/inflightInternet/submit Completed in 48 ms"
+RequestId="6fb26c6ef0b8" SessionId="_d3b0b86c-2e22-4af7-857d-a934b0fbea5c-A348D2E7AE55D8F3DE4A2F76598889F9" UserId="236126" UserEmail="gspencer@eab.com" DateTime="2024-09-17 02:59:55.4761" ThreadId="26" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/unexpensed/0?sortKey=1&sortOrder=2 START"
+RequestId="6fb26c6ef0b8" SessionId="_d3b0b86c-2e22-4af7-857d-a934b0fbea5c-A348D2E7AE55D8F3DE4A2F76598889F9" UserId="236126" UserEmail="gspencer@eab.com" DateTime="2024-09-17 02:59:55.5234" ThreadId="12" Level="TRACE" Message="Get Unexpensed transactions sorted by Date Descending start."
+RequestId="6fb26c6ef0b8" SessionId="_d3b0b86c-2e22-4af7-857d-a934b0fbea5c-A348D2E7AE55D8F3DE4A2F76598889F9" UserId="236126" UserEmail="gspencer@eab.com" DateTime="2024-09-17 02:59:55.5234" ThreadId="12" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+RequestId="6fb26c6ef0b8" SessionId="_d3b0b86c-2e22-4af7-857d-a934b0fbea5c-A348D2E7AE55D8F3DE4A2F76598889F9" UserId="236126" UserEmail="gspencer@eab.com" DateTime="2024-09-17 02:59:55.5234" ThreadId="12" Level="TRACE" Message="MyLog: startIndex is: 0 AND pageSize is: 50"
+RequestId="6fb26c6ef0b8" SessionId="_d3b0b86c-2e22-4af7-857d-a934b0fbea5c-A348D2E7AE55D8F3DE4A2F76598889F9" UserId="236126" UserEmail="gspencer@eab.com" DateTime="2024-09-17 02:59:55.5395" ThreadId="12" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation end. Duration: 14 ms."
+RequestId="6fb26c6ef0b8" SessionId="_d3b0b86c-2e22-4af7-857d-a934b0fbea5c-A348D2E7AE55D8F3DE4A2F76598889F9" UserId="236126" UserEmail="gspencer@eab.com" DateTime="2024-09-17 02:59:55.8077" ThreadId="25" Level="TRACE" Message="MyLog: ExpenseGridRowsId list is: 2248713,2249168,2249593,2253866,2254158,2254159,2254405,2254406,2254407,2254408,2254782,2254783,2254855,2254856,2255172,2255173,2255174,2255403,2255428,2255458,2255569,2255570,2255571,2256145,2256216,2256515,2256516,2256685,2256686,2256771,2256772,2257107,2257416,2257417,2257418,2258413,2258414,2258631,2258977,2258978,2258979,2258980,2258981,2259204,2259205,2259602,2259603,2259604,2259605,2261019"
+RequestId="6fb26c6ef0b8" SessionId="_d3b0b86c-2e22-4af7-857d-a934b0fbea5c-A348D2E7AE55D8F3DE4A2F76598889F9" UserId="236126" UserEmail="gspencer@eab.com" DateTime="2024-09-17 02:59:55.8077" ThreadId="25" Level="TRACE" Message="MyLog: Include Allocations: False"
+RequestId="6fb26c6ef0b8" SessionId="_d3b0b86c-2e22-4af7-857d-a934b0fbea5c-A348D2E7AE55D8F3DE4A2F76598889F9" UserId="236126" UserEmail="gspencer@eab.com" DateTime="2024-09-17 02:59:55.8077" ThreadId="25" Level="TRACE" Message="MyLog: Ordered Transaction Ids list is: 2258977,2258978,2258979,2258980,2258981,2259602,2259603,2259604,2259605,2258631,2259204,2259205,2261019,2257417,2257418,2256685,2256686,2257107,2258414,2256771,2256772,2256216,2256515,2256516,2257416,2255174,2255569,2255570,2255571,2254782,2254783,2255172,2255173,2255403,2256145,2258413,2254406,2254407,2254408,2254855,2254856,2255458,2253866,2254158,2254159,2254405,2255428,2249168,2249593,2248713"
+RequestId="6fb26c6ef0b8" SessionId="_d3b0b86c-2e22-4af7-857d-a934b0fbea5c-A348D2E7AE55D8F3DE4A2F76598889F9" UserId="236126" UserEmail="gspencer@eab.com" DateTime="2024-09-17 02:59:55.8077" ThreadId="25" Level="TRACE" Message="MyLog: Owner Id is: 7cce1774-29f6-4c8a-8694-b9441437ec9f"
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+RequestId="938ba0f5a25a" SessionId="_22e14a99-e302-46c0-a49a-9675ecd055e4-2D9F6E6FF8827B3EBA5E4D67788D5199" UserId="502734" UserEmail="RKorson@eab.com" 
+DateTime="2024-09-17 09:26:19.0603" ThreadId="16" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: 5ec11699-ae3e-4317-8c17-851e08be5a57. Reason: Card not found. OwnerId: 27cd4ddc-7c9e-48d4-b0e2-03ed4cd314af. EmployeeNumber: 227486X005313" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace Logs:
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+RequestId="f432162b90a3" SessionId="_a959deb8-3f68-49fa-a2b5-709a1d1f07ed-68777189D6D0FEE0E9DEAD3EFF40C383" UserId="235139" UserEmail="TRinehart@eab.com" 
+DateTime="2024-09-17 09:49:57.7434" ThreadId="9" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-09-17 07:02:14.2317" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutApprovedTransactions" Message="Following error occurs during sending 'Go Expense: The following expenses have been approved' email to 'SGreenleaf@eab.com': transaction must have a personal amount" Exception="System.ArgumentException: transaction must have a personal amount
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.ComputeReimbursementAmount(ExpenseGridRow transaction)
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.GetBody(List`1 transactions, User user, DateTime date)
+   at ABC.ERS.EmailWorkers.Processors.EmailToUsersApproved.EmailToUsersApprovedMessageCreator.CreateMessage(EmailToUserModel emailModel)
+   at ABC.Common.Worker.Mail.MailSenderProcessor`1.<>c__DisplayClass6.<SendMail>b__2() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Mail\MailSenderProcessor.cs:line 84
+   at ABC.Common.Framework.Logger.Logger.LogActionTime[T](Func`1 action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 116
+   at ABC.Common.Worker.Mail.MailSenderProcessor`1.SendMail() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Mail\MailSenderProcessor.cs:line 83"
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-09-18 01:34:54.0783" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (503) Server Unavailable.
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------

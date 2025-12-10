@@ -1,0 +1,103 @@
+[19-02-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-02-19 06:48:10.8251" Provider="CDF3Import" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+
+DateTime="2024-02-19 06:48:10.8408" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20240123_045741SB_005978.xml'" 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Base.ExdFileProcessor.DownloadAndSaveFiles(IEnumerable`1 feedInfoModels)"
+
+2.
+DateTime="2024-02-19 15:11:42.4187" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The operation has timed out (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+TRACE:
+DateTime="2024-02-19 15:11:46.0025" Provider="WorkersHost" 
+Message="Creator: 'EmailsAttachment' disposed."
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+	
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+RequestId="" 
+DateTime="2024-02-19 01:48:14.5085" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+2. Relates to ERS_Workerhost_fatal fatal error of Email Attachment
+RequestId="" 
+DateTime="2024-02-19 15:11:46.0651" 
+Message="The request failed. The operation has timed out" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The operation has timed out ---> System.Net.WebException: The operation has timed out
+
+INFO:::
+RequestId="90192023a578" DateTime="2024-02-19 15:11:46.0651" ThreadId="47" Level="TRACE" Message="MailApiService.GetMails, MailAccount: ComData start." Provider="Mail"
+RequestId="d62ad3708dad" DateTime="2024-02-19 15:11:46.1553" ThreadId="26" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 334 ms." Provider="Comdata"
+RequestId="d62ad3708dad" DateTime="2024-02-19 15:11:46.1553" ThreadId="26" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556368XXXXXX3081','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'B','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'KATHRYN','cardLastName':'GRAY','driverLicenseNumber':'','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'231655X000906','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2020-11-01T00:00:00','cardToken':'263Z77Y7D7','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':0.00,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':30000.00,'cycleTxnLimit':999,'cycleTxnLimitUsed':0,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':999},'mailingDetails':{'mailMethod':'4','mailName':'THE ADVISORY BOARD COMPANY','mailAttentionTo':'KATHRYN GRAY','mailAddress1':'18 PARK VIEW AVE','mailAddress2':'PH05','mailCity':'JERSEY CITY','mailState':'NJ','mailZip':'07302','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="7b01c1ddcaee" DateTime="2024-02-19 15:11:46.1720" ThreadId="26" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'238110X004475','maskCardFlag':'Y'}]" Provider="Comdata"
+
+
+3.
+RequestId="30a563d7c4b4" 
+DateTime="2024-02-19 15:55:01.7097" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="ComdataMC" 
+Exception=""
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

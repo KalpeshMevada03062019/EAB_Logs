@@ -1,0 +1,80 @@
+*[18-08-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal  
+-------------------------
+1. #3 Timeout Error
+RequestId="8d03d63e22eb" UserId="235327" UserEmail="SDeLorenzo@eab.com" 
+DateTime="2024-08-18 12:16:12.0281" ThreadId="25" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-08-17 18:45:08.4772" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = LV8PR15MB6487.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965 (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. #2522 same error
+RequestId="cba4134b4f40" 
+DateTime="2024-08-18 05:52:37.4683" ThreadId="82" Level="FATAL" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+TRACE:
+RequestId="cba4134b4f40" DateTime="2024-08-18 05:52:35.2555" ThreadId="82" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'238730X004804','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="cba4134b4f40" DateTime="2024-08-18 05:52:35.2555" ThreadId="82" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="75e16ac52bd1" DateTime="2024-08-18 05:52:37.5158" ThreadId="82" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'238730X004055','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="75e16ac52bd1" DateTime="2024-08-18 05:52:37.5158" ThreadId="82" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------

@@ -1,0 +1,190 @@
+*[13-08-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal  
+-------------------------
+1. # Timeout error
+RequestId="e8b9b5a5af22" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-08-13 06:00:43.9648" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+ at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesCountAsync>d__11f.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1761
+ at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsActionAsync>d__eb`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1339  
+ at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsCountAsync>d__5c.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 468
+ at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredCountAsync>d__d6.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 516  
+  .ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredCountAsync>d__d6.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 516
+
+TRACE::
+RequestId="e8b9b5a5af22" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-13 06:00:13.8924" ThreadId="42" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/count START"
+RequestId="e8b9b5a5af22" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-13 06:00:13.8924" ThreadId="42" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/count Request content: {'amountFrom':null,'amountTo':null,'categories':[{'name':'Air Travel','id':-2,'selected':true},{'name':'Ground Transportation','id':5,'selected':false},{'name':'Hotel','id':1,'selected':true},{'name':'Food','id':4,'selected':true},{'name':'Miscellaneous','id':8,'selected':false},{'name':'Mobile Communication','id':-1,'selected':false},{'name':'Group Event','id':29,'selected':false}],'creditCards':[],'dateFrom':null,'dateTo':null,'submitDateFrom':'08/12/2024','submitDateTo':'08/12/2024','merchants':[],'transactionIds':[],'filterPurposes':[],'name':null,'notes':null,'statuses':[{'id':5,'name':'Pending Finance','selected':false},{'id':4,'name':'Approved','selected':true},{'id':7,'name':'Paid','selected':true}],'states':[{'id':3,'selected':false},{'id':2,'selected':false},{'id':1,'selected':false}],'users':[],'allCash':false,'allCreditCards':false,'allDirectBill':false}"
+RequestId="e8b9b5a5af22" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-13 06:00:13.9200" ThreadId="55" Level="TRACE" Message="Get Filtered transactions count start."
+RequestId="e8b9b5a5af22" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-13 06:00:13.9200" ThreadId="55" Level="TRACE" Message="GetTransactionsOfSpecifiedStatusesCount query compilation start."
+RequestId="e8b9b5a5af22" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-13 06:00:13.9200" ThreadId="55" Level="TRACE" Message="GetTransactionsOfSpecifiedStatusesCount query compilation end. Duration: 0 ms."
+
+Screenshot above condition for timeout error - https://prnt.sc/jHNVJArJBKKf
+
+2.
+RequestId="b8e052150ad0" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-08-13 06:05:08.1370" ThreadId="57" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+TRACE::
+RequestId="b8e052150ad0" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-13 06:04:38.1075" ThreadId="42" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/count START"
+RequestId="b8e052150ad0" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-13 06:04:38.1075" ThreadId="42" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/count Request content: {'amountFrom':null,'amountTo':null,'categories':[{'name':'Air Travel','id':-2,'selected':true},{'name':'Ground Transportation','id':5,'selected':false},{'name':'Hotel','id':1,'selected':true},{'name':'Food','id':4,'selected':true},{'name':'Miscellaneous','id':8,'selected':false},{'name':'Mobile Communication','id':-1,'selected':false},{'name':'Group Event','id':29,'selected':false}],'creditCards':[],'dateFrom':null,'dateTo':null,'submitDateFrom':'08/12/2024','submitDateTo':'08/12/2024','merchants':[],'transactionIds':[],'filterPurposes':[],'name':null,'notes':null,'statuses':[{'id':5,'name':'Pending Finance','selected':false},{'id':4,'name':'Approved','selected':true},{'id':7,'name':'Paid','selected':true}],'states':[{'id':3,'selected':false},{'id':2,'selected':false},{'id':1,'selected':false}],'users':[],'allCash':false,'allCreditCards':false,'allDirectBill':false}"
+RequestId="b8e052150ad0" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-13 06:04:38.1353" ThreadId="42" Level="TRACE" Message="Get Filtered transactions count start."
+RequestId="b8e052150ad0" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-13 06:04:38.1353" ThreadId="42" Level="TRACE" Message="GetTransactionsOfSpecifiedStatusesCount query compilation start."
+RequestId="b8e052150ad0" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-13 06:04:38.1353" ThreadId="42" Level="TRACE" Message="GetTransactionsOfSpecifiedStatusesCount query compilation end. Duration: 0 ms."
+RequestId="b8e052150ad0" UserId="502570" UserEmail="SunilKumar@eab.com" DateTime="2024-08-13 06:05:08.1370" ThreadId="57" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/count Completed in 30030 ms"
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" 
+DateTime="2024-08-13 12:11:16.0990" ThreadId="23" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: beefb85a-b04d-4582-97c6-0a9bdab41a53. Reason: Card not found. OwnerId: 6b04b6b0-9beb-4899-8a9e-b96e058ca49f. EmployeeNumber: 239252X004411" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:06.3550" ThreadId="7" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/spendingProfiles/user/6b04b6b0-9beb-4899-8a9e-b96e058ca49f/prolong START"
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:06.3713" ThreadId="10" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync.CheckSpendingProfileAsync start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:06.3713" ThreadId="7" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync.CheckSpendingProfileAsync end. Duration: 1 ms."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:06.3713" ThreadId="7" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync._comdataMcApiService.ActivateCreditCardAsync. Attempt number = 1 of 1 start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:11.7232" ThreadId="19" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync._comdataMcApiService.ActivateCreditCardAsync. Attempt number = 1 of 1 end. Duration: 5351 ms."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:11.7232" ThreadId="19" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync_operationLogService.LogAsync start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:11.7232" ThreadId="23" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync_operationLogService.LogAsync end. Duration: 3 ms."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:12.4965" ThreadId="19" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync_eventNotificationService.NotifyCreditCardActivatedAsync start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:15.2827" ThreadId="23" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync_eventNotificationService.NotifyCreditCardActivatedAsync end. Duration: 2786 ms."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:15.2883" ThreadId="8" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync.DeactivateCreditCardAsync start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:15.2929" ThreadId="8" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:16.0990" ThreadId="23" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 806 ms."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:16.3950" ThreadId="10" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/spendingProfiles/user/6b04b6b0-9beb-4899-8a9e-b96e058ca49f/prolong Completed in 10040 ms"
+
+WARN::
+RequestId="5fcc00fa7036" SessionId="_161184ed-1dd1-4f79-846f-f2ea3ec1274e-F18983DE289CE36EE80001EBDFF1E4A4" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:16.0990" ThreadId="23" Level="WARN" Message="SpendingProfileService.ActivateBlockedByLimitsCardAsync Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details." Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details.
+   at ABC.Common.Web.Helpers.HttpResponseNotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.Web\Helpers\HttpResponseNotificationService.cs:line 30
+   at ABC.CCM.BL.CreditCardService.<DeactivateCreditCardAsync>d__76.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\CreditCardService.cs:line 517
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.CreditCardService.<>c__DisplayClass3e.<<ActivateCreditCardAsync>b__37>d__4c.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\CreditCardService.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__6.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 92
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at ABC.CCM.BL.CreditCardService.<ActivateCreditCardAsync>d__4f.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\CreditCardService.cs:line 402
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.SpendingProfileService.<ActivateBlockedByLimitsCardAsync>d__7f.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\SpendingProfileService.cs:line 714"
+
+Card Detail -
+  Credit Card ID - 68051
+  EmployeeNumber - 239252X004411
+  Last4Digits - 7936
+  First6Digits - 556368
+  CardNumber - SARAH SWANSON
+  External ID - 239252
+
+2.
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" 
+DateTime="2024-08-13 12:11:16.3950" ThreadId="10" Level="FATAL" 
+Message="HTTP validation error: Looks like we are experiencing an issue. If it continues, contact the Go Team." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:06.3550" ThreadId="7" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/spendingProfiles/user/6b04b6b0-9beb-4899-8a9e-b96e058ca49f/prolong START"
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:06.3713" ThreadId="10" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync.CheckSpendingProfileAsync start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:06.3713" ThreadId="7" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync.CheckSpendingProfileAsync end. Duration: 1 ms."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:06.3713" ThreadId="7" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync._comdataMcApiService.ActivateCreditCardAsync. Attempt number = 1 of 1 start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:11.7232" ThreadId="19" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync._comdataMcApiService.ActivateCreditCardAsync. Attempt number = 1 of 1 end. Duration: 5351 ms."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:11.7232" ThreadId="19" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync_operationLogService.LogAsync start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:11.7232" ThreadId="23" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync_operationLogService.LogAsync end. Duration: 3 ms."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:12.4965" ThreadId="19" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync_eventNotificationService.NotifyCreditCardActivatedAsync start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:15.2827" ThreadId="23" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync_eventNotificationService.NotifyCreditCardActivatedAsync end. Duration: 2786 ms."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:15.2883" ThreadId="8" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync.DeactivateCreditCardAsync start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:15.2929" ThreadId="8" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:16.0990" ThreadId="23" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 806 ms."
+RequestId="5fcc00fa7036" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-08-13 12:11:16.3950" ThreadId="10" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/spendingProfiles/user/6b04b6b0-9beb-4899-8a9e-b96e058ca49f/prolong Completed in 10040 ms"
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #2 same error
+RequestId="50bd49980252" UserId="236801" UserEmail="SGreenleaf@eab.com"
+DateTime="2024-08-13 19:55:34.4830" ThreadId="36" Level="FATAL" 
+Message="The requested service, 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+at ABC.UPM.Website.ApiControllers.Profile.CreditCardController.<GetInfoAsync>d__0.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Website\ApiControllers\Profile\CreditCardController.cs:line 56
+
+2.
+RequestId="4d6bb534f503" UserId="236801" UserEmail="SGreenleaf@eab.com" 
+DateTime="2024-08-13 19:55:45.1561" ThreadId="41" Level="FATAL" 
+Message="The requested service, 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information." 
+Exception="System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+Trace::
+RequestId="d39e2a6a9d30"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:34.3252" ThreadId="19" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/creditcard/get START"
+RequestId="d39e2a6a9d30"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:34.5462" ThreadId="36" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/creditcard/get Completed in 221 ms"
+RequestId="d1bf4dbe1b09"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:40.4218" ThreadId="41" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/userPersonalInfo/get START"
+RequestId="d1bf4dbe1b09"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:40.4376" ThreadId="19" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/userPersonalInfo/get Completed in 16 ms"
+RequestId="34681ce9d651"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:41.1964" ThreadId="36" Level="TRACE" Message="POST https://go.myeab.com/upm/api/clientInfo/addClientInfo START"
+RequestId="28bf004a0983"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:41.1964" ThreadId="36" Level="TRACE" Message="The client browser info. Inner Width = 0, Inner Height = 0, Screen Width = 1280, Screen Height = 720, Device Pixel Ratio = 3, Device.AppCodeName = Mozilla, Device.AppName = Netscape, Device.AppVersion = 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36, Device.UserAgent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36, Device.Platform = Win32"
+RequestId="34681ce9d651"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:41.1964" ThreadId="36" Level="TRACE" Message="POST https://go.myeab.com/upm/api/clientInfo/addClientInfo Completed in 0 ms"
+RequestId="a1fbe457a0b8"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:41.2438" ThreadId="41" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/validation/get START"
+RequestId="a1fbe457a0b8"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:41.2438" ThreadId="36" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/validation/get Completed in 0 ms"
+RequestId="824f98aa7ba1"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:41.3071" ThreadId="36" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/userPersonalInfo/get START"
+RequestId="824f98aa7ba1"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:41.3071" ThreadId="40" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/userPersonalInfo/get Completed in 0 ms"
+RequestId="c77305457d72"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:43.1217" ThreadId="36" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/validation/get START"
+RequestId="c77305457d72"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:43.1217" ThreadId="51" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/validation/get Completed in 0 ms"
+RequestId="8679bcaeb8f0"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:45.1405" ThreadId="19" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/creditcard/get START"
+RequestId="8679bcaeb8f0"UserId="236801" UserEmail="SGreenleaf@eab.com" DateTime="2024-08-13 19:55:45.1561" ThreadId="41" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/creditcard/get Completed in 16 ms"
+RequestId="4fddfb1b81a2" SessionId="" UserId="" UserEmail="" DateTime="2024-08-13 20:02:29.9609" ThreadId="40" Level="TRACE" Message="Session sliding for user Sarah Greenleaf"
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------

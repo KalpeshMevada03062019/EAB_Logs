@@ -1,0 +1,77 @@
+*[11-02-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+
+----------------------
+UPM_Website_fatal
+----------------------
+1. 
+
+-----------------------
+EXD_OuterGateway_Fatal
+-----------------------
+1. 
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1. 
+DateTime="2024-02-11 06:48:07.1339" Provider="CDF3Import" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+
+DateTime="2024-02-11 06:48:07.1440" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20240123_045741SB_005978.xml'" 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Base.ExdFileProcessor.DownloadAndSaveFiles(IEnumerable`1 feedInfoModels)"
+
+2.
+DateTime="2024-02-11 12:47:33.0848" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An error occurred while executing the command definition. See the inner exception for details.
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+1.
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1. 
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. 
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+
+----------------------
+UPM_API_Fatal
+----------------------
+1. 
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------
+
+
+

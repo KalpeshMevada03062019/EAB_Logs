@@ -1,0 +1,103 @@
+*[29-01-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+RequestId="9300f8784673" UserId="236148" UserEmail="kcarter@eab.com" 
+DateTime="2024-01-29 08:59:31.1653"
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+
+----------------------
+UPM_Website_fatal
+----------------------
+1.
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1.
+DateTime="2024-01-29 06:48:11.4967" Provider="CDF3Import"
+Message="Object reference not set to an instance of an object."
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+   
+DateTime="2024-01-29 06:48:11.4967" ThreadId="1" Level="TRACE" Provider="CDF3Import" Message="ExdFileProcessor. Finish file 'G0210862_20240123_045741SB_005978.xml'" - THIS FILE IS NOT PROCCESSED IN ERS
+DateTime="2024-01-29 06:48:11.4967" ThreadId="1" Level="TRACE" Provider="CDF3Import" Message="ExdFileProcessor. Start file 'G0210862_20240129_013157SB_005988.xml' downloading"
+DateTime="2024-01-29 06:48:11.4967" ThreadId="1" Level="TRACE" Provider="CDF3Import" Message="ExdFileProcessor. Start saving of file 'G0210862_20240129_013157SB_005988.xml'"  
+ 
+2.
+DateTime="2024-01-29 06:48:21.9461" Provider="BalboaSupplementalImport" 
+Message="File with id bb38d1da-925a-4b5e-91fd-9ada511639f4 is empty." 
+Exception=""
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+1.
+
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1.
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1.
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+RequestId="e1a6fac7bcf7" 
+DateTime="2024-01-29 03:12:07.6430" 
+Message="Description: The underlying connection was closed: The connection was closed unexpectedly.." Provider="Comdata" 
+Exception=""
+
+
+RequestId="57ed05ae09d4" 
+DateTime="2024-01-29 04:22:54.1818" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+RequestId="de2f99b81c2e" 
+DateTime="2024-01-29 04:23:14.3479" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+RequestId="e76c6cb9d5a8" 
+DateTime="2024-01-29 16:42:18.3671" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+
+----------------------
+UPM_API_Fatal
+----------------------
+1.
+
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------
+
+
+

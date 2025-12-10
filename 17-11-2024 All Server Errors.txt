@@ -1,0 +1,128 @@
+*[17-11-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #2 same error
+RequestId="79eeb94264e0" UserId="237576" UserEmail="TMoran@eab.com" 
+DateTime="2024-11-17 09:37:10.0975" ThreadId="12" Level="FATAL" 
+Message="Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 3f2fd9fb-9f21-49de-8a3f-403b2c9682f1. UserName: EAB, CustomerID:  " 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 3f2fd9fb-9f21-49de-8a3f-403b2c9682f1. UserName: EAB, CustomerID:   (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+Card details:
++++++++++++++
+Employee Name - Thomas Moran
+Status - Active
+CustomerID - BRV61
+EmployeeNumber - 237576X004420
+
+EXD_InnerGateway_Trace
+RequestId="f2650cc9b06b" DateTime="2024-11-17 09:37:21.5915" ThreadId="82" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'DGYXS','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'THOMAS','cardLastName':'MORAN','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'237576X005987','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*9063','alertServiceFlag':true,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'THOMAS MORAN','mailAddress1':'12 Elwin Road','mailAddress2':' ','mailCity':'Natick','mailState':'MA','mailZip':'01760','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="f2650cc9b06b" DateTime="2024-11-17 09:37:21.5915" ThreadId="82" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="f2650cc9b06b" DateTime="2024-11-17 09:37:22.8300" ThreadId="82" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync end. Duration: 1240 ms." Provider="ComdataMC"
+RequestId="f2650cc9b06b" DateTime="2024-11-17 09:37:22.8300" ThreadId="82" Level="TRACE" Message="Method: addMasterCardAsync. Response params: {'addMasterCardResponse':{'status':'failure','requestUID':null,'Items':['000113','User does not have access to the accountNumber or custid'],'ItemsElementName':[6,7]}}" Provider="ComdataMC"
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+1.
+RequestId="b2f4ed6f6b86" 
+DateTime="2024-11-17 08:02:29.3730" ThreadId="8" Level="FATAL" 
+Message="Twilio. From=+18042401773, Digits=3783. Exception occurred during activation card via phone" 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)
+   --- End of inner exception stack trace ---
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.EXD.OuterGateway.Controllers.TwilioConnectionController.<ActivateCreditCard>d__18.MoveNext() in c:\git_sources\eabgo\ExternalData\ABC.EXD.OuterGateway\Controllers\TwilioConnectionController.cs:line 386
+System.Net.WebException: The request was aborted: The request was canceled.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)"
+
+Trace: (Start but not end)
+++++++++
+RequestId="b2f4ed6f6b86" 
+DateTime="2024-11-17 08:01:29.3544" ThreadId="10" Level="TRACE" 
+Message="TwilioConnectionController.ActivateCreditCard_cardManagementApiService.ActivateCreditCardViaPhone start."
+
+Info log:
++++++++++++
+RequestId="41a514f21da8" DateTime="2024-11-17 08:01:25.3342" ThreadId="7" Level="INFO" Message="Twilio. CheckUserPhoneAndCreditCard. Twilio incoming call from +18042401773"
+RequestId="41a514f21da8" DateTime="2024-11-17 08:01:25.3342" ThreadId="7" Level="INFO" Message="Start checking User Phone Number (+18042401773) and Credit Card (3783)."
+RequestId="41a514f21da8" DateTime="2024-11-17 08:01:29.2427" ThreadId="7" Level="INFO" Message="End checking User Phone Number and Credit Card. Validation result: True"
+RequestId="b2f4ed6f6b86" DateTime="2024-11-17 08:01:29.3544" ThreadId="10" Level="INFO" Message="Twilio. HandleInput. From=+18042401773, Digits=3783"
+RequestId="2b69e5997098" DateTime="2024-11-17 08:01:55.1476" ThreadId="9" Level="INFO" Message="Twilio. ValidateLastTwoCardStatuses. Twilio incoming call from +18042401773"
+RequestId="2b69e5997098" DateTime="2024-11-17 08:01:55.1476" ThreadId="9" Level="INFO" Message="Start validation of user last two cards. User input: 3783."
+RequestId="2b69e5997098" DateTime="2024-11-17 08:01:56.2625" ThreadId="9" Level="INFO" Message="End validation of user last two cards. User input: 3783. Validation result: False"
+RequestId="3791553e9f39" DateTime="2024-11-17 08:02:11.5002" ThreadId="8" Level="INFO" Message="Twilio. ValidateLastTwoCardStatuses. Twilio incoming call from +18042401773"
+RequestId="3791553e9f39" DateTime="2024-11-17 08:02:11.5002" ThreadId="8" Level="INFO" Message="Start validation of user last two cards. User input: 3783."
+RequestId="3791553e9f39" DateTime="2024-11-17 08:02:12.2766" ThreadId="8" Level="INFO" Message="End validation of user last two cards. User input: 3783. Validation result: False"
+RequestId="b2f4ed6f6b86" DateTime="2024-11-17 08:02:29.4246" ThreadId="8" Level="INFO" Message="Twilio. From=+18042401773, Digits=3783. Activation results: isSuccessfull = False, message = ''"
+RequestId="b2f4ed6f6b86" DateTime="2024-11-17 08:02:29.4246" ThreadId="8" Level="INFO" Message="Twilio. From=+18042401773, Digits=3783. Dial BalboaPhoneNumber '+12027471777'. Audio Url = https://go.myeab.com/exd/Content/Audio/unsuccessful.mp3"
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

@@ -1,0 +1,101 @@
+*[30-09-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+RequestId="9958216a44c6" SessionId="_0477c2b7-c87e-4d97-b996-b722285abd35-9267E25B8B5BB63C862A832E51D5F335" UserId="502418" UserEmail="pchamoli@eab.com" 
+DateTime="2025-09-30 07:05:28.7948" ThreadId="9" Level="FATAL" 
+Message="HTTP validation error: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 9ca9ef57-b15c-490b-b791-9d84b75f9cb0. UserName: EAB, CustomerID:  " 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card detail
+---------------------
+First Name - Brooke	
+LastName - Verbeek
+Status - 
+MaskedNumber -  
+EmployeeNumber - 
+CID - 
+
+EXD_InnerGateway_Trace
+-------------------------
+RequestId="e0dcab69ac6a" DateTime="2025-09-30 07:05:27.9883" ThreadId="17" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="e0dcab69ac6a" DateTime="2025-09-30 07:05:28.4168" ThreadId="22" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 435 ms." Provider="Comdata"
+RequestId="e0dcab69ac6a" DateTime="2025-09-30 07:05:28.4318" ThreadId="22" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556368XXXXXX9808','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'B','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'JACK','cardLastName':'SPYHALSKI','driverLicenseNumber':'','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'232123X005181','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2024-11-01T00:00:00','cardToken':'396G39W4C9','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':0.00,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':30000.00,'cycleTxnLimit':999,'cycleTxnLimitUsed':0,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':999},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'JACK SPYHALSKI','mailAddress1':'3012 SEMMES AVE','mailAddress2':'','mailCity':'RICHMOND','mailState':'VA','mailZip':'23225','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="747fb24a02a6" DateTime="2025-09-30 07:05:28.4797" ThreadId="22" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'240282X005903','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="747fb24a02a6" DateTime="2025-09-30 07:05:28.4797" ThreadId="22" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="affe7c428f42" DateTime="2025-09-30 07:05:28.5591" ThreadId="22" Level="TRACE" Message="Method: addMasterCardAsync. Request params: [{'cardDetails':[{,'custId':'DGYXS','punchCardFlag':true,'punchCardFlagSpecified':true,'cardStatus':'B','profileFlag':'Y','profileValue':'008','cardFirstName':'ELISABETH','cardLastName':'VERBEEK','driverLicenseNumber':'****','driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':'240770X338932','vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*5027','alertServiceFlag':true,'alertServiceFlagSpecified':true,'vehicleTankCapacity':null,'mailingDetails':[{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'OPERATIONS TEAM   CC','mailAddress1':'EAB','mailAddress2':'2445 M Street NW','mailCity':'Washington','mailState':'DC','mailZip':'20037','mailCountry':'USA','mailingParams':null}],'cardParams':null}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'cardAddParams':null}]" Provider="ComdataMC"
+RequestId="affe7c428f42" DateTime="2025-09-30 07:05:28.5591" ThreadId="22" Level="TRACE" Message="ComdataMcApiService.AddCreditCardAsync._mcClient.addMasterCardAsync start." Provider="ComdataMC"
+RequestId="747fb24a02a6" DateTime="2025-09-30 07:05:28.7335" ThreadId="17" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 259 ms." Provider="Comdata"
+RequestId="747fb24a02a6" DateTime="2025-09-30 07:05:28.7335" ThreadId="17" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556305XXXXXX8484','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'A','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'ALEXANDRA','cardLastName':'MOWREY','driverLicenseNumber':'****','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'240282X005903','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2028-11-01T00:00:00','cardToken':'399Z76Q7E4','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':764.92,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':29235.08,'cycleTxnLimit':999,'cycleTxnLimitUsed':13,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':986},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'ALEXANDRA MOWREY','mailAddress1':'25 HUDSON STREET','mailAddress2':'APT 912','mailCity':'JERSEY CITY','mailState':'NJ','mailZip':'07302','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="d59bf5c345f8" DateTime="2025-09-30 07:05:28.7974" ThreadId="17" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'240282X004654','maskCardFlag':'Y'}]" Provider="Comdata"
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+1.

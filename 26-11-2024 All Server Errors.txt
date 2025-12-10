@@ -1,0 +1,111 @@
+*[26-11-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-11-26 07:43:13.5575" ThreadId="1" Level="FATAL" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 239640" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '239640X005931'
+
+Card Detail:
+++++++++++++
+Name: Evan Galvan
+MaskedNumber: 556305XXXXXX5087
+EmployeeNumber: 239640X005931
+Status: Active
+CustomerId: DGYXS
+
+Trace:
+DateTime="2024-11-26 07:43:13.2879" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-11-26 07:43:13.5255" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 234 ms."
+DateTime="2024-11-26 07:43:13.5255" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 235765X005945 end. Duration: 234 ms."
+DateTime="2024-11-26 07:43:13.5255" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9001 start."
+DateTime="2024-11-26 07:43:13.5361" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 9001 end. Duration: 4 ms."
+DateTime="2024-11-26 07:43:13.5575" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 235765X005505 start."
+DateTime="2024-11-26 07:43:13.5575" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2024-11-26 07:43:13.5255" ThreadId="23" Level="TRACE" Provider="ComdataSyncOut" Message="CreditCardService.UpdateCreditCardStatusByComdataStatusAsync_comdataMcApiService.UpdateCreditCardBillingAddressAsync. end. Duration: 462 ms."
+DateTime="2024-11-26 07:43:13.5676" ThreadId="1" Level="TRACE" Provider="ComdataSyncOut" Message="Card address was updated for user. ExternalId=240059"
+DateTime="2024-11-26 07:43:13.5743" ThreadId="1" Level="TRACE" Provider="ComdataSyncOut" Message="Card address was updated for user. ExternalId=240295"
+DateTime="2024-11-26 07:43:13.5743" ThreadId="1" Level="TRACE" Provider="ComdataSyncOut" Message="Card address was updated for user. ExternalId=238723"
+DateTime="2024-11-26 07:43:13.6380" ThreadId="12" Level="TRACE" Provider="ComdataSyncOut" Message="CreditCardService.UpdateCreditCardStatusByComdataStatusAsync_comdataMcApiService.UpdateCreditCardBillingAddressAsync. start."
+DateTime="2024-11-26 07:43:13.7904" ThreadId="15" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 227 ms."
+
+Info:
+DateTime="2024-11-26 07:43:13.2715" ThreadId="1" Level="INFO" Provider="ComdataSyncIn" Message="ComDataSync Card with id = 2935 was synced."
+DateTime="2024-11-26 07:43:13.5255" ThreadId="19" Level="INFO" Provider="ComdataSyncIn" Message="Credit card with masked number 556305XXXXXX6776 has been updated with ComData info for owner with id '1e77feb6-84aa-464b-b8a6-bd6d35c792ea'"
+DateTime="2024-11-26 07:43:13.5361" ThreadId="1" Level="INFO" Provider="ComdataSyncIn" Message="ComDataSync Card with id = 9001 was synced."
+DateTime="2024-11-26 07:43:13.7904" ThreadId="19" Level="INFO" Provider="ComdataSyncIn" Message="Credit card with masked number 556368XXXXXX1242 has been updated with ComData info for owner with id '1e77feb6-84aa-464b-b8a6-bd6d35c792ea'"
+DateTime="2024-11-26 07:43:13.7904" ThreadId="1" Level="INFO" Provider="ComdataSyncIn" Message="ComDataSync Card with id = 7565 was synced."
+
+Warn:
+DateTime="2024-11-26 07:28:44.8800" ThreadId="1" Level="WARN" Provider="ComdataSyncIn" Message="SyncByItemProcessor.MergeEntity. Error for 5658." Exception="System.ArgumentException: CreditCardEntitiesMerger.MergeEntity. Card with EmployeeNumber '238057X004596' is not found in ComData. CardId: 5658.
+   at ABC.CCM.Workers.ComdataSyncIn.CreditCardEntitiesMerger.MergeEntity(Int32 creditCardId)
+   at ABC.Common.Worker.Sync.SyncByItemProcessor`1.MergeEntity(IList`1 sourceEntities) in c:\git_sources\eabgo\Common\ABC.Common.Worker\Sync\SyncByItemProcessor.cs:line 32"
+DateTime="2024-11-26 07:43:13.5676" ThreadId="9" Level="WARN" Provider="ComdataSyncOut" Message="UpdateCreditCardMailingAddress. User with id 'de16a8f4-f7a2-44ce-a1b1-43686c166068' has no active credit cards. Nothing to update." Exception=""
+DateTime="2024-11-26 07:43:13.5743" ThreadId="4" Level="WARN" Provider="ComdataSyncOut" Message="UpdateCreditCardMailingAddress. User with id '44aad70b-4153-44c3-80a1-4569d3638e31' has no active credit cards. Nothing to update." Exception=""
+DateTime="2024-11-26 07:43:13.5743" ThreadId="9" Level="WARN" Provider="ComdataSyncOut" Message="UpdateCreditCardMailingAddress. User with id '313e7834-2cbb-43f9-88b3-523abf58768d' has no active credit cards. Nothing to update." Exception=""
+DateTime="2024-11-26 07:43:15.6925" ThreadId="13" Level="WARN" Provider="ComdataSyncOut" Message="UpdateCreditCardMailingAddress. User with id '61593d0b-8b40-4c59-82aa-bce0607a4b37' has no active credit cards. Nothing to update." Exception=""
+DateTime="2024-11-26 07:43:15.7395" ThreadId="1" Level="WARN" Provider="ComdataSyncOut" Message="Error while credit card system replacement." Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Users Spending Profile is blocked or does not allows credit cards. UserId=e3442089-f4ce-4305-88d0-a8e31ebc3ddd
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

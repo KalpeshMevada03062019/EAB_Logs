@@ -1,0 +1,174 @@
+*[19-03-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+RequestId="0101c4b03abd" UserId="502418" UserEmail="pchamoli@eab.com" 
+DateTime="2025-03-19 04:14:23.7141" ThreadId="40" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="0101c4b03abd" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-03-19 04:14:23.6821" ThreadId="41" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/food/2340441 START"
+RequestId="0101c4b03abd" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-03-19 04:14:23.6979" ThreadId="41" Level="TRACE" Message="User '237675' in 'User' role: Getting transaction data for id '2340441'"
+RequestId="0101c4b03abd" UserId="502418" UserEmail="pchamoli@eab.com" DateTime="2025-03-19 04:14:23.7296" ThreadId="40" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/food/2340441 Completed in 48 ms"
+
+TransactionDetail
+---------------------
+TransactionId - https://prnt.sc/KMl2rLyfOuXf, https://prnt.sc/o3G1KmZpr0mw
+TransactionId - 2340441
+Discriminator - ExpenseTransactionFood
+OwnerId - 59CFA54F-AA1E-4995-87FA-30A1D623C998
+Status - 5 (WFA)
+Amount - 17.88
+FirstName - Megan	
+LastName - Balicki
+External ID - 238745
+FormOfPayment - Cash
+
+---------------
+ID - 05711EC2-47FC-4787-A293-B670CB1A3805
+ExternalID - 237675
+FirstName - Hunter
+LastName - Lambert
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="" 
+DateTime="2025-03-19 19:31:06.8543" ThreadId="46" Level="FATAL" 
+Message="The response received from the service didn't contain valid XML." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The response received from the service didn't contain valid XML. ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlCharCheckingReader.Read()
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read(XmlNodeType nodeType) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 170
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadXmlDeclaration(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 1083
+   --- End of inner exception stack trace ---
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadXmlDeclaration(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 1087
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadSoapFault(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 593
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ProcessWebException(WebException webException) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 934
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 831
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ValidateAndEmitRequest(IEwsHttpWebRequest& request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 724
+   at Microsoft.Exchange.WebServices.Data.MultiResponseServiceRequest`1.Execute() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\MultiResponseServiceRequest.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.ExchangeService.BindToFolder(FolderId folderId, PropertySet propertySet) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ExchangeService.cs:line 278
+   at Microsoft.Exchange.WebServices.Data.ExchangeService.BindToFolder[TFolder](FolderId folderId, PropertySet propertySet) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ExchangeService.cs:line 295
+   at ABC.EXD.InnerGateway.MailApiService.<>c__DisplayClass6.<GetInboxMailCount>b__5() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 104
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 106
+   at ABC.EXD.InnerGateway.MailApiService.GetInboxMailCount(MailAccount account) in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 109
+   at SyncInvokeGetInboxMailCount(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlCharCheckingReader.Read()
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read(XmlNodeType nodeType) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 170
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadXmlDeclaration(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 1083"
+
+
+20-03-2025
+--------------
+RequestId="" 
+DateTime="2025-03-20 01:49:54.6252" ThreadId="27" Level="FATAL" 
+Message="The response received from the service didn't contain valid XML." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The response received from the service didn't contain valid XML. ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlCharCheckingReader.Read()
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read(XmlNodeType nodeType) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 170
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadXmlDeclaration(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 1083
+   --- End of inner exception stack trace ---
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadXmlDeclaration(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 1087
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadSoapFault(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 593
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ProcessWebException(WebException webException) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 934
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 831
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ValidateAndEmitRequest(IEwsHttpWebRequest& request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 724
+   at Microsoft.Exchange.WebServices.Data.MultiResponseServiceRequest`1.Execute() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\MultiResponseServiceRequest.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.Folder.InternalFindItems[TItem](SearchFilter searchFilter, ViewBase view, Grouping groupBy) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ServiceObjects\Folders\Folder.cs:line 360
+   at Microsoft.Exchange.WebServices.Data.Folder.FindItems(SearchFilter searchFilter, ItemView view) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ServiceObjects\Folders\Folder.cs:line 381
+   at ABC.EXD.InnerGateway.MailApiService.<>c__DisplayClass3.<GetMails>b__0() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 60
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 106
+   at ABC.EXD.InnerGateway.MailApiService.GetMails(MailAccount account, Nullable`1 receivedAfterDate, String subject) in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 71
+   at SyncInvokeGetMails(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlCharCheckingReader.Read()
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read(XmlNodeType nodeType) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 170
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadXmlDeclaration(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 1083"
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

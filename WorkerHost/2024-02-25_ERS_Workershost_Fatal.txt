@@ -1,0 +1,16 @@
+DateTime="2024-02-25 06:48:06.2135" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="Object reference not set to an instance of an object." Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+DateTime="2024-02-25 06:48:06.2293" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20240123_045741SB_005978.xml'" Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Base.ExdFileProcessor.DownloadAndSaveFiles(IEnumerable`1 feedInfoModels)"
+DateTime="2024-02-25 06:48:40.2094" ThreadId="1" Level="FATAL" Provider="CDF3Parser" Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item" Exception="ABC.ERS.FileWorkers.Implementation.Exceptions.Cdf3ParserAbsentElementException: There is no 'DateOfPurchase' required item
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Parsers.Base.Cdf3FileValue`1.SetValue(T target, XElement root)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Parsers.ExpenseParsers.Cdf3ParserExpenseHotel.<>c__DisplayClass8.<Parse>b__4(Cdf3FileValue`1 x)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Parsers.ExpenseParsers.Cdf3ParserExpenseHotel.Parse(XElement element, MerchantCategory merchantCategory)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Parsers.ExpenseParsers.Cdf3ParserExpenseBase`1.ParseToCollection(XElement element, MerchantCategory merchantCategory)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Parsers.ExpenseParsers.Cdf3ParserExpenseHotel.ParseToCollection(XElement element, MerchantCategory merchantCategory)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Cdf3FilePartsProcessor.ParseTransaction(Cdf3FilePart part, User transactionOwner, List`1 merchantCategories, CreditCard autoapproveCreditCard, Purpose autoPurpose, String transactionSpecification)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Cdf3FilePartsProcessor.Run()"

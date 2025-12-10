@@ -1,0 +1,215 @@
+*[13-11-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #8 same error
+RequestId="5fb08ff9758b" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-11-13 07:03:19.4168" ThreadId="9" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: User does not have access to the accountNumber or custid. ActorId: 7b56cf05-086f-41d1-af57-d66ae5a4a8ca. OwnerId: b5f7a9b9-1530-4173-bb34-e2b971d7d3ae. Last4Digits: 1111, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Details:
+++++++++++++++
+OwnerId: B5F7A9B9-1530-4173-BB34-E2B971D7D3AE
+FirstName: Nicole
+LastName: (Curtis) Flanagan
+CustomerID: DGYXS
+MaskedNumber: 556305XXXXXX1111
+EmployeeNumber: 237688X005724
+Status: Active
+
+EXD_InnerGateway_Trace
+----------------------
+RequestId="cf46dbe72d54" DateTime="2024-11-13 07:03:17.4516" ThreadId="45" Level="TRACE" Message="ComdataMcApiService.ActivateCreditCardAsync.UpdateMasterCardStatusAsync start." Provider="ComdataMC"
+RequestId="cf46dbe72d54" DateTime="2024-11-13 07:03:17.4516" ThreadId="45" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardStatusAsync.UpdateMasterCardActionAsync start." Provider="ComdataMC"
+RequestId="cf46dbe72d54" DateTime="2024-11-13 07:03:17.4516" ThreadId="45" Level="TRACE" Message="Method: updateMasterCardAsync. Request params: [{'cardIdentifierType':[3],'cardIdentifier':['237688X005724'],'cardDetails':[{,'custId':'DGYXS','cardStatus':'A','profileFlag':null,'profileValue':null,'profileDescription':null,'cardFirstName':null,'cardLastName':null,'driverLicenseNumber':null,'driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':null,'vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardToken':null,'cardBlockReasonCode':null,'cardBlockReasonDesc':null,'cardBlockDate':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*0188','alertServiceFlag':true,'vehicleTankCapacity':null,'masterCardParams':null,'mailingDetails':[{'mailMethod':null,'mailName':null,'mailAttentionTo':'NICOLE CURTIS','mailAddress1':'5 Cleaveland Ave','mailAddress2':' ','mailCity':'Canton','mailState':'NY','mailZip':'13617','mailCountry':'USA','mailingParams':null}]}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'updateCardParams':null}]" Provider="ComdataMC"
+RequestId="cf46dbe72d54" DateTime="2024-11-13 07:03:17.4516" ThreadId="45" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardActionAsync._mcClient.updateMasterCardAsync start." Provider="ComdataMC"
+RequestId="d0de323172f9" DateTime="2024-11-13 07:03:17.4886" ThreadId="28" Level="TRACE" Message="MailApiService.SendMail, MailAccounts: ExpenseHelp, AbcMailMessage:   start." Provider="Mail"
+RequestId="d0de323172f9" DateTime="2024-11-13 07:03:17.8395" ThreadId="28" Level="TRACE" Message="SendMail. Mail message has beens sent using account ExpenseHelp. Mail content: {'Attachments':[{'Content':null,'ContentId':'credit_card.png','ContentType':null,'ExternalId':null,'IsInline':true,'Name':'credit_card.png','Size':0},{'Content':null,'ContentId':'chat_bubbles.png','ContentType':null,'ExternalId':null,'IsInline':true,'Name':'chat_bubbles.png','Size':0},{'Content':null,'ContentId':'question.png','ContentType':null,'ExternalId':null,'IsInline':true,'Name':'question.png','Size':0},{'Content':null,'ContentId':'lifesaver.png','ContentType':null,'ExternalId':null,'IsInline':true,'Name':'lifesaver.png','Size':0},{'Content':null,'ContentId':'eab_go_logo_new.png','ContentType':null,'ExternalId':null,'IsInline':true,'Name':'eab_go_logo_new.png','Size':0}],'Bcc':[],'CC':[],'DateTimeReceived':'0001-01-01T00:00:00','From':null,'HtmlBody':'<!DOCTYPE HTML PUBLIC \'-//W3C//DTD HTML 3.2 Final//EN\'>\r\n<html>\r\n<head>\r\n    <title>ABC</title>\r\n    <meta http-equiv=\'Content-Type\' content=\'text/html; charset=utf-8\'>\r\n    <meta name=\'viewport\' content=\'width=device-width\' />\r\n    <style type=\'text/css\'>\r\n\t    * {\r\n\t\t    -webkit-text-resize: 100%;\r\n\t\t    -webkit-text-size-adjust: none;\r\n\t\t    text-resize: 100%;\r\n\t    }\r\n\r\n\t    table {\r\n\t\t    border-collapse: collapse;\r\n\t\t    margin: 0 auto;\r\n\t    }\r\n\r\n\t    a[href] {\r\n\t\t    color: #00B1B0 !important;\r\n\t    }\r\n\r\n\t    span a,\r\n\t    span.MsoHyperlink {\r\n\t\t    color: #00B1B0 !important;\r\n\t\t    text-decoration: none !important;\r\n\t    }\r\n\r\n\t\t.innerText {\r\n\t\t    margin-bottom: 15px;\r\n\t\t    text-align: justify;\r\n\t    }\r\n\r\n\t    .mainLink {\r\n\t\t    color: #00B1B0 !important;\r\n\t\t    text-decoration: none;\r\n\t    }\r\n\t\t\r\n\t    .mainLink:visited {\r\n\t\t    color: #00B1B0 !important;\r\n\t\t    text-decoration: none;\r\n\t    }\r\n\r\n\t\t@media (min-width: 615px) {\r\n\t\t    .footerLinkIcon {\r\n\t\t\t    display: table-cell;\r\n\t\t\t    vertical-align: text-top;\r\n\t\t    }\r\n\t    }\r\n\r\n\t    @media (max-width: 614px) {\r\n\t\t    .footerLinkIcon {\r\n\t\t\t    display: none;\r\n\t\t    }\r\n\t    }\r\n\r\n\t    .bigIcon {\r\n\t\t    width: 35px;\r\n\t\t    height: 35px;\r\n\t\t    display: block;\r\n\t\t    margin-right: 10px;\r\n\t    }\r\n\r\n\t\t.footerLink {\r\n\t\t    display: block;\r\n\t\t    color: #00B1B0;\r\n\t\t    font-weight: bold;\r\n\t\t    font-size: 10pt;\r\n\t    }\r\n\r\n\t    .footerLink:visited {\r\n\t\t    display: block;\r\n\t\t    color: #00B1B0 !important;\r\n\t\t    font-weight: bold;\r\n\t\t    font-size: 10pt;\r\n\t\t    text-decoration: none !important;\r\n\t    }\r\n\r\n\t\t.eabLogo {\r\n\t\t    width: 180px;\r\n\t\t    height: 56px;\r\n\t    }\r\n\r\n\t    .empty {\r\n\t\t    width: 10px;\r\n\t\t    min-width: 10px;\r\n\t\t}\r\n\r\n\t    .letterTHOutlook {\r\n\t\t    border: 1px solid #555555;\r\n\t\t    background: #ddd;\r\n\t\t    text-align: center;\r\n\t\t    padding: 7px;\r\n\t    }\r\n\r\n\t    .OutlookIconTD {\r\n\t\t    padding: 20px 4px 20px 20px;\r\n\t\t    vertical-align: text-top;\r\n\t    }\r\n\r\n\t    .OutlookTextTD {\r\n\t\t    padding: 20px 20px 20px 6px;\r\n\t\t    vertical-align: text-top;\r\n\t    }\r\n\r\n\t    td p {\r\n\t\t    word-break: break-all;\r\n\t\t    margin: 0;\r\n\t\t    padding: 0;\r\n\t    }\r\n    </style>\r\n</head>\r\n<body>\r\n\r\n<table style=\'width: 100%;\'>\r\n\t<tr style=\'background: #c8102e;\'>\r\n\t\t<td colspan=\'9\' align=\'center\' valign=\'top\'>\r\n\t\t\t<table height=\'46\' valign=\'top\' style=\'text-align: center; vertical-align: top; height: 46px;\'>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td style=\'text-align: center; padding: 0 5px 5px 0;\'>\r\n\t\t\t\t\t\t<div style=\'width: 22px; height: 16px; margin-bottom: 4px; display: flex; align-content: center;\'>\r\n\t\t\t\t\t\t\t<img style=\'width: 22px; height: 16px; display: block; margin-top: 4px;\' src=\'cid:credit_card.png\' alt=\'Credit Card\' />\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t\t<td valign=\'middle\' style=\'padding: 10px 6px; color: white; font-size: 9pt; font-weight: 500; font-family: Arial, Helvetica, sans-serif; line-height: normal; vertical-align: middle;\'>Rejected Expense</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td class=\'empty\'></td>\r\n\t\t<td colspan=\'7\'>\r\n\t\t\t<div style=\'width: 100%; margin: 15px 0 0; color: #555555; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;\'>\r\n\r\n\t\t\t\t<div class=\'innerText\'>Hi, Amy Bourne.</div>\r\n\t\t\t\t<div class=\'innerText\'><span style=\'font-weight: bold;\'>The following expense(s) has been rejected.</span> Please review the rejection reason below and <a class=\'mainLink\' style=\'color: #00B1B0; text-decoration: none;\' href=\'https://go.myeab.com/expense\'>re-submit the expense.</a></div>\r\n\t\t\t</div>\r\n\t\t</td>\r\n\t\t<td class=\'empty\'></td>\r\n\t</tr>\r\n\r\n\t<tr>\r\n\t\t<th class=\'empty\'></th>\r\n\t\t<th class=\'letterTHOutlook\' valign=\'middle\' align=\'center\' style=\'width: 12%;\'>\r\n\t\t\t<table height=\'28\' valign=\'middle\' align=\'center\' width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\'>\r\n\t\t\t\t<tr style=\'color: #555555; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold; line-height: 14px;\'>\r\n\t\t\t\t\t<td height=\'28\' style=\'font-size: 0; width: 8px;\'></td>\r\n\t\t\t\t\t<td hheight=\'28\' align=\'center\' style=\'text-align: center;\'>Date</td>\r\n\t\t\t\t\t<td height=\'28\' style=\'font-size: 0; width: 8px;\'></td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t</th>\r\n\t\t<th colspan=\'2\' class=\'letterTHOutlook\' valign=\'middle\' align=\'center\' style=\'width: 24%;\'>\r\n\t\t\t<table height=\'28\' valign=\'middle\' align=\'center\' width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\'>\r\n\t\t\t\t<tr style=\'color: #555555; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; line-height: 14px; font-weight: bold;\'>\r\n\t\t\t\t\t<td height=\'28\' style=\'font-size: 0; width: 8px;\'></td>\r\n\t\t\t\t\t<td height=\'28\' align=\'center\' style=\'text-align: center;\'>Merchant</td>\r\n\t\t\t\t\t<td height=\'28\' style=\'font-size: 0; width: 8px;\'></td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t</th>\r\n\t\t<th class=\'letterTHOutlook\' valign=\'middle\' align=\'center\' style=\'width: 12%;\'>\r\n\t\t\t<table height=\'28\' valign=\'middle\' align=\'center\' width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\'>\r\n\t\t\t\t<tr style=\'color: #555555; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; line-height: 14px; font-weight: bold;\'>\r\n\t\t\t\t\t<td height=\'28\' style=\'font-size: 0; width: 8px;\'></td>\r\n\t\t\t\t\t<td height=\'28\' align=\'center\' style=\'text-align: center;\'>Business Amount</td>\r\n\t\t\t\t\t<td height=\'28\' style=\'font-size: 0; width: 8px;\'></td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t</th>\r\n\t\t<th colspan=\'3\' class=\'letterTHOutlook\' valign=\'middle\' align=\'center\' style=\'width: 48%;\'>\r\n\t\t\t<table height=\'28\' valign=\'middle\' align=\'center\' width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\'>\r\n\t\t\t\t<tr style=\'color: #555555; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; line-height: 14px; font-weight: bold;\'>\r\n\t\t\t\t\t<td height=\'28\' style=\'font-size: 0; width: 8px;\'></td>\r\n\t\t\t\t\t<td height=\'28\' align=\'center\' style=\'text-align: center; color: #c8102e;\'>\r\n\t\t\t\t\t\tRejection Reason\r\n\t\t\t\t\t</td>\r\n\t\t\t\t\t<td height=\'28\' style=\'font-size: 0; width: 8px;\'></td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t</th>\r\n\t\t<th class=\'empty\'></th>\r\n\t</tr>\r\n\t<tr style=\'height: 100%;\'>\r\n\t<td></td>\r\n\t<td valign=\'top\' style=\'border-right: 1px solid #555555; border-left: 1px solid #555555; text-align: center; background-color: #ffffff;\'>\r\n\t\t<table width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\' style=\'background-color: #ffffff;\'>\r\n\t\t\t<tr>\r\n\t\t\t\t<td style=\'font-size: 0; line-height: 0;\' height=\'5\'></td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td width=\'5\'></td>\r\n\t\t\t\t<td align=\'center\' style=\'line-height: 16px; text-align: center;\'>\r\n\t\t\t\t\t<font face=\'Arial, Helvetica, sans-serif\' color=\'#555555\' size=\'1\' style=\'font-size: 10pt; line-height: 15px\'>11/05/2024</font>\r\n\t\t\t\t</td>\r\n\t\t\t\t<td width=\'5\'></td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td style=\'font-size: 0; line-height: 0;\' height=\'5\'></td>\r\n\t\t\t</tr>\r\n\t\t</table>\r\n\t</td>\r\n\t<td colspan=\'2\' valign=\'top\' style=\'border-right: 1px solid #555555; text-align: left; background-color: #ffffff;\'>\r\n\t\t<table width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\' style=\'background-color: #ffffff;\'>\r\n\t\t\t<tr>\r\n\t\t\t\t<td style=\'font-size: 0; line-height: 0;\' height=\'5\'></td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<table width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\'>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td width=\'5\'></td>\r\n\t\t\t\t\t\t\t<td align=\'left\' style=\'line-height: 15px; text-align: left;\'>\r\n\t\t\t\t\t\t\t\t<font face=\'Arial, Helvetica, sans-serif\' color=\'#555555\' size=\'1\' style=\'font-size: 10pt; line-height: 15px\'>TWILIO SENDGRID SAN FRANCISCO CA</font>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t<td width=\'5\'></td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td style=\'font-size: 0; line-height: 0;\' height=\'5\'></td>\r\n\t\t\t</tr>\r\n\t\t</table>\r\n\t</td>\r\n\t<td valign=\'top\' style=\'border-right: 1px solid #555555; text-align: center; background-color: #ffffff;\'>\r\n\t\t<table width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\' style=\'background-color: #ffffff;\'>\r\n\t\t\t<tr>\r\n\t\t\t\t<td style=\'font-size: 0; line-height: 0;\' height=\'5\'></td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td>\r\n\t\t\t\t\t<table width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\'>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td width=\'5\'></td>\r\n\t\t\t\t\t\t\t<td align=\'center\' style=\'line-height: 15px; text-align: center;\'>\r\n\t\t\t\t\t\t\t\t<font face=\'Arial, Helvetica, sans-serif\' color=\'#555555\' size=\'1\' style=\'font-size: 10pt; line-height: 15px\'>89.95</font>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t<td width=\'5\'></td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td style=\'font-size: 0; line-height: 0;\' height=\'5\'></td>\r\n\t\t\t</tr>\r\n\t\t</table>\r\n\t</td>\r\n\t<td colspan=\'3\' valign=\'top\' style=\'border-right: 1px solid #555555; text-align: left; background-color: #ffffff;\'>\r\n\t\t<table width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\' style=\'background-color: #ffffff;\'>\r\n\t\t\t<tr>\r\n\t\t\t\t<td style=\'font-size: 0; line-height: 0;\' height=\'5\'></td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td valign=\'top\'>\r\n\t\t\t\t\t<table width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\' bgcolor=\'#ffffff\'>\r\n\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t<td width=\'5\'></td>\r\n\t\t\t\t\t\t\t<td align=\'left\' style=\'line-height: 15px; text-align: left;\'>\r\n\t\t\t\t\t\t\t\t<p><font face=\'Arial, Helvetica, sans-serif\' color=\'#3c5560\' size=\'1\' style=\'font-size: 10pt; line-height: 15px\'>Hi Amy,\n\nCould you please provide some more information about this expense.\n\nThank you.</font></p>\r\n\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t<td width=\'5\'></td>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t</table>\r\n\t\t\t\t</td>\r\n\t\t\t</tr>\r\n\t\t\t<tr>\r\n\t\t\t\t<td style=\'font-size: 0; line-height: 0;\' height=\'5\'></td>\r\n\t\t\t</tr>\r\n\t\t</table>\r\n\t</td>\r\n\t<td class=\'empty\'></td>\r\n</tr>\r\n\r\n\r\n\r\n\t<tr>\r\n\t\t<td class=\'empty\'></td>\r\n\t\t<td colspan=\'7\' style=\'border-top: 1px solid #555555\'></td>\r\n\t\t<td class=\'empty\'></td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td class=\'empty\'></td>\r\n\t\t<td colspan=\'7\'>\r\n\t\t\t<div style=\'width: 100%; margin: 15px 0 30px; color: #555555; font-family: Arial, Helvetica, sans-serif; font-size: 10pt;\'>\r\n\t\t\t\t<div class=\'innerText\'>Please reach out to <a class=\'mainLink\' style=\'color: #00B1B0; text-decoration: none;\' href=\'mailto:go@eab.com\'>go@eab.com</a> if you have any questions.</div>\r\n\t\t\t</div>\r\n\t\t</td>\r\n\t\t<td class=\'empty\'></td>\r\n\t</tr>\r\n\t<tr style=\'background: #ddd;\'>\r\n\t\t<td class=\'empty\'></td>\r\n\t\t<td colspan=\'7\' align=\'center\' valign=\'top\'>\r\n\r\n\t\t\t<table valign=\'top\' widht=\'214\' style=\'text-align: center; border-bottom: 1px solid #bbb;\'>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\'OutlookIconTD\' align=\'left\' valign=\'top\' style=\'width: 45px; vertical-align: top;\'>\r\n\t\t\t\t\t\t<div>\r\n\t\t\t\t\t\t\t<img class=\'bigIcon\' src=\'cid:chat_bubbles.png\' alt=\'Chat\'/>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t\t<td class=\'OutlookTextTD\' align=\'left\' valign=\'top\' style=\'line-height: 16px; vertical-align: top;\'>\r\n\t\t\t\t\t\t<a class=\'footerLink\' style=\'color: #00B1B0 !important; text-decoration: none; font: 10.5pt Arial, Helvetica, sans-serif;\' href=\'mailto:go@eab.com\'>Email Us</a>\r\n\t\t\t\t\t\t<div style=\'color: #a3a3a3; font: 9pt  Arial, Helvetica, sans-serif;\'>Tell us how it is</div>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t\t<td class=\'OutlookIconTD\' align=\'left\' valign=\'top\' style=\'width: 45px; vertical-align: top;\'>\r\n\t\t\t\t\t\t<img class=\'bigIcon\' src=\'cid:question.png\' alt=\'question\'/>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t\t<td class=\'OutlookTextTD\' align=\'left\' valign=\'top\' style=\'line-height: 16px; vertical-align: top;\'>\r\n\t\t\t\t\t\t<a class=\'footerLink\' style=\'color: #00B1B0 !important; text-decoration: none; font: 10.5pt Arial, Helvetica, sans-serif;\' href=\'https://go.myeab.com/help/\'>Go Help</a>\r\n\t\t\t\t\t\t<div style=\'color: #a3a3a3; font: 9pt  Arial, Helvetica, sans-serif;\'>Get answers</div>\r\n\r\n\t\t\t\t\t</td>\r\n\t\t\t\t\t<td class=\'OutlookIconTD\' align=\'left\' valign=\'top\' style=\'width: 45px; vertical-align: top;\'>\r\n\t\t\t\t\t\t<div class=\'footerLinkIcon\'>\r\n\t\t\t\t\t\t\t<img class=\'bigIcon\' src=\'cid:lifesaver.png\' alt=\'Lifesaver\'/>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t\t<td class=\'OutlookTextTD\' align=\'left\' valign=\'top\' style=\'line-height: 16px; vertical-align: top;\'>\r\n\t\t\t\t\t\t<a class=\'footerLink\' style=\'color: #00B1B0 !important; text-decoration: none; font: 10.5pt Arial, Helvetica, sans-serif;\' href=\'tel:202-747-1777\'>202-747-1777</a>\r\n\t\t\t\t\t\t<div style=\'color: #a3a3a3; font: 9pt  Arial, Helvetica, sans-serif;\'>We're here 24/7</div>\r\n\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\r\n\t\t</td>\r\n\t\t<td class=\'empty\'></td>\r\n\t</tr>\r\n\t<tr style=\'background: #ddd;\'>\r\n\t\t<td class=\'empty\'></td>\r\n\t\t<td colspan=\'7\' class=\'logoTD\' align=\'center\' valign=\'top\' style=\'line-height: 24px; vertical-align: top;\'>\r\n\t\t\t<div style=\'width: 180px; height: 56px; margin: auto; padding-bottom: 14px;\'>\r\n\t\t\t\t<img class=\'eabLogo\' style=\'display: block; margin-top: 10px;\' src=\'cid:eab_go_logo_new.png\' alt=\'EAB Logo\'/>\r\n\t\t\t</div>\r\n\r\n\t\t</td>\r\n\t\t<td class=\'empty\'></td>\r\n\t</tr>\r\n</table>\r\n\r\n</body>\r\n</html>','Id':null,'ReplyTo':[],'Subject':'Go Expense: The following expenses have been rejected','To':[{'Address':'amy.bourne@seramount.com','Name':'Amy Bourne'}]}" Provider="Mail"
+RequestId="d0de323172f9" DateTime="2024-11-13 07:03:17.8395" ThreadId="28" Level="TRACE" Message="MailApiService.SendMail, MailAccounts: ExpenseHelp, AbcMailMessage:   end. Duration: 350 ms." Provider="Mail"
+RequestId="cf46dbe72d54" DateTime="2024-11-13 07:03:19.2596" ThreadId="85" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardActionAsync._mcClient.updateMasterCardAsync end. Duration: 1813 ms." Provider="ComdataMC"
+RequestId="cf46dbe72d54" DateTime="2024-11-13 07:03:19.2596" ThreadId="85" Level="TRACE" Message="Method: updateMasterCardAsync. Response params: {'updateMasterCardResponse':{'status':'failure','Items':['000113','User does not have access to the accountNumber or custid'],'ItemsElementName':[5,6]}}" Provider="ComdataMC"
+RequestId="cf46dbe72d54" DateTime="2024-11-13 07:03:19.2596" ThreadId="85" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardStatusAsync.UpdateMasterCardActionAsync end. Duration: 1813 ms." Provider="ComdataMC"
+RequestId="cf46dbe72d54" DateTime="2024-11-13 07:03:19.2596" ThreadId="85" Level="TRACE" Message="ComdataMcApiService.ActivateCreditCardAsync.UpdateMasterCardStatusAsync end. Duration: 1813 ms." Provider="ComdataMC"
+
+
+2. #3 same error
+RequestId="c6b982f9b45d" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-11-13 07:03:55.0729" ThreadId="11" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: 7b56cf05-086f-41d1-af57-d66ae5a4a8ca. Reason: User does not have access to the accountNumber or custid. OwnerId: b5f7a9b9-1530-4173-bb34-e2b971d7d3ae. EmployeeNumber: 237688X003409. CustomerID: BRV61" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Details:
+++++++++++++++
+OwnerId: B5F7A9B9-1530-4173-BB34-E2B971D7D3AE
+FirstName: Nicole
+LastName: (Curtis) Flanagan
+CustomerID: BR
+MaskedNumber: 556368XXXXXX7796
+EmployeeNumber: 237688X003409
+Status: Blocked
+
+EXD_InnerGateway_Trace
+----------------------
+RequestId="d0de323172f9" DateTime="2024-11-13 07:03:53.0848" ThreadId="33" Level="TRACE" Message="MailApiService.GetMails, MailAccount: ComData start." Provider="Mail"
+RequestId="d0de323172f9" DateTime="2024-11-13 07:03:53.4528" ThreadId="33" Level="TRACE" Message="MailApiService.GetMails, MailAccount: ComData end. Duration: 363 ms." Provider="Mail"
+RequestId="2a4d0bdba6c8" DateTime="2024-11-13 07:03:53.7061" ThreadId="33" Level="TRACE" Message="ComdataMcApiService.DeactivateCreditCardAsync.UpdateMasterCardStatusAsync start." Provider="ComdataMC"
+RequestId="2a4d0bdba6c8" DateTime="2024-11-13 07:03:53.7061" ThreadId="33" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardStatusAsync.UpdateMasterCardActionAsync start." Provider="ComdataMC"
+RequestId="2a4d0bdba6c8" DateTime="2024-11-13 07:03:53.7061" ThreadId="33" Level="TRACE" Message="Method: updateMasterCardAsync. Request params: [{'cardIdentifierType':[3],'cardIdentifier':['237688X003409'],'cardDetails':[{,'custId':'BRV61','cardStatus':'B','profileFlag':null,'profileValue':null,'profileDescription':null,'cardFirstName':null,'cardLastName':null,'driverLicenseNumber':null,'driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':null,'vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardToken':null,'cardBlockReasonCode':null,'cardBlockReasonDesc':null,'cardBlockDate':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*0188','alertServiceFlag':true,'vehicleTankCapacity':null,'masterCardParams':null,'mailingDetails':[{'mailMethod':null,'mailName':null,'mailAttentionTo':null,'mailAddress1':null,'mailAddress2':null,'mailCity':null,'mailState':null,'mailZip':null,'mailCountry':null,'mailingParams':null}]}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'updateCardParams':null}]" Provider="ComdataMC"
+RequestId="2a4d0bdba6c8" DateTime="2024-11-13 07:03:53.7061" ThreadId="33" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardActionAsync._mcClient.updateMasterCardAsync start." Provider="ComdataMC"
+RequestId="2a4d0bdba6c8" DateTime="2024-11-13 07:03:54.9300" ThreadId="31" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardActionAsync._mcClient.updateMasterCardAsync end. Duration: 1218 ms." Provider="ComdataMC"
+RequestId="2a4d0bdba6c8" DateTime="2024-11-13 07:03:54.9302" ThreadId="31" Level="TRACE" Message="Method: updateMasterCardAsync. Response params: {'updateMasterCardResponse':{'status':'failure','Items':['000113','User does not have access to the accountNumber or custid'],'ItemsElementName':[5,6]}}" Provider="ComdataMC"
+RequestId="2a4d0bdba6c8" DateTime="2024-11-13 07:03:54.9302" ThreadId="31" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardStatusAsync.UpdateMasterCardActionAsync end. Duration: 1218 ms." Provider="ComdataMC"
+RequestId="2a4d0bdba6c8" DateTime="2024-11-13 07:03:54.9302" ThreadId="31" Level="TRACE" Message="ComdataMcApiService.DeactivateCreditCardAsync.UpdateMasterCardStatusAsync end. Duration: 1218 ms." Provider="ComdataMC"
+RequestId="d0de323172f9" DateTime="2024-11-13 07:04:53.0824" ThreadId="28" Level="TRACE" Message="MailApiService.GetMails, MailAccount: ComData start." Provider="Mail"
+RequestId="d0de323172f9" DateTime="2024-11-13 07:04:53.5576" ThreadId="28" Level="TRACE" Message="MailApiService.GetMails, MailAccount: ComData end. Duration: 479 ms." Provider="Mail"
+RequestId="64b1c38ba902" DateTime="2024-11-13 07:04:58.9320" ThreadId="58" Level="TRACE" Message="ComdataMcApiService.DeactivateCreditCardAsync.UpdateMasterCardStatusAsync start." Provider="ComdataMC"
+RequestId="64b1c38ba902" DateTime="2024-11-13 07:04:58.9320" ThreadId="58" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardStatusAsync.UpdateMasterCardActionAsync start." Provider="ComdataMC"
+RequestId="64b1c38ba902" DateTime="2024-11-13 07:04:58.9320" ThreadId="58" Level="TRACE" Message="Method: updateMasterCardAsync. Request params: [{'cardIdentifierType':[3],'cardIdentifier':['237688X003409'],'cardDetails':[{,'custId':'BRV61','cardStatus':'B','profileFlag':null,'profileValue':null,'profileDescription':null,'cardFirstName':null,'cardLastName':null,'driverLicenseNumber':null,'driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':null,'vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardToken':null,'cardBlockReasonCode':null,'cardBlockReasonDesc':null,'cardBlockDate':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*0188','alertServiceFlag':true,'vehicleTankCapacity':null,'masterCardParams':null,'mailingDetails':[{'mailMethod':null,'mailName':null,'mailAttentionTo':null,'mailAddress1':null,'mailAddress2':null,'mailCity':null,'mailState':null,'mailZip':null,'mailCountry':null,'mailingParams':null}]}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'updateCardParams':null}]" Provider="ComdataMC"
+RequestId="64b1c38ba902" DateTime="2024-11-13 07:04:58.9320" ThreadId="58" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardActionAsync._mcClient.updateMasterCardAsync start." Provider="ComdataMC"
+RequestId="64b1c38ba902" DateTime="2024-11-13 07:04:59.7272" ThreadId="28" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardActionAsync._mcClient.updateMasterCardAsync end. Duration: 797 ms." Provider="ComdataMC"
+RequestId="64b1c38ba902" DateTime="2024-11-13 07:04:59.7272" ThreadId="28" Level="TRACE" Message="Method: updateMasterCardAsync. Response params: {'updateMasterCardResponse':{'status':'failure','Items':['000113','User does not have access to the accountNumber or custid'],'ItemsElementName':[5,6]}}" Provider="ComdataMC"
+RequestId="64b1c38ba902" DateTime="2024-11-13 07:04:59.7272" ThreadId="28" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardStatusAsync.UpdateMasterCardActionAsync end. Duration: 798 ms." Provider="ComdataMC"
+RequestId="64b1c38ba902" DateTime="2024-11-13 07:04:59.7272" ThreadId="28" Level="TRACE" Message="ComdataMcApiService.DeactivateCreditCardAsync.UpdateMasterCardStatusAsync end. Duration: 798 ms." Provider="ComdataMC"
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+RequestId="2fafa05f883a" UserId="238474" UserEmail="ASchwartz@eab.com" 
+DateTime="  " ThreadId="17" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: SHUTDOWN is in progress.
+Login failed for user 'goadmin'.
+Cannot continue the execution because the session is in the kill state.
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-11-13 06:50:01.4917" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+2.
+DateTime="2024-11-13 06:50:01.4917" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241022_123338SB_006535.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+3.
+DateTime="2024-11-13 06:50:01.6814" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+4.
+DateTime="2024-11-13 06:50:01.6814" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+5.
+DateTime="2024-11-13 06:50:01.7137" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+
+6.
+DateTime="2024-11-13 06:50:01.7137" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_073936SB_006538.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+7.
+DateTime="2024-11-13 06:50:18.2414" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+
+8.
+DateTime="2024-11-13 06:50:18.2414" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+9.
+DateTime="2024-11-13 06:50:36.0374" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+
+10.
+DateTime="2024-11-13 06:50:36.0374" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541tryagain.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+11.
+DateTime="2024-11-13 06:50:52.9607" ThreadId="1" Level="FATAL" Provider="CDF3Parser" 
+Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item" 
+Exception="ABC.ERS.FileWorkers.Implementation.Exceptions.Cdf3ParserAbsentElementException: There is no 'DateOfPurchase' required item
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-11-13 17:07:59.9134" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Cannot open database "ABC-CCM" requested by the login. The login failed.
+Login failed for user 'goadmin'.
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="19f8a727b2af" 
+DateTime="2024-11-13 10:41:55.4010" ThreadId="49" Level="FATAL" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+
+2.
+RequestId="6fbe1d062581" 
+DateTime="2024-11-13 13:42:19.2926" ThreadId="14" Level="FATAL" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="ComdataMC" 
+Exception=""
+
+3.
+RequestId="973f23969925" 
+DateTime="2024-11-13 16:09:29.1587" ThreadId="14" Level="FATAL" 
+Message="Description: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.." Provider="Comdata" 
+Exception=""
+
+UPM_Api_Fatal
+-------------------------
+1. 
+RequestId="" 
+DateTime="2024-11-13 17:08:02.3660" ThreadId="18" Level="FATAL" 
+Message="An exception has been raised that is likely due to a transient failure. If you are connecting to a SQL Azure database consider using SqlAzureExecutionStrategy." 
+Exception="System.Data.Entity.Core.EntityException: An exception has been raised that is likely due to a transient failure. If you are connecting to a SQL Azure database consider using SqlAzureExecutionStrategy. ---> System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The specified network name is no longer available.) ---> System.ComponentModel.Win32Exception: The specified network name is no longer available
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

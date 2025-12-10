@@ -1,0 +1,56 @@
+RequestId="5bc8dd033989" SessionId="_8b746c13-92ec-4704-b17c-2137ae9bfb87-6F9631EB12CE3D05F4A4FE1370E3EB98" UserId="238803" UserEmail="BPolen@eab.com" DateTime="2024-11-06 10:43:56.4917" ThreadId="45" Level="FATAL" Message="Rule execution error: 'Error: 'ExpenseItem:9/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1' Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:9/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:9/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExc...)."
+RequestId="b9d04a0f4a46" SessionId="_8b746c13-92ec-4704-b17c-2137ae9bfb87-51AA6F3887A822FD54929366BA4DB571" UserId="240677" UserEmail="AKanodia@eab.com" DateTime="2024-11-06 13:19:06.6295" ThreadId="25" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' Message = 'Cannot read properties of undefined (reading 'split')'" Exception="System.Exception: TypeError: Cannot read properties of undefined (reading 'split')
+    at getFileExtension (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13296:42)
+    at Object.isAttachmentAnImage (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13301:24)
+    at openCarouselOrDownload (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:22061:37)
+    at https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:20711:25
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:364550
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:302569)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:304045
+    at w (https://cdn.freshmarketer.com/250342/873272.js:3:343444)"
+RequestId="7489ab42771a" SessionId="_8b746c13-92ec-4704-b17c-2137ae9bfb87-51AA6F3887A822FD54929366BA4DB571" UserId="240677" UserEmail="AKanodia@eab.com" DateTime="2024-11-06 13:19:07.0990" ThreadId="34" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' Message = 'Cannot read properties of undefined (reading 'split')'" Exception="System.Exception: TypeError: Cannot read properties of undefined (reading 'split')
+    at getFileExtension (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13296:42)
+    at Object.isAttachmentAnImage (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13301:24)
+    at openCarouselOrDownload (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:22061:37)
+    at https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:20711:25
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:364550
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:302569)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:304045
+    at w (https://cdn.freshmarketer.com/250342/873272.js:3:343444)"
+RequestId="8d6095d4fa22" SessionId="_8b746c13-92ec-4704-b17c-2137ae9bfb87-51AA6F3887A822FD54929366BA4DB571" UserId="240677" UserEmail="AKanodia@eab.com" DateTime="2024-11-06 13:19:07.6915" ThreadId="34" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' Message = 'Cannot read properties of undefined (reading 'split')'" Exception="System.Exception: TypeError: Cannot read properties of undefined (reading 'split')
+    at getFileExtension (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13296:42)
+    at Object.isAttachmentAnImage (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13301:24)
+    at openCarouselOrDownload (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:22061:37)
+    at https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:20711:25
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:364550
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:302569)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:304045
+    at w (https://cdn.freshmarketer.com/250342/873272.js:3:343444)"
+RequestId="fd2d82b30b66" SessionId="_8b746c13-92ec-4704-b17c-2137ae9bfb87-51AA6F3887A822FD54929366BA4DB571" UserId="240677" UserEmail="AKanodia@eab.com" DateTime="2024-11-06 13:28:50.8774" ThreadId="34" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' Message = 'Cannot read properties of undefined (reading 'split')'" Exception="System.Exception: TypeError: Cannot read properties of undefined (reading 'split')
+    at getFileExtension (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13296:42)
+    at Object.isAttachmentAnImage (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13301:24)
+    at openCarouselOrDownload (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:22061:37)
+    at https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:20711:25
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:364550
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:302569)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:304045
+    at w (https://cdn.freshmarketer.com/250342/873272.js:3:343444)"
+RequestId="408978530113" SessionId="_8b746c13-92ec-4704-b17c-2137ae9bfb87-51AA6F3887A822FD54929366BA4DB571" UserId="240677" UserEmail="AKanodia@eab.com" DateTime="2024-11-06 13:28:53.7280" ThreadId="65" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' Message = 'Cannot read properties of undefined (reading 'split')'" Exception="System.Exception: TypeError: Cannot read properties of undefined (reading 'split')
+    at getFileExtension (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13296:42)
+    at Object.isAttachmentAnImage (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13301:24)
+    at openCarouselOrDownload (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:22061:37)
+    at https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:20711:25
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:364550
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:302569)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:304045
+    at w (https://cdn.freshmarketer.com/250342/873272.js:3:343444)"
+RequestId="981385f97a45" SessionId="_8b746c13-92ec-4704-b17c-2137ae9bfb87-51AA6F3887A822FD54929366BA4DB571" UserId="240677" UserEmail="AKanodia@eab.com" DateTime="2024-11-06 13:28:54.1873" ThreadId="65" Level="FATAL" Message="The client JavaScript exception. UserAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' Message = 'Cannot read properties of undefined (reading 'split')'" Exception="System.Exception: TypeError: Cannot read properties of undefined (reading 'split')
+    at getFileExtension (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13296:42)
+    at Object.isAttachmentAnImage (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:13301:24)
+    at openCarouselOrDownload (https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:22061:37)
+    at https://go.myeab.com/expense/bundles/modules?v=G3NDFI7QtD461OZFDyGpr19FvZI7ZQLVI9qerefd6Yw1:20711:25
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:364550
+    at d (https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:302569)
+    at https://go.myeab.com/expense/bundles/libs?v=Xj8OG9d810Z5DrKx5roFkjrR2cLNFw7_GKbTsyXFgME1:1:304045
+    at w (https://cdn.freshmarketer.com/250342/873272.js:3:343444)"

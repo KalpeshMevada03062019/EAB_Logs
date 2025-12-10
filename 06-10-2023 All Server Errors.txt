@@ -1,0 +1,78 @@
+[06-10-2023]
+*WebServer*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+RequestId="5064d0c41dfe"
+DateTime="2023-10-06 08:32:40.4209"
+Message="Error adding admin notification." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+ at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at ABC.Common.Web.Infrastructure.GlobalExceptionLogger.<LogAsync>d__0.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\GlobalExceptionLogger.cs:line 36"
+
+
+*Workerhost*
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1.
+DateTime="2023-10-06 07:38:57.8834" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 238596" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408'
+									
+2.                                  
+DateTime="2023-10-06 07:38:58.2479" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 235720" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '235720X003508'
+
+----------------------
+ERS_Workerhost_fatal 
+----------------------
+1.
+DateTime="2023-10-06 06:49:41.2813" Provider="CDF3Parser" 
+Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item" 
+Exception="ABC.ERS.FileWorkers.Implementation.Exceptions.Cdf3ParserAbsentElementException: There is no 'DateOfPurchase' required item
+
+2.
+DateTime="2023-10-06 23:10:14.7721" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = DM6PR15MB3194.namprd15.prod.outlook.com, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965 (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = DM6PR15MB3194.namprd15.prod.outlook.com, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965
+   at Microsoft.Exchange.WebServices.Data.ServiceResponse.InternalThrowIfNecessary() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Responses\ServiceResponse.cs:line 277
+   at Microsoft.Exchange.WebServices.Data.MultiResponseServiceRequest`1.Execute() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\MultiResponseServiceRequest.cs:line 169
+   at Microsoft.Exchange.WebServices.Data.ExchangeService.BindToFolder(FolderId folderId, PropertySet propertySet) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ExchangeService.cs:l...)."
+   
+3.
+DateTime="2023-10-06 23:15:03.1923" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = DM6PR15MB3194.namprd15.prod.outlook.com, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965 (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+DateTime="2023-10-06 23:10:14.0949"
+Message="Mailbox move in progress. Try again later., Cannot open mailbox. Server = DM6PR15MB3194.namprd15.prod.outlook.com, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = DM6PR15MB3194.namprd15.prod.outlook.com, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965
+
+2.
+DateTime="2023-10-06 23:15:02.5247"
+Message="Mailbox move in progress. Try again later., Cannot open mailbox. Server = DM6PR15MB3194.namprd15.prod.outlook.com, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = DM6PR15MB3194.namprd15.prod.outlook.com, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965
+

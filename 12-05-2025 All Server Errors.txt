@@ -1,0 +1,112 @@
+*[12-05-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #1 error
+RequestId="d2a0e0223ce5" UserId="502586" UserEmail="jtracy@eab.com" 
+DateTime="2025-05-12 09:18:25.7440" ThreadId="8" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: beefb85a-b04d-4582-97c6-0a9bdab41a53. Reason: User does not have access to the accountNumber or custid. OwnerId: f3ed5f87-a5e8-4fa0-8c3c-4172a2a9e008. EmployeeNumber: 238941X005531. CustomerID: BRV61" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="d2a0e0223ce5" SessionId="_c04aa06c-1572-4c42-9e80-7e8f79012aeb-44E9FEE58A694F10D796213A48FEAB47" UserId="502586" UserEmail="jtracy@eab.com" DateTime="2025-05-12 09:18:24.7774" ThreadId="9" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7591/deactivate START"
+RequestId="d2a0e0223ce5" SessionId="_c04aa06c-1572-4c42-9e80-7e8f79012aeb-44E9FEE58A694F10D796213A48FEAB47" UserId="502586" UserEmail="jtracy@eab.com" DateTime="2025-05-12 09:18:24.7930" ThreadId="8" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="d2a0e0223ce5" SessionId="_c04aa06c-1572-4c42-9e80-7e8f79012aeb-44E9FEE58A694F10D796213A48FEAB47" UserId="502586" UserEmail="jtracy@eab.com" DateTime="2025-05-12 09:18:25.7440" ThreadId="8" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 951 ms."
+RequestId="d2a0e0223ce5" SessionId="_c04aa06c-1572-4c42-9e80-7e8f79012aeb-44E9FEE58A694F10D796213A48FEAB47" UserId="502586" UserEmail="jtracy@eab.com" DateTime="2025-05-12 09:18:25.7440" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7591/deactivate Completed in 967 ms"
+
+
+Card Detail:
+---------------------------------------
+Username: Mike Thompson
+MaskedNumber: 556368XXXXXX0237
+EmployeeNumber: 238941X005531
+OwnerId: F3A9F26B-5315-4D37-AE79-50825F08C85A
+CustomerID: BRV61
+Status: Active
+Expiration Date: 2028-11-01 00:00:00.000
+
+2. #4 same error
+RequestId="b4f41aca3232" UserId="502586" UserEmail="jtracy@eab.com" 
+DateTime="2025-05-12 09:18:29.9054" ThreadId="8" Level="FATAL" 
+Message="HTTP validation error: Unable to replace credit card when owner already has an active credit card. OwnerId: f3ed5f87-a5e8-4fa0-8c3c-4172a2a9e008. EmployeeNumber:238941X338824." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="b4f41aca3232" SessionId="_c04aa06c-1572-4c42-9e80-7e8f79012aeb-44E9FEE58A694F10D796213A48FEAB47" UserId="502586" UserEmail="jtracy@eab.com" DateTime="2025-05-12 09:18:29.7996" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/9274/replace START"
+RequestId="b4f41aca3232" SessionId="_c04aa06c-1572-4c42-9e80-7e8f79012aeb-44E9FEE58A694F10D796213A48FEAB47" UserId="502586" UserEmail="jtracy@eab.com" DateTime="2025-05-12 09:18:29.9054" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/9274/replace Completed in 106 ms"
+
+Card Detail:
+---------------------------------------
+Username: Mike Thompson
+MaskedNumber: 556305XXXXXX0355
+EmployeeNumber: 238941X338824
+OwnerId: F3A9F26B-5315-4D37-AE79-50825F08C85A
+CustomerID: DGYXS
+Status: Blocked
+Expiration Date: 2028-11-01 00:00:00.000
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

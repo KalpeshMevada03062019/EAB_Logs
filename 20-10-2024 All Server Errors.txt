@@ -1,0 +1,141 @@
+*[20-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #5 same error
+RequestId="365fcedcf343" UserId="238514" UserEmail="DBrett@eab.com" 
+DateTime="2024-10-20 07:19:08.1809" ThreadId="20" Level="FATAL" 
+Message="Error updating spending profile for user with external id 238514" 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/ccm_api/SpendingProfileManagementApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #3 same error
+RequestId="e1a04180bb30" SessionId="_ea4f76b5-bbf4-4f38-94a4-30f5079155c6-30397D96F24B367D1349D8D9F15359E5" UserId="500234" UserEmail="LGoad@eab.com" DateTime="2024-10-20 06:09:48.6098" ThreadId="11" Level="FATAL" 
+Message="The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout." 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+   at ABC.CCM.BL.TransactionService.<>c__DisplayClassa.<<GetUserTransactionsAsync>b__5>d__c.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\TransactionService.cs:line 0
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+   at ABC.CCM.BL.TransactionService.<GetUserTransactionsAsync>d__f.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.BL\TransactionService.cs:line 83
+   at ABC.CCM.Website.ApiControllers.UserController.<GetUserTransactionGridAsync>d__1e.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.Website\ApiControllers\UserController.cs:line 229
+   at ABC.CCM.Website.ApiControllers.UserController.<GetUserTransactionsAsync>d__7.MoveNext() in c:\git_sources\eabgo\CreditCardManagement\ABC.CCM.Website\ApiControllers\UserController.cs:line 131
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-10-20 06:59:28.7160" ThreadId="1" Level="FATAL" Provider="CDF3Parser" 
+Message="CDF3 Parsing: InRule validation exception: One or more errors occurred." 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."
+
+2. #1 - 18 Oct, #160 - 20 Oct
+DateTime="2024-10-20 10:40:02.9797" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: One or more errors occurred. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+System.AggregateException: One or more errors occurred. ----> Microsoft.Identity.Client.MsalServiceException: AADSTS7000222: The provided client secret keys for app 'bbe161ec-8d30-4463-a13b-badf42e0aa11' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: 050d5fe2-0521-4eb0-8946-a3c411143700 Correlation ID: fddb7142-9808-40ed-be73-5ddc9798a43a Timestamp: 2024-10-20 14:40:03Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateErrorResponse(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext, Boolean addCorrelationId)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.<ExecuteRequestAsync>d__10`1.MoveNext()
+--- End of stack trace from previo...)."
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #790 - Mailbox
+DateTime="2024-10-20 04:06:54.2380" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.MailingService.<GetMailsAsync>d__3.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ABC.CCM.Workers.ComDataEmailSync.ComDataEmailProcessor.Run()
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 104
+   at ABC.Common.Worker.Hosts.AbcWorkersHost.ExecuteCreators(String[] creatorNames) in c:\git_sources\eabgo\Common\ABC.Common.Worker\Hosts\AbcWorkersHost.cs:line 85
+---> (Inner Exception #0) System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55 (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+   at Microsoft.Exchange.WebServices.Data.ServiceResponse.InternalThrowIfNecessary() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Responses\ServiceResponse.cs:line 277
+   at Microsoft.Exchange.WebServices.Data.MultiResponseServiceRequest`1.Execute() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\MultiResponseServiceRequest.cs:line 169
+   at Microsoft.Exchange.WebServices.Data.Folder.InternalFindItems[TItem](SearchFilter searchFilter, ViewBase view, Grouping groupBy) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\so...).<---
+
+System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55 (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+   at Microsoft.Exchange.WebServices.Data.ServiceResponse.InternalThrowIfNecessary() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Responses\ServiceResponse.cs:line 277
+   at Microsoft.Exchange.WebServices.Data.MultiResponseServiceRequest`1.Execute() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\MultiResponseServiceRequest.cs:line 169
+   at Microsoft.Exchange.WebServices.Data.Folder.InternalFindItems[TItem](SearchFilter searchFilter, ViewBase view, Grouping groupBy) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\so...)."
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="" DateTime="2024-10-20 04:06:54.7954" ThreadId="31" Level="FATAL" 
+Message="Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+2. #949 same error
+RequestId="" 
+DateTime="2024-10-20 10:40:04.1377" ThreadId="86" Level="FATAL" 
+Message="One or more errors occurred." Provider="" 
+Exception="System.AggregateException: One or more errors occurred. ---> Microsoft.Identity.Client.MsalServiceException: AADSTS7000222: The provided client secret keys for app 'bbe161ec-8d30-4463-a13b-badf42e0aa11' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: 050d5fe2-0521-4eb0-8946-a3c411143700 Correlation ID: fddb7142-9808-40ed-be73-5ddc9798a43a Timestamp: 2024-10-20 14:40:03Z
+
+RequestId="4b8d5eaf4b30" DateTime="2024-10-20 10:40:03.3561" ThreadId="35" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'222703X005484','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="4b8d5eaf4b30" DateTime="2024-10-20 10:40:03.3561" ThreadId="35" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="fe0d8653b083" DateTime="2024-10-20 10:40:03.5461" ThreadId="86" Level="TRACE" Message="MailApiService.GetInboxMailCount, MailAccounts: ExpenseReceipt start." Provider="Mail"
+RequestId="4b8d5eaf4b30" DateTime="2024-10-20 10:40:03.5838" ThreadId="35" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 230 ms." Provider="Comdata"
+RequestId="4b8d5eaf4b30" DateTime="2024-10-20 10:40:03.5838" ThreadId="35" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556368XXXXXX9427','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'B','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'ELIZABETH','cardLastName':'ROGAN','driverLicenseNumber':'','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'222703X005484','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2028-11-01T00:00:00','cardToken':'399L66F4P2','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':0.00,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':30000.00,'cycleTxnLimit':999,'cycleTxnLimitUsed':0,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':999},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'ELIZABETH ROGAN','mailAddress1':'3226 19TH STREET NW','mailAddress2':'','mailCity':'WASHINGTON','mailState':'DC','mailZip':'20010','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="0efedbc344cf" DateTime="2024-10-20 10:40:03.6040" ThreadId="35" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'222703X004441','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="0efedbc344cf" DateTime="2024-10-20 10:40:03.6040" ThreadId="35" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="fe0d8653b083" DateTime="2024-10-20 10:40:03.7362" ThreadId="86" Level="TRACE" Message="MailApiService.GetInboxMailCount, MailAccounts: ExpenseReceipt end. Duration: 188 ms." Provider="Mail"
+RequestId="fe0d8653b083" DateTime="2024-10-20 10:40:03.7417" ThreadId="86" Level="TRACE" Message="MailApiService.GetInboxMailCount, MailAccounts: ExpenseReceipt start." Provider="Mail"
+RequestId="fe0d8653b083" DateTime="2024-10-20 10:40:03.7417" ThreadId="86" Level="TRACE" Message="MailApiService. GetOrCreateService. Service will be recreated after 55 minutes: ExpenseReceipt." Provider="Mail"
+RequestId="bdeb08613d8d" DateTime="2024-10-20 10:40:04.2904" ThreadId="86" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 188 ms." Provider="Comdata"
+RequestId="bdeb08613d8d" DateTime="2024-10-20 10:40:04.2904" ThreadId="86" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556368XXXXXX5871','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'A','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'ETHAN','cardLastName':'ROSSI','driverLicenseNumber':'','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'238897X005395','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2024-11-01T00:00:00','cardToken':'397V32J2Y9','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':683.51,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':29316.49,'cycleTxnLimit':999,'cycleTxnLimitUsed':4,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':995},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'ETHAN ROSSI','mailAddress1':'2816 MONUMENT AVENUE','mailAddress2':'APARTMENT 5','mailCity':'RICHMOND','mailState':'VA','mailZip':'23221','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="2b5d65a39f4a" DateTime="2024-10-20 10:40:04.2939" ThreadId="86" Level="TRACE" Message="ComdataMcApiService.DeactivateCreditCardAsync.UpdateMasterCardStatusAsync start." Provider="ComdataMC"
+RequestId="2b5d65a39f4a" DateTime="2024-10-20 10:40:04.2939" ThreadId="86" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardStatusAsync.UpdateMasterCardActionAsync start." Provider="ComdataMC"
+RequestId="2b5d65a39f4a" DateTime="2024-10-20 10:40:04.2939" ThreadId="86" Level="TRACE" Message="Method: updateMasterCardAsync. Request params: [{'cardIdentifierType':[3],'cardIdentifier':['238897X005195'],'cardDetails':[{,'custId':'BRV61','cardStatus':'B','profileFlag':null,'profileValue':null,'profileDescription':null,'cardFirstName':null,'cardLastName':null,'driverLicenseNumber':null,'driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':null,'vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardToken':null,'cardBlockReasonCode':null,'cardBlockReasonDesc':null,'cardBlockDate':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*8500','alertServiceFlag':true,'vehicleTankCapacity':null,'masterCardParams':null,'mailingDetails':[{'mailMethod':null,'mailName':null,'mailAttentionTo':null,'mailAddress1':null,'mailAddress2':null,'mailCity':null,'mailState':null,'mailZip':null,'mailCountry':null,'mailingParams':null}]}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'updateCardParams':null}]" Provider="ComdataMC"
+RequestId="2b5d65a39f4a" DateTime="2024-10-20 10:40:04.2939" ThreadId="86" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardActionAsync._mcClient.updateMasterCardAsync start." Provider="ComdataMC"
+RequestId="2b5d65a39f4a" DateTime="2024-10-20 10:40:05.0662" ThreadId="35" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardActionAsync._mcClient.updateMasterCardAsync end. Duration: 771 ms." Provider="ComdataMC"
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

@@ -1,0 +1,126 @@
+[13-04-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.
+RequestId="9efdd47e6ee8" UserId="500234" UserEmail="LGoad@eab.com" 
+DateTime="2024-04-13 22:32:25.4656" 
+Message="HTTP validation error: Deactivate credit card request failed. Reason: A timeout has occurred.  Please use the requestUID to lookup the status of your request.. Actor Id: ae8195b5-050f-4eaa-a2ce-b4514e30ee79" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+TRACE:
+RequestId="9efdd47e6ee8" SessionId="_5fdc786e-3651-4851-a5a5-063c4c924e90-217B109E665B4AC03183B152FA1D832F" UserId="500234" UserEmail="LGoad@eab.com" DateTime="2024-04-13 22:31:40.0944" ThreadId="22" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5016/deactivate START"
+RequestId="9efdd47e6ee8" SessionId="_5fdc786e-3651-4851-a5a5-063c4c924e90-217B109E665B4AC03183B152FA1D832F" UserId="500234" UserEmail="LGoad@eab.com" DateTime="2024-04-13 22:31:40.0944" ThreadId="22" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="9efdd47e6ee8" SessionId="_5fdc786e-3651-4851-a5a5-063c4c924e90-217B109E665B4AC03183B152FA1D832F" UserId="500234" UserEmail="LGoad@eab.com" DateTime="2024-04-13 22:32:25.4656" ThreadId="23" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 45358 ms."
+RequestId="9efdd47e6ee8" SessionId="_5fdc786e-3651-4851-a5a5-063c4c924e90-217B109E665B4AC03183B152FA1D832F" UserId="500234" UserEmail="LGoad@eab.com" DateTime="2024-04-13 22:32:25.4656" ThreadId="23" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5016/deactivate Completed in 45371 ms"
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-04-13 02:10:22.1837" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (503) Server Unavailable. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+DateTime="2024-04-13 04:17:37.2332" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An error occurred while executing the command definition. See the inner exception for details.
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #3 same error #Timeout error
+DateTime="2024-04-13 04:17:29.0954" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_Workershost_Fatal
+-------------------------
+1.	
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="" 
+DateTime="2024-04-13 02:10:22.8907" 
+Message="The request failed. The remote server returned an error: (503) Server Unavailable." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (503) Server Unavailable. ---> System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+
+2. 
+RequestId="a53aada5e8c0" 
+DateTime="2024-04-13 02:11:58.6377" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+3.
+RequestId="39e9cc52894e" 
+DateTime="2024-04-13 02:15:07.4776" 
+Message="Description: An error occurred while receiving the HTTP response to https://w6.iconnectdata.com/MCWS/services/MCWS. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="ComdataMC" 
+Exception=""
+
+4. 
+RequestId="1b4c2a65d68f" 
+DateTime="2024-04-13 03:42:39.9204" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+5. #2 same error
+RequestId="" DateTime="2024-04-13 14:04:15.7086" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+6.												 
+RequestId="" DateTime="2024-04-13 23:01:13.8770" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

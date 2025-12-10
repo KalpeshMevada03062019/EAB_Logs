@@ -1,0 +1,243 @@
+*[05-12-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #2 same error 
+RequestId="9f33863fbb75" UserId="502729" UserEmail="KMarientes@eab.com" 
+DateTime="2024-12-05 10:14:01.9845" ThreadId="20" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: Object reference not set to an instance of an object.. ActorId: 829f2041-7f7a-4384-89b2-e22fad618a46. OwnerId: aa7b3da3-b3c4-492c-a9a1-8f493807f98b. Last4Digits: 3664, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="9f33863fbb75" SessionId="_c490298c-52f7-41c8-b298-d1f79508441c-1D8B59777FDC9A05E5CBF3CC98C3B681" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-12-05 10:14:00.8629" ThreadId="20" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7778/activate START"
+RequestId="9f33863fbb75" SessionId="_c490298c-52f7-41c8-b298-d1f79508441c-1D8B59777FDC9A05E5CBF3CC98C3B681" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-12-05 10:14:00.8943" ThreadId="20" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync.CheckSpendingProfileAsync start."
+RequestId="9f33863fbb75" SessionId="_c490298c-52f7-41c8-b298-d1f79508441c-1D8B59777FDC9A05E5CBF3CC98C3B681" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-12-05 10:14:00.8943" ThreadId="20" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync.CheckSpendingProfileAsync end. Duration: 5 ms."
+RequestId="9f33863fbb75" SessionId="_c490298c-52f7-41c8-b298-d1f79508441c-1D8B59777FDC9A05E5CBF3CC98C3B681" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-12-05 10:14:00.8943" ThreadId="20" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync._comdataMcApiService.ActivateCreditCardAsync. Attempt number = 1 of 1 start."
+RequestId="9f33863fbb75" SessionId="_c490298c-52f7-41c8-b298-d1f79508441c-1D8B59777FDC9A05E5CBF3CC98C3B681" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-12-05 10:14:01.9694" ThreadId="20" Level="TRACE" Message="CreditCardService.ActivateCreditCardAsync._comdataMcApiService.ActivateCreditCardAsync. Attempt number = 1 of 1 end. Duration: 1076 ms."
+RequestId="9f33863fbb75" SessionId="_c490298c-52f7-41c8-b298-d1f79508441c-1D8B59777FDC9A05E5CBF3CC98C3B681" UserId="502729" UserEmail="KMarientes@eab.com" DateTime="2024-12-05 10:14:01.9845" ThreadId="20" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7778/activate Completed in 1122 ms"
+
+
+Card Detail:
+-------------
+FirstName: Taylor	
+LastName: Veith
+Status:Activate
+CustomerID: DGYXS
+EmployeeNumber: 239129X005714
+
+2.
+RequestId="a93a078166ad" UserId="502729" UserEmail="KMarientes@eab.com" 
+DateTime="2024-12-05 10:14:16.2939" ThreadId="20" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: 829f2041-7f7a-4384-89b2-e22fad618a46. Reason: Object reference not set to an instance of an object.. OwnerId: aa7b3da3-b3c4-492c-a9a1-8f493807f98b. EmployeeNumber: 239129X004700. CustomerID: BRV61" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+-------------
+FirstName: Taylor	
+LastName: Veith
+Status: Blocked
+CustomerID: BRV61
+EmployeeNumber: 239129X004700
+
+3. #4 same error 
+RequestId="721dca7977f9" UserId="502734" UserEmail="RKorson@eab.com" 
+DateTime="2024-12-05 11:15:14.2160" ThreadId="20" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: Object reference not set to an instance of an object.. ActorId: 5ec11699-ae3e-4317-8c17-851e08be5a57. OwnerId: aa7b3da3-b3c4-492c-a9a1-8f493807f98b. Last4Digits: 3664, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+-------------
+FirstName: Taylor	
+LastName: Veith
+Status:Activate
+CustomerID: DGYXS
+EmployeeNumber: 239129X005714
+
+4. #1 same error
+RequestId="78f999483242" UserId="502734" UserEmail="RKorson@eab.com" 
+DateTime="2024-12-05 11:15:38.9886" ThreadId="17" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: 5ec11699-ae3e-4317-8c17-851e08be5a57. Reason: Object reference not set to an instance of an object.. OwnerId: aa7b3da3-b3c4-492c-a9a1-8f493807f98b. EmployeeNumber: 239129X004700. CustomerID: BRV61" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+-------------
+FirstName: Taylor	
+LastName: Veith
+Status: Blocked
+CustomerID: BRV61
+EmployeeNumber: 239129X004700
+
+5. #3 same error
+RequestId="f3b1cfc98897" UserId="502586" UserEmail="JTracy@eab.com" 
+DateTime="2024-12-05 12:31:19.0457" ThreadId="20" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: Object reference not set to an instance of an object.. ActorId: beefb85a-b04d-4582-97c6-0a9bdab41a53. OwnerId: aa7b3da3-b3c4-492c-a9a1-8f493807f98b. Last4Digits: 3664, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+-------------
+FirstName: Taylor	
+LastName: Veith
+Status:Activate
+CustomerID: DGYXS
+MaskedNumber: 556305XXXXXX3664
+
+6. #1 error
+RequestId="77eed9445af3" UserId="502586" UserEmail="JTracy@eab.com" 
+DateTime="2024-12-05 12:31:29.1700" ThreadId="20" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: beefb85a-b04d-4582-97c6-0a9bdab41a53. Reason: Object reference not set to an instance of an object.. OwnerId: aa7b3da3-b3c4-492c-a9a1-8f493807f98b. EmployeeNumber: 239129X004700. CustomerID: BRV61" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+-------------
+FirstName: Taylor	
+LastName: Veith
+Status: Blocked
+CustomerID: BRV61
+EmployeeNumber: 239129X004700
+
+7. #3 same error
+RequestId="5aa4a2b6911b" UserId="502772" UserEmail="DBallard@eab.com" 
+DateTime="2024-12-05 13:38:01.0381" ThreadId="20" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: Object reference not set to an instance of an object.. ActorId: 13ec61eb-63bb-4ba2-b3b8-63eab9030741. OwnerId: ae2d7a2e-f27a-48ad-8e14-9be08fd5a1fe. Last4Digits: 5725, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+-------------
+FirstName: Wenie
+LastName: Lado
+Status: Active
+CustomerID: DGYXS
+EmployeeNumber: 239106X005980
+MaskedNumber: 556305XXXXXX5725
+
+8. #1 error
+RequestId="046ccd40af95" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2024-12-05 13:53:47.9026" ThreadId="14" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: Object reference not set to an instance of an object.. ActorId: f5088bf5-4b99-4291-a563-f9adbb4dbe94. OwnerId: 48fc8d33-f6ea-493f-b468-b5479137754d. Last4Digits: 1153, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+-------------
+FirstName: Owen
+LastName: Crean
+Status: Active
+CustomerID: DGYXS
+EmployeeNumber: 232205X005927
+MaskedNumber: 556305XXXXXX1153
+
+9. #3 same error
+RequestId="4fea6d58a92d" UserId="239091" UserEmail="DHamami@eab.com" 
+DateTime="2024-12-05 13:56:05.5708" ThreadId="22" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: Object reference not set to an instance of an object.. ActorId: cb90d534-3033-4697-b0dc-c4ba9f56d7ad. OwnerId: 48fc8d33-f6ea-493f-b468-b5479137754d. Last4Digits: 1153, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+-------------
+FirstName: Owen
+LastName: Crean
+Status: Active
+CustomerID: DGYXS
+EmployeeNumber: 232205X005927
+MaskedNumber: 556305XXXXXX1153
+
+10. #2 same error
+RequestId="ba624a265419" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2024-12-05 14:11:28.7050" ThreadId="13" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: f5088bf5-4b99-4291-a563-f9adbb4dbe94. Reason: Object reference not set to an instance of an object.. OwnerId: f5088bf5-4b99-4291-a563-f9adbb4dbe94. EmployeeNumber: 229370X006021. CustomerID: DGYXS" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+-------------
+FirstName: Rachel
+LastName: Becker
+Status: Active
+CustomerID: DGYXS
+EmployeeNumber: 229370X006021
+MaskedNumber: 556305XXXXXX9635
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #1 same error
+RequestId="588c9231bb98" UserId="240202" UserEmail="SDrew@eab.com" 
+DateTime="2024-12-05 13:43:23.9825" ThreadId="40" Level="FATAL" 
+Message="Add new card request failed. Reason: Object reference not set to an instance of an object.. UserId: bd3b2829-c5d9-402a-b160-5bb1beffdfc3. UserName: EAB, CustomerID:  " 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Add new card request failed. Reason: Object reference not set to an instance of an object.. UserId: bd3b2829-c5d9-402a-b160-5bb1beffdfc3. UserName: EAB, CustomerID:   (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+Card Detail:
+-------------
+FirstName: Savannah
+LastName: Drew
+Status: 
+CustomerID: 
+EmployeeNumber: 
+MaskedNumber: 
+
+Trace:
+RequestId="5136cd85c0d3" UserId="240202" UserEmail="SDrew@eab.com" DateTime="2024-12-05 13:43:22.0069" ThreadId="44" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/replace START"
+RequestId="5136cd85c0d3" UserId="240202" UserEmail="SDrew@eab.com" DateTime="2024-12-05 13:43:24.0456" ThreadId="40" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/creditcard/replace Completed in 2039 ms"
+
+
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. #31 sane error
+RequestId="d81426eb2c04" DateTime="2024-12-05 10:12:05.7684" ThreadId="9" Level="FATAL" 
+Message="Description: Object reference not set to an instance of an object.." Provider="ComdataMC" 
+Exception=""
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. #3 same error
+RequestId="" DateTime="2024-12-05 13:43:25.0278" ThreadId="21" Level="FATAL" 
+Message="Add new card request failed. Reason: Object reference not set to an instance of an object.. UserId: bd3b2829-c5d9-402a-b160-5bb1beffdfc3. UserName: EAB, CustomerID:  " 
+Exception="ABC.Common.BL.Exceptions.ValidationException: Add new card request failed. Reason: Object reference not set to an instance of an object.. UserId: bd3b2829-c5d9-402a-b160-5bb1beffdfc3. UserName: EAB, CustomerID:  
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

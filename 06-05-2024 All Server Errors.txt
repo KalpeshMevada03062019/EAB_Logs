@@ -1,0 +1,143 @@
+[06-05-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="ee4f7e161e7f" SessionId="_eeb900bf-67e9-4261-a0bf-883c45d46df6-25F858B3C0EEA9015448C59523F07B03" UserId="240236" UserEmail="Reese.Geyer@seramount.com" 
+DateTime="2024-05-06 09:36:22.7829"
+Message="The remote host closed the connection. The error code is 0x80070057." 
+Exception="System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+
+2.
+RequestId="28413c3c544f" SessionId="_a490ec6f-5e5a-433a-880d-7ffb709a738e-778923CEA8CA648E3F5B2DE3DCE1DDB9" UserId="240137" UserEmail="GJewell@eab.com" 
+DateTime="2024-05-06 13:54:37.8734" 
+Message="The remote host closed the connection. The error code is 0x800704CD." 
+Exception="System.Web.HttpException (0x800704CD): The remote host closed the connection. The error code is 0x800704CD.
+
+3.
+RequestId="4578536c6d2e" SessionId="_eeb900bf-67e9-4261-a0bf-883c45d46df6-24F0E80C3413B331494125E3848F5D8D" UserId="240141" UserEmail="Michael.Nicholson@Seramount.com" 
+DateTime="2024-05-06 20:51:14.9323" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+
+4.
+RequestId="83c94aa3dba3" SessionId="_eeb900bf-67e9-4261-a0bf-883c45d46df6-8C9B7AA546073CE7835787AF6869BDB7" UserId="227883" UserEmail="mbailey@eab.com" 
+DateTime="2024-05-06 21:58:28.2458" 
+Message="The remote host closed the connection. The error code is 0x80070057." 
+Exception="System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.  
+RequestId="6f3bdee6c480" SessionId="_7d7f86c0-8dca-471e-beab-dfb06a20da45-2A9074794B1CEB33A8E1A46011885124" UserId="502586" UserEmail="JTracy@eab.com" 
+DateTime="2024-05-06 13:53:13.0120" 
+Message="HTTP validation error: State must be provided for USA" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #Timeout
+RequestId="9d68b800e78d" SessionId="_eeb900bf-67e9-4261-a0bf-883c45d46df6-3B00829A1C386781DEEA64108A89851F" UserId="240172" UserEmail="YColeman@eab.com" 
+DateTime="2024-05-06 12:17:14.3799" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An error occurred while executing the command definition. See the inner exception for details. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+2.
+RequestId="ed447f06eeef" UserEmail="BCannon@eab.com" DateTime="2024-05-06 17:53:39.8555" 
+Message="The remote host closed the connection. The error code is 0x80070057." 
+Exception="System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+1. #2 same error
+RequestId="505803e16ba6" 
+DateTime="2024-05-06 11:56:17.4118"
+Message="The remote host closed the connection. The error code is 0x80070057." 
+Exception="System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-05-06 02:25:02.9102" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SJ2PR15MB6468.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965 (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #Timeout
+DateTime="2024-05-06 02:43:24.9179" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+ 
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_Workershost_Fatal
+-------------------------
+1.	
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="ca94aa891b5a" 
+DateTime="2024-05-06 02:11:28.1275" ThreadId="19" Level="FATAL" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+
+2.
+RequestId="" 
+DateTime="2024-05-06 02:25:03.6612" ThreadId="71" Level="FATAL" 
+Message="Mailbox move in progress. Try again later., Cannot open mailbox. Server = SJ2PR15MB6468.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SJ2PR15MB6468.namprd15.prod.outlook.com, mdbGuid = a4cd89cf-c2c9-4a6b-b33f-60bf666cea8f, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965
+
+3.
+RequestId="67113dcb7e29" 
+DateTime="2024-05-06 08:27:20.7286" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

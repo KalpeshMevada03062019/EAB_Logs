@@ -1,0 +1,279 @@
+11-08-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal 
+-------------------------
+1. 
+RequestId="4b0491ae175f" SessionId="_fda84c82-d370-4d38-b388-bb98db43bcad-EB7451E80C4B2BF47924FE52BC67E16E" UserId="239048" UserEmail="EArtis@eab.com" 
+DateTime="2024-08-10 06:47:52.2710" ThreadId="8" Level="FATAL" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+
+2.
+RequestId="26e707f16976" UserId="236895" UserEmail="Kalston@eab.com" 
+DateTime="2024-08-11 10:06:49.2873" ThreadId="7" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+3.
+RequestId="6fded658ca65" UserId="237967" UserEmail="KFranklin@eab.com" 
+DateTime="2024-08-10 10:10:32.8787" ThreadId="13" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1844
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<UnexpensedAsync>d__96.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 371
+
+4. InRule Timeout error
+RequestId="acfccef4b410" UserId="236895" UserEmail="Kalston@eab.com" 
+DateTime="2024-08-11 10:09:15.1779" ThreadId="9" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+
+5. *NEW ERROR* No further trace - Related to HOTEL transaction Id=2232635
+RequestId="42f4f86dcfb8" UserId="239844" UserEmail="RRay@eab.com" 
+DateTime="2024-08-11 12:02:32.8291" ThreadId="16" Level="FATAL" 
+Message="HTTP validation error: There is no transaction with Id={0}." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE:
+RequestId="42f4f86dcfb8" UserId="239844" UserEmail="RRay@eab.com" DateTime="2024-08-11 12:02:32.6868" ThreadId="16" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate START"
+RequestId="42f4f86dcfb8" UserId="239844" UserEmail="RRay@eab.com" DateTime="2024-08-11 12:02:32.6868" ThreadId="16" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate Request content: {'allocationItems':[{'id':0,'allocatedBy':'Employee','isOwn':true,'percentage':100,'value':'Rebekah Ray','departmentExternalId':null,'departmentAllocationAvailability':null,'userId':'d1bbf8d0-cef0-4013-ac80-6e0b0973a49c','availablePurposesIds':null,'isGuestUser':false,'userEntity':'EAB'}],'expenses':[{'businessAmount':'749.02','date':'06/27/2024','expenseType':null,'id':3128011,'personalAmount':'0.00','note':'','personalAmountInternational':'0.00','businessAmountInternational':'749.02'}],'transactionInfo':{'basedCityReason':null,'overAllowedAmountReason':null,'whyBookedOutsideReason':null,'traveler':'RAY, REBEKAH','defaultTravelerName':'Rebekah Ray','perDiems':[{'rate':280,'startDate':'07/15/2019','endDate':null,'onDate':'June 27th'}],'hotelConfirmation':null,'isDetailed':false,'attachment':null,'isFolioValidated':null,'createdFromTransactionId':null,'date':'06/27/2024','logoId':66,'totalAmount':749.02,'merchant':{'merchantCategoryId':3512,'address':'505 N. MICHIGAN','city':'Chicago','country':'USA','name':'INTERCONTINENTAL HOTELS','state':'IL','zip':'60611-0000','displayName':'INTERCONTINENTAL HOTELS, Chicago, IL'},'purposes':[],'version':'AAAAAAEWUIQ=','isShared':false,'isRejected':null,'currency':{'id':5,'code':'USD','name':'United States dollar','countryName':null,'countryCode':null},'isInInternationalMode':false,'exchangeRate':1,'paymentInfo':{'formOfPayment':'CreditCard','name':'R.Ray-9940'},'reassignmentInfo':null,'ownerManagementLevel':'B2 Early Professional','notes':null,'approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(USD) United States Dollar','perDiemList':[{'perDiem':0}]},'transactionId':2232635,'receiptId':208309,'clientDate':'2024-08-11T12:02:33-04:00'}"
+RequestId="42f4f86dcfb8" UserId="239844" UserEmail="RRay@eab.com" DateTime="2024-08-11 12:02:32.7346" ThreadId="16" Level="TRACE" Message="Validating access right start."
+RequestId="42f4f86dcfb8" UserId="239844" UserEmail="RRay@eab.com" DateTime="2024-08-11 12:02:32.7346" ThreadId="27" Level="TRACE" Message="Validating access right end. Duration: 2 ms."
+RequestId="42f4f86dcfb8" UserId="239844" UserEmail="RRay@eab.com" DateTime="2024-08-11 12:02:32.7346" ThreadId="27" Level="TRACE" Message="Updating transaction entity start."
+RequestId="42f4f86dcfb8" UserId="239844" UserEmail="RRay@eab.com" DateTime="2024-08-11 12:02:32.8291" ThreadId="16" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/food/validate Completed in 142 ms"
+-------
+TrancationsDetail:::::
+TransactionID=2232635 
+FirstName: Rebekah	
+UserID: 239844
+Discriminator=ExpenseTransactionHotel
+CreditCardId = 74101
+CreatedDate: 2024-07-01 06:58:49.997
+Charge Date: 2024-06-27
+Status = 4
+Amount=749.02
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-08-11 07:47:53.8053" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SJ0PR15MB4775.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+
+06-07-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+RequestId="" DateTime="2024-08-11 07:47:54.7336" ThreadId="7" Level="FATAL" 
+Message="Mailbox move in progress. Try again later., Cannot open mailbox. Server = SJ0PR15MB4775.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SJ0PR15MB4775.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+2.
+RequestId="de15f5709cc8" 
+DateTime="2024-08-11 23:21:00.3759" ThreadId="19" Level="FATAL" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1. 
+
+
+
+InRule Server
+-------------------------
+
+
+
+

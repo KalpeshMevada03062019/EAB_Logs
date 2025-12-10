@@ -1,0 +1,72 @@
+28-07-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="3c179bd27847" UserId="236895" UserEmail="Kalston@eab.com" 
+DateTime="2024-07-28 12:55:26.3739" ThreadId="7" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1836
+c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 348
+
+2.
+RequestId="e9af0b94a67b" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-07-28 22:21:18.9721" ThreadId="16" Level="FATAL" 
+Message="Nullable object must have a value." 
+Exception="System.InvalidOperationException: Nullable object must have a value.
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. #2 same error
+DateTime="2024-07-28 07:00:15.8430" ThreadId="1" Level="FATAL" Provider="EmailsToBudgetOwner" 
+Message="Following error occurs during sending 'Transactions waiting for approval' email: One or more errors occurred." 
+Exception="System.AggregateException: One or more errors occurred. ---> System.InvalidOperationException: Nullable object must have a value.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+

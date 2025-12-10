@@ -1,0 +1,97 @@
+*[04-12-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+RequestId="bc2ed7769e57" UserId="222705" UserEmail="Aherman@eab.com" 
+DateTime="2024-12-04 11:35:30.7275" ThreadId="36" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: c669c356-e4fc-4ff3-ba71-2da3cc6e4504. Reason: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake. OwnerId: d911ba4d-b7b5-49cf-a61b-f3954d1ee7dc. EmployeeNumber: 239306X004971. CustomerID: BRV61" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="bc2ed7769e57" UserId="222705" UserEmail="Aherman@eab.com" DateTime="2024-12-04 11:35:16.0145" ThreadId="40" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7031/deactivate START"
+RequestId="bc2ed7769e57" UserId="222705" UserEmail="Aherman@eab.com" DateTime="2024-12-04 11:35:16.0145" ThreadId="7" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="bc2ed7769e57" UserId="222705" UserEmail="Aherman@eab.com" DateTime="2024-12-04 11:35:30.7275" ThreadId="36" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 14707 ms."
+RequestId="bc2ed7769e57" UserId="222705" UserEmail="Aherman@eab.com" DateTime="2024-12-04 11:35:30.7275" ThreadId="36" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/7031/deactivate Completed in 14713 ms"
+
+Card Detail:
+-----------------
+FirstName: Mark 
+LastName: Rizzotti
+CustomerID: BRV61
+Status: Blocked
+MaskedNumber: 556368XXXXXX7892
+EmployeeNumber: 239306X004971
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="" 
+DateTime="2024-12-04 03:55:03.0119" ThreadId="43" Level="FATAL" 
+Message="The remote host closed the connection. The error code is 0x80070057." Provider="" 
+Exception="System.ServiceModel.CommunicationException: The remote host closed the connection. The error code is 0x80070057. ---> System.Web.HttpException: The remote host closed the connection. The error code is 0x80070057.
+
+2.
+RequestId="d56542894313" 
+DateTime="2024-12-04 11:35:30.9415" ThreadId="51" Level="FATAL" 
+Message="Description: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake." Provider="ComdataMC" 
+Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

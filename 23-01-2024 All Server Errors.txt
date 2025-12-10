@@ -1,0 +1,165 @@
+*[23-01-2024]*
+
+*Web Server*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+
+----------------------
+UPM_Website_fatal
+----------------------
+1.
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1.
+DateTime="2024-01-23 06:49:02.4603" Provider="BalboaSupplementalImport" 
+Message="File with id 1a61d95d-1581-4829-8429-ccef9a45fcc8 is empty." 
+Exception=""
+
+
+2. #Timeout error
+DateTime="2024-01-23 16:15:46.2324" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+INFO: - 
+Workerprocess started but not ended
+DateTime="2024-01-23 16:15:01.7624" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="Start running creator with name 'TravelerCategoriesSync'"
+
+TRACE: - https://prnt.sc/2H5tij-CXUFO
+DateTime="2024-01-23 16:15:07.5531" ThreadId="1" Level="TRACE" Provider="TravelerCategoriesSync" Message="TravelerCategorySync.MergeEntities. Start merging traveler category entities."
+DateTime="2024-01-23 16:15:46.2425" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'TravelerCategoriesSync' disposed."
+
+3.
+DateTime="2024-01-23 06:49:01.5600" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="Object reference not set to an instance of an object." Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+
+TRACE:::
+DateTime="2024-01-23 06:49:01.3379" ThreadId="1" Level="TRACE" Provider="CDF3Import" Message="ExdFileProcessor. Start file 'G0210862_20240123_045741SB_005978.xml' downloading"
+DateTime="2024-01-23 06:49:01.3379" ThreadId="1" Level="TRACE" Provider="CDF3Import" Message="ExdFileProcessor. Start saving of file 'G0210862_20240123_045741SB_005978.xml'"
+DateTime="2024-01-23 06:49:01.2945" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLUQAZ' has been updated."
+DateTime="2024-01-23 06:49:01.2945" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLVQAZ' has been updated."
+DateTime="2024-01-23 06:49:01.3060" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLWQAZ' has been updated."
+DateTime="2024-01-23 06:49:01.3218" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLXQAZ' has been updated."
+DateTime="2024-01-23 06:49:01.3319" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLYQAZ' has been updated."
+DateTime="2024-01-23 06:49:01.3379" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLZQAZ' has been updated."
+DateTime="2024-01-23 06:49:01.3379" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLaQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.3379" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLbQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.3537" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLcQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.3694" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLdQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.3740" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLeQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.3740" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLfQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.3851" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLgQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.3851" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLhQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.3942" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLiQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4012" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLjQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4012" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLkQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4012" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLlQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4169" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLmQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4169" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLnQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4325" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLoQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4325" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLpQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4325" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLqQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4325" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLrQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4482" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLsQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4583" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLtQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4639" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLuQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4685" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLvQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4685" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLwQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4796" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLxQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4887" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLyQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4989" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tLzQAJ' has been updated."
+DateTime="2024-01-23 06:49:01.4989" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tM0QAJ' has been updated."
+DateTime="2024-01-23 06:49:01.5115" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tM1QAJ' has been updated."
+DateTime="2024-01-23 06:49:01.5191" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tM2QAJ' has been updated."
+DateTime="2024-01-23 06:49:01.5292" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tM3QAJ' has been updated."
+DateTime="2024-01-23 06:49:01.5292" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tM4QAJ' has been updated."
+DateTime="2024-01-23 06:49:01.5292" ThreadId="1" Level="TRACE" Provider="InstitutionFeedImport" Message="Institution with ExternalId '0016R00003I1tM5QAJ' has been updated."
+DateTime="2024-01-23 06:49:01.5701" ThreadId="1" Level="TRACE" Provider="CDF3Import" Message="ExdFileProcessor. Finish file 'G0210862_20240123_045741SB_005978.xml'"
+DateTime="2024-01-23 06:49:01.5701" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running end. Duration: 6300 ms."
+DateTime="2024-01-23 06:49:01.5701" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'CDF3Import' disposed."
+
+
+INFO:::::
+DateTime="2024-01-23 06:49:01.4325" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Splitting: Start"
+DateTime="2024-01-23 06:49:01.4325" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Splitting: Adding of City/State/Country if absent - Start."
+DateTime="2024-01-23 06:49:01.4325" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Splitting: Adding of City/State/Country if absent - Finish."
+DateTime="2024-01-23 06:49:01.4482" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Splitting: Credit card is created for EmployeeId = '230834X003242OLD' with card name 'KELLY MCCARTHY' and number 556368******9213."
+DateTime="2024-01-23 06:49:01.4685" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Splitting: Credit card is created for EmployeeId = '233631X004688' with card name 'CHETAN RAO' and number 556368******0759."
+DateTime="2024-01-23 06:49:01.4685" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Splitting: Credit card is created for EmployeeId = '238213X004686' with card name 'DANIEL HIMMELFARB' and number 556368******7960."
+DateTime="2024-01-23 06:49:01.4796" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="CDF3 Splitting: Credit card is created for EmployeeId = '240308X004687' with card name 'KRISTEN KENT' and number 556368******3711."
+DateTime="2024-01-23 06:49:01.5701" ThreadId="1" Level="INFO" Provider="CDF3Import" Message="ExdFileProcessor. Finish. Downloads: 6 - success, 4 - fail"
+
+----------------------
+EXD_Workerhost_fatal
+----------------------
+1.
+
+
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1.
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1.
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+RequestId="5d99b20d1615" 
+DateTime="2024-01-23 05:07:37.1566" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+
+2.
+RequestId="9caf387e6282" 
+DateTime="2024-01-23 10:53:49.4780" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+Service Started but not ended:::
+RequestId="9caf387e6282" DateTime="2024-01-23 10:53:45.1886" ThreadId="13" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239640X004231','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="9caf387e6282" DateTime="2024-01-23 10:53:45.1886" ThreadId="13" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+
+RequestId="df810cc6bdca" DateTime="2024-01-23 08:07:10.5569" ThreadId="19" Level="INFO" Message="PersonalInfo update is needed for user with ExtId = 239640. Changed: EmergencyContactName. Nutravel value: K Galvan. User value: Kim Galvan." Provider="NuTravel"
+RequestId="df810cc6bdca" DateTime="2024-01-23 08:07:10.5569" ThreadId="19" Level="INFO" Message="CustomFields update is needed for user with ExtId = 239640." Provider="NuTravel"
+
+
+
+3.
+RequestId="6099e586401a" 
+DateTime="2024-01-23 21:54:41.3580" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+----------------------
+UPM_API_Fatal
+----------------------
+1.
+
+----------------------
+ERS_API_Fatal
+----------------------
+1.
+
+*InRule Server*
+----------------------
+InRule_Fatal
+----------------------

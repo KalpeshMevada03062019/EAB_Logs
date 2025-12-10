@@ -1,0 +1,90 @@
+31-07-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="d428e1d80cf2" UserId="239891" UserEmail="LJohnston@eab.com" 
+DateTime="2024-07-31 09:46:23.8443" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+---------------
+User ID: 7BB76CCF-1C67-4CB8-B927-5E1A7E2360FC
+ExternalId: 223533
+Andrew Rosen
+
+
+
+Trace::
+RequestId="d428e1d80cf2" SessionId="_52dd1302-f8b5-493b-9c68-76a2ec578474-321A4065968A6CB61DF059E5A3782684" UserId="239891" UserEmail="LJohnston@eab.com" DateTime="2024-07-31 09:46:23.8274" ThreadId="46" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/food/2241350 START"
+RequestId="d428e1d80cf2" SessionId="_52dd1302-f8b5-493b-9c68-76a2ec578474-321A4065968A6CB61DF059E5A3782684" UserId="239891" UserEmail="LJohnston@eab.com" DateTime="2024-07-31 09:46:23.8374" ThreadId="46" Level="TRACE" Message="User '239891' in 'PurposeEditor' role: Getting transaction data for id '2241350'"
+RequestId="d428e1d80cf2" SessionId="_52dd1302-f8b5-493b-9c68-76a2ec578474-321A4065968A6CB61DF059E5A3782684" UserId="239891" UserEmail="LJohnston@eab.com" DateTime="2024-07-31 09:46:23.8443" ThreadId="49" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/food/2241350 Completed in 17 ms"
+
+
+Staging::
+RequestId="62b61114677f" UserId="502324" UserEmail="CDarji@eab.com" 
+DateTime="2024-07-31 11:25:48.8260" ThreadId="24" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-07-30 21:01:54.1580" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+2.
+DateTime="2024-07-30 22:52:53.7930" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (503) Server Unavailable.
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+

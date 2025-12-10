@@ -1,0 +1,111 @@
+*[12-11-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="4757406512d5" SessionId="_9adcbee9-50af-4dd5-a7d6-227b337f8722-45B02EB03A2715AB54E826B974D5847E" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2025-12-02 10:36:41.7064" ThreadId="59" Level="FATAL" 
+Message="The remote host closed the connection. The error code is 0x80070057." 
+Exception="System.Web.HttpException (0x80070057): The remote host closed the connection. The error code is 0x80070057.
+   at System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   at System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   at System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   at System.Web.HttpWriter.WriteFromStream(Byte[] data, Int32 offset, Int32 size)
+   at System.IO.Stream.<>c.<BeginWriteInternal>b__46_0(Object <p0>)
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.IO.Stream.EndWrite(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.WebHost.HttpControllerHandler.<WriteStreamedResponseContentAsync>d__15.MoveNext()"
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+1.
+RequestId="651f21362037" DateTime="2025-12-03 00:09:50.9666" ThreadId="9" Level="FATAL" Message="Description: Server returned an invalid SOAP Fault.  Please see InnerException for more details.." Provider="Comdata" Exception=""
+RequestId="e851b7fb6564" DateTime="2025-12-03 00:25:01.0245" ThreadId="71" Level="FATAL" Message="Description: Server returned an invalid SOAP Fault.  Please see InnerException for more details.." Provider="Comdata" Exception=""
+RequestId="b88ab16e4a72" DateTime="2025-12-03 00:39:48.8230" ThreadId="17" Level="FATAL" Message="Description: Server returned an invalid SOAP Fault.  Please see InnerException for more details.." Provider="Comdata" Exception=""
+
+
+Trace:
+RequestId="651f21362037" DateTime="2025-12-03 00:09:50.8342" ThreadId="9" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239860X005804','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="651f21362037" DateTime="2025-12-03 00:09:50.8342" ThreadId="9" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+
+RequestId="e851b7fb6564" DateTime="2025-12-03 00:25:00.9024" ThreadId="59" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239860X005804','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="e851b7fb6564" DateTime="2025-12-03 00:25:00.9024" ThreadId="59" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+
+RequestId="b88ab16e4a72" DateTime="2025-12-03 00:39:48.7120" ThreadId="47" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239860X005804','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="b88ab16e4a72" DateTime="2025-12-03 00:39:48.7120" ThreadId="47" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+
+RequestId="1e6472478a69" DateTime="2025-12-03 00:54:50.1519" ThreadId="59" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239860X005804','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="1e6472478a69" DateTime="2025-12-03 00:54:50.1519" ThreadId="59" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+1.

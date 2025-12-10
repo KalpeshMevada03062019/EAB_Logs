@@ -1,0 +1,43 @@
+[30-09-2023]
+*WebServer*
+----------------------
+ERS_Website_fatal
+----------------------
+1.
+DateTime="2023-09-30 04:43:45.6994" Provider="WorkersHost" [Timeout error]
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" Exception="System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+
+2.
+DateTime="2023-09-30 06:50:01.2343" Provider="CDF3Parser" [Timeout error]
+Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item" Exception="ABC.ERS.FileWorkers.Implementation.Exceptions.Cdf3ParserAbsentElementException: There is no 'DateOfPurchase' required item
+
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+DateTime="2023-09-30 07:38:46.7480" Provider="ComdataSyncOut" [common error]
+Message="Error updated mailing address for user with ExternalId id 238596" Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408'
+
+2.
+DateTime="2023-09-30 07:38:47.1793" Provider="ComdataSyncOut" [common error]
+Message="Error updated mailing address for user with ExternalId id 235720" Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '235720X003508'
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+DateTime="2023-09-30 07:16:25.7019"
+Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+Message="X-Request-Id: e65e14fe-2b8d-4760-a59c-2d4cd04590a5" Provider="" Exception=""
+Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43009595817},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+
+2.
+RequestId="2eabb5ec2446" 
+DateTime="2023-09-30 08:56:54.1905" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="ComdataMC" Exception=""
+
+
+

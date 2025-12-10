@@ -1,0 +1,194 @@
+*[12-11-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+RequestId="0eaa1712d3d6" UserId="229370" UserEmail="RBecker@eab.com" 
+DateTime="2024-11-12 16:42:35.9553" ThreadId="15" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: f5088bf5-4b99-4291-a563-f9adbb4dbe94. Reason: Card not found. OwnerId: 28061fbe-e89c-4cec-bd61-e7e390b80fa7. EmployeeNumber: 226636X004382. CustomerID: BRV61" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace Logs:
++++++++++++
+RequestId="0eaa1712d3d6" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-11-12 16:42:35.4645" ThreadId="23" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5438/deactivate START"
+RequestId="0eaa1712d3d6" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-11-12 16:42:35.4812" ThreadId="7" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="0eaa1712d3d6" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-11-12 16:42:35.9553" ThreadId="15" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 478 ms."
+RequestId="0eaa1712d3d6" UserId="229370" UserEmail="RBecker@eab.com" DateTime="2024-11-12 16:42:35.9553" ThreadId="15" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5438/deactivate Completed in 491 ms"
+
+Credit Card Detail:
++++++++++++++++++
+FirstName - Cassandra
+LastName - Coleman
+EmployeeNumber - 226636X004382
+MaskedNumber - 556368XXXXXX7860
+Status - Active
+
+EXD_InnerGateway_Trace (API Server)
+++++++++++++++++++++++++++++++++++
+RequestId="be57ab9867d7" DateTime="2024-11-12 16:42:36.3498" ThreadId="66" Level="TRACE" Message="ComdataMcApiService.DeactivateCreditCardAsync.UpdateMasterCardStatusAsync start." Provider="ComdataMC"
+RequestId="be57ab9867d7" DateTime="2024-11-12 16:42:36.3498" ThreadId="66" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardStatusAsync.UpdateMasterCardActionAsync start." Provider="ComdataMC"
+RequestId="be57ab9867d7" DateTime="2024-11-12 16:42:36.3498" ThreadId="66" Level="TRACE" Message="Method: updateMasterCardAsync. Request params: [{'cardIdentifierType':[3],'cardIdentifier':['226636X004382'],'cardDetails':[{,'custId':'BRV61','cardStatus':'B','profileFlag':null,'profileValue':null,'profileDescription':null,'cardFirstName':null,'cardLastName':null,'driverLicenseNumber':null,'driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':null,'vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardToken':null,'cardBlockReasonCode':null,'cardBlockReasonDesc':null,'cardBlockDate':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*1141','alertServiceFlag':true,'vehicleTankCapacity':null,'masterCardParams':null,'mailingDetails':[{'mailMethod':null,'mailName':null,'mailAttentionTo':null,'mailAddress1':null,'mailAddress2':null,'mailCity':null,'mailState':null,'mailZip':null,'mailCountry':null,'mailingParams':null}]}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'updateCardParams':null}]" Provider="ComdataMC"
+RequestId="be57ab9867d7" DateTime="2024-11-12 16:42:36.3498" ThreadId="66" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardActionAsync._mcClient.updateMasterCardAsync start." Provider="ComdataMC"
+RequestId="be57ab9867d7" DateTime="2024-11-12 16:42:36.8149" ThreadId="85" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardActionAsync._mcClient.updateMasterCardAsync end. Duration: 472 ms." Provider="ComdataMC"
+RequestId="be57ab9867d7" DateTime="2024-11-12 16:42:36.8149" ThreadId="85" Level="TRACE" Message="Method: updateMasterCardAsync. Response params: {'updateMasterCardResponse':{'status':'failure','Items':['000022','Card not found'],'ItemsElementName':[5,6]}}" Provider="ComdataMC"
+RequestId="be57ab9867d7" DateTime="2024-11-12 16:42:36.8149" ThreadId="85" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardStatusAsync.UpdateMasterCardActionAsync end. Duration: 473 ms." Provider="ComdataMC"
+RequestId="be57ab9867d7" DateTime="2024-11-12 16:42:36.8149" ThreadId="85" Level="TRACE" Message="ComdataMcApiService.DeactivateCreditCardAsync.UpdateMasterCardStatusAsync end. Duration: 473 ms." Provider="ComdataMC"
+
+2. #Timeout error
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" 
+DateTime="2024-11-12 10:41:34.7062" ThreadId="38" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:3/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.', and 1 others" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:3/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.", and 1 others (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:3/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.", and 1 others ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlCl...)."
+
+Trace:
++++++++
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:23.0225" ThreadId="45" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate START"
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:23.0225" ThreadId="45" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate Request content: {'allocationItems':[{'id':0,'allocatedBy':'Employee','isOwn':true,'percentage':100,'value':'Madeleine Rhyneer','departmentExternalId':null,'departmentAllocationAvailability':null,'userId':'389cc4cd-c733-49a6-927a-b70cfe630202','availablePurposesIds':null,'isGuestUser':false,'userEntity':'EAB'}],'expenses':[{'businessAmount':'299.00','date':'10/21/2024','expenseType':{'id':8,'name':'Nightly Rate','route':null},'id':3199803,'personalAmount':'0.00','note':'','personalAmountInternational':'0.00','businessAmountInternational':'299.00'},{'businessAmount':'52.67','date':'10/21/2024','expenseType':{'id':10,'name':'Hotel Taxes','route':null},'id':3209153,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'52.67'},{'businessAmount':'86.99','date':'10/21/2024','expenseType':{'id':5,'name':'Food','route':null},'id':3209154,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'86.99'},{'businessAmount':'299.00','date':'10/22/2024','expenseType':{'id':8,'name':'Nightly Rate','route':null},'id':3209155,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'299.00'},{'businessAmount':'52.67','date':'10/22/2024','expenseType':{'id':10,'name':'Hotel Taxes','route':null},'id':3209156,'personalAmount':'0.00','note':null,'personalAmountInternational':'0.00','businessAmountInternational':'52.67'}],'transactionInfo':{'basedCityReason':null,'overAllowedAmountReason':'This is the conference rate for the College Board National Forum - I was a presenter at the conference.','whyBookedOutsideReason':'I booked through the conference - and also communicated to the GO Team - not sure why it didn't end up on my list.','traveler':'RHYNEER, MADELEINE','defaultTravelerName':'Madeleine Rhyneer','perDiems':[{'rate':260,'startDate':'07/15/2019','endDate':null,'onDate':'October 22nd'}],'hotelConfirmation':{'id':1,'name':'Other','isOther':true,'hotel':{'id':0,'name':null,'country':null,'city':null,'state':null}},'isDetailed':false,'attachment':{'id':213628,'version':'AAAAAAEcaA0=','userId':'389cc4cd-c733-49a6-927a-b70cfe630202','userName':'Madeleine Rhyneer','isAttached':true,'isAttachmentImage':false,'name':'FOLIO-31561-4_kqea.pdf','source':'','fileCreatedDate':'2024-11-10T16:05:02.207','folio':null},'isFolioValidated':null,'createdFromTransactionId':null,'date':'10/23/2024','logoId':68,'totalAmount':790.33,'merchant':{'merchantCategoryId':3509,'address':'110 E 2ND ST','city':'Austin','country':'USA','name':'MARRIOTT HOTELS','state':'TX','zip':'78701-0000','displayName':'MARRIOTT HOTELS, Austin, TX'},'purposes':[{'id':41042,'name':'Tradeshow or Industry Conference','isBudgetLine':false,'isGeneric':true,'hasHostCostCenter':true,'isIncentiveTrip':false,'assignedAmount':790.33,'percentage':100,'hasDollarCap':false,'hostCostCenterName':'Sales Strategic Enrollment (Enrollment)','hostCostCenterId':596,'isInstitutionRequired':false,'institutionId':null,'institutionName':null,'isSelected':false}],'version':'AAAAAAEclEM=','isShared':false,'isRejected':null,'currency':{'id':5,'code':'USD','name':'United States dollar','countryName':null,'countryCode':null},'isInInternationalMode':false,'exchangeRate':1,'paymentInfo':{'formOfPayment':'CreditCard','name':'M.Rhyneer-0965'},'reassignmentInfo':null,'ownerManagementLevel':'E1 Executive','notes':'The meal was entertaining a partner, Eric Staab from Lewis & Clark College','approverNotes':null,'escalationNotes':null,'breakfast':null,'lunch':null,'dinner':null,'passenger':'','currencyCodeInput':'(USD) United States Dollar','perDiemList':[{'perDiem':0}]},'transactionId':2285578,'receiptId':213628,'clientDate':'2024-11-12T07:40:24-08:00'}"
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:23.0861" ThreadId="51" Level="TRACE" Message="Validating access right start."
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:23.0861" ThreadId="49" Level="TRACE" Message="Validating access right end. Duration: 2 ms."
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:23.0861" ThreadId="49" Level="TRACE" Message="Updating transaction entity start."
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:23.1605" ThreadId="51" Level="TRACE" Message="Updating transaction entity end. Duration: 69 ms."
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:23.1605" ThreadId="38" Level="TRACE" Message="Server validation start."
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:25.7150" ThreadId="41" Level="TRACE" Message="Server validation end. Duration: 2562 ms."
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:25.7150" ThreadId="41" Level="TRACE" Message="Purpose DollarCap validation start."
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:26.3324" ThreadId="74" Level="TRACE" Message="Purpose DollarCap validation end. Duration: 606 ms."
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:26.3324" ThreadId="74" Level="TRACE" Message="In Rule validation start."
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:26.3324" ThreadId="74" Level="TRACE" Message="InRuleService. ValidateTransactionsAsync. Start"
+RequestId="0f252a594378" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:40:26.3324" ThreadId="74" Level="TRACE" Message="InRuleService. ValidateTransactionsByInRuleAsync. Pre-validation completed. Duration: 5 ms."
+RequestId="0f252a594378" SessionId="_356840c8-2b27-4f36-bde9-c7c4084454f1-17D0AAB14BF2090BFF4B4F6E583B9270" UserId="500412" UserEmail="BChalkley@eab.com" DateTime="2024-11-12 10:41:39.8190" ThreadId="38" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate Completed in 76797 ms"
+
+
+
+RequestId="fdacca45c829" UserId="239972" UserEmail="BBlake@eab.com" 
+DateTime="2024-11-12 10:47:29.0401" ThreadId="57" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+RequestId="23d02fc431d2" UserId="222705" UserEmail="Aherman@eab.com" 
+DateTime="2024-11-12 17:15:41.2816" ThreadId="33" Level="FATAL" 
+Message="An exception has been raised that is likely due to a transient failure. If you are connecting to a SQL Azure database consider using SqlAzureExecutionStrategy." 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An exception has been raised that is likely due to a transient failure. If you are connecting to a SQL Azure database consider using SqlAzureExecutionStrategy. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+System.Data.Entity.Core.EntityException: An exception has been raised that is likely due to a transient failure. If you are connecting to a SQL Azure database consider using SqlAzureExecutionStrategy. ----> System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ----> System.Data.SqlClient.SqlException: A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The specified network name is no longer available.) ----> System.ComponentModel.Win32Exception: The specified network name is no longer available
+
+   --- End of inner ExceptionDetail stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject state...)."
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-11-12 06:49:17.5067" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+2.
+DateTime="2024-11-12 06:49:17.5067" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+3.
+DateTime="2024-11-12 06:49:18.2658" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+4.
+DateTime="2024-11-12 06:49:18.2658" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+5.
+DateTime="2024-11-12 06:49:18.2965" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+6.
+DateTime="2024-11-12 06:49:18.2965" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_073936SB_006538.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+7.
+DateTime="2024-11-12 06:49:29.1084" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+8.
+DateTime="2024-11-12 06:49:29.1084" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+9.
+DateTime="2024-11-12 06:49:40.2818" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+10.
+DateTime="2024-11-12 06:49:40.2818" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541tryagain.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #2 same error
+DateTime="2024-11-12 17:11:13.0472" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+RequestId="" DateTime="2024-11-12 17:15:42.1708" ThreadId="65" Level="FATAL" 
+Message="An exception has been raised that is likely due to a transient failure. If you are connecting to a SQL Azure database consider using SqlAzureExecutionStrategy." 
+Exception="System.Data.Entity.Core.EntityException: An exception has been raised that is likely due to a transient failure. If you are connecting to a SQL Azure database consider using SqlAzureExecutionStrategy. ---> System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The specified network name is no longer available.) ---> System.ComponentModel.Win32Exception: The specified network name is no longer available
+
+
+InRule Server
+-------------------------

@@ -1,0 +1,34 @@
+DateTime="2023-11-29 06:48:02.4405" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.CreateOrUpdateCreditCards(List`1 accountElements)
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.CreateRelatedEntities(List`1 accountElements, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+DateTime="2023-11-29 06:48:02.4405" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20231113_090618SB_005837.xml'" Exception="System.Exception: There is no EmployeeId element.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.CreateOrUpdateCreditCards(List`1 accountElements)
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.CreateRelatedEntities(List`1 accountElements, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Base.ExdFileProcessor.DownloadAndSaveFiles(IEnumerable`1 feedInfoModels)"
+DateTime="2023-11-29 06:48:14.6149" ThreadId="1" Level="FATAL" Provider="CDF3Parser" Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item" Exception="ABC.ERS.FileWorkers.Implementation.Exceptions.Cdf3ParserAbsentElementException: There is no 'DateOfPurchase' required item
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Parsers.Base.Cdf3FileValue`1.SetValue(T target, XElement root)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Parsers.ExpenseParsers.Cdf3ParserExpenseHotel.<>c__DisplayClass8.<Parse>b__4(Cdf3FileValue`1 x)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Parsers.ExpenseParsers.Cdf3ParserExpenseHotel.Parse(XElement element, MerchantCategory merchantCategory)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Parsers.ExpenseParsers.Cdf3ParserExpenseBase`1.ParseToCollection(XElement element, MerchantCategory merchantCategory)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Parsers.ExpenseParsers.Cdf3ParserExpenseHotel.ParseToCollection(XElement element, MerchantCategory merchantCategory)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Cdf3FilePartsProcessor.ParseTransaction(Cdf3FilePart part, User transactionOwner, List`1 merchantCategories, CreditCard autoapproveCreditCard, Purpose autoPurpose, String transactionSpecification)
+   at ABC.ERS.FileWorkers.Implementation.Parsing.Cdf3.Cdf3FilePartsProcessor.Run()"
+DateTime="2023-11-29 07:03:02.3481" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutApprovedTransactions" Message="Following error occurs during sending 'Go Expense: The following expenses have been approved' email to 'DMorton@eab.com': The request failed. The remote server returned an error: (503) Server Unavailable." Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (503) Server Unavailable. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (503) Server Unavailable. ----> System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.Exchange.WebServices.Data.EwsHttpWebRequest.Microsoft.Exchange.WebServices.Data.IEwsHttpWebRequest.GetResponse() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsHttpWebRequest.cs:line 113
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 821
+   --- End of inner ExceptionDetail stack trace ---
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWeb...)."
+DateTime="2023-11-29 07:04:28.0338" ThreadId="1" Level="FATAL" Provider="EmailsToUserAboutRejectedTransactions" Message="Following error occurs during sending 'Go Expense: The following expenses have been rejected' email to 'AWells@eab.com': The request failed. The remote server returned an error: (503) Server Unavailable." Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (503) Server Unavailable. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (503) Server Unavailable. ----> System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Microsoft.Exchange.WebServices.Data.EwsHttpWebRequest.Microsoft.Exchange.WebServices.Data.IEwsHttpWebRequest.GetResponse() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsHttpWebRequest.cs:line 113
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWebResponse(IEwsHttpWebRequest request) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\Requests\ServiceRequestBase.cs:line 821
+   --- End of inner ExceptionDetail stack trace ---
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.GetEwsHttpWeb...)."

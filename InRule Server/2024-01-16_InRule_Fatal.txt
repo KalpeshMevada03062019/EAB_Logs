@@ -1,0 +1,1080 @@
+DateTime="2024-01-16 08:47:37.0924" ThreadId="28" Level="FATAL" Message="Rule execution error: "Error: "ExpenseItem:2/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfAllocations/ForEachAllocation/IfAllocatedToUser/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" Exception="Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 28
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:2/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfAllocations/ForEachAllocation/IfAllocatedToUser/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ---> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement36_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.RuleSession.?(DateTime startTime)
+   at InRule.Runtime.RuleSession.ApplyRules()
+   at ABC.InRule.RuleEngine.RuleEngineApiService.ValidateTransactions(TransactionsListModel transactions) in c:\git_sources\eabgo\InRule\ABC.InRule.RuleEngine\RuleEngineApiService.svc.cs:line 67
+   at SyncInvokeValidateTransactions(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement36_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.:DatabaseQueryError
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 28
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 28
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement36_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+ClientConnectionId:2d4a6b37-a4ba-4fa7-9014-af5ebb231a17
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+DateTime="2024-01-16 09:03:42.7605" ThreadId="13" Level="FATAL" Message="Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" Exception="Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 13
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ---> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement25_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.RuleSession.?(DateTime startTime)
+   at InRule.Runtime.RuleSession.ApplyRules()
+   at ABC.InRule.RuleEngine.RuleEngineApiService.ValidateTransactions(TransactionsListModel transactions) in c:\git_sources\eabgo\InRule\ABC.InRule.RuleEngine\RuleEngineApiService.svc.cs:line 67
+   at SyncInvokeValidateTransactions(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement25_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.:DatabaseQueryError
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 13
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 13
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement25_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+ClientConnectionId:5722ecff-9941-4aba-bfc2-daa47eb6892b
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+DateTime="2024-01-16 09:31:54.1485" ThreadId="26" Level="FATAL" Message="Rule execution error: "Error: "ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" Exception="Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 26
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ---> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement49_IfMFHOrHotelTransactionAlreadyExists1(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement40_MealforHostAndHotelSameDayPrevention(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.RuleSession.?(DateTime startTime)
+   at InRule.Runtime.RuleSession.ApplyRules()
+   at ABC.InRule.RuleEngine.RuleEngineApiService.ValidateTransactions(TransactionsListModel transactions) in c:\git_sources\eabgo\InRule\ABC.InRule.RuleEngine\RuleEngineApiService.svc.cs:line 67
+   at SyncInvokeValidateTransactions(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement49_IfMFHOrHotelTransactionAlreadyExists1(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement40_MealforHostAndHotelSameDayPrevention(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.:DatabaseQueryError
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 26
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 26
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement49_IfMFHOrHotelTransactionAlreadyExists1(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+ClientConnectionId:5722ecff-9941-4aba-bfc2-daa47eb6892b
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+DateTime="2024-01-16 09:32:59.9450" ThreadId="10" Level="FATAL" Message="Rule execution error: "Error: "ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" Exception="Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 10
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ---> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement49_IfMFHOrHotelTransactionAlreadyExists1(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement40_MealforHostAndHotelSameDayPrevention(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.RuleSession.?(DateTime startTime)
+   at InRule.Runtime.RuleSession.ApplyRules()
+   at ABC.InRule.RuleEngine.RuleEngineApiService.ValidateTransactions(TransactionsListModel transactions) in c:\git_sources\eabgo\InRule\ABC.InRule.RuleEngine\RuleEngineApiService.svc.cs:line 67
+   at SyncInvokeValidateTransactions(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement49_IfMFHOrHotelTransactionAlreadyExists1(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement40_MealforHostAndHotelSameDayPrevention(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.:DatabaseQueryError
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 10
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 10
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement49_IfMFHOrHotelTransactionAlreadyExists1(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+ClientConnectionId:c0a76c48-fd2d-4fb8-a850-ee9b06034190
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+DateTime="2024-01-16 10:09:55.0157" ThreadId="28" Level="FATAL" Message="Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfAllocations/ForEachAllocation/IfAllocatedToUser/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" Exception="Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 28
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfAllocations/ForEachAllocation/IfAllocatedToUser/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ---> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement36_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.RuleSession.?(DateTime startTime)
+   at InRule.Runtime.RuleSession.ApplyRules()
+   at ABC.InRule.RuleEngine.RuleEngineApiService.ValidateTransactions(TransactionsListModel transactions) in c:\git_sources\eabgo\InRule\ABC.InRule.RuleEngine\RuleEngineApiService.svc.cs:line 67
+   at SyncInvokeValidateTransactions(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement36_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.:DatabaseQueryError
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 28
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 28
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement36_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+ClientConnectionId:10619993-808d-4d93-a332-8cf8bca76072
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+DateTime="2024-01-16 10:10:31.9165" ThreadId="51" Level="FATAL" Message="Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfAllocations/ForEachAllocation/IfAllocatedToUser/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" Exception="Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 51
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfAllocations/ForEachAllocation/IfAllocatedToUser/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ---> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement36_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.RuleSession.?(DateTime startTime)
+   at InRule.Runtime.RuleSession.ApplyRules()
+   at ABC.InRule.RuleEngine.RuleEngineApiService.ValidateTransactions(TransactionsListModel transactions) in c:\git_sources\eabgo\InRule\ABC.InRule.RuleEngine\RuleEngineApiService.svc.cs:line 67
+   at SyncInvokeValidateTransactions(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement36_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.:DatabaseQueryError
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 51
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 51
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement36_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+ClientConnectionId:66baaa83-966d-4026-90e1-e0f938b844d4
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+DateTime="2024-01-16 10:10:54.2866" ThreadId="20" Level="FATAL" Message="Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" Exception="Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 20
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ---> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement25_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.RuleSession.?(DateTime startTime)
+   at InRule.Runtime.RuleSession.ApplyRules()
+   at ABC.InRule.RuleEngine.RuleEngineApiService.ValidateTransactions(TransactionsListModel transactions) in c:\git_sources\eabgo\InRule\ABC.InRule.RuleEngine\RuleEngineApiService.svc.cs:line 67
+   at SyncInvokeValidateTransactions(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement25_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.:DatabaseQueryError
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 20
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 20
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement25_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+ClientConnectionId:10619993-808d-4d93-a332-8cf8bca76072
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"
+DateTime="2024-01-16 10:11:33.9841" ThreadId="21" Level="FATAL" Message="Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" Exception="Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 21
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ---> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement25_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.RuleSession.?(DateTime startTime)
+   at InRule.Runtime.RuleSession.ApplyRules()
+   at ABC.InRule.RuleEngine.RuleEngineApiService.ValidateTransactions(TransactionsListModel transactions) in c:\git_sources\eabgo\InRule\ABC.InRule.RuleEngine\RuleEngineApiService.svc.cs:line 67
+   at SyncInvokeValidateTransactions(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement25_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.Engine.RuleEngine.?(EngineException A_0, StateContainer A_1, IExecutableInfo A_2, DependencyScope A_3, Int64 A_4, IValueStack A_5)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+   at InRule.DynamicMethods1.ExecuteElement9_FoodPerDiems(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableElement A_0, DependencyScope A_1, IValueStack A_2, Int64 A_3, Int64 A_4)
+Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.:DatabaseQueryError
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 21
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Operating System: Microsoft Windows NT 10.0.20348.0
+Processor Count: 2
+CLR Version: 4.0.30319.42000
+CLR Mode: 64-bit
+Thread Culture: 1033
+ThreadID: 21
+ProcessID: 5468
+Installer Version: N/A
+irSDK Version: 4.6.5.14859
+
+Error Information:
+InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   --- End of inner exception stack trace ---
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, String A_3, Tuple`2[] A_4, Boolean A_5)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, Boolean A_4)
+   at InRule.Runtime.DatabaseQuery.?(RuleEngine A_0, Int64 A_1, RuleSessionDataCache A_2, Object[] A_3, ScalarResultRowsBehavior A_4, Object A_5)
+   at InRule.DynamicMethods1.ExecuteElement25_SetReportedAmount(StateContainer currentContainer, DependencyScope currentScope, Int64 currentframeId, IValueStack currentValueStack)
+   at InRule.Runtime.Engine.RuleEngine.?(IExecutableInfo A_0, StateContainer A_1, DependencyScope A_2, IValueStack A_3, Int64 A_4)
+System.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at InRule.Runtime.ConnectionProvider.<>c__DisplayClassb.?(IDbCommand A_0)
+   at InRule.Runtime.ConnectionProvider.?(IDataInfo A_0, String A_1, Tuple`2[] A_2, Action`1 A_3)
+ClientConnectionId:10619993-808d-4d93-a332-8cf8bca76072
+Error Number:-2,State:0,Class:11
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out"

@@ -1,0 +1,99 @@
+[04-04-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.
+RequestId="8b6708ff014f" UserId="501927" UserEmail="JJauss@eab.com" 
+DateTime="2024-04-04 09:24:38.3807"
+Message="HTTP validation error: Activate credit card request failed. Reason: A timeout has occurred.  Please use the requestUID to lookup the status of your request.. ActorId: a92b9fe2-1f18-43ad-815f-f6e51f63d331" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2.
+RequestId="8b6708ff014f" UserId="501927" UserEmail="JJauss@eab.com" 
+DateTime="2024-04-04 09:24:39.1940"
+Message="HTTP validation error: Looks like we are experiencing an issue. If it continues, contact the Go Team." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+INFO:
+RequestId="13f8c15e247b" SessionId="_c24fbc4a-53ec-4fe2-9c39-2191113295a9-D86E23B85CEB19F4BB5C5060B7C38353" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-04 09:19:54.5308" Message="Credit card with masked number 556368XXXXXX7323 has been created for owner with id '8144a71c-52be-4ba4-ba59-9dbcb2be6a47'"
+RequestId="13f8c15e247b" SessionId="_c24fbc4a-53ec-4fe2-9c39-2191113295a9-D86E23B85CEB19F4BB5C5060B7C38353" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-04 09:20:06.0264" Message="Credit card with masked number 556368XXXXXX7323 has been updated with ComData info for owner with id '8144a71c-52be-4ba4-ba59-9dbcb2be6a47'"
+
+TRACE:
+RequestId="11d665599ab5" SessionId="_c24fbc4a-53ec-4fe2-9c39-2191113295a9-D86E23B85CEB19F4BB5C5060B7C38353" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-04 09:19:28.0139" ThreadId="9" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/clientInfo/addClientInfo START"
+RequestId="11d665599ab5" SessionId="_c24fbc4a-53ec-4fe2-9c39-2191113295a9-D86E23B85CEB19F4BB5C5060B7C38353" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-04 09:19:28.0139" ThreadId="9" Level="TRACE" Message="The client browser info. Inner Width = 1451, Inner Height = 795, Screen Width = 1920, Screen Height = 1080, Device Pixel Ratio = 1, Device.AppCodeName = Mozilla, Device.AppName = Netscape, Device.AppVersion = 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36, Device.UserAgent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36, Device.Platform = Win32"
+RequestId="11d665599ab5" SessionId="_c24fbc4a-53ec-4fe2-9c39-2191113295a9-D86E23B85CEB19F4BB5C5060B7C38353" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-04 09:19:28.0139" ThreadId="9" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/clientInfo/addClientInfo Completed in 0 ms"
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-04-04 09:10:11.7867" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=14; handshake=14999;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_Workershost_Fatal
+-------------------------
+1.	
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. #3 same error
+RequestId="46c93d4509d3" 
+DateTime="2024-04-04 06:40:00.6600" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="ComdataMC" 
+Exception=""
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+
+

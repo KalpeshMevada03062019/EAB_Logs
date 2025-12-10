@@ -1,0 +1,230 @@
+*[22-09-2023]*
+
+*WebServer*
+----------------------
+ERS_Website_fatal
+----------------------
+
+1. 
+DateTime="2023-09-22 06:52:37.2068"
+Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item" 
+Exception="ABC.ERS.FileWorkers.Implementation.Exceptions.Cdf3ParserAbsentElementException: There is no 'DateOfPurchase' required item
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+DateTime="2023-09-22 07:39:48.1824"
+Message="Error updated mailing address for user with ExternalId id 238596" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408'
+
+2.
+DateTime="2023-09-22 07:39:48.5136" ThreadId="1" Level="FATAL" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 235720" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '235720X003508'
+
+*APIServer*
+----------------------
+EXD_InnerGateway_Fatal
+----------------------
+1.
+DateTime="2023-09-22 07:16:26.5989"
+Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id"
+Message="X-Request-Id: 4229b1b0-63e3-49c8-97d4-80ac8888e502"
+Message="Error Status Code : 409 Conflict"
+Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43009595817},"message":"It should be a unique value","code":"duplicate_value"}]}"
+
+2.
+RequestId="fe52b41216a2" [No any further detail in error.]
+DateTime="2023-09-22 08:08:47.4389"
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.."
+
+*InRule Server*
+----------------------
+2023-09-22_InRule_Fatal
+----------------------
+1.
+DateTime="2023-09-22 09:22:34.4661" [Timeout error]
+Message="Rule execution error: "Error: "ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.""
+
+
+*[23-09-2023]*
+
+*WebServer*
+----------------------
+ERS_Website_fatal
+----------------------
+1.
+DateTime="2023-09-23 06:51:57.0906"
+Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item" 
+Exception="ABC.ERS.FileWorkers.Implementation.Exceptions.Cdf3ParserAbsentElementException: There is no 'DateOfPurchase' required item
+
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+DateTime="2023-09-23 07:38:57.2825"
+Message="Error updated mailing address for user with ExternalId id 238596" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408' at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+
+  
+2.
+DateTime="2023-09-23 07:38:58.0066"
+Message="Error updated mailing address for user with ExternalId id 235720" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '235720X003508' at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+
+3.
+DateTime="2023-09-23 16:37:54.4114" [Timeout error]
+Message="Unhandled error while running creator 'ComDataEmailSync'"
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: SHUTDOWN is in progress. at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+System.Data.SqlClient.SqlException (0x80131904): SHUTDOWN is in progress.
+Login failed for user 'goadmin'.
+Cannot continue the execution because the session is in the kill state.
+
+----------------------
+UPM_Website_fatal
+----------------------
+1.
+DateTime="2023-09-23 07:38:57.2825"
+Message="Error updated mailing address for user with ExternalId id 238596" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408'
+
+2.
+DateTime="2023-09-23 07:38:58.0066"
+Message="Error updated mailing address for user with ExternalId id 235720" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '235720X003508' at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+
+3.
+DateTime="2023-09-23 16:37:54.4114" [Timeout error]
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: SHUTDOWN is in progress.
+Login failed for user 'goadmin'.
+Cannot continue the execution because the session is in the kill state.
+
+*APIServer*
+----------------------
+EXD_InnerGateway_Fatal
+----------------------
+1.
+DateTime="2023-09-23 07:16:24.8250"
+Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id"
+Message="X-Request-Id: 4229b1b0-63e3-49c8-97d4-80ac8888e502"
+Message="Error Status Code : 409 Conflict"
+Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43009595817},"message":"It should be a unique value","code":"duplicate_value"}]}"
+
+2.
+RequestId="3fbbe7d6396c"  [No any further detail in error.]
+DateTime="2023-09-23 11:22:38.4743"
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull."
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1.
+DateTime="2023-09-23 06:51:57.0906"
+Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item"
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1.
+DateTime="2023-09-23 07:38:57.2825"
+Message="Error updated mailing address for user with ExternalId id 238596"
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408' at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+
+2.
+DateTime="2023-09-23 07:38:58.0066"
+Message="Error updated mailing address for user with ExternalId id 235720"
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '235720X003508' at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+
+3.
+DateTime="2023-09-23 16:37:54.4114"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: SHUTDOWN is in progress.
+Login failed for user 'goadmin'.
+Cannot continue the execution because the session is in the kill state.
+
+
+
+*[24-09-2023]*
+
+*WebServer*
+----------------------
+ERS_Website_fatal
+----------------------
+1.
+DateTime="2023-09-24 07:16:25.8134" [Same error 10 time]
+Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id"
+Message="X-Request-Id: 4229b1b0-63e3-49c8-97d4-80ac8888e502"
+Message="Error Status Code : 409 Conflict"
+Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43009595817},"message":"It should be a unique value","code":"duplicate_value"}]}"
+
+2.
+RequestId="4f9f8cbb1c10" [No any further detail in error.]
+DateTime="2023-09-24 22:12:36.2753"
+Message="Description: com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed; nested exception is com.sun.xml.wss.XWSSecurityException: com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed."
+
+3.
+RequestId="da8284a0c36e" [same error 23 time, only request id is different]
+DateTime="2023-09-24 23:41:51.4169"
+Message="Description: The HTTP service located at https://w6.iconnectdata.com/MCWS/services/MCWS is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later.."
+
+*APIServer*
+----------------------
+EXD_InnerGateway_Fatal
+----------------------
+1.
+DateTime="2023-09-24 07:16:25.8134" 
+Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id"
+Message="X-Request-Id: 4229b1b0-63e3-49c8-97d4-80ac8888e502"
+Message="Error Status Code : 409 Conflict"
+Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43009595817},"message":"It should be a unique value","code":"duplicate_value"}]}"\
+
+2.
+RequestId="4f9f8cbb1c10" 
+DateTime="2023-09-24 22:12:36.2753" ThreadId="39" Level="FATAL" 
+Message="Description: com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed; nested exception is com.sun.xml.wss.XWSSecurityException: com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed." Provider="ComdataMC" Exception=""
+
+3.
+RequestId="da8284a0c36e" [same error 23 time, only request id is different]
+DateTime="2023-09-24 23:41:51.4169"
+Message="Description: The HTTP service located at https://w6.iconnectdata.com/MCWS/services/MCWS is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later.." Provider="ComdataMC" Exception=""
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1.
+DateTime="2023-09-24 06:52:13.5937"
+Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item"
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1.
+DateTime="2023-09-24 07:38:35.9903"
+Message="Error updated mailing address for user with ExternalId id 238596"
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408' at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+
+2.
+DateTime="2023-09-24 07:38:36.3719"
+Message="Error updated mailing address for user with ExternalId id 235720" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '235720X003508' at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+
+
+*[25-09-2023]*
+*WebServer*
+----------------------
+ERS_Website_fatal
+----------------------
+RequestId="520e7d932c1c" [same error one more time]
+DateTime="2023-09-25 00:00:02.6643"
+Message="Description: The HTTP service located at https://w6.iconnectdata.com/MCWS/services/MCWS is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later.."
+
+
+RequestId="4aacf4a18ca9" [Timeout error]
+DateTime="2023-09-25 01:59:33.5300"
+Message="An error occurred while executing the command definition. See the inner exception for details."
+
+

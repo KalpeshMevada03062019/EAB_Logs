@@ -1,0 +1,151 @@
+*[14-08-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal  
+-------------------------
+1. #14 same Timeout Error for same user
+RequestId="3d352c69a903" UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-08-14 03:00:27.5190" ThreadId="10" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesCountAsync>d__11f.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1761
+
+- UserId="502570" UserEmail="SunilKumar@eab.com"
+- UserId="240286" UserEmail="ERamsey@eab.com"
+- #3 : UserId="240313" UserEmail="SShakeeb@eab.com"
+- #2 : UserId="240320" UserEmail="SydneyMoore@eab.com"
+
+=======================TRACE=========================
+RequestId="3d352c69a903" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-14 02:59:55.1602" ThreadId="5" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/count START"
+RequestId="3d352c69a903" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-14 02:59:55.1602" ThreadId="5" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/count Request content: {'amountFrom':null,'amountTo':null,'categories':[{'name':'Air Travel','id':-2,'selected':false},{'name':'Ground Transportation','id':5,'selected':false},{'name':'Hotel','id':1,'selected':false},{'name':'Food','id':4,'selected':false},{'name':'Miscellaneous','id':8,'selected':false},{'name':'Mobile Communication','id':-1,'selected':true},{'name':'Group Event','id':29,'selected':false}],'creditCards':[],'dateFrom':null,'dateTo':null,'submitDateFrom':'08/13/2024','submitDateTo':'08/13/2024','merchants':[],'transactionIds':[],'filterPurposes':[],'name':null,'notes':null,'statuses':[{'id':5,'name':'Pending Finance','selected':true},{'id':4,'name':'Approved','selected':false},{'id':7,'name':'Paid','selected':false}],'states':[{'id':3,'selected':false},{'id':2,'selected':false},{'id':1,'selected':false}],'users':[],'allCash':false,'allCreditCards':false,'allDirectBill':false}"
+RequestId="3d352c69a903" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-14 02:59:55.1758" ThreadId="5" Level="TRACE" Message="Get Filtered transactions count start."
+RequestId="3d352c69a903" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-14 02:59:55.1915" ThreadId="5" Level="TRACE" Message="GetTransactionsOfSpecifiedStatusesCount query compilation start."
+RequestId="3d352c69a903" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-14 02:59:55.1918" ThreadId="5" Level="TRACE" Message="GetTransactionsOfSpecifiedStatusesCount query compilation end. Duration: 0 ms."
+RequestId="3d352c69a903" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-14 03:00:27.5544" ThreadId="10" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/count Completed in 32394 ms"
+
+=======================INFO=========================
+
+
+2.
+RequestId="00af15039edb" UserId="239906" UserEmail="JNichols@eab.com" 
+DateTime="2024-08-14 08:40:01.8137" ThreadId="41" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.InRuleService.<GetTransactionsToRevalidateAsync>d__45.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\InRuleService.cs:line 373
+   at ABC.ERS.BL.InRuleService.<GetTransactionsToRevalidateAsync>d__4d.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\InRuleService.cs:line 396
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<SubmitTransactionAsync>d__1b1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 1776
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<SubmitAsync>d__70.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 439
+
+
+3. #1 Object reference not set to an instance of an object.
+RequestId="86a6008886e7" UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-08-14 03:00:27.5444" ThreadId="7" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+
+=======================TRACE=========================
+RequestId="86a6008886e7" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-14 02:59:55.3498" ThreadId="5" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/0?sortKey=3&sortOrder=2 START"
+RequestId="86a6008886e7" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-14 02:59:55.3498" ThreadId="5" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/0?sortKey=3&sortOrder=2 Request content: {'amountFrom':null,'amountTo':null,'categories':[{'name':'Air Travel','id':-2,'selected':false},{'name':'Ground Transportation','id':5,'selected':false},{'name':'Hotel','id':1,'selected':false},{'name':'Food','id':4,'selected':false},{'name':'Miscellaneous','id':8,'selected':false},{'name':'Mobile Communication','id':-1,'selected':true},{'name':'Group Event','id':29,'selected':false}],'creditCards':[],'dateFrom':null,'dateTo':null,'submitDateFrom':'08/13/2024','submitDateTo':'08/13/2024','merchants':[],'transactionIds':[],'filterPurposes':[],'name':null,'notes':null,'statuses':[{'id':5,'name':'Pending Finance','selected':true},{'id':4,'name':'Approved','selected':false},{'id':7,'name':'Paid','selected':false}],'states':[{'id':3,'selected':false},{'id':2,'selected':false},{'id':1,'selected':false}],'users':[],'allCash':false,'allCreditCards':false,'allDirectBill':false}"
+RequestId="86a6008886e7" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-14 02:59:55.3820" ThreadId="7" Level="TRACE" Message="Get Filtered transactions sorted by Amount Descending start."
+RequestId="86a6008886e7" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-14 02:59:55.3820" ThreadId="7" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+RequestId="86a6008886e7" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-14 03:00:27.5544" ThreadId="7" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/grid/filter/0?sortKey=3&sortOrder=2 Completed in 32205 ms"
+=======================INFO=========================
+RequestId="50e0a1a40635" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-13 03:18:19.6699" ThreadId="7" Level="INFO" Message="User '502418': Start downloading document 'NAFSA 2025 Invoice.pdf'"
+
+
+4.
+RequestId="3d352c69a903" UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-08-14 03:00:27.5444" ThreadId="10" Level="FATAL" 
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.
+
+5. #2 In Rule Timeout Error for same user and Total #8 same error
+RequestId="ddc16d1ca235"  UserId="235561" UserEmail="TLongshore@eab.com" #97864dcf90a1
+DateTime="2024-08-14 09:16:54.9698" ThreadId="43" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+
+6. #In Rule Timeout Error
+RequestId="610b994103ba" UserId="237732" UserEmail="CHubbard@eab.com" 
+DateTime="2024-08-14 09:17:15.0622" ThreadId="41" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+
+7. #In Rule Timeout Error
+RequestId="e5199cd9ca75" UserId="239701" UserEmail="ChristinaHunt@eab.com" 
+DateTime="2024-08-14 10:49:49.3927" ThreadId="56" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1' Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExc...)."
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #2 same error - SQL TIMEOUT
+DateTime="2024-08-14 07:27:54.0847" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="" 
+DateTime="2024-08-14 07:27:55.5958" ThreadId="81" Level="FATAL" 
+Message="Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+2.
+RequestId="f0bb28e78d5e" 
+DateTime="2024-08-14 17:57:40.2116" ThreadId="94" Level="FATAL" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------

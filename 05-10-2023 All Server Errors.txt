@@ -1,0 +1,46 @@
+[05-10-2023]
+*WebServer*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+RequestId="cfcebaf87d0f" 
+DateTime="2023-10-05 09:23:47.6157"
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2.
+RequestId="1ac659de0263" 
+DateTime="2023-10-05 13:11:54.9110" 
+Message="HTTP validation error: Wrong image file." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+3.
+RequestId="649e53201a55" DateTime="2023-10-05 13:12:23.6247" 
+Message="HTTP validation error: Wrong image file." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1.
+RequestId="4c057f5f9de8" 
+DateTime="2023-10-04 03:23:25.1810" 
+Message="Description: The HTTP request to 'https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200' has exceeded the allotted timeout of 01:00:00. The time allotted to this operation may have been a portion of a longer timeout.." Provider="Comdata" Exception=""
+
+2.
+RequestId="eea13824759d" 
+DateTime="2023-10-04 14:10:15.4143" 
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="ComdataMC" Exception=""
+
+
+*InRule Server*
+----------------------
+InRule_Fatal all Timeout error
+----------------------
+1.
+DateTime="2023-10-05 12:16:27.6409" 
+Message="Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" Exception="Operating System: Microsoft Windows NT 10.0.20348.0

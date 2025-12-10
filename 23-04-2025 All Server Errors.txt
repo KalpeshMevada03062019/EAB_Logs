@@ -1,0 +1,130 @@
+*[23-04-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="d16143bb9d08" UserId="502418" UserEmail="pchamoli@eab.com" 
+DateTime="2025-04-23 05:58:41.0439" ThreadId="43" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+DateTime="2025-04-23 07:38:33.2876" ThreadId="1" Level="FATAL" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 238871" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238871X005587'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at ABC.CCM.Workers.ComdataSyncOut.ComdataSyncOutProcessor.UpdateCardAddressForUsers()
+---> (Inner Exception #0) ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238871X005587'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()<---
+
+ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238871X005587'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()"
+
+ 
+Trace:
+
+DateTime="2025-04-23 07:38:33.2142" ThreadId="13" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 270 ms."
+DateTime="2025-04-23 07:38:33.2142" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 236621X005522 end. Duration: 270 ms."
+DateTime="2025-04-23 07:38:33.2142" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 7582 start."
+DateTime="2025-04-23 07:38:33.2142" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.UpdateCreditCardWithComDataInfoAsync. Card Id: 7582 end. Duration: 1 ms."
+DateTime="2025-04-23 07:38:33.2142" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="CreditCardEntitiesMerger.MergeEntity.GetCreditCardComDataInfoAsync. Card employee number: 238200X005900 start."
+DateTime="2025-04-23 07:38:33.2142" ThreadId="1" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync start."
+DateTime="2025-04-23 07:38:33.2775" ThreadId="9" Level="TRACE" Provider="ComdataSyncOut" Message="CreditCardService.UpdateCreditCardStatusByComdataStatusAsync_comdataMcApiService.UpdateCreditCardBillingAddressAsync. end. Duration: 965 ms."
+DateTime="2025-04-23 07:38:33.3092" ThreadId="1" Level="TRACE" Provider="ComdataSyncOut" Message="ComdataSyncOutProcessor.ReplaceCardsDueToOwnerNameChange - ReplaceCreditCardAsync start."
+DateTime="2025-04-23 07:38:33.3923" ThreadId="17" Level="TRACE" Provider="ComdataSyncOut" Message="AddCreditCardAsync start."
+DateTime="2025-04-23 07:38:33.4839" ThreadId="13" Level="TRACE" Provider="ComdataSyncIn" Message="GetCardByEmployeeNumberAsync end. Duration: 271 ms." 
+ 
+
+Credit Card Detail:
+----------------------
+FirstName: Kyle
+LastName: Whitaker
+OwnerId: 9CB0910D-93F6-4976-8C74-A31303E55E78
+CustomerID: DGYXS
+Status: Active
+MaskedNumber: 556305XXXXXX4314
+EmployeeNumber: 238871X005587 
+ 
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

@@ -1,0 +1,118 @@
+*[20-11-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #2 same error
+RequestId="88ae092721e5" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-11-20 07:25:59.6118" ThreadId="5" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: User does not have access to the accountNumber or custid. ActorId: 7b56cf05-086f-41d1-af57-d66ae5a4a8ca. OwnerId: 70c08e68-4feb-463a-b07a-88a8e146f99e. Last4Digits: 7434, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+3. #1 error
+RequestId="066ab4bcb952" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-11-20 07:28:37.8879" ThreadId="19" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: 7b56cf05-086f-41d1-af57-d66ae5a4a8ca. Reason: User does not have access to the accountNumber or custid. OwnerId: cea56be2-c960-40fc-aaf9-f7f700acfadd. EmployeeNumber: 226146X004426. CustomerID: BRV61" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+4. #2 same error
+RequestId="e112eb8fa477" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-11-20 07:28:46.6395" ThreadId="19" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: User does not have access to the accountNumber or custid. ActorId: 7b56cf05-086f-41d1-af57-d66ae5a4a8ca. OwnerId: cea56be2-c960-40fc-aaf9-f7f700acfadd. Last4Digits: 8505, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. TESTED FILE:: #File share by rachel on 19 Nov to verify by processing manually in production that creates duplicate transaction
+DateTime="2024-11-20 01:42:03.5533" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.CreateOrUpdateCreditCards(List`1 accountElements)
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.CreateRelatedEntities(List`1 accountElements, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)"
+
+DateTime="2024-11-20 01:42:03.5533" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241119_150219SB_006599.xml'" Exception="System.Exception: There is no EmployeeId element.
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.CreateOrUpdateCreditCards(List`1 accountElements)
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.CreateRelatedEntities(List`1 accountElements, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Splitting.Cdf3FileSplitter.Split(XDocument root, IDbContext context)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Cdf3FileSaver.Save(FeedInfoModel feedContent)
+   at ABC.ERS.FileWorkers.Implementation.Downloading.Base.ExdFileProcessor.DownloadAndSaveFiles(IEnumerable`1 feedInfoModels)"
+
+
+DateTime="2024-11-20 01:38:50.7157" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-20 01:38:50.7315" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241022_123338SB_006535.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-20 01:38:51.1565" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-20 01:38:51.1565" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-20 01:38:51.2981" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-20 01:38:51.2981" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241023_073936SB_006538.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-20 01:39:00.9215" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-20 01:39:00.9215" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-20 01:39:11.1010" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-20 01:39:11.1010" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541tryagain.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-20 01:42:03.5533" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-20 01:42:03.5533" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241119_150219SB_006599.xml'" Exception="System.Exception: There is no EmployeeId element.
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-11-19 09:15:54.8205" ThreadId="1" Level="FATAL" Provider="ComDataEmailSync" 
+Message="ComData Message processor. Event Notification failed for credit card decline. Credit card decline Id: 98982" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="d5efe38ca167" 
+DateTime="2024-11-20 19:54:52.1346" ThreadId="19" Level="FATAL" 
+Message="Description: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake." Provider="ComdataMC" 
+Exception=""
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

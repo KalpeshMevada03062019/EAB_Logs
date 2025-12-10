@@ -1,0 +1,185 @@
+*[03-11-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #2 same error for last4digit 5732 card
+RequestId="be8077417086" UserId="500234" UserEmail="LGoad@eab.com" 
+DateTime="2024-11-03 21:37:33.1464" ThreadId="8" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: User does not have access to the accountNumber or custid. ActorId: ae8195b5-050f-4eaa-a2ce-b4514e30ee79. OwnerId: 840a324a-6b09-4c7d-a52f-7af9334cb64a. Last4Digits: 5732, CustomerID = 'BRV61'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2. #4 same error
+RequestId="e5506955d25e" UserId="500234" UserEmail="LGoad@eab.com" 
+DateTime="2024-11-03 21:52:18.5877" ThreadId="7" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: User does not have access to the accountNumber or custid. ActorId: ae8195b5-050f-4eaa-a2ce-b4514e30ee79. OwnerId: 9bbe19f3-467b-4ed0-be5b-e7cfe1010820. Last4Digits: 9531, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #4 same error
+RequestId="2f7bda717671" UserId="225118" UserEmail="MBaum@eab.com" 
+DateTime="2024-11-03 07:14:26.8517" ThreadId="22" Level="FATAL" 
+Message="The HTTP request to 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout." 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/ccm_api/CardManagementApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+
+2. #2 same error
+RequestId="9308724c117b" UserId="235451" UserEmail="sbharris@eab.com" 
+DateTime="2024-11-03 21:56:52.4432" ThreadId="20" Level="FATAL" 
+Message="Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 840a324a-6b09-4c7d-a52f-7af9334cb64a. UserName: EAB, CustomerID:  " 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 840a324a-6b09-4c7d-a52f-7af9334cb64a. UserName: EAB, CustomerID:   (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. #11 same error of EmailsAttachment
+DateTime="2024-11-03 02:00:02.4625" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The remote server returned an error: (401) Unauthorized. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+2.
+DateTime="2024-11-03 06:48:17.5595" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+3.
+DateTime="2024-11-03 06:48:17.5655" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241022_123338SB_006535.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+4.
+DateTime="2024-11-03 06:48:17.5812" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+5.
+DateTime="2024-11-03 06:48:17.5812" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+6.
+DateTime="2024-11-03 06:48:17.6282" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+7.
+DateTime="2024-11-03 06:48:17.6282" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_073936SB_006538.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+8.
+DateTime="2024-11-03 06:48:26.6171" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+9.
+DateTime="2024-11-03 06:48:26.6171" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+10.
+DateTime="2024-11-03 06:48:35.8423" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+11.
+DateTime="2024-11-03 06:48:35.8423" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541tryagain.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. #91 same error
+RequestId="" 
+DateTime="2024-11-03 01:06:53.9727" ThreadId="64" Level="FATAL" 
+Message="The collection is empty. Parameter name: items" Provider="" 
+Exception="System.ArgumentException: The collection is empty.
+Parameter name: items
+   at Microsoft.Exchange.WebServices.Data.EwsUtilities.ValidateParamCollection(IEnumerable collection, String paramName) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsUtilities.cs:line 1181
+   at Microsoft.Exchange.WebServices.Data.ExchangeService.LoadPropertiesForItems(IEnumerable`1 items, PropertySet propertySet) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\ExchangeService.cs:line 1205
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 106
+   at ABC.EXD.InnerGateway.MailApiService.GetMails(MailAccount account, Nullable`1 receivedAfterDate, String subject) in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 71
+   at SyncInvokeGetMails(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)"
+
+2. #62 same error
+RequestId="" 
+DateTime="2024-11-03 01:37:53.5989" ThreadId="51" Level="FATAL" 
+Message="The request failed. The remote server returned an error: (401) Unauthorized." Provider=""
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The remote server returned an error: (401) Unauthorized. ---> System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+RequestId="" 
+DateTime="2024-11-03 07:14:27.9483" ThreadId="16" Level="FATAL" 
+Message="The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataMcApiService.svc' has exceeded the allotted timeout of 00:00:59.9840000. The time allotted to this operation may have been a portion of a longer timeout." 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataMcApiService.svc' has exceeded the allotted timeout of 00:00:59.9840000. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+
+2.
+RequestId="" 
+DateTime="2024-11-03 07:15:37.8811" ThreadId="16" Level="FATAL" 
+Message="The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataMcApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout." 
+Exception="System.TimeoutException: The HTTP request to 'https://eabgowers-p01/exd_inner/ComdataMcApiService.svc' has exceeded the allotted timeout of 00:01:00. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The request was aborted: The request was canceled.
+
+3.
+RequestId="" 
+DateTime="2024-11-03 21:56:51.7731" ThreadId="10" Level="FATAL" 
+Message="Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 840a324a-6b09-4c7d-a52f-7af9334cb64a. UserName: EAB, CustomerID:  " 
+Exception="ABC.Common.BL.Exceptions.ValidationException: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 840a324a-6b09-4c7d-a52f-7af9334cb64a. UserName: EAB, CustomerID:  
+
+4.
+RequestId="" 
+DateTime="2024-11-03 21:57:03.3433" ThreadId="17" Level="FATAL" 
+Message="Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 840a324a-6b09-4c7d-a52f-7af9334cb64a. UserName: EAB, CustomerID:  " 
+Exception="ABC.Common.BL.Exceptions.ValidationException: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 840a324a-6b09-4c7d-a52f-7af9334cb64a. UserName: EAB, CustomerID:  
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

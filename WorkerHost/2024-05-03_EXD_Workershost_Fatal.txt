@@ -1,0 +1,18 @@
+DateTime="2024-05-03 06:01:14.6083" ThreadId="1" Level="FATAL" Provider="WorkersHost" Message="Unhandled error while running creator 'UberFeedDownloader'" Exception="Renci.SshNet.Common.SshConnectionException: An established connection was aborted by the server.
+   at Renci.SshNet.Session.WaitOnHandle(WaitHandle waitHandle, TimeSpan timeout)
+   at Renci.SshNet.PrivateKeyAuthenticationMethod.Authenticate(Session session)
+   at Renci.SshNet.AuthenticationMethod.Renci.SshNet.IAuthenticationMethod.Authenticate(ISession session)
+   at Renci.SshNet.ClientAuthentication.TryAuthenticate(ISession session, AuthenticationState authenticationState, String[] allowedAuthenticationMethods, SshAuthenticationException& authenticationException)
+   at Renci.SshNet.ClientAuthentication.Authenticate(IConnectionInfoInternal connectionInfo, ISession session)
+   at Renci.SshNet.ConnectionInfo.Authenticate(ISession session, IServiceFactory serviceFactory)
+   at Renci.SshNet.Session.Connect()
+   at Renci.SshNet.BaseClient.CreateAndConnectSession()
+   at Renci.SshNet.BaseClient.Connect()
+   at ABC.EXD.Framework.SftpProvider.FtpClient.ABC.EXD.Framework.SftpProvider.Contracts.IExdSftpClient.Connect()
+   at ABC.EXD.Framework.SftpProvider.SftpProvider.Connect()
+   at ABC.EXD.Framework.SftpProvider.SftpProvider.GetFilesDetails(String folderPath, String fileMask)
+   at ABC.EXD.Workers.ExternalStorages.SftpExternalStorage.GetAllFileNames() in c:\git_sources\eabgo\ExternalData\ABC.EXD.Workers\ExternalStorages\SftpExternalStorage.cs:line 35
+   at ABC.EXD.Workers.FilesDownloader.FilesDownloader`1.GetUnprocessedAndProcessedFileNames(List`1& alreadyProcessedFileNames) in c:\git_sources\eabgo\ExternalData\ABC.EXD.Workers\FilesDownloader\FilesDownloader.cs:line 47
+   at ABC.EXD.Workers.Processors.FileDownloaderProcessor.Run() in c:\git_sources\eabgo\ExternalData\ABC.EXD.Workers\Processors\FileDownloaderProcessor.cs:line 35
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 104
+   at ABC.Common.Worker.Hosts.AbcWorkersHost.ExecuteCreators(String[] creatorNames) in c:\git_sources\eabgo\Common\ABC.Common.Worker\Hosts\AbcWorkersHost.cs:line 85"

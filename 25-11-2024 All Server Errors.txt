@@ -1,0 +1,123 @@
+*[25-11-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+RequestId="8a2910d90753" UserId="224124" UserEmail="SMandelbaum@eab.com" 
+DateTime="2024-11-25 12:25:52.2796" ThreadId="6" Level="FATAL" 
+Message="HTTP validation error: Move credit card to 033 profile request failed. Reason: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.."
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="8a2910d90753" UserId="224124" UserEmail="SMandelbaum@eab.com" DateTime="2024-11-25 12:25:51.5250" ThreadId="9" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/spendingprofiles/user/0aef0339-49e8-4a5c-a3dc-9ec0a1abf536/profile/13 START"
+RequestId="8a2910d90753" UserId="224124" UserEmail="SMandelbaum@eab.com" DateTime="2024-11-25 12:25:51.5372" ThreadId="9" Level="TRACE" Message="MoveCreditCardToProfileAsync to 033 start."
+RequestId="8a2910d90753" UserId="224124" UserEmail="SMandelbaum@eab.com" DateTime="2024-11-25 12:25:52.2796" ThreadId="6" Level="TRACE" Message="MoveCreditCardToProfileAsync to 033 end. Duration: 744 ms."
+RequestId="8a2910d90753" UserId="224124" UserEmail="SMandelbaum@eab.com" DateTime="2024-11-25 12:25:52.5633" ThreadId="6" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/spendingprofiles/user/0aef0339-49e8-4a5c-a3dc-9ec0a1abf536/profile/13 Completed in 1038 ms"
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. #3 same error
+RequestId="0fbd82af5f08" UserId="239185" UserEmail="ACarney@eab.com" 
+DateTime="2024-11-25 07:15:32.0985" ThreadId="7" Level="FATAL" 
+Message="Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: c6b6640a-c531-47db-b693-98c1c3081f3c. UserName: EAB, CustomerID:  " 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: c6b6640a-c531-47db-b693-98c1c3081f3c. UserName: EAB, CustomerID:   (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+Card Details:
+----------------------
+Name: Amy Carney
+ExternalID: 239185
+CustomerID: DGYXS
+Status: PendingProcessing
+MaskedNumber: 556305XXXXXX7611
+EmployeeNumber: 239185X338694
+
+
+2. #5 same error
+RequestId="2f3a0c9ef62b" UserId="223059" UserEmail="AKnowlton@eab.com" 
+DateTime="2024-11-25 07:33:35.1468" ThreadId="26" Level="FATAL" 
+Message="Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 9bfb2333-a53e-413e-8c25-7b86f803b5b6. UserName: EAB, CustomerID:  " 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Add new card request failed. Reason: User does not have access to the accountNumber or custid. UserId: 9bfb2333-a53e-413e-8c25-7b86f803b5b6. UserName: EAB, CustomerID:   (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+Card Details:
+----------------------
+Name: Aaron Knowlton
+ExternalID: 223059
+CustomerID: DGYXS
+Status: PendingProcessing
+MaskedNumber: 556305XXXXXX6882
+EmployeeNumber: 223059X338693
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-11-25 06:48:58.3135" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:48:58.3135" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:48:58.3930" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:48:58.4086" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:48:58.5343" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:48:58.5343" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241023_073936SB_006538.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:49:09.7396" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:49:09.7396" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:49:19.3558" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:49:19.3558" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541tryagain.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:52:58.7758" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="There is no EmployeeId element." Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:52:58.7758" ThreadId="1" Level="FATAL" Provider="CDF3Import" Message="ExdFileProcessor. Error loading file 'G0210862_20241119_150219SB_006599.xml'" Exception="System.Exception: There is no EmployeeId element.
+DateTime="2024-11-25 06:53:15.9592" ThreadId="1" Level="FATAL" Provider="BalboaSupplementalImport" Message="File with id ad76daa2-e995-4ed1-9573-6568d021b522 is empty." Exception=""
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #4 same error
+DateTime="2024-11-25 09:58:33.8356" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The operation has timed out
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

@@ -1,0 +1,131 @@
+*[30-05-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="833abc780094" SessionId="_7d76d03a-d5f1-41f7-aa2f-473417df4026-3DF116206F6F4294D95CC522A5D01AE7" UserId="235964" UserEmail="CDoci@eab.com"
+DateTime="2025-05-30 12:08:25.7638" ThreadId="62" Level="FATAL" 
+Message="Rule execution error: 'Error: 'ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+
+
+2.
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+RequestId="5716cd297ae6" SessionId="_63355375-4b7b-458e-96bc-b9124f40adbe-649687E74A5D04D906AE12D24FE24ED2" UserId="239121" UserEmail="RArnold@eab.com" 
+DateTime="2025-05-30 12:27:25.7481" ThreadId="8" Level="FATAL" 
+Message="HTTP validation error: Air preferences is absent." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="b89c43dd979a" SessionId="_63355375-4b7b-458e-96bc-b9124f40adbe-649687E74A5D04D906AE12D24FE24ED2" UserId="239121" UserEmail="RArnold@eab.com" DateTime="2025-05-30 12:27:25.7331" ThreadId="23" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/userPersonalInfo/get START"
+RequestId="f58b5f2c4982" SessionId="_63355375-4b7b-458e-96bc-b9124f40adbe-649687E74A5D04D906AE12D24FE24ED2" UserId="239121" UserEmail="RArnold@eab.com" DateTime="2025-05-30 12:27:25.7331" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/travel/preferences/save START"
+RequestId="b89c43dd979a" SessionId="_63355375-4b7b-458e-96bc-b9124f40adbe-649687E74A5D04D906AE12D24FE24ED2" UserId="239121" UserEmail="RArnold@eab.com" DateTime="2025-05-30 12:27:25.7331" ThreadId="11" Level="TRACE" Message="GET https://go.myeab.com/upm/api/profile/userPersonalInfo/get Completed in 0 ms"
+RequestId="f58b5f2c4982" SessionId="_63355375-4b7b-458e-96bc-b9124f40adbe-649687E74A5D04D906AE12D24FE24ED2" UserId="239121" UserEmail="RArnold@eab.com" DateTime="2025-05-30 12:27:25.7481" ThreadId="8" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/travel/preferences/save Completed in 15 ms"
+
+
+2
+RequestId="d3ed7d22a24f" SessionId="_63355375-4b7b-458e-96bc-b9124f40adbe-649687E74A5D04D906AE12D24FE24ED2" UserId="239121" UserEmail="RArnold@eab.com" 
+DateTime="2025-05-30 12:27:25.7638" ThreadId="16" Level="FATAL" 
+Message="HTTP validation error: Delegates is absent." 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+Trace:
+RequestId="e3c377a74ada" SessionId="_63355375-4b7b-458e-96bc-b9124f40adbe-649687E74A5D04D906AE12D24FE24ED2" UserId="239121" UserEmail="RArnold@eab.com" DateTime="2025-05-30 12:27:25.7638" ThreadId="16" Level="TRACE" Message="POST https://go.myeab.com/upm/api/profile/notifications/save START"
+
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2025-05-29 07:38:17.9025" ThreadId="1" Level="FATAL" Provider="ComdataSyncOut" Message="Error updated mailing address for user with ExternalId id 240391" Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at ABC.CCM.Workers.ComdataSyncOut.ComdataSyncOutProcessor.UpdateCardAddressForUsers()
+---> (Inner Exception #0) ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()<---
+
+ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '240391X005311'
+   at ABC.Common.BL.NotificationService.ThrowValidationError(String message) in c:\git_sources\eabgo\Common\ABC.Common.BL\NotificationService.cs:line 10
+   at ABC.CCM.BL.CreditCardService.<UpdateCreditCardMailingAddressAsync>d__165.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at ABC.CCM.BL.CreditCardService.<UpdateActiveCreditCardsMailingAddressAsync>d__9d.MoveNext()"
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

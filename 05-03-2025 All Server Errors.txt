@@ -1,0 +1,142 @@
+*[05-03-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+RequestId="50775915fdb6" UserId="502586" UserEmail="jtracy@eab.com" 
+DateTime="2025-03-05 16:01:40.2083" ThreadId="9" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: beefb85a-b04d-4582-97c6-0a9bdab41a53. Reason: User does not have access to the accountNumber or custid. OwnerId: eb127c73-b731-4c51-8e7f-e67eaa2b76f5. EmployeeNumber: 239948X338731. CustomerID: DGYXS" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="50775915fdb6" SessionId="_023da577-f465-4609-9795-c17d1a63ebc2-9191449616050B3DC38CACB02CE756B5" UserId="502586" UserEmail="jtracy@eab.com" DateTime="2025-03-05 16:01:39.3705" ThreadId="15" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/9177/replace START"
+RequestId="50775915fdb6" SessionId="_023da577-f465-4609-9795-c17d1a63ebc2-9191449616050B3DC38CACB02CE756B5" UserId="502586" UserEmail="jtracy@eab.com" DateTime="2025-03-05 16:01:39.4187" ThreadId="15" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="50775915fdb6" SessionId="_023da577-f465-4609-9795-c17d1a63ebc2-9191449616050B3DC38CACB02CE756B5" UserId="502586" UserEmail="jtracy@eab.com" DateTime="2025-03-05 16:01:40.2083" ThreadId="9" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 778 ms."
+RequestId="50775915fdb6" SessionId="_023da577-f465-4609-9795-c17d1a63ebc2-9191449616050B3DC38CACB02CE756B5" UserId="502586" UserEmail="jtracy@eab.com" DateTime="2025-03-05 16:01:40.2083" ThreadId="9" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/9177/replace Completed in 838 ms"
+
+Card Detail:
+-----------------------
+FirstName: Rebecca
+LastName: Kelley
+MaskedNumber: 556305XXXXXX5054
+EmployeeNumber: 239948X338731
+Status: Blocked
+CustomerID: DGYXS
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2025-03-05 09:05:02.7948" ThreadId="1" Level="FATAL" Provider="WorkersHost" Message="Unhandled error while running creator 'EmailsAttachment'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The response received from the service didn't contain valid XML. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceRequestException: The response received from the service didn't contain valid XML. ----> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlCharCheckingReader.Read()
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read(XmlNodeType nodeType) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 170
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadXmlDeclaration(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManag...)."
+DateTime="2025-03-05 09:16:02.9389" ThreadId="1" Level="FATAL" Provider="WorkersHost" Message="Unhandled error while running creator 'EmailsAttachment'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The response received from the service didn't contain valid XML. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceRequestException: The response received from the service didn't contain valid XML. ----> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlCharCheckingReader.Read()
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read(XmlNodeType nodeType) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 170
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadXmlDeclaration(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManag...)."
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2025-03-05 08:47:53.8328" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The response received from the service didn't contain valid XML.
+   at System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   at System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass7_0`1.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at ABC.CCM.BL.MailingService.<GetMailsAsync>d__3.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at ABC.CCM.Workers.ComDataEmailSync.ComDataEmailProcessor.Run()
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 104
+   at ABC.Common.Worker.Hosts.AbcWorkersHost.ExecuteCreators(String[] creatorNames) in c:\git_sources\eabgo\Common\ABC.Common.Worker\Hosts\AbcWorkersHost.cs:line 85
+---> (Inner Exception #0) System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The response received from the service didn't contain valid XML. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceRequestException: The response received from the service didn't contain valid XML. ----> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlCharCheckingReader.Read()
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read(XmlNodeType nodeType) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 170
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadXmlDeclaration(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManag...).<---
+
+System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The response received from the service didn't contain valid XML. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+Microsoft.Exchange.WebServices.Data.ServiceRequestException: The response received from the service didn't contain valid XML. ----> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlCharCheckingReader.Read()
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read() in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 157
+   at Microsoft.Exchange.WebServices.Data.EwsXmlReader.Read(XmlNodeType nodeType) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManagedApi\src\EwsManagedApi\Core\EwsXmlReader.cs:line 170
+   at Microsoft.Exchange.WebServices.Data.ServiceRequestBase.ReadXmlDeclaration(EwsServiceXmlReader reader) in \\REDMOND\EXCHANGE\BUILD\E15\15.00.0913.015\SOURCES\sources\dev\EwsManag...)."
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

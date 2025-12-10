@@ -1,0 +1,95 @@
+[27-02-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+RequestId="7a6b87a1411d" UserId="236619" UserEmail="SLeDuc@eab.com" 
+DateTime="2024-02-27 08:47:01.3626" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+2.
+RequestId="7a9534ccec58" UserId="240192" UserEmail="LKostenko@eab.com" 
+DateTime="2024-02-27 08:48:59.0637" 
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration. ---> System.InvalidOperationException: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. #4 Same error
+RequestId="d78d301b1509" UserId="501927" UserEmail="JJauss@eab.com" 
+DateTime="2024-02-27 10:19:54.5790" 
+Message="HTTP validation error: Add new card request failed. Reason: Can not ship to PO Box for expedited method" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE::
+RequestId="d78d301b1509" SessionId="_7ab38581-9b12-4e87-b0a9-2ee92fe63ea7-76964A6E71444A7FEE44ECB8C99FF58B" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-02-27 10:19:53.6937" ThreadId="7" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5092/replace START"
+RequestId="d78d301b1509" SessionId="_7ab38581-9b12-4e87-b0a9-2ee92fe63ea7-76964A6E71444A7FEE44ECB8C99FF58B" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-02-27 10:19:54.0672" ThreadId="24" Level="TRACE" Message="AddCreditCardAsync start."
+RequestId="d78d301b1509" SessionId="_7ab38581-9b12-4e87-b0a9-2ee92fe63ea7-76964A6E71444A7FEE44ECB8C99FF58B" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-02-27 10:19:54.5790" ThreadId="24" Level="TRACE" Message="AddCreditCardAsync end. Duration: 513 ms."
+RequestId="d78d301b1509" SessionId="_7ab38581-9b12-4e87-b0a9-2ee92fe63ea7-76964A6E71444A7FEE44ECB8C99FF58B" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-02-27 10:19:54.5790" ThreadId="24" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5092/replace Completed in 885 ms"
+
+INFO ::
+RequestId="e8e0aa298b21" SessionId="_7ab38581-9b12-4e87-b0a9-2ee92fe63ea7-A65D88A4E9059A536DF477FC200D9556" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-02-27 09:21:41.6326" ThreadId="9" Level="INFO" Message="Credit card with masked number 556368XXXXXX1229 has been created for owner with id '49d77cd3-3009-44bd-8020-e2a4d44595b6'"
+RequestId="e8e0aa298b21" SessionId="_7ab38581-9b12-4e87-b0a9-2ee92fe63ea7-A65D88A4E9059A536DF477FC200D9556" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-02-27 09:21:42.2821" ThreadId="9" Level="INFO" Message="Credit card with masked number 556368XXXXXX1229 has been updated with ComData info for owner with id '49d77cd3-3009-44bd-8020-e2a4d44595b6'"
+RequestId="425f14eef834" SessionId="_7ab38581-9b12-4e87-b0a9-2ee92fe63ea7-7653A19B6803DC0841FE3AE94176DC75" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-02-27 09:41:42.8991" ThreadId="27" Level="INFO" Message="Credit card with masked number 556368XXXXXX2771 has been created for owner with id '37e8ecad-1c13-4019-93ba-c3e5ad67f1a2'"
+RequestId="425f14eef834" SessionId="_7ab38581-9b12-4e87-b0a9-2ee92fe63ea7-7653A19B6803DC0841FE3AE94176DC75" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-02-27 09:41:45.5746" ThreadId="7" Level="INFO" Message="Credit card with masked number 556368XXXXXX2771 has been updated with ComData info for owner with id '37e8ecad-1c13-4019-93ba-c3e5ad67f1a2'"
+RequestId="ed682555c560" SessionId="_7ab38581-9b12-4e87-b0a9-2ee92fe63ea7-AA66310AAEC340D80D71B0DCC01235F3" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-02-27 10:49:59.3733" ThreadId="9" Level="INFO" Message="Credit card with masked number 556368XXXXXX0387 has been created for owner with id '296277e6-3b86-4cda-a5ed-01928f573b53'"
+RequestId="ed682555c560" SessionId="_7ab38581-9b12-4e87-b0a9-2ee92fe63ea7-AA66310AAEC340D80D71B0DCC01235F3" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-02-27 10:49:59.9062" ThreadId="9" Level="INFO" Message="Credit card with masked number 556368XXXXXX0387 has been updated with ComData info for owner with id '296277e6-3b86-4cda-a5ed-01928f573b53'"
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-02-27 05:46:12.4830" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+	
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+RequestId="" 
+DateTime="2024-02-27 05:46:14.8159" 
+Message="The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server." Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceRequestException: The request failed. The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+2.
+RequestId="aab8b4a5e5fa" 
+DateTime="2024-02-27 22:42:41.0164" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" Exception=""
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

@@ -1,0 +1,99 @@
+*[13-02-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2025-02-13 06:00:49.4528" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'HertzParser'" 
+Exception="Renci.SshNet.Common.SshAuthenticationException: Permission denied (password).
+   at Renci.SshNet.ClientAuthentication.Authenticate(IConnectionInfoInternal connectionInfo, ISession session)
+   at Renci.SshNet.ConnectionInfo.Authenticate(ISession session, IServiceFactory serviceFactory)
+   at Renci.SshNet.Session.Connect()
+   at Renci.SshNet.BaseClient.CreateAndConnectSession()
+   at Renci.SshNet.BaseClient.Connect()
+   at ABC.EXD.Framework.SftpProvider.FtpClient.ABC.EXD.Framework.SftpProvider.Contracts.IExdSftpClient.Connect()
+   at ABC.EXD.Framework.SftpProvider.SftpProvider.Connect()
+   at ABC.EXD.Framework.SftpProvider.SftpProvider.Exists(String path)
+   at ABC.EXD.Workers.ExternalStorages.SftpExternalStorage.GetAllFileNames() in c:\git_sources\eabgo\ExternalData\ABC.EXD.Workers\ExternalStorages\SftpExternalStorage.cs:line 28
+   at ABC.EXD.Workers.FilesDownloader.FilesDownloader`1.GetUnprocessedAndProcessedFileNames(List`1& alreadyProcessedFileNames) in c:\git_sources\eabgo\ExternalData\ABC.EXD.Workers\FilesDownloader\FilesDownloader.cs:line 47
+   at ABC.EXD.Workers.Processors.SftpProcessor`1.Run() in c:\git_sources\eabgo\ExternalData\ABC.EXD.Workers\Processors\SftpProcessor.cs:line 44
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 104
+   at ABC.Common.Worker.Hosts.AbcWorkersHost.ExecuteCreators(String[] creatorNames) in c:\git_sources\eabgo\Common\ABC.Common.Worker\Hosts\AbcWorkersHost.cs:line 85"
+
+DateTime="2025-02-13 07:00:52.9837" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'HertzCleaner'" 
+Exception="Renci.SshNet.Common.SshAuthenticationException: Permission denied (password).
+   at Renci.SshNet.ClientAuthentication.Authenticate(IConnectionInfoInternal connectionInfo, ISession session)
+   at Renci.SshNet.ConnectionInfo.Authenticate(ISession session, IServiceFactory serviceFactory)
+   at Renci.SshNet.Session.Connect()
+   at Renci.SshNet.BaseClient.CreateAndConnectSession()
+   at Renci.SshNet.BaseClient.Connect()
+   at ABC.EXD.Framework.SftpProvider.FtpClient.ABC.EXD.Framework.SftpProvider.Contracts.IExdSftpClient.Connect()
+   at ABC.EXD.Framework.SftpProvider.SftpProvider.Connect()
+   at ABC.EXD.Framework.SftpProvider.SftpProvider.Exists(String path)
+   at ABC.EXD.Workers.ExternalStorages.SftpExternalStorage.GetAllFileNames() in c:\git_sources\eabgo\ExternalData\ABC.EXD.Workers\ExternalStorages\SftpExternalStorage.cs:line 28
+   at ABC.EXD.Workers.Processors.SftpCleanerProcessor`1.Run() in c:\git_sources\eabgo\ExternalData\ABC.EXD.Workers\Processors\SftpCleanerProcessor.cs:line 43
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 104
+   at ABC.Common.Worker.Hosts.AbcWorkersHost.ExecuteCreators(String[] creatorNames) in c:\git_sources\eabgo\Common\ABC.Common.Worker\Hosts\AbcWorkersHost.cs:line 85"
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

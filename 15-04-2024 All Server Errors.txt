@@ -1,0 +1,138 @@
+[15-04-2024]
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+RequestId="e8099a39d77d" UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-04-15 05:52:47.3145" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. GT-56
+RequestId="dfc80c728a2e" UserId="501927" UserEmail="JJauss@eab.com" 
+DateTime="2024-04-15 12:14:04.8636" 
+Message="Model state validation error: The Reason field is required." 
+Exception=""
+
+RequestId="dfc80c728a2e" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:14:04.8447" ThreadId="19" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5246/replace START"
+RequestId="811d72ee54b7" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:14:04.8602" ThreadId="9" Level="TRACE" Message="GET https://go.myeab.com/ccm/api/cards/replace/reasons?status=Blocked Completed in 16 ms"
+RequestId="80625c7d1b5d" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:14:04.8630" ThreadId="20" Level="TRACE" Message="GET https://go.myeab.com/ccm/api/states?countryId=236 Completed in 18 ms"
+RequestId="dfc80c728a2e" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:14:04.8636" ThreadId="19" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5246/replace Completed in 19 ms"
+
+
+INFO::
+RequestId="ee2481fc0616" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:04:47.7815" ThreadId="9" Level="INFO" Message="Credit card with masked number 556368XXXXXX2720 has been created for owner with id 'd92d95f8-46dd-49bb-9055-ad34d95e59af'"
+RequestId="ee2481fc0616" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:04:49.0448" ThreadId="9" Level="INFO" Message="Credit card with masked number 556368XXXXXX2720 has been updated with ComData info for owner with id 'd92d95f8-46dd-49bb-9055-ad34d95e59af'"
+
+2.
+RequestId="09b078b01126" UserId="501927" UserEmail="JJauss@eab.com" 
+DateTime="2024-04-15 12:19:39.3218" 
+Message="HTTP validation error: Deactivate credit card request failed. Reason: Card not found. Actor Id: a92b9fe2-1f18-43ad-815f-f6e51f63d331" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE:
+RequestId="09b078b01126" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:19:38.5335" ThreadId="19" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/4590/deactivate START"
+RequestId="09b078b01126" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:19:38.5486" ThreadId="7" Level="TRACE" Message="DeactivateCreditCardAsync start."
+RequestId="09b078b01126" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:19:39.3218" ThreadId="7" Level="TRACE" Message="DeactivateCreditCardAsync end. Duration: 760 ms."
+RequestId="09b078b01126" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:19:39.3218" ThreadId="7" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/4590/deactivate Completed in 788 ms"
+
+INFO:
+RequestId="c8591d9212af" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:22:03.4476" ThreadId="19" Level="INFO" Message="Credit card with masked number 556368XXXXXX8916 has been created for owner with id 'e3427260-aeb2-4fe6-95dd-3832927ea01f'"
+RequestId="c8591d9212af" SessionId="_ab0c9999-0edf-467b-aebc-15850ab4c88b-9A5B5B638130BB2F614AD679AE78D790" UserId="501927" UserEmail="JJauss@eab.com" DateTime="2024-04-15 12:22:03.9211" ThreadId="7" Level="INFO" Message="Credit card with masked number 556368XXXXXX8916 has been updated with ComData info for owner with id 'e3427260-aeb2-4fe6-95dd-3832927ea01f'"
+
+3. #11 same error for JTracy@eab.com
+RequestId="4164bc53df32" UserId="502586" UserEmail="JTracy@eab.com" 
+DateTime="2024-04-15 18:33:10.7919"
+Message="HTTP validation error: Unable to replace credit card when owner already has an active credit card. UserId: 8be72666-bdcd-4403-9273-36679c4d28e4" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE::
+RequestId="4164bc53df32" SessionId="_e7b32c54-4977-4e89-9adc-bf3d6367677c-D85F8D89EBF45405BA8587EE666260DE" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-04-15 18:33:10.7599" ThreadId="9" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5205/replace START"
+RequestId="4164bc53df32" SessionId="_e7b32c54-4977-4e89-9adc-bf3d6367677c-D85F8D89EBF45405BA8587EE666260DE" UserId="502586" UserEmail="JTracy@eab.com" DateTime="2024-04-15 18:33:10.7919" ThreadId="9" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5205/replace Completed in 32 ms"
+
+4. #2 same error for ADurgan@eab.com
+RequestId="b7531660fb55" UserId="501312" UserEmail="ADurgan@eab.com" 
+DateTime="2024-04-15 19:16:20.9241" 
+Message="HTTP validation error: Unable to replace credit card when owner already has an active credit card. UserId: 8be72666-bdcd-4403-9273-36679c4d28e4" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+TRACE::
+RequestId="b7531660fb55" SessionId="_e7b32c54-4977-4e89-9adc-bf3d6367677c-E3B5E086E872F1ECC51417F444D5C8E9" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-04-15 19:16:20.9084" ThreadId="20" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5205/replace START"
+RequestId="b7531660fb55" SessionId="_e7b32c54-4977-4e89-9adc-bf3d6367677c-E3B5E086E872F1ECC51417F444D5C8E9" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-04-15 19:16:20.9241" ThreadId="18" Level="TRACE" Message="POST https://go.myeab.com/ccm/api/cards/5205/replace Completed in 16 ms"
+
+INFO::
+RequestId="fd84a6e62c98" SessionId="_e7b32c54-4977-4e89-9adc-bf3d6367677c-E3B5E086E872F1ECC51417F444D5C8E9" UserId="501312" UserEmail="ADurgan@eab.com" DateTime="2024-04-15 20:17:36.3882" ThreadId="7" Level="INFO" Message="User 501312 has been logged out"
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1.
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. #Timeout error
+DateTime="2024-04-15 06:55:08.7854" Provider="CDF3Parser" 
+Message="CDF3 Parsing: InRule validation exception: One or more errors occurred." 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:6/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_Workershost_Fatal
+-------------------------
+1.	
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="26bcc457f166" DateTime="2024-04-15 03:15:44.2652" ThreadId="21" Level="FATAL" Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+RequestId="7a4f694dd1fe" DateTime="2024-04-15 03:26:38.8066" ThreadId="41" Level="FATAL" Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+RequestId="d5cec168319a" DateTime="2024-04-15 03:39:10.2355" ThreadId="19" Level="FATAL" Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+RequestId="0b870abd6ad6" DateTime="2024-04-15 03:40:23.5306" ThreadId="25" Level="FATAL" Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+RequestId="c593772db2c1" DateTime="2024-04-15 04:41:05.0369" ThreadId="23" Level="FATAL" Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" Exception=""
+RequestId="66c384b2f330" DateTime="2024-04-15 07:43:52.6735" ThreadId="66" Level="FATAL" Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+1.
+

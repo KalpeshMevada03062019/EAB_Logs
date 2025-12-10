@@ -1,0 +1,86 @@
+[10-10-2023]
+
+Web Server
+----------------------
+ERS_Website_fatal
+----------------------
+1. All Timeout error
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1. [Repeated error again after 6 oct]
+DateTime="2023-10-10 03:25:02.6441" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsAttachment'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = MN2PR15MB3198.namprd15.prod.outlook.com, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965 (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+								    
+2.                                  
+DateTime="2023-10-10 06:48:41.7280" Provider="BalboaSupplementalImport" 
+Message="File with id d6f28afd-db13-4986-b911-26b986ea8041 is empty." Exception=""
+	
+3.
+DateTime="2023-10-10 07:09:02.6769" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An error occurred while executing the command definition. See the inner exception for details.
+
+	
+----------------------
+NTF_Workerhost_fatal
+----------------------
+1. [Need to inform to Karl due to same error again]
+DateTime="2023-10-10 07:13:53.4443" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception: Access is denied
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1. [2 same error - common error]
+DateTime="2023-10-10 07:13:48.4556" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception: Access is denied
+
+2.
+DateTime="2023-10-10 07:37:46.4176" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 238596" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408'
+
+
+*API Server*
+----------------------
+EXD_innerGateway_Fatal
+----------------------
+1. [As per andriee , it resolved kimbly ]
+RequestId="49126f44f255" 
+DateTime="2023-10-10 02:37:45.1803" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+
+2.  [As per andriee , it resolved kimbly ]
+RequestId="37327d331843" 
+DateTime="2023-10-10 02:38:52.6821" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" Exception=""
+
+3. [Repeated error again after 6 oct]
+DateTime="2023-10-10 03:25:02.9962" 
+Message="Mailbox move in progress. Try again later., Cannot open mailbox. Server = MN2PR15MB3198.namprd15.prod.outlook.com, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = MN2PR15MB3198.namprd15.prod.outlook.com, maiboxGuid = b5759d2a-4063-4f3d-a969-31299e941965
+
+4.
+RequestId="4b8296601d34" 
+DateTime="2023-10-10 04:53:38.6369" 
+Message="Description: The HTTP service located at https://w6.iconnectdata.com/MCWS/services/MCWS is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later.." Provider="ComdataMC" Exception=""
+
+----------------------
+UPM_API_Fatal
+----------------------
+1.
+DateTime="2023-10-10 07:09:03.0305" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.) ---> System.ComponentModel.Win32Exception: The semaphore timeout period has expired
+Error in line
+ABC.UPM.BL.UserService.<GetAllAsync>d__15.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.BL\UserService.cs:line 85
+ABC.UPM.Api.UpmApiService.<<GetUsersTravelerCategoriesAsync>b__26>d__2b.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Api\UpmApiService.svc.cs:line 135
+ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+ABC.UPM.Api.UpmApiService.<GetUsersTravelerCategoriesAsync>d__2f.MoveNext() in c:\git_sources\eabgo\UserProfileManager\ABC.UPM.Api\UpmApiService.svc.cs:line 132

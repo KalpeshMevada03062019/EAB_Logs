@@ -1,0 +1,81 @@
+06-06-2024
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+RequestId="b0fc64407338" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-06-06 03:21:50.3784"  
+Message="Error adding admin notification." 
+Exception="System.InvalidOperationException: The changes to the database were committed successfully, but an error occurred while updating the object context. The ObjectContext might be in an inconsistent state. Inner exception message: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration. ---> System.InvalidOperationException: Saving or accepting changes failed because more than one entity of type 'ABC.Common.Models.DataModels.AdminNotification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+
+2. #3 same error
+RequestId="b1f3a0d2e53d" UserEmail="MarioMoore@eab.com" 
+DateTime="2024-06-06 12:41:05.2144" ThreadId="38" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+
+TRACE::
+RequestId="b1f3a0d2e53d" UserId="239611" UserEmail="MarioMoore@eab.com" DateTime="2024-06-06 12:41:05.1713" ThreadId="22" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/misc/2222281 START"
+RequestId="b1f3a0d2e53d" UserId="239611" UserEmail="MarioMoore@eab.com" DateTime="2024-06-06 12:41:05.1828" ThreadId="22" Level="TRACE" Message="User '224337' in 'User' role: Getting transaction data for id '2222281'"
+RequestId="b1f3a0d2e53d" UserId="239611" UserEmail="MarioMoore@eab.com" DateTime="2024-06-06 12:41:05.2144" ThreadId="38" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/misc/2222281 Completed in 43 ms"
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-06-06 19:57:54.1083" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1.
+
+API Server
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1.
+RequestId="9afe0184a516" 
+DateTime="2024-06-06 02:28:05.2408" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+2.
+RequestId="" 
+DateTime="2024-06-06 19:57:55.3747" 
+Message="Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55" Provider="" 
+Exception="Microsoft.Exchange.WebServices.Data.ServiceResponseException: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1.
+
+InRule Server
+-------------------------
+
+

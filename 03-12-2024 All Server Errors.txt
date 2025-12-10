@@ -1,0 +1,96 @@
+*[03-12-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. #5 same error
+RequestId="54e45616a1b2" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-12-03 07:13:58.9187" ThreadId="10" Level="FATAL" 
+Message="HTTP validation error: Activate credit card request failed. Reason: User does not have access to the accountNumber or custid. ActorId: 7b56cf05-086f-41d1-af57-d66ae5a4a8ca. OwnerId: 9e8ad593-92df-47df-8291-b09efee3c8c4. Last4Digits: 1512, CustomerID = 'DGYXS'" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+------------
+CustomerID: DGYXS
+MaskedNumber: 556305XXXXXX1512
+Status: Active
+EmployeeNumber: 502601X338695
+FirstName: Karen
+LastName: Hertling
+
+2. #15 same error
+RequestId="fc41f777a6bf" UserId="500232" UserEmail="KArchuleta@eab.com" 
+DateTime="2024-12-03 07:17:02.5201" ThreadId="10" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: 7b56cf05-086f-41d1-af57-d66ae5a4a8ca. Reason: User does not have access to the accountNumber or custid. OwnerId: 9e8ad593-92df-47df-8291-b09efee3c8c4. EmployeeNumber: 502601X005324. CustomerID: BRV61" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Card Detail:
+------------
+CustomerID: BRV61
+Status: Blocked
+MaskedNumber: 556368XXXXXX9618
+EmployeeNumber: 502601X005324
+FirstName: Karen
+LastName: Hertling
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

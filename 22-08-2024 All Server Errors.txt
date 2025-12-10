@@ -1,0 +1,262 @@
+*[22-08-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal  
+-------------------------
+1. 
+RequestId="39b39cd5c29c" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-08-22 03:07:45.1673" ThreadId="8" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesCountAsync>d__11f.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1762
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsActionAsync>d__eb`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1340
+   at ABC.ERS.BL.ExpenseGridService.<GetFilteredTransactionsCountAsync>d__5c.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 469
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<>c__DisplayClassd1.<<GetFilteredCountAsync>b__d0>d__d3.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 0
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 78
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<GetFilteredCountAsync>d__d6.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 516
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+Methods:
+GetTransactionsOfSpecifiedStatusesCountAsync()
+GetFilteredTransactionsActionAsync()
+GetFilteredTransactionsCountAsync()
+ExecuteActionFilterAsync()
+GetFilteredCountAsync()
+
+2.
+RequestId="081e8d8544bd" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-08-22 03:07:45.4045" ThreadId="27" Level="FATAL" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+   at ABC.Common.Web.Infrastructure.GlobalExceptionLogger.<LogAsync>d__0.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\Infrastructure\GlobalExceptionLogger.cs:line 36
+
+3.
+RequestId="e033928571e6" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-08-22 04:59:51.8227" ThreadId="15" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+4.
+RequestId="2eca3e871bae" UserId="240295" UserEmail="AMoore@eab.com" 
+DateTime="2024-08-22 15:21:48.3503" ThreadId="53" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1842
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsActionAsync>d__db`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 0
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsAsync>d__4d.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 411
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<SubmittedAsync>d__8a.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 348
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+Methods::
+GetTransactionsOfSpecifiedStatusesAsync()
+GetSubmittedTransactionsActionAsync()
+GetSubmittedTransactionsAsync()
+SubmittedAsync()
+ExecuteActionFilterAsync()
+
+4.
+RequestId="213358b5e045" UserId="240295" UserEmail="AMoore@eab.com" 
+DateTime="2024-08-22 15:22:42.7249" ThreadId="67" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1842
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsActionAsync>d__db`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 0
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsAsync>d__4d.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 411
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<SubmittedAsync>d__8a.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 348
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+Methods:
+GetTransactionsOfSpecifiedStatusesAsync()
+GetSubmittedTransactionsActionAsync()
+GetSubmittedTransactionsAsync()
+SubmittedAsync()
+ExecuteActionFilterAsync()
+
+5.
+RequestId="ed3adec16b65" UserId="240295" UserEmail="AMoore@eab.com" 
+DateTime="2024-08-22 15:22:56.9274" ThreadId="53" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1850
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsActionAsync>d__db`1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 0
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsAsync>d__4d.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 411
+   at ABC.ERS.BL.ExpenseGridService.<GetSubmittedTransactionsAsync>d__4d.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 411
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<>c__DisplayClass85.<<SubmittedAsync>b__84>d__87.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 0
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<SubmittedAsync>d__8a.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 348
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+ 
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.  
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-08-22 06:57:52.4654" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'FareSavingsParser'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.Common.Worker.Feed.Processor.TabularFeedProcessor`2.<Run>b__2() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Feed\Processor\TabularFeedProcessor.cs:line 72
+   at ABC.Common.Framework.Logger.Logger.LogActionTime[T](Func`1 action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 116
+   at ABC.Common.Worker.Feed.Processor.TabularFeedProcessor`2.Run() in c:\git_sources\eabgo\Common\ABC.Common.Worker\Feed\Processor\TabularFeedProcessor.cs:line 71
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 104
+   at ABC.Common.Worker.Hosts.AbcWorkersHost.ExecuteCreators(String[] creatorNames) in c:\git_sources\eabgo\Common\ABC.Common.Worker\Hosts\AbcWorkersHost.cs:line 85
+
+:::TRACE:::
+DateTime="2024-08-22 06:57:22.2628" ThreadId="1" Level="TRACE" Provider="FareSavingsParser" Message="loader.GetUnprocessedLiteFeeds start."
+DateTime="2024-08-22 06:57:22.2941" ThreadId="1" Level="TRACE" Provider="FareSavingsParser" Message="loader.GetUnprocessedLiteFeeds end. Duration: 30 ms."
+DateTime="2024-08-22 06:57:22.3098" ThreadId="1" Level="TRACE" Provider="FareSavingsParser" Message="loader.GetAllLiteLinesByFeed start."
+DateTime="2024-08-22 06:57:22.3257" ThreadId="1" Level="TRACE" Provider="FareSavingsParser" Message="loader.GetAllLiteLinesByFeed end. Duration: 6 ms."
+DateTime="2024-08-22 06:57:22.3988" ThreadId="1" Level="TRACE" Provider="FareSavingsParser" Message="localStorage.GetUnprocessedFeedReferences start."
+DateTime="2024-08-22 06:57:52.4810" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'FareSavingsParser' disposed."
+
+:::INFO:::
+DateTime="2024-08-22 06:57:22.1362" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="Start running creator with name 'FareSavingsParser'"
+DateTime="2024-08-22 06:57:22.2354" ThreadId="1" Level="INFO" Provider="FareSavingsParser" Message="Start."
+DateTime="2024-08-22 06:57:22.3098" ThreadId="1" Level="INFO" Provider="FareSavingsParser" Message="1 new Feeds received."
+DateTime="2024-08-22 06:57:22.3988" ThreadId="1" Level="INFO" Provider="FareSavingsParser" Message="Feed Id = c16ad300-ecd0-462f-b755-0053e8a4727e with 12 lines is registered."
+DateTime="2024-08-22 06:57:52.4810" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="End running creator with name 'FareSavingsParser'"
+
+/run UberParser VirtualCardParser CDF3Import BalboaSupplementalImport NationalImport HertzImport CDF3Parser BalboaAirParser BalboaHotelParser NationalParser HertzParser AirlineFlightParser FareSavingsParser AirTicketChangeParser FareSavingsFromChangeParser AutosubmitTransactionsUpdater
+
+2. #1:: 21-08-2024, #1 :: 22-08-2024
+DateTime="2024-08-22 08:00:43.1778" ThreadId="1" Level="FATAL" Provider="EmailsToAdmin" 
+Message="Following error occurs during sending 'Emails To Admin.' email: An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+:::TRACE:::
+DateTime="2024-08-22 08:00:03.0048" ThreadId="1" Level="TRACE" Provider="EmailsToAdmin" Message="Initializing data loader start."
+DateTime="2024-08-22 08:00:03.0542" ThreadId="1" Level="TRACE" Provider="EmailsToAdmin" Message="Initializing data loader end. Duration: 3 ms."
+DateTime="2024-08-22 08:00:03.0542" ThreadId="1" Level="TRACE" Provider="EmailsToAdmin" Message="Creating and sending emails start."
+DateTime="2024-08-22 08:00:03.0683" ThreadId="1" Level="TRACE" Provider="EmailsToAdmin" Message="Load email model start."
+
+:::INFO:::
+DateTime="2024-08-22 08:00:02.4975" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="Start running creator with name 'EmailsToAdmin'"
+
+
+3. #1 error - 
+DateTime="2024-08-22 08:00:58.2564" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'EmailsToAdmin'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=14988;  ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-08-22 06:36:58.3803" ThreadId="1" Level="FATAL" Provider="ComDataEmailSync" 
+Message="ComData Message processor. Event Notification failed for credit card decline. Credit card decline Id: 92226" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+   at ABC.CCM.BL.EventNotificationService.<NotifyCreditCardDeclinedAsync>d__5.MoveNext()
+---> (Inner Exception #0) System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+System.ServiceModel.ServiceActivationException: The requested service, 'https://eabgowers-p01/ntf_api/NotificationApiService.svc' could not be activated. See the server's diagnostic trace logs for more information.
+
+
+::::::::::TRACE::::::::
+DateTime="2024-08-22 06:35:54.4262" ThreadId="1" Level="TRACE" Provider="ComDataEmailSync" Message="ComData Message processor: There're 0 inbox mails to process"
+DateTime="2024-08-22 06:35:54.4464" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running end. Duration: 2396 ms."
+DateTime="2024-08-22 06:35:54.4586" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'ComDataEmailSync' disposed."
+DateTime="2024-08-22 06:36:52.0715" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running start."
+DateTime="2024-08-22 06:36:54.5226" ThreadId="1" Level="TRACE" Provider="ComDataEmailSync" Message="ComData Message processor: There're 1 inbox mails to process"
+DateTime="2024-08-22 06:36:54.5387" ThreadId="1" Level="TRACE" Provider="ComDataEmailSync" Message="ComData Message processor: Start processing mail id - AAMkAGVlY2RlYzE3LWEwMDMtNGY0Zi1hMTg1LWZmNzcwYjNkOWM1NQBGAAAAAADlqZaiPuI7QpY9iwoxZi+wBwCtiNd8Fk0rT4/6iNUCak2gAAAAAAEMAACtiNd8Fk0rT4/6iNUCak2gAAX6LbLSAAA=, subject - "Declined Charge Message from Risk Management at Comdata ", from - "riskmanagement@comdata.com""
+DateTime="2024-08-22 06:36:54.6487" ThreadId="1" Level="TRACE" Provider="ComDataEmailSync" Message="ComData Message processor: Mail parsing finished for ComData mail with id: AAMkAGVlY2RlYzE3LWEwMDMtNGY0Zi1hMTg1LWZmNzcwYjNkOWM1NQBGAAAAAADlqZaiPuI7QpY9iwoxZi+wBwCtiNd8Fk0rT4/6iNUCak2gAAAAAAEMAACtiNd8Fk0rT4/6iNUCak2gAAX6LbLSAAA="
+DateTime="2024-08-22 06:36:58.3803" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Processor running end. Duration: 6309 ms."
+DateTime="2024-08-22 06:36:58.3803" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'ComDataEmailSync' disposed."
+
+
+:::INFO:::
+DateTime="2024-08-22 06:36:52.0815" ThreadId="1" Level="INFO" Provider="ComDataEmailSync" Message="ComData Message processor: Started"
+DateTime="2024-08-22 06:36:53.9055" ThreadId="1" Level="INFO" Provider="ComDataEmailSync" Message="ComData Message processor: mails with specific subject (Declined Charge Message from Risk Management at Comdata) will be processed"
+DateTime="2024-08-22 06:36:58.3803" ThreadId="1" Level="INFO" Provider="ComDataEmailSync" Message="ComData Message processor: Finished. 1 mail(s) were parsed."
+DateTime="2024-08-22 06:36:58.3803" ThreadId="1" Level="INFO" Provider="WorkersHost" Message="End running creator with name 'ComDataEmailSync'"
+
+::WARN:::
+DateTime="2024-08-22 06:30:05.0266" ThreadId="1" Level="WARN" Provider="DepartmentsSync" Message="Department with external id DEFAULT exists in CCM but haven't been provided from UPM and has been deactivated." Exception=""
+DateTime="2024-08-22 06:37:43.7602" ThreadId="1" Level="WARN" Provider="ComdataSyncIn" Message="SyncByItemProcessor.MergeEntity. Error for 5026." Exception="System.ArgumentException: CreditCardEntitiesMerger.MergeEntity. Card with EmployeeNumber '239870X003976' is not found in ComData. CardId: 5026.
+   at ABC.CCM.Workers.ComdataSyncIn.CreditCardEntitiesMerger.MergeEntity(Int32 creditCardId)
+   at ABC.Common.Worker.Sync.SyncByItemProcessor`1.MergeEntity(IList`1 sourceEntities) in c:\git_sources\eabgo\Common\ABC.Common.Worker\Sync\SyncByItemProcessor.cs:line 32"
+
+UserID-239870
+Firstname - Katie
+LastName - 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1.
+DateTime="2024-08-22 06:15:48.5079" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'CustomerIoUserSender'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: An error occurred while sending the request.
+   at ABC.Common.BL.AdminNotificationService.AddAndSaveNotifications(Subsystems subsystem, AdminNotificationSeverities severity, Boolean isEmailBody, String[] messages) in c:\git_sources\eabgo\Common\ABC.Common.BL\AdminNotificationService.cs:line 42
+System.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=6; handshake=14988;  ---> System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+
+:::TRACE:::
+DateTime="2024-08-22 06:15:25.0714" ThreadId="1" Level="TRACE" Provider="CustomerIoUserSender" Message="CustomerIoService.ComposeAndSendJsonUserAsync: 1918 Users for CustomerIo will be send."
+DateTime="2024-08-22 06:15:48.5079" ThreadId="1" Level="TRACE" Provider="WorkersHost" Message="Creator: 'CustomerIoUserSender' disposed."
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="a08edf67e470" 
+DateTime="2024-08-22 16:12:15.9773" ThreadId="75" Level="FATAL" 
+Message="Description: An error occurred while receiving the HTTP response to https://api.iconnectdata.com/FleetCreditWS/services/FleetCreditWS0200. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details.." Provider="Comdata" 
+Exception=""
+
+2.
+RequestId="594884bb3f54" 
+DateTime="2024-08-22 06:15:49.7886" ThreadId="71" Level="FATAL" 
+Message="Send Users Event Failed. Error: An error occurred while sending the request." Provider="CustomerIo" 
+Exception="System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+3.
+RequestId="" 
+DateTime="2024-08-22 06:15:49.9996" ThreadId="71" Level="FATAL" 
+Message="An error occurred while sending the request." Provider="" 
+Exception="System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------
+
+
+STAGING :::
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 

@@ -1,0 +1,170 @@
+*[21-08-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal  
+-------------------------
+1. #20 Timeout error
+RequestId="af0be6840e6a" UserId="236148" UserEmail="kcarter@eab.com" 
+DateTime="2024-08-21 08:08:08.9792" ThreadId="52" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.PurposeService.<GetNonClientFacedPurposeByIdAsync>d__5a.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\PurposeService.cs:line 549
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.PurposesController.<GetNonClientFacedPurposeAsync>d__26.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\PurposesController.cs:line 223
+
+:::TRACE:
+RequestId="af0be6840e6a" UserId="236148" UserEmail="kcarter@eab.com" DateTime="2024-08-21 08:07:38.7598" ThreadId="58" Level="TRACE" Message="GET https://go.myeab.com/expense/api/purposes/getNcfPurpose?id=42797 START"
+RequestId="fa384a866ba6" UserId="236148" UserEmail="kcarter@eab.com" DateTime="2024-08-21 08:07:38.7719" ThreadId="43" Level="TRACE" Message="GET https://go.myeab.com/expense/api/purposes/getBudgetLimitTypes Response content: [{'id':1,'name':'Per Budget'},{'id':2,'name':'Per User'}]"
+RequestId="fa384a866ba6" UserId="236148" UserEmail="kcarter@eab.com" DateTime="2024-08-21 08:07:38.7719" ThreadId="43" Level="TRACE" Message="GET https://go.myeab.com/expense/api/purposes/getBudgetLimitTypes Completed in 28 ms"
+RequestId="1c2a8796f336" UserId="236148" UserEmail="kcarter@eab.com" DateTime="2024-08-21 08:07:38.7719" ThreadId="43" Level="TRACE" Message="GET https://go.myeab.com/expense/api/purposes/getPurposeReasons Response content: [{'id':2,'name':'Project'},{'id':3,'name':'In-Day (entire team)'},{'id':4,'name':'Conference/Training'},{'id':5,'name':'Internal Travel'},{'id':6,'name':'Social events'},{'id':7,'name':'Procurement'},{'id':8,'name':'Incentive Trip'},{'id':9,'name':'Miscellaneous Incentive'},{'id':10,'name':'Partner Event'}]"
+RequestId="1c2a8796f336" UserId="236148" UserEmail="kcarter@eab.com" DateTime="2024-08-21 08:07:38.7719" ThreadId="43" Level="TRACE" Message="GET https://go.myeab.com/expense/api/purposes/getPurposeReasons Completed in 28 ms"
+RequestId="af0be6840e6a" UserId="236148" UserEmail="kcarter@eab.com" DateTime="2024-08-21 08:08:16.1834" ThreadId="52" Level="TRACE" Message="GET https://go.myeab.com/expense/api/purposes/getNcfPurpose?id=42797 Completed in 37424 ms"
+
+
+2. #4 same timeout error
+RequestId="6f47d2a0a785" UserId="239295" UserEmail="barbara.frankel@seramount.com" 
+DateTime="2024-08-21 08:17:58.0836" ThreadId="34" Level="FATAL" 
+Message="An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - AttachmentBody, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.Common.Web.ApiControllers.Base.SaveableController`2.<SaveChangesAsync>d__0.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Base\SaveableController.cs:line 30
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.AttachmentController.<UploadAsync>d__39.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\AttachmentController.cs:line 336
+
+:::TRACE:::
+RequestId="6f47d2a0a785" UserId="239295" UserEmail="barbara.frankel@seramount.com" DateTime="2024-08-21 08:17:21.6522" ThreadId="38" Level="TRACE" Message="POST https://go.myeab.com/expense/api/Attachment/upload START"
+RequestId="6f47d2a0a785" UserId="239295" UserEmail="barbara.frankel@seramount.com" DateTime="2024-08-21 08:17:21.7154" ThreadId="50" Level="TRACE" Message="User '239295' in 'User' role: Start to upload."
+RequestId="6f47d2a0a785" UserId="239295" UserEmail="barbara.frankel@seramount.com" DateTime="2024-08-21 08:18:33.1205" ThreadId="34" Level="TRACE" Message="POST https://go.myeab.com/expense/api/Attachment/upload Completed in 71468 ms"
+
+
+3. #22 same error
+RequestId="1544116a2705" UserId="502418" UserEmail="PChamoli@eab.com" 
+DateTime="2024-08-21 08:18:07.1548" ThreadId="52" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.Web.ExpenseNow.Mappers.AttachmentMapper.MapToModel(AttachmentModel model, Attachment attachment, Boolean includeContent, IAttachmentService attachmentService, Int32 maxWidth, Int32 maxHeight) in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\Mappers\AttachmentMapper.cs:line 26
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.AttachmentController.<GetAttachmentByIdAsync>d__21.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\AttachmentController.cs:line 209
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+
+:::TRACE:::
+RequestId="1544116a2705" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-21 08:17:32.1010" ThreadId="32" Level="TRACE" Message="GET https://go.myeab.com/expense/api/attachment/get/208869/950/600 START"
+RequestId="1544116a2705" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-21 08:17:32.1010" ThreadId="32" Level="TRACE" Message="User '502418' in 'GlobalApprover' role: Start to retrieve attachment with id '208869'."
+RequestId="1544116a2705" UserId="502418" UserEmail="PChamoli@eab.com" DateTime="2024-08-21 08:18:07.1806" ThreadId="52" Level="TRACE" Message="GET https://go.myeab.com/expense/api/attachment/get/208869/950/600 Completed in 35080 ms"
+
+
+4. #7 same error till now
+RequestId="41bfcc7c6104" UserId="239878" UserEmail="QGordon@eab.com" 
+DateTime="2024-08-21 08:18:16.4124" ThreadId="21" Level="FATAL" 
+Message="Error adding admin notification.. The DbUpdateException in such objects: Item type - AdminNotification, item state - Added" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.
+
+5.
+RequestId="50ef6427d0ab" UserId="238896" UserEmail="KDornfeld@eab.com" 
+DateTime="2024-08-21 10:29:34.1448" ThreadId="40" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   at ABC.ERS.BL.ExpenseGridService.<GetTransactionsOfSpecifiedStatusesAsync>d__132.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.BL\ExpenseGridService.cs:line 1850
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.ExpenseGridController.<SubmittedAsync>d__8a.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\ExpenseGridController.cs:line 348
+
+:::TRACE:::
+RequestId="50ef6427d0ab" UserId="238896" UserEmail="KDornfeld@eab.com" DateTime="2024-08-21 10:28:54.4248" ThreadId="28" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/submitted/0?sortKey=1&sortOrder=2 START"
+RequestId="50ef6427d0ab" UserId="238896" UserEmail="KDornfeld@eab.com" DateTime="2024-08-21 10:28:54.4719" ThreadId="20" Level="TRACE" Message="Get Submitted transactions sorted by Date Descending start."
+RequestId="50ef6427d0ab" UserId="238896" UserEmail="KDornfeld@eab.com" DateTime="2024-08-21 10:28:54.4719" ThreadId="20" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation start."
+RequestId="50ef6427d0ab" UserId="238896" UserEmail="KDornfeld@eab.com" DateTime="2024-08-21 10:28:54.4719" ThreadId="20" Level="TRACE" Message="MyLog: startIndex is: 0 AND pageSize is: 50"
+RequestId="50ef6427d0ab" UserId="238896" UserEmail="KDornfeld@eab.com" DateTime="2024-08-21 10:29:04.1368" ThreadId="40" Level="TRACE" Message="GetTransactionsOfSpecifiedStatuses query compilation end. Duration: 9658 ms."
+RequestId="50ef6427d0ab" UserId="238896" UserEmail="KDornfeld@eab.com" DateTime="2024-08-21 10:29:37.3698" ThreadId="40" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/grid/submitted/0?sortKey=1&sortOrder=2 Completed in 42945 ms"
+
+
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.  
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. #2 same error
+DateTime="2024-08-21 08:00:42.9630" ThreadId="1" Level="FATAL" Provider="EmailsToAdmin" 
+Message="Following error occurs during sending 'Emails To Admin.' email: An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-08-21 08:08:03.5703" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComdataSyncIn'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-08-21 08:00:44.2150" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="3bcc7dc978b6" 
+DateTime="2024-08-21 12:32:52.4160" ThreadId="21" Level="FATAL" 
+Message="Description: com.ibm.wsspi.wssecurity.SoapSecurityException: WSEC6521E: Login failed. The exception is : com.ibm.websphere.security.auth.WSLoginFailedException: com.ibm.wsspi.security.auth.callback.WSServletRequestCallback not supported by CallbackHandler to gather authentication information from the usernull." Provider="Comdata" 
+Exception=""
+
+::::TRACE::::
+RequestId="8ac91c1c2318" DateTime="2024-08-21 12:32:47.9284" ThreadId="78" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556368XXXXXX6963','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'B','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'AMANDA','cardLastName':'FAIRCLOTH','driverLicenseNumber':'','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'224335X004016','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2024-11-01T00:00:00','cardToken':'367C69U7F9','cardBlockReasonCode':'0058','cardBlockReasonDesc':'FRAUD-OVERRIDE MODE'},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':0.00,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':30000.00,'cycleTxnLimit':999,'cycleTxnLimitUsed':0,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':999},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'AMANDA FAIRCLOTH','mailAddress1':'2510 5TH ST. S','mailAddress2':'','mailCity':'ARLINGTON','mailState':'VA','mailZip':'22204','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="3bcc7dc978b6" DateTime="2024-08-21 12:32:47.9497" ThreadId="78" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239844X004812','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="3bcc7dc978b6" DateTime="2024-08-21 12:32:47.9497" ThreadId="78" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="ee15a9ec9c15" DateTime="2024-08-21 12:32:52.4160" ThreadId="21" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'239844X004059','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="ee15a9ec9c15" DateTime="2024-08-21 12:32:52.4160" ThreadId="21" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="9f54a47434d7" DateTime="2024-08-21 12:32:54.9860" ThreadId="21" Level="TRACE" Message="MailApiService.GetMails, MailAccount: ComData start." Provider="Mail"
+RequestId="9f54a47434d7" DateTime="2024-08-21 12:32:55.7865" ThreadId="21" Level="TRACE" Message="MailApiService.GetMails, MailAccount: ComData end. Duration: 807 ms." Provider="Mail"
+RequestId="ee15a9ec9c15" DateTime="2024-08-21 12:33:03.8070" ThreadId="78" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 11382 ms." Provider="Comdata"
+
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1.
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+
+InRule Server
+-------------------------
+
+
+STAGING :::
+-------------------------
+CCM_Website_fatal
+-------------------------
+1. RequestId="05bc8d628f89" UserId="502602" UserEmail="KMevada@eab.com" 
+DateTime="2024-08-22 09:27:26.5124" ThreadId="10" Level="FATAL" 
+Message="HTTP validation error: Deactivate credit card request failed. actorLog: Actor Id: c3a79c71-f15e-4888-bf3d-052f6cce9bc8. Reason: com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed; nested exception is com.sun.xml.wss.XWSSecurityException: com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed. OwnerId: c3a79c71-f15e-4888-bf3d-052f6cce9bc8. EmployeeNumber: 502602X555810" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2.
+RequestId="ae64892fc98e" UserId="502602" UserEmail="KMevada@eab.com" 
+DateTime="2024-08-22 09:38:16.3396" ThreadId="11" Level="FATAL" 
+Message="HTTP validation error: Add new card request failed. Reason: com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed; nested exception is com.sun.xml.wss.XWSSecurityException: com.sun.xml.wss.impl.WssSoapFaultException: Authentication of Username Password Token Failed. UserId: 868d712f-237f-400f-94d9-b7fbc96d3bcb. UserName: EAB " 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+

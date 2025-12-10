@@ -1,0 +1,132 @@
+*[27-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+NOT EXISTED - 'G0210862_20241023_073936SB_006538.xml' and 'G0210862_20241022_123338SB_006535.xml' for employee id missing,  
+1.
+DateTime="2024-10-27 06:49:12.1427" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+2.
+DateTime="2024-10-27 06:49:12.1427" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+3.
+DateTime="2024-10-27 06:49:12.1577" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+4.
+DateTime="2024-10-27 06:49:12.1577" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0459535_20241023_073641SB_004008.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+5.
+DateTime="2024-10-27 06:49:12.2366" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+6.
+DateTime="2024-10-27 06:49:12.2366" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+7.
+DateTime="2024-10-27 06:49:21.0008" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="There is no EmployeeId element." 
+Exception="System.Exception: There is no EmployeeId element.
+
+8.
+DateTime="2024-10-27 06:49:21.0008" ThreadId="1" Level="FATAL" Provider="CDF3Import" 
+Message="ExdFileProcessor. Error loading file 'G0210862_20241023_170145SB_006541.xml'" 
+Exception="System.Exception: There is no EmployeeId element.
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+DateTime="2024-10-27 15:17:53.8055" ThreadId="1" Level="FATAL" Provider="WorkersHost"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Mailbox move in progress. Try again later., Cannot open mailbox. Server = SA1PR15MB4772.namprd15.prod.outlook.com, mdbGuid = 444a1335-ae17-486d-9c74-d6c9de92128d, maiboxGuid = eecdec17-a003-4f4f-a185-ff770b3d9c55
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+RequestId="0782abd434cc" 
+DateTime="2024-10-27 21:27:02.2302" ThreadId="13" Level="FATAL" 
+Message="Description: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake." Provider="ComdataMC" 
+Exception=""
+
+Trace:
+RequestId="0782abd434cc" DateTime="2024-10-27 21:26:48.3922" ThreadId="5" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardStatusAsync.UpdateMasterCardActionAsync start." Provider="ComdataMC"
+RequestId="0782abd434cc" DateTime="2024-10-27 21:26:48.3922" ThreadId="5" Level="TRACE" Message="Method: updateMasterCardAsync. Request params: [{'cardIdentifierType':[3],'cardIdentifier':['235405X005264'],'cardDetails':[{,'custId':'BRV61','cardStatus':'B','profileFlag':null,'profileValue':null,'profileDescription':null,'cardFirstName':null,'cardLastName':null,'driverLicenseNumber':null,'driverLicenseState':null,'tripNumber':null,'vehicleNumber':null,'employeeNumber':null,'vehicleVINNumber':null,'vehicleDescription':null,'vehicleLicensePlateNumber':null,'registrationExpiration':null,'miscellaneous1':null,'miscellaneous2':null,'miscellaneous3':null,'cardExpiration':null,'cardToken':null,'cardBlockReasonCode':null,'cardBlockReasonDesc':null,'cardBlockDate':null,'cardholderEmail':'creditcardalert@eab.com','mobilePhoneNumber':'*2108','alertServiceFlag':true,'vehicleTankCapacity':null,'masterCardParams':null,'mailingDetails':[{'mailMethod':null,'mailName':null,'mailAttentionTo':null,'mailAddress1':null,'mailAddress2':null,'mailCity':null,'mailState':null,'mailZip':null,'mailCountry':null,'mailingParams':null}]}],'options':{'maskCard':true,'maskCardSpecified':true,'optionParams':null},'updateCardParams':null}]" Provider="ComdataMC"
+RequestId="0782abd434cc" DateTime="2024-10-27 21:26:48.3922" ThreadId="5" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardActionAsync._mcClient.updateMasterCardAsync start." Provider="ComdataMC"
+RequestId="e77422b85b1b" DateTime="2024-10-27 21:26:53.1558" ThreadId="5" Level="TRACE" Message="MailApiService.GetMails, MailAccount: ComData start." Provider="Mail"
+RequestId="e77422b85b1b" DateTime="2024-10-27 21:26:53.5704" ThreadId="5" Level="TRACE" Message="MailApiService.GetMails, MailAccount: ComData end. Duration: 412 ms." Provider="Mail"
+RequestId="0782abd434cc" DateTime="2024-10-27 21:27:02.2302" ThreadId="13" Level="TRACE" Message="ComdataMcApiService.UpdateMasterCardStatusAsync.UpdateMasterCardActionAsync end. Duration: 13829 ms." Provider="ComdataMC"
+RequestId="0782abd434cc" DateTime="2024-10-27 21:27:02.2302" ThreadId="13" Level="TRACE" Message="ComdataMcApiService.DeactivateCreditCardAsync.UpdateMasterCardStatusAsync end. Duration: 13829 ms." Provider="ComdataMC"
+RequestId="02ba2c278486" DateTime="2024-10-27 21:27:02.2302" ThreadId="13" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'235405X005264','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="02ba2c278486" DateTime="2024-10-27 21:27:02.2302" ThreadId="13" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="252e2f2dc662" DateTime="2024-10-27 21:27:03.5560" ThreadId="5" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'235480X005365','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="252e2f2dc662" DateTime="2024-10-27 21:27:03.5560" ThreadId="5" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="252e2f2dc662" DateTime="2024-10-27 21:27:03.7809" ThreadId="5" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 226 ms." Provider="Comdata"
+RequestId="252e2f2dc662" DateTime="2024-10-27 21:27:03.7884" ThreadId="5" Level="TRACE" Message="Method: inquireCardV02Async. Response params: {'cardNumber':'556368XXXXXX9643','cardDetails':{'discretionaryData':null,'trackingNumber':null,'cardStatus':'A','profileFlag':'Y','profileValue':'008','profileDescription':'ABC $10K DAY/$30K MONTHLY','cardFirstName':'RICHARD','cardLastName':'HOLZBACH','driverLicenseNumber':'','driverLicenseState':'','tripNumber':'','vehicleNumber':'','employeeNumber':'235480X005365','vehicleVINNumber':'','vehicleDescription':'','vehicleLicensePlateNumber':'','registrationExpiration':null,'miscellaneous1':'','miscellaneous2':'','cardExpiration':'2024-11-01T00:00:00','cardToken':'397K47G6M2','cardBlockReasonCode':'0000','cardBlockReasonDesc':null},'amountLimits':{'dailyAmountLimit':10000.00,'dailyAmountLimitUsed':0.00,'dailyAmountLimitHold':0.00,'dailyAmountLimitAvailable':10000.00,'dailyTxnLimit':999,'dailyTxnLimitUsed':0,'dailyTxnLimitHold':0,'dailyTxnLimitAvailable':999,'cycleAmountLimit':30000.00,'cycleAmountLimitUsed':66.29,'cycleAmountLimitHold':0.00,'cycleAmountLimitAvailable':29933.71,'cycleTxnLimit':999,'cycleTxnLimitUsed':2,'cycleTxnLimitHold':0,'cycleTxnLimitAvailable':997},'mailingDetails':{'mailMethod':'4','mailName':'EAB','mailAttentionTo':'RICHARD HOLZBACH','mailAddress1':'4607 CABRETTA DR','mailAddress2':'','mailCity':'MOSELEY','mailState':'VA','mailZip':'23120','mailCountry':'USA'}}" Provider="Comdata"
+RequestId="41b9f06ec7e6" DateTime="2024-10-27 21:27:03.8041" ThreadId="5" Level="TRACE" Message="Method: inquireCardV02Async. Request params: [{'discretionaryData':null,'trackingNumber':null,'cardIdentifierType':3,'cardIdentifier':'235480X004742','maskCardFlag':'Y'}]" Provider="Comdata"
+RequestId="41b9f06ec7e6" DateTime="2024-10-27 21:27:03.8041" ThreadId="5" Level="TRACE" Message="GetCardByEmployeeNumber start." Provider="Comdata"
+RequestId="41b9f06ec7e6" DateTime="2024-10-27 21:27:04.0196" ThreadId="13" Level="TRACE" Message="GetCardByEmployeeNumber end. Duration: 208 ms." Provider="Comdata"
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

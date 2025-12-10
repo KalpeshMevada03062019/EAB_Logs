@@ -1,0 +1,410 @@
+
+
+*[21-09-2023]*
+
+*WebServer*
+------------------------
+ERS_WebSite_Fatal [12644 line file, too many timeout error]
+------------------------
+1. 
+RequestId="041ace5889f7"
+DateTime="2023-09-21 03:28:31.9284"
+Message="An error occurred while executing the command definition. See the inner exception for details."
+
+2. [there are too many Same timeout error]
+RequestId="a3cf78724f58"
+DateTime="2023-09-21 07:41:50.1620"
+Message="The underlying provider failed on Open." [306 time same error]
+
+RequestId="a3cf78724f58"
+DateTime="2023-09-21 07:41:50.1932"
+Message="Error adding admin notification." [133 time same error]
+
+------------------------
+UPM_WebSite_Fatal
+------------------------
+1.
+RequestId="fb5941317cb8"
+DateTime="2023-09-21 07:39:38.5334"
+Message="The underlying provider failed on Open." [Timeout error]
+
+2.
+RequestId="ab1fd2d07cc8"
+DateTime="2023-09-21 07:41:16.1060"
+Message="The underlying provider failed on Open."
+
+3.
+RequestId="892ecbf05265"
+DateTime="2023-09-21 07:48:14.0554"
+Message="The underlying provider failed on Open."
+
+4.
+RequestId="c4e41fdff4cd"
+DateTime="2023-09-21 07:50:19.5590"
+Message="The underlying provider failed on Open."
+
+*API Server*
+------------------------
+EXD_InnerGateway_Fatal
+------------------------
+1.
+DateTime="2023-09-21 07:16:29.1421"
+Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+
+2.
+DateTime="2023-09-21 07:16:29.1421"
+Message="X-Request-Id: d121cb47-f998-4bbe-86b3-973460001bd5"
+
+3.
+DateTime="2023-09-21 07:16:29.1421"
+Message="Error Status Code : 409 Conflict"
+
+4.
+DateTime="2023-09-21 07:16:29.1421"
+Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43009595817},"message":"It should be a unique value","code":"duplicate_value"}]}"
+
+5.
+DateTime="2023-09-21 07:21:30.5912"
+Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+
+6.
+DateTime="2023-09-21 07:21:30.5912"
+Message="X-Request-Id: c3dfc89b-18fb-4f1e-9691-25b508889306"
+
+7.
+DateTime="2023-09-21 07:21:30.5912"
+Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+
+8.
+DateTime="2023-09-21 07:21:30.5912
+Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43182317830},"message":"It should be a unique value","code":"duplicate_value"}]}"
+
+9.
+DateTime="2023-09-21 07:39:49.1070"
+Message="The underlying provider failed on Open."
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+------------------------
+NTF_Api_Fatal
+------------------------
+1.
+DateTime="2023-09-21 07:37:05.6209"
+Message="The underlying provider failed on Open."
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+2.
+DateTime="2023-09-21 07:38:11.8691"
+Message="The underlying provider failed on Open."
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+------------------------
+ERS_Api_Fatal
+------------------------
+1. [Same timeout error 3 time]
+DateTime="2023-09-21 07:41:16.2536"
+Message="The underlying provider failed on Open." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+------------------------
+UPM_Api_Fatal
+------------------------
+
+1. [44 time same error]
+DateTime="2023-09-21 07:50:03.9620"
+Message="The underlying provider failed on Open." 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+
+
+*Workerhost Server*
+------------------------
+CCM_WorkerHost_Fatal
+------------------------
+1.
+DateTime="2023-09-21 07:36:53.3416"
+Message="Unhandled error while running creator 'ComDataEmailSync'"
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+2.
+DateTime="2023-09-21 07:37:33.3482"
+Message="Unhandled error while running creator 'ComdataSyncIn'"
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+3.
+DateTime="2023-09-21 07:37:53.3365"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+4.
+DateTime="2023-09-21 07:38:53.3733"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+5.
+DateTime="2023-09-21 07:39:35.1871"
+Message="Error updated mailing address for user with ExternalId id 238596"
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408'
+
+6.
+DateTime="2023-09-21 07:39:35.6215"
+Message="Error updated mailing address for user with ExternalId id 235720" 
+Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '235720X003508'
+
+7. [Not timeout error]
+DateTime="2023-09-21 07:39:48.9437"
+Message="Unhandled error while running creator 'TrackingNumberParser'" 
+Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The underlying provider failed on Open. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+
+
+8.
+DateTime="2023-09-21 07:39:52.9261"
+Message="Unhandled error while running creator 'ComDataEmailSync'"
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+9.
+DateTime="2023-09-21 07:40:52.8984"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+10.
+DateTime="2023-09-21 07:41:52.8836"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+11.
+DateTime="2023-09-21 07:41:56.7671"
+Message="Unhandled error while running creator 'DailyStatisticsSender'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The underlying provider failed on Open.
+
+12.
+DateTime="2023-09-21 07:42:52.7971"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+13.
+DateTime="2023-09-21 07:43:52.7996"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+14.
+DateTime="2023-09-21 07:44:52.7991"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+15.
+DateTime="2023-09-21 07:45:52.7908"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+16.
+DateTime="2023-09-21 07:46:52.7940"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+17.
+DateTime="2023-09-21 07:47:52.7939"
+Message="Unhandled error while running creator 'ComDataEmailSync'"
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+18.
+DateTime="2023-09-21 07:48:52.7938"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+19.
+DateTime="2023-09-21 07:49:52.8024"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+20.
+DateTime="2023-09-21 07:50:52.7927"
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+
+------------------------
+NTF_WorkerHost_Fatal
+------------------------
+1.
+DateTime="2023-09-21 07:37:08.5832"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+2.
+DateTime="2023-09-21 07:38:08.0882"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+3.
+DateTime="2023-09-21 07:39:08.5818"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+4.
+DateTime="2023-09-21 07:40:07.9397"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+5.
+DateTime="2023-09-21 07:41:07.9015"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+6.
+DateTime="2023-09-21 07:42:07.8928"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+7.
+DateTime="2023-09-21 07:43:08.0785"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+8.
+DateTime="2023-09-21 07:44:07.9211"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+9.
+DateTime="2023-09-21 07:45:07.9323"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+10.
+DateTime="2023-09-21 07:46:07.9285"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+11.
+DateTime="2023-09-21 07:47:07.9132"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'"
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+12.
+DateTime="2023-09-21 07:48:08.0935"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+13.
+DateTime="2023-09-21 07:49:07.9136" ThreadId="1"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+14.
+DateTime="2023-09-21 07:50:07.9051" ThreadId="1"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+15.
+DateTime="2023-09-21 07:51:07.9266"
+Message="Unhandled error while running creator 'CustomerIoEventsProcessor'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+
+------------------------
+ERS_WorkerHost_Fatal
+------------------------
+1. [Not related to timeout]
+DateTime="2023-09-21 06:51:15.8945"
+Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item" Exception="ABC.ERS.FileWorkers.Implementation.Exceptions.Cdf3ParserAbsentElementException: There is no 'DateOfPurchase' required item
+
+2.
+DateTime="2023-09-21 07:37:09.1156"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+3.
+DateTime="2023-09-21 07:38:08.8609"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+4.
+DateTime="2023-09-21 07:39:09.8086"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+5.
+DateTime="2023-09-21 07:40:08.9252"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+6.
+DateTime="2023-09-21 07:41:08.4111"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+7.
+DateTime="2023-09-21 07:42:08.4010"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+8.
+DateTime="2023-09-21 07:43:08.5313"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+9.
+DateTime="2023-09-21 07:44:08.2079"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+10.
+DateTime="2023-09-21 07:45:09.1561"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+11.
+DateTime="2023-09-21 07:46:08.2944"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+12.
+DateTime="2023-09-21 07:47:08.1039"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+13.
+DateTime="2023-09-21 07:48:08.4852"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+14.
+DateTime="2023-09-21 07:49:08.3230"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+15.
+DateTime="2023-09-21 07:50:08.4605"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+16.
+DateTime="2023-09-21 07:51:08.2923"
+Message="Unhandled error while running creator 'TravelerCategoriesSync'" 
+Exception="System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Login failed for user 'goadmin'.
+
+
+
+*InRule Server*
+------------------------
+InRule_Fatal [1163 time same error] - not related to timeout error
+------------------------
+1.
+DateTime="2023-09-21 02:09:57.6294"
+Message="InRuleService. ValidateTransactions. 1 transactions have been validated in 710 ms"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

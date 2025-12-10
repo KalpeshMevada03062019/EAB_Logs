@@ -1,0 +1,106 @@
+*[31-03-2025]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1.
+RequestId="7b91b27487f1" UserId="239091" UserEmail="DHamami@eab.com" 
+DateTime="2025-03-31 13:27:50.6549" ThreadId="85" Level="FATAL" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+Trace:
+RequestId="7b91b27487f1" UserId="239091" UserEmail="DHamami@eab.com" DateTime="2025-03-31 13:27:50.6233" ThreadId="83" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/misc/2345321 START"
+RequestId="7b91b27487f1" UserId="239091" UserEmail="DHamami@eab.com" DateTime="2025-03-31 13:27:50.6383" ThreadId="83" Level="TRACE" Message="User '237575' in 'User' role: Getting transaction data for id '2345321'"
+RequestId="7b91b27487f1" UserId="239091" UserEmail="DHamami@eab.com" DateTime="2025-03-31 13:27:50.6549" ThreadId="85" Level="TRACE" Message="GET https://go.myeab.com/expense/api/transaction/misc/2345321 Completed in 32 ms"
+
+Dina Hamami
+-----------------------
+Transaction Detail:
+-----------------------
+ID - 2345321
+Amount - 13.93
+Owner ID - 320D3B2C-CE07-45EF-8E1D-4C2D0576E4E4
+FirstName - Hannah
+LastName - Ball
+Discriminator - ExpenseTransactionMiscellaneus
+Status - 4 (Approved)
+LastStatusChangeDate - 2025-03-31 14:00:58.127
+External ID - 239749
+
+https://prnt.sc/gjZfPR65V2gg
+https://prnt.sc/c93MngzxT-oi
+--
+User ID - F3B13711-34B2-420E-BD74-321C730B5E1B
+Name - Sarah Parrott
+External ID - 237575
+
+- Analyzed detailed trace and info logs of "Invalid permissions" to identify transaction details related to invalid permissions during the submission of Transaction ID: 2345321.
+- Verified the ExpenseTransactions table for the last status change date to confirm successful transaction submission for Miscellaneus.
+- Ensured the Miscellaneus expense transaction was updated correctly.
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+

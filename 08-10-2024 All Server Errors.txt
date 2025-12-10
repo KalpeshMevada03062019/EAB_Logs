@@ -1,0 +1,95 @@
+*[08-10-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. #Common Timeout error of ExpenseGridService.cs:line 1842
+RequestId="dba851a0f41d" UserId="502570" UserEmail="SunilKumar@eab.com" 
+DateTime="2024-10-08 02:56:06.3813" ThreadId="18" Level="FATAL" 
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+2. #Common Timeout error of SaveableController.cs:line 30
+RequestId="1e5673c497a5" UserId="233880" UserEmail="HChatham@EAB.com" 
+DateTime="2024-10-08 09:19:23.2388" ThreadId="45" Level="FATAL" 
+Message="An error occurred while updating the entries. See the inner exception for details.. The DbUpdateException in such objects: Item type - ExpenseTransactionTr_E0E006794D425A569228CDAE417854FDC956A5179027F9814CC6CAF17A1ACDAF, item state - Modified" 
+Exception="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+3. #
+RequestId="ba83803ee7bf" UserId="239972" UserEmail="BBlake@eab.com" 
+DateTime="2024-10-08 09:09:18.7586" ThreadId="14" Level="FATAL" 
+Message="Object reference not set to an instance of an object." 
+Exception="System.NullReferenceException: Object reference not set to an instance of an object.
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<UpdateTransactionEntityAsync>d__165.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 1527
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<>c__DisplayClassa0.<<ValidateAsync>b__9c>d__a5.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 0
+   at ABC.Common.Framework.Logger.Logger.<LogActionTimeAsync>d__1`1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 0
+   at ABC.ERS.Web.ExpenseNow.ApiControllers.TransactionDetails.Base.TransactionDetailsController`7.<ValidateAsync>d__b1.MoveNext() in c:\git_sources\eabgo\ExpenseNow\ABC.ERS.Web.ExpenseNow\ApiControllers\TransactionDetails\Base\TransactionDetailsController.cs:line 0
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+   at ABC.Common.Web.ApiControllers.Filters.AsyncActionFilterAttribute.<ExecuteActionFilterAsync>d__1.MoveNext() in c:\git_sources\eabgo\Common\ABC.Common.Web\ApiControllers\Filters\AsyncActionFilterAttribute.cs:line 28
+   
+Trace:
+++++++
+RequestId="ba83803ee7bf" UserId="239972" UserEmail="BBlake@eab.com" DateTime="2024-10-08 09:09:16.9088" ThreadId="71" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate START"
+RequestId="ba83803ee7bf" UserId="239972" UserEmail="BBlake@eab.com" DateTime="2024-10-08 09:09:16.9088" ThreadId="71" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate Request content: {'receiptId':211472,'clientDate':'2024-10-08T09:09:16-04:00'}"
+RequestId="ba83803ee7bf" UserId="239972" UserEmail="BBlake@eab.com" DateTime="2024-10-08 09:09:18.7586" ThreadId="14" Level="TRACE" Message="Validating access right start."
+RequestId="ba83803ee7bf" UserId="239972" UserEmail="BBlake@eab.com" DateTime="2024-10-08 09:09:18.7586" ThreadId="14" Level="TRACE" Message="Validating access right end. Duration: 0 ms."
+RequestId="ba83803ee7bf" UserId="239972" UserEmail="BBlake@eab.com" DateTime="2024-10-08 09:09:18.7586" ThreadId="14" Level="TRACE" Message="Updating transaction entity start."
+RequestId="ba83803ee7bf" UserId="239972" UserEmail="BBlake@eab.com" DateTime="2024-10-08 09:09:18.8821" ThreadId="14" Level="TRACE" Message="POST https://go.myeab.com/expense/api/transaction/hotel/validate Completed in 1973 ms"
+
+
+   
+-------------------------
+CCM_Website_fatal
+-----------------------
+1.
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1.
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #2
+DateTime="2024-10-08 09:19:23.4691" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. 
+
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------

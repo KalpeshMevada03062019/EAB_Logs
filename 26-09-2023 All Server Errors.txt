@@ -1,0 +1,287 @@
+[26-09-2023]
+*WebServer*
+----------------------
+CCM_Website_fatal
+----------------------
+1.
+RequestId="4acd48d6d09d" [there same 3 timeout error, no more detail]
+DateTime="2023-09-26 08:18:29.2359"
+Message="HTTP validation error: Deactivate credit card request failed. Reason: Card not found. Actor Id: 7b56cf05-086f-41d1-af57-d66ae5a4a8ca" Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+----------------------
+ERS_Website_fatal
+----------------------
+1.
+RequestId="e0069ce5b806" [Timeout error]
+DateTime="2023-09-26 06:43:15.6985" 
+Message="HTTP validation error: Invalid permissions" 
+Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+2.
+RequestId="6d0752f960ad", RequestId="98adf3ebd3d3" [Timeout error]
+DateTime="2023-09-26 08:35:49.9681"
+Message="Rule execution error: 'Error: 'ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount' Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExcept...)."
+
+3.
+RequestId="74129dfc5b61" [Timeout error]
+DateTime="2023-09-26 08:43:52.5221"
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+4.
+RequestId="a62dfa5cc16e" [Timeout error]
+DateTime="2023-09-26 08:43:56.3034"
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+						 
+5.                       
+RequestId="7fa10209738e"  [Timeout error]
+DateTime="2023-09-26 08:44:00.4571"
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+						 
+6.                       
+RequestId="0a025005bb9c" [Timeout error]
+DateTime="2023-09-26 08:47:17.8795"
+Message="An error occurred while executing the command definition. See the inner exception for details." 
+Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+7.
+RequestId="4756ca735659" [Timeout error]
+DateTime="2023-09-26 09:02:51.5127"
+Message="Rule execution error: 'Error: 'ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1' Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'" Exception="System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Rule execution error: "Error: "ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+InRule.Runtime.RuntimeException: Rule execution error: "Error: "ExpenseItem:1/MealforHostAndHotelSameDayPrevention/IfMealForHostOrHotel/IfMFHOrHotelTransactionAlreadyExists1" Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding." ----> InRule.Runtime.EngineException: Integration Error => Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> InRule.Runtime.IntegrationException: Unable to execute Databse SQL query 'MFHOrHotelTransactionAlreadyExists': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ----> System.Data.SqlClient.SqlExc...)."
+
+8.
+RequestId="a6073ecf5744"
+DateTime="2023-09-26 11:07:25.4840"
+Message="HTTP validation error: Invalid permissions" Exception="System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details."
+
+
+*Workerhost*
+----------------------
+ERS_Workerhost_fatal
+----------------------
+1.
+DateTime="2023-09-26 06:48:40.5695"
+Message="File with id 7a680939-572f-457a-b894-85a198f976e5 is empty." Exception=""
+
+
+DateTime="2023-09-26 06:48:46.2247"
+Provider="CDF3Parser" 
+Message="CDF3 Parsing: Transaction '10372765643'. Error - There is no 'DateOfPurchase' required item" 
+Exception="ABC.ERS.FileWorkers.Implementation.Exceptions.Cdf3ParserAbsentElementException: There is no 'DateOfPurchase' required item
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+1.
+DateTime="2023-09-26 07:38:43.5086" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 238596" Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '238596X003408'
+
+2.
+DateTime="2023-09-26 07:38:43.8747" Provider="ComdataSyncOut" 
+Message="Error updated mailing address for user with ExternalId id 235720" Exception="System.AggregateException: One or more errors occurred. ---> ABC.Common.BL.Exceptions.ValidationException: Unable to update billing address for credit card with token '235720X003508'
+
+API Server
+----------------------
+EXD_InnerGateway_Fatal
+----------------------
+1.
+RequestId="c2e274b30792" 
+DateTime="2023-09-26 05:12:49.8380"
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="Comdata" Exception=""
+
+2.
+DateTime="2023-09-26 07:16:55.9665"
+Message="API Error: Your request is not successful. If you are not able to debug this error properly, mail us at support@freshdesk.com with the following X-Request-Id" Provider="" Exception=""
+Message="X-Request-Id: c2cdbe59-8ccc-4da5-a4b5-a9f8a82c7152" Provider="" Exception=""
+Message="Error Status Code : 409 Conflict" Provider="" Exception=""
+Message="Error Response: {"description":"Validation failed","errors":[{"field":"email","additional_info":{"user_id":43009595817},"message":"It should be a unique value","code":"duplicate_value"}]}" Provider="" Exception=""
+
+3.
+RequestId="df5f3aed694b"
+Message="Description: The underlying connection was closed: A connection that was expected to be kept alive was closed by the server.." Provider="ComdataMC" Exception=""
+
+InRule Server
+----------------------
+InRule_Fatal
+----------------------
+1.
+DateTime="2023-09-26 06:59:47.5265"
+Message="Rule execution error: "Error: "ExpenseItem:38/HotelNightPerDiem/IfHotelNight/IfBusinessAmount/IfOwner/IncreaseReportedAmountForOwner" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDateInCitySkipAllocations': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" Exception="Operating System: Microsoft Windows NT 10.0.20348.0
+
+2.
+DateTime="2023-09-26 08:35:52.4668"
+Message="Rule execution error: "Error: "ExpenseItem:1/FoodPerDiems/IfFood/IfFoodPerDiemHasNotBeenChecked/IfBusinessAmountGreaterZero/IfOwner/SetReportedAmount" Integration Error => Unable to execute Databse SQL query 'SelectTotalByTypeForUserAtDate': Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding."" Exception="Operating System: Microsoft Windows NT 10.0.20348.0
+
+[27-09-2023]
+*WebServer*
+----------------------
+ERS_Website_fatal
+----------------------
+1. 
+RequestId="77f94433760a" [Timeout]
+DateTime="2023-09-27 01:54:52.8159"
+Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+2.
+RequestId="651cbdbaf4ad"  [Timeout]
+DateTime="2023-09-27 01:58:07.0939" 
+Message="An error occurred while executing the command definition. See the inner exception for details." Exception="System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+
+*Workerhost*
+----------------------
+EXD_Workerhost_fatal
+----------------------
+1. 
+DateTime="2023-09-27 06:00:04.0734"
+Message="Start running creator with name 'DepartmentParser'"
+DateTime="2023-09-27 06:00:12.4658"
+Message="End running creator with name 'DepartmentParser'"
+DateTime="2023-09-27 06:00:12.4658"
+Message="Start running creator with name 'UserParser'"
+DateTime="2023-09-27 06:00:21.8704"Message="End running creator with name 'UserParser'"
+DateTime="2023-09-27 06:00:21.8704"
+Message="Start running creator with name 'TravelerCategoryParser'"
+DateTime="2023-09-27 06:00:22.7754"
+Message="End running creator with name 'TravelerCategoryParser'"
+DateTime="2023-09-27 06:00:22.7754"
+Message="Start running creator with name 'VirtualCardParser'"
+DateTime="2023-09-27 06:00:25.9940"
+Message="End running creator with name 'VirtualCardParser'"
+DateTime="2023-09-27 06:00:25.9940"
+Message="Start running creator with name 'CDF3Import'"
+DateTime="2023-09-27 06:00:39.0962"
+Message="End running creator with name 'CDF3Import'"
+DateTime="2023-09-27 06:00:39.0962"
+Message="Start running creator with name 'BalboaParser'"
+DateTime="2023-09-27 06:00:47.3554"
+Message="End running creator with name 'BalboaParser'"
+DateTime="2023-09-27 06:00:47.3554"
+Message="Start running creator with name 'NationalParser'"
+DateTime="2023-09-27 06:00:50.5223"
+Message="End running creator with name 'NationalParser'"
+DateTime="2023-09-27 06:00:50.5223"
+Message="Start running creator with name 'HertzParser'"
+DateTime="2023-09-27 06:00:51.5724"
+Message="End running creator with name 'HertzParser'"
+DateTime="2023-09-27 06:00:51.5724"
+Message="Start running creator with name 'UberFeedDownloader'"
+DateTime="2023-09-27 06:00:53.6768"
+Message="End running creator with name 'UberFeedDownloader'"
+DateTime="2023-09-27 06:00:53.6768"
+Message="Start running creator with name 'UberFeedDownloader'"
+DateTime="2023-09-27 06:00:54.8690"
+Message="End running creator with name 'UberFeedDownloader'"
+DateTime="2023-09-27 06:00:54.8690"
+Message="Start running creator with name 'UberFeedDownloader'"
+DateTime="2023-09-27 06:00:55.9602"
+Message="End running creator with name 'UberFeedDownloader'"
+DateTime="2023-09-27 06:00:55.9602"
+Message="Start running creator with name 'UberParser'"
+DateTime="2023-09-27 06:00:59.4450"
+Message="End running creator with name 'UberParser'"
+DateTime="2023-09-27 06:00:59.4450"
+Message="Start running creator with name 'AirlineCouponParser'"
+DateTime="2023-09-27 06:01:06.3011"
+Message="End running creator with name 'AirlineCouponParser'"
+DateTime="2023-09-27 06:01:06.3011"
+Message="Start running creator with name 'AirTicketChangeParser'"
+DateTime="2023-09-27 06:01:13.0577"
+Message="End running creator with name 'AirTicketChangeParser'"
+DateTime="2023-09-27 06:01:13.0577"
+Message="Start running creator with name 'TrackingNumberParser'"
+DateTime="2023-09-27 06:01:13.9617"
+Message="End running creator with name 'TrackingNumberParser'"
+DateTime="2023-09-27 06:01:13.9617"
+Message="Start running creator with name 'InstitutionParser'"
+DateTime="2023-09-27 06:02:54.4674"
+Message="End running creator with name 'InstitutionParser'"
+DateTime="2023-09-27 07:00:02.0192"
+Message="Start running creator with name 'DepartmentCleaner'"
+
+DateTime="2023-09-27 07:00:26.5000" Provider="DepartmentCleaner" 
+Message="File 'KB_-_Expense_Dept_Feed.csv' has been moved to the processed folder"
+
+DateTime="2023-09-27 07:00:27.9623"
+Message="End running creator with name 'DepartmentCleaner'"
+
+DateTime="2023-09-27 07:00:28.3542"
+Message="Start running creator with name 'UserCleaner'"
+
+DateTime="2023-09-27 07:00:39.3889"
+Message="File 'user_profile_extended_feed_2023-09-27.csv' has been moved to the processed folder"
+DateTime="2023-09-27 07:00:39.8982"
+Message="End running creator with name 'UserCleaner'"
+DateTime="2023-09-27 07:00:39.9942"
+Message="Start running creator with name 'TravelerCategoryCleaner'"
+DateTime="2023-09-27 07:00:41.0226"
+Message="End running creator with name 'TravelerCategoryCleaner'"
+DateTime="2023-09-27 07:00:41.0226"
+Message="Start running creator with name 'VirtualCardCleaner'"
+DateTime="2023-09-27 07:00:46.5900"
+Message="File 'VCCHtl_092123.csv' has been moved to the processed folder"
+DateTime="2023-09-27 07:00:47.1604"
+Message="End running creator with name 'VirtualCardCleaner'"
+DateTime="2023-09-27 07:00:47.1604"
+Message="Start running creator with name 'CDF3Cleaner'"
+DateTime="2023-09-27 07:00:51.1946"
+Message="File 'G0459535_20230926_103055SB_003255.xml' has been moved to the processed folder"
+DateTime="2023-09-27 07:00:54.4773"
+Message="File 'G0210862_20230926_104721SB_005747.xml' has been moved to the processed folder"
+DateTime="2023-09-27 07:00:58.2042"
+Message="File 'G0459535_20230926_104750SB_003256.xml' has been moved to the processed folder"
+DateTime="2023-09-27 07:01:01.0905"
+Message="File 'G0210862_20230926_110407SB_005748.xml' has been moved to the processed folder"
+DateTime="2023-09-27 07:01:01.5042"
+Message="End running creator with name 'CDF3Cleaner'"
+DateTime="2023-09-27 07:01:01.5042"
+Message="Start running creator with name 'BalboaCleaner'"
+DateTime="2023-09-27 07:01:11.1191"
+Message="File 'abc-9-25-23.zip' has been moved to the processed folder"
+DateTime="2023-09-27 07:01:11.1191" 
+Message="End running creator with name 'BalboaCleaner'"
+DateTime="2023-09-27 07:01:11.1191" 
+Message="Start running creator with name 'NationalCleaner'"
+DateTime="2023-09-27 07:01:18.2781" Provider="NationalCleaner" 
+Message="File '26092023databasics.txt' has been moved to the processed folder"
+
+DateTime="2023-09-27 07:01:19.1125" 
+Message="End running creator with name 'NationalCleaner'"
+DateTime="2023-09-27 07:01:19.2770" 
+Message="Start running creator with name 'HertzCleaner'"
+DateTime="2023-09-27 07:01:22.7820" 
+Message="End running creator with name 'HertzCleaner'"
+DateTime="2023-09-27 07:01:22.9780" 
+Message="Start running creator with name 'UberCleaner'"
+DateTime="2023-09-27 07:01:28.6848" 
+Message="File 'daily_trips-2023_09_25.csv' has been moved to the processed folder"
+DateTime="2023-09-27 07:01:29.4195" 
+Message="End running creator with name 'UberCleaner'"
+DateTime="2023-09-27 07:01:29.4195"
+Message="Start running creator with name 'AirlineCouponCleaner'"
+DateTime="2023-09-27 07:01:38.8806" ThreadId="1" Level="INFO" Provider="AirlineCouponCleaner" 
+Message="File 'Flown_09262023_missing.csv' has been moved to the processed folder"
+DateTime="2023-09-27 07:01:45.1825" ThreadId="1" Level="INFO" Provider="AirlineCouponCleaner" 
+Message="File 'Flown_092123.csv' has been moved to the processed folder"
+DateTime="2023-09-27 07:01:45.1825" Provider="WorkersHost" 
+Message="End running creator with name 'AirlineCouponCleaner'"
+DateTime="2023-09-27 07:01:45.1825"
+Message="Start running creator with name 'AirTicketChangeCleaner'"
+DateTime="2023-09-27 07:01:53.5483" ThreadId="1"
+Message="File 'Changes_09262023_missing.csv' has been moved to the processed folder"
+DateTime="2023-09-27 07:01:59.5300"
+Message="File 'Changes_092123.csv' has been moved to the processed folder"
+DateTime="2023-09-27 07:01:59.5305"
+Message="End running creator with name 'AirTicketChangeCleaner'"
+DateTime="2023-09-27 07:01:59.5305"
+Message="Start running creator with name 'TrackingNumberCleaner'"
+DateTime="2023-09-27 07:02:00.4011"
+Message="End running creator with name 'TrackingNumberCleaner'"
+
+----------------------
+CCM_Workerhost_fatal
+----------------------
+

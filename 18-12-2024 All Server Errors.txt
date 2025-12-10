@@ -1,0 +1,205 @@
+*[18-12-2024]*
+
+*Web Server*
+-------------------------
+ERS_Website_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Website_fatal
+-----------------------
+1. 
+
+-------------------------
+UPM_Website_fatal
+-------------------------
+1. 
+
+EXD_OuterGateway_Fatal
+-------------------------
+
+
+*Workerhost*
+-------------------------
+ERS_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+UPM_Workerhost_fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Workerhost_fatal
+-------------------------
+1. #301 same error
+DateTime="2024-12-18 01:06:01.3643" ThreadId="1" Level="FATAL" Provider="WorkersHost" 
+Message="Unhandled error while running creator 'ComDataEmailSync'" 
+Exception="System.AggregateException: One or more errors occurred. ---> System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: One or more errors occurred.
+
+-------------------------
+NTFs_Workerhost_fatal
+-------------------------
+1. 
+
+*API Server*
+-------------------------
+EXD_InnerGateway_Fatal
+-------------------------
+1. #379 same error
+RequestId="" DateTime="2024-12-18 01:06:00.9510" ThreadId="74" Level="FATAL" 
+Message="One or more errors occurred." Provider="" 
+Exception="System.AggregateException: One or more errors occurred. ---> Microsoft.Identity.Client.MsalServiceException: AADSTS7000222: The provided client secret keys for app 'bbe161ec-8d30-4463-a13b-badf42e0aa11' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: df494d86-17c9-451a-9ea3-9b2e2ba3ae00 Correlation ID: 726194f2-6d64-4c88-a0ae-055236db08f0 Timestamp: 2024-12-18 06:06:01Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateErrorResponse(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext, Boolean addCorrelationId)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.<ExecuteRequestAsync>d__10`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.<GetTokenAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<SendHttpMessageAsync>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<SendTokenRequestAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<RunAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.<ExecuteAsync>d__3.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at ABC.EXD.InnerGateway.MailApiService.GetOrCreateService(MailAccount account) in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 357
+   at ABC.EXD.InnerGateway.MailApiService.<>c__DisplayClass3.<GetMails>b__0() in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 43
+   at ABC.Common.Framework.Logger.Logger.LogActionTime(Action action, String actionName) in c:\git_sources\eabgo\Common\ABC.Common.Framework\Logger\Logger.cs:line 106
+   at ABC.EXD.InnerGateway.MailApiService.GetMails(MailAccount account, Nullable`1 receivedAfterDate, String subject) in c:\git_sources\eabgo\ExternalData\ABC.EXD.InnerGateway\MailApiService.svc.cs:line 71
+   at SyncInvokeGetMails(Object , Object[] , Object[] )
+   at System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+---> (Inner Exception #0) Microsoft.Identity.Client.MsalServiceException: AADSTS7000222: The provided client secret keys for app 'bbe161ec-8d30-4463-a13b-badf42e0aa11' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: df494d86-17c9-451a-9ea3-9b2e2ba3ae00 Correlation ID: 726194f2-6d64-4c88-a0ae-055236db08f0 Timestamp: 2024-12-18 06:06:01Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateErrorResponse(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext, Boolean addCorrelationId)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.<ExecuteRequestAsync>d__10`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.<GetTokenAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<SendHttpMessageAsync>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<SendTokenRequestAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<RunAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.<ExecuteAsync>d__3.MoveNext()
+	ErrorCode: invalid_client
+	StatusCode: 401 
+	ResponseBody: {"error":"invalid_client","error_description":"AADSTS7000222: The provided client secret keys for app 'bbe161ec-8d30-4463-a13b-badf42e0aa11' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: df494d86-17c9-451a-9ea3-9b2e2ba3ae00 Correlation ID: 726194f2-6d64-4c88-a0ae-055236db08f0 Timestamp: 2024-12-18 06:06:01Z","error_codes":[7000222],"timestamp":"2024-12-18 06:06:01Z","trace_id":"df494d86-17c9-451a-9ea3-9b2e2ba3ae00","correlation_id":"726194f2-6d64-4c88-a0ae-055236db08f0","error_uri":"https://login.microsoftonline.com/error?code=7000222"} 
+	Headers: Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+client-request-id: 726194f2-6d64-4c88-a0ae-055236db08f0
+x-ms-request-id: df494d86-17c9-451a-9ea3-9b2e2ba3ae00
+x-ms-ests-server: 2.1.19683.3 - SCUS ProdSlices
+x-ms-clitelem: 1,7000222,0,,
+x-ms-srs: 1.P
+Content-Security-Policy-Report-Only: object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-gBB2uiorD_JEb196o922LQ' 'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com https://*.bing.com 'report-sample'; img-src 'self' data: https://*.msauth.net https://*.msftauth.net https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+X-XSS-Protection: 0
+Cache-Control: no-store, no-cache
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+Set-Cookie: fpc=AhLVSWQxtH9JmQ2YLQzMe2GQfpEnAQAAAEhd9N4OAAAA; expires=Fri, 17-Jan-2025 06:06:01 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Wed, 18 Dec 2024 06:06:00 GMT
+<---
+
+Microsoft.Identity.Client.MsalServiceException: AADSTS7000222: The provided client secret keys for app 'bbe161ec-8d30-4463-a13b-badf42e0aa11' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: df494d86-17c9-451a-9ea3-9b2e2ba3ae00 Correlation ID: 726194f2-6d64-4c88-a0ae-055236db08f0 Timestamp: 2024-12-18 06:06:01Z
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateErrorResponse(HttpResponse response, RequestContext requestContext)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.CreateResponse[T](HttpResponse response, RequestContext requestContext, Boolean addCorrelationId)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.<ExecuteRequestAsync>d__10`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.OAuth2.OAuth2Client.<GetTokenAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<SendHttpMessageAsync>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<SendTokenRequestAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.ClientCredentialRequest.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.Internal.Requests.RequestBase.<RunAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.Identity.Client.ApiConfig.Executors.ConfidentialClientExecutor.<ExecuteAsync>d__3.MoveNext()
+	ErrorCode: invalid_client
+	StatusCode: 401 
+	ResponseBody: {"error":"invalid_client","error_description":"AADSTS7000222: The provided client secret keys for app 'bbe161ec-8d30-4463-a13b-badf42e0aa11' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: df494d86-17c9-451a-9ea3-9b2e2ba3ae00 Correlation ID: 726194f2-6d64-4c88-a0ae-055236db08f0 Timestamp: 2024-12-18 06:06:01Z","error_codes":[7000222],"timestamp":"2024-12-18 06:06:01Z","trace_id":"df494d86-17c9-451a-9ea3-9b2e2ba3ae00","correlation_id":"726194f2-6d64-4c88-a0ae-055236db08f0","error_uri":"https://login.microsoftonline.com/error?code=7000222"} 
+	Headers: Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+client-request-id: 726194f2-6d64-4c88-a0ae-055236db08f0
+x-ms-request-id: df494d86-17c9-451a-9ea3-9b2e2ba3ae00
+x-ms-ests-server: 2.1.19683.3 - SCUS ProdSlices
+x-ms-clitelem: 1,7000222,0,,
+x-ms-srs: 1.P
+Content-Security-Policy-Report-Only: object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-gBB2uiorD_JEb196o922LQ' 'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com https://*.bing.com 'report-sample'; img-src 'self' data: https://*.msauth.net https://*.msftauth.net https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All
+X-XSS-Protection: 0
+Cache-Control: no-store, no-cache
+P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
+Set-Cookie: fpc=AhLVSWQxtH9JmQ2YLQzMe2GQfpEnAQAAAEhd9N4OAAAA; expires=Fri, 17-Jan-2025 06:06:01 GMT; path=/; secure; HttpOnly; SameSite=None, x-ms-gateway-slice=estsfd; path=/; secure; httponly
+Date: Wed, 18 Dec 2024 06:06:00 GMT
+"
+
+UPM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+CCM_Api_Fatal
+-------------------------
+1. 
+
+-------------------------
+ERS_Api_Fatal
+-------------------------
+1.
+
+
+InRule Server
+-------------------------
+
